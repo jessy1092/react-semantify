@@ -6,10 +6,12 @@ Integrate Semantic-ui with react components. It depends on Semantic-UI and helps
 
 ### With Browserify
 
-`npm install react-semantify`
+```sh
+npm install react-semantify
+```
 
 Ex.
-```app.jsx
+```js
 var React = require('react');
 var Button = require('react-semantify').Button;
 
@@ -37,13 +39,15 @@ React.render(
 And then you should include semantic-ui in your browser. Use [cdnjs](https://cdnjs.com/libraries/semantic-ui) or [bower](http://bower.io/)
 
 Use cdnjs
-```index.html
+```html
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.0.1/semantic.min.css">
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.js">
 ```
 
 Use bower
-`bower install semantic-ui`
+```sh
+bower install semantic-ui
+```
 
 
 ## Component
