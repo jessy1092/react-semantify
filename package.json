@@ -1,7 +1,7 @@
 {
   "name"       : "react-semantify",
   "description": "Integrate Semantic-ui with react components.",
-  "version"    : "0.0.2",
+  "version"    : "0.0.3",
   "keywords": [
     "react",
     "semantic-ui",
@@ -20,6 +20,15 @@
   },
   "engines":{
     "node": "0.10.x"
+  },
+  "main": "src/index.js",
+  "browserify": {
+    "transform": [[
+      "reactify", {
+          "es6": true
+        }
+      ]
+    ]
   },
   "dependencies": {
     "react": "^0.12.0"
@@ -42,8 +51,11 @@
   "repository": [
     {
       "type": "git",
-      "url" : "https://github.com/jessy1092/react-senta-ui-dev"
+      "url" : "https://github.com/jessy1092/react-semantify"
     }
   ],
+  "bugs": {
+    "url": "https://github.com/jessy1092/react-semantify/issues"
+  },
   "license": "MIT"
 }

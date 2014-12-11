@@ -25,7 +25,7 @@ gulp.task 'test',<[browserify:test]>, (callback)->
     callback err
 
 gulp.task 'browserify', ->
-  browserify './src/index.js'
+  browserify './src/index_browser.js'
     .transform reactifyES6
     .bundle!
     .pipe vinyl-source-stream 'react-semantify.js'
@@ -36,5 +36,5 @@ gulp.task 'watch', ->
   gulp.watch ['./src/**/*', './index.jsx'], <[browserify]> .on \changed, gulp-livereload.changed
 
 gulp.task 'build', <[browserify]>
-gulp.task 'dev', <[build server watch]>
+gulp.task 'dev', <[build watch]>
 gulp.task 'default', <[build]>

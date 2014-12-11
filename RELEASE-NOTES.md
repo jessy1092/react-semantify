@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+## Version 0.0.3 - 2014/12/12
+
+- Can use with npm install. `npm install react-semantify`
+- build browser version.
+
 ## Version 0.0.1 - 2014/12/11
 
 - init

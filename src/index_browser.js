@@ -1,7 +1,7 @@
 "use strict";
-React = require('react/addons');
+React = global.React;
 
-module.exports = {
+module.exports = global.Semantify = {
   // collections
   Breadcrumb: require('./collections/breadcrumb.jsx')(React),
   Form: require('./collections/form.jsx')(React),
