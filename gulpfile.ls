@@ -25,7 +25,7 @@ gulp.task 'test',<[browserify:test]>, (callback)->
     callback err
 
 gulp.task 'browserify', ->
-  browserify './index.js'
+  browserify './src/index.js'
     .transform reactifyES6
     .bundle!
     .pipe vinyl-source-stream 'react-semantify.js'
