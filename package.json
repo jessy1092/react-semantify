@@ -1,0 +1,43 @@
+{
+  "name"       : "react-semantify",
+  "description": "Integrate Semantic-ui with react components.",
+  "version"    : "0.0.1",
+  "contributor": [
+    {
+      "name" : "Lee",
+      "email": "jessy1092@gmail.com"
+    }
+  ],
+  "scripts": {
+    "start": "gulp dev",
+    "test": "gulp test"
+  },
+  "engines":{
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "react": "^0.12.0"
+  },
+  "devDependencies": {
+    "LiveScript": "^1.3.1",
+    "gulp": "^3.7.0",
+    "gulp-util": "^3.0.1",
+    "gulp-livereload": "^2.0.0",
+    "browserify": "^6.0.2",
+    "reactify": "^0.17.0",
+    "vinyl-source-stream": "^1.0.0",
+    "glob": "^4.0.6",
+    "liveify": "^1.3.1",
+    "karma": "^0.12.16",
+    "karma-jasmine": "^0.1.5",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "should": "^4.0.1"
+  },
+  "repository": [
+    {
+      "type": "git",
+      "url" : "https://github.com/jessy1092/react-senta-ui-dev"
+    }
+  ],
+  "license": "MIT"
+}
