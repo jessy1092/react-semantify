@@ -6,6 +6,25 @@ The components' Docs will coming soon.
 
 ## Usage
 
+### In Browser
+
+[Download js file](https://github.com/jessy1092/react-semantify/releases)
+
+And then include in your html.
+
+You should include dependency.
+- jQuery
+- Semantic-Ui
+- React with Addons
+
+```html
+<script src="//cdnjs.cloudflare.com/ajax/libs/react/0.12.1/react-with-addons.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.js"></script>
+<script src="/vendors/react-semantify.js"></script>
+```
+
 ### With Browserify
 
 ```sh
@@ -38,11 +57,17 @@ React.render(
 );
 ```
 
-And then you should include semantic-ui in your browser. Use [cdnjs](https://cdnjs.com/libraries/semantic-ui) or [bower](http://bower.io/)
+And then you should include 
+- jQuery
+- semantic-ui 
+in your browser. 
+
+Use [cdnjs](https://cdnjs.com/libraries/semantic-ui) or [bower](http://bower.io/)
 
 Use cdnjs
 ```html
-<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.0.1/semantic.min.css">
+<script type="text/javascript" src="//code.jquery.com/jquery-1.10.0.min.js">
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.css">
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.js">
 ```
 
