@@ -2,6 +2,8 @@ React-Semantify
 =============
 Integrate Semantic-ui with react components. It depends on Semantic-UI and helps you use with react component.
 
+The components' Docs will coming soon.
+
 ## Usage
 
 ### With Browserify
@@ -17,13 +19,13 @@ var Button = require('react-semantify').Button;
 
 var HelloBox = React.createClass({
 
-  onClick: function () {
-    console.log('hello world');
+  _onClick: function () {
+    console.log('hello world!');
   },
 
   render: function () {
     return (
-      <Button color="red">
+      <Button color="red" onClick={this._onClick}>
         Hello World!
       </Button>
     );
