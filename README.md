@@ -25,6 +25,33 @@ You should include dependency.
 <script src="/vendors/react-semantify.js"></script>
 ```
 
+ex.
+```
+<script type="text/javascript">
+  var Button = Semantify.Button;
+
+  var HelloBox = React.createClass({
+
+    _onClick: function () {
+      console.log('hello world!');
+    },
+
+    render: function () {
+      return (
+        <Button color="red" onClick={this._onClick}>
+          Hello World!
+        </Button>
+      );
+    }
+  });
+
+  React.render(
+    <HelloBox />,
+    document.getElementById('content')
+  );
+</script>
+```
+
 ### With Browserify
 
 ```sh
@@ -57,10 +84,7 @@ React.render(
 );
 ```
 
-And then you should include 
-- jQuery
-- semantic-ui 
-in your browser. 
+And then you should include `jQuery` and `semantic-ui` in your browser. 
 
 Use [cdnjs](https://cdnjs.com/libraries/semantic-ui) or [bower](http://bower.io/)
 
