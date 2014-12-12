@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+## Version 0.0.4 - 2014/12/12
+
+- Support react-semantify.min.js. You can [download js file](https://github.com/jessy1092/react-semantify/releases/)
+- More clearly example on browser in README.
+
 ## Version 0.0.3 - 2014/12/12
 
 - Can use with npm install. `npm install react-semantify`
