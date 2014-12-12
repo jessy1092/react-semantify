@@ -16,18 +16,21 @@ You should include dependency.
 - jQuery
 - Semantic-Ui
 - React with Addons
+- JSXTransformer (If you write jsx in browser.)
 
+Ex. Write a simple button in browser.
 ```html
 <script src="//cdnjs.cloudflare.com/ajax/libs/react/0.12.1/react-with-addons.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/react/0.12.1/JSXTransformer.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.js"></script>
 <script src="/vendors/react-semantify.js"></script>
 ```
 
-ex.
 ```
-<script type="text/javascript">
+<div id="content"></div>
+<script type="text/jsx">
   var Button = Semantify.Button;
 
   var HelloBox = React.createClass({
