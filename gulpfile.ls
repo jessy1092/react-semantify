@@ -1,9 +1,13 @@
-require! <[gulp gulp-util gulp-livereload]>
-require! <[express path ]>
-require! <[vinyl-source-stream browserify glob karma liveify reactify]>
+require! <[gulp gulp-util gulp-livereload gulp-uglify gulp-rename]>
+require! <[vinyl-source-stream vinyl-buffer browserify glob karma liveify reactify]>
 require! <[child_process]>
 
 build_path = 'dst'
+source     = vinyl-source-stream
+buffer     = vinyl-buffer
+uglify     = gulp-uglify
+rename     = gulp-rename
+
 reactifyES6 = (file) ->
   reactify file, {+es6}
 
@@ -12,7 +16,7 @@ gulp.task 'browserify:test', ->
   browserify testFiles
     .transform liveify
     .bundle!
-    .pipe vinyl-source-stream 'bundle-test.js'
+    .pipe source 'bundle-test.js'
     .pipe gulp.dest "./test/spec/"
 
 gulp.task 'test',<[browserify:test]>, (callback)->
@@ -28,7 +32,11 @@ gulp.task 'browserify', ->
   browserify './src/index_browser.js'
     .transform reactifyES6
     .bundle!
-    .pipe vinyl-source-stream 'react-semantify.js'
+    .pipe source 'react-semantify.js'
+    .pipe gulp.dest "#{build_path}/"
+    .pipe buffer!
+    .pipe uglify!
+    .pipe rename 'react-semantify.min.js'
     .pipe gulp.dest "#{build_path}/"
 
 gulp.task 'watch', ->
