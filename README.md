@@ -108,7 +108,7 @@ bower install semantic-ui
 ## Component
 
 - Elements
-  + Button
+  + [Button](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Button)
   + Divider
   + Flag
   + Header
