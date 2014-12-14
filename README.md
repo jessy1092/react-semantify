@@ -114,8 +114,8 @@ bower install semantic-ui
   + [Header](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Header)
   + [Icon](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Icon)
   + [Image](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Image)
-  + Input
-  + Label
+  + [Input](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Input)
+  + [Label](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Label)
   + List
   + Loader
   + Rail

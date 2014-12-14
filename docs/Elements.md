@@ -152,3 +152,53 @@ is equal to
 
 - *className*: The className would be part of the `class` attribute.
 - *src*: The image's source file.
+
+
+# Input
+A standard Input.
+
+### Example
+
+```html
+<Input className="exampleinput"></Input>
+```
+
+is equal to 
+
+```html
+<div class="ui input exampleinput"></div>
+```
+
+### Properties
+
+- *className*: The className would be part of the `class` attribute.
+
+
+# Label
+A standard Label.
+
+### Example
+
+```html
+<Label className="examplelabel" color="red" type="div"></Label>
+```
+
+You also can write like this:
+```html
+<Label className="red examplelabel" type="div"></Label>
+```
+
+are equal to 
+
+```html
+<div class="ui label red examplelabel"></div>
+```
+
+and register the function(this._onClick) on click event.
+
+### Properties
+
+- *className*: The className would be part of the `class` attribute.
+- *color*: The color is equal to Semantic-Ui color.
+- *type*: Generate the html tag. `type="div"` would be `<div><\div>`. `type="link"` would be `<a><\a>`
+- *onClick*: The click event.
