@@ -1,6 +1,7 @@
 React-Semantify
 =============
 [![Dependency Status][david-dm-image]][david-dm-url]
+
 Integrate Semantic-ui with react components. It depends on Semantic-UI and helps you use with react component.
 
 The components' Docs will coming soon.
@@ -114,7 +115,7 @@ bower install semantic-ui
   + [Header](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#header)
   + [Icon](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#icon)
   + [Image](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#image)
-  + [Input](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#input)
+  + [Input](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#input) - Pre-release
   + [Label](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#label)
   + [List](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#list)
   + [Loader](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#loader)
@@ -123,9 +124,9 @@ bower install semantic-ui
   + [Segment](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#segment)
   + [Steps/Step](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#stepsstep) - Pre-release
 
-- Collections
-  + Breadcrumb
-  + Form
+- [Collections](https://github.com/jessy1092/react-semantify/blob/master/docs/Collections.md)
+  + [Breadcrumb](https://github.com/jessy1092/react-semantify/blob/master/docs/Collections.md#breadcrumb) - Pre-release
+  + [Form](https://github.com/jessy1092/react-semantify/blob/master/docs/Collections.md#stepsstep) - Pre-release
   + Grid
   + Comment
   + Feed

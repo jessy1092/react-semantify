@@ -321,7 +321,7 @@ A standard Steps/Step.
 ```html
 <Steps className="examplestep">
   <Step>123</Step>
-</Step>
+</Steps>
 ```
 
 is equal to 
