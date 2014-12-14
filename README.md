@@ -109,11 +109,11 @@ bower install semantic-ui
 
 - Elements
   + [Button](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Button)
-  + Divider
-  + Flag
-  + Header
-  + Icon
-  + Image
+  + [Divider](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Divider)
+  + [Flag](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Flag)
+  + [Header](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Header)
+  + [Icon](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Icon)
+  + [Image](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Image)
   + Input
   + Label
   + List
