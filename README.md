@@ -1,5 +1,6 @@
 React-Semantify
 =============
+[![Dependency Status][david-dm-image]][david-dm-url]
 Integrate Semantic-ui with react components. It depends on Semantic-UI and helps you use with react component.
 
 The components' Docs will coming soon.
@@ -8,7 +9,7 @@ The components' Docs will coming soon.
 
 ### In Browser
 
-[Download js file](https://github.com/jessy1092/react-semantify/releases)
+[Download js file][react-semantify-url]
 
 And then include in your html.
 
@@ -28,7 +29,7 @@ Ex. Write a simple button in browser.
 <script src="/vendors/react-semantify.js"></script>
 ```
 
-```
+```js
 <div id="content"></div>
 <script type="text/jsx">
   var Button = Semantify.Button;
@@ -89,7 +90,7 @@ React.render(
 
 And then you should include `jQuery` and `semantic-ui` in your browser. 
 
-Use [cdnjs](https://cdnjs.com/libraries/semantic-ui) or [bower](http://bower.io/)
+Use [cdnjs][cdnjs-url] or [bower][bower-url]
 
 Use cdnjs
 ```html
@@ -106,21 +107,21 @@ bower install semantic-ui
 
 ## Component
 
-- Elements
-  + Button
-  + Divider
-  + Flag
-  + Header
-  + Icon
-  + Image
-  + Input
-  + Label
-  + List
-  + Loader
-  + Rail
-  + Reveal
-  + Segment
-  + Step
+- [Elements](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md)
+  + [Button](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Button)
+  + [Divider](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Divider)
+  + [Flag](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Flag)
+  + [Header](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Header)
+  + [Icon](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Icon)
+  + [Image](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Image)
+  + [Input](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Input)
+  + [Label](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Label)
+  + [List](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#List)
+  + [Loader](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Loader)
+  + [Rail](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Rail) - Pre-release
+  + [Reveal](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Reveal) - Pre-release
+  + [Segment](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Reveal)
+  + [Steps/Step](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Steps/Step) - Pre-release
 
 - Collections
   + Breadcrumb
@@ -157,6 +158,15 @@ bower install semantic-ui
 
 [Release Notes](https://github.com/jessy1092/react-semantify/blob/master/RELEASE-NOTES.md)
 
+## Contribute
+[![devDependency Status][david-dm-dev-image]][david-dm-dev-url]
+
+1. Fork it.
+2. Create your feature-branch `git checkout -b your-new-feature-branch`
+3. Commit your change `git commit -am 'Add new feature'`
+4. Push to the branch `git push origin your-new-feature-branch`
+5. Create new Pull Request with develop branch
+
 ## License
 
 The MIT License (MIT)
@@ -179,3 +189,12 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[bower-url]: http://bower.io/
+[cdnjs-url]: https://cdnjs.com/libraries/semantic-ui
+[react-semantify-url]: https://github.com/jessy1092/react-semantify/releases
+
+[david-dm-image]: https://david-dm.org/jessy1092/react-semantify.svg?style=flat-square
+[david-dm-url]: https://david-dm.org/jessy1092/react-semantify
+[david-dm-dev-image]: https://david-dm.org/jessy1092/react-semantify/dev-status.svg?style=flat-square
+[david-dm-dev-url]: https://david-dm.org/jessy1092/react-semantify#info=devDependencies
