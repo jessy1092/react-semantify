@@ -1,3 +1,7 @@
 # node
 node_modules/
 _public/
+
+# Else
+docs/
+.editorconfig

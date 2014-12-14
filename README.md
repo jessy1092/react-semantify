@@ -108,20 +108,20 @@ bower install semantic-ui
 ## Component
 
 - [Elements](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md)
-  + [Button](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Button)
-  + [Divider](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Divider)
-  + [Flag](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Flag)
-  + [Header](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Header)
-  + [Icon](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Icon)
-  + [Image](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Image)
-  + [Input](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Input)
-  + [Label](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Label)
-  + [List](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#List)
-  + [Loader](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Loader)
-  + [Rail](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Rail) - Pre-release
-  + [Reveal](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Reveal) - Pre-release
-  + [Segment](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Reveal)
-  + [Steps/Step](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Steps/Step) - Pre-release
+  + [Button](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#button)
+  + [Divider](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#divider)
+  + [Flag](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#flag)
+  + [Header](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#header)
+  + [Icon](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#icon)
+  + [Image](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#image)
+  + [Input](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#input)
+  + [Label](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#label)
+  + [List](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#list)
+  + [Loader](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#loader)
+  + [Rail](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#rail) - Pre-release
+  + [Reveal](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#reveal) - Pre-release
+  + [Segment](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#segment)
+  + [Steps/Step](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#stepsstep) - Pre-release
 
 - Collections
   + Breadcrumb
