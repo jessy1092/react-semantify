@@ -107,7 +107,7 @@ bower install semantic-ui
 
 ## Component
 
-- Elements
+- [Elements](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md)
   + [Button](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Button)
   + [Divider](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Divider)
   + [Flag](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Flag)
@@ -116,10 +116,10 @@ bower install semantic-ui
   + [Image](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Image)
   + [Input](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Input)
   + [Label](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Label)
-  + List
-  + Loader
-  + Rail
-  + Reveal
+  + [List](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#List)
+  + [Loader](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Loader)
+  + [Rail](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Rail) - Pre-release
+  + [Reveal](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Reveal) - Pre-release
   + Segment
   + Step
 

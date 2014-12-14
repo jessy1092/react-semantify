@@ -202,3 +202,83 @@ and register the function(this._onClick) on click event.
 - *color*: The color is equal to Semantic-Ui color.
 - *type*: Generate the html tag. `type="div"` would be `<div><\div>`. `type="link"` would be `<a><\a>`
 - *onClick*: The click event.
+
+
+# List
+A standard List.
+
+### Example
+
+```html
+<List className="examplelist"></List>
+```
+
+is equal to 
+
+```html
+<div class="ui list examplelist"></div>
+```
+
+### Properties
+
+- *className*: The className would be part of the `class` attribute.
+
+
+# Loader
+A standard Loader.
+
+### Example
+
+```html
+<Loader className="exampleloader"></Loader>
+```
+
+is equal to 
+
+```html
+<div class="ui loader exampleloader"></div>
+```
+
+### Properties
+
+- *className*: The className would be part of the `class` attribute.
+
+
+# Rail
+A standard Rail.
+
+### Example
+
+```html
+<Rail className="examplerail"></Rail>
+```
+
+is equal to 
+
+```html
+<div class="ui rail examplerail"></div>
+```
+
+### Properties
+
+- *className*: The className would be part of the `class` attribute.
+
+
+# Reveal
+A standard Reveal.
+
+### Example
+
+```html
+<Reveal className="examplereveal"></Reveal>
+```
+
+is equal to 
+
+```html
+<div class="ui reveal examplereveal"></div>
+```
+
+### Properties
+
+- *className*: The className would be part of the `class` attribute.
