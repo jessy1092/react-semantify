@@ -311,3 +311,27 @@ and register the function(this._onClick) on click event.
 - *className*: The className would be part of the `class` attribute.
 - *color*: The color is equal to Semantic-Ui color.
 - *onClick*: The click event.
+
+
+# Steps/Step
+A standard Steps/Step.
+
+### Example
+
+```html
+<Steps className="examplestep">
+  <Step>123</Step>
+</Step>
+```
+
+is equal to 
+
+```html
+<div class="ui steps examplestep">
+  <div class="step">123</div>
+</div>
+```
+
+### Properties
+
+- *className*: The className would be part of the `class` attribute.
