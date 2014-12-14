@@ -657,7 +657,7 @@ module.exports = function (React) {
       var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
 
       return (
-        React.createElement("div", React.__spread({},  other, {className: this.getClassName(defaultClassName)}), 
+        React.createElement("img", React.__spread({},  other, {className: this.getClassName(defaultClassName)}), 
           this.props.children
         )
       );
@@ -700,22 +700,23 @@ module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
   var ColorSelector  = require('../mixins/colorSelector.js')(React);
+  var TypeSelector   = require('../mixins/typeSelector.js')(React);
   var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui label';
 
   var Label = React.createClass({displayName: 'Label',
 
-    mixins: [ClassGenerator, ColorSelector],
+    mixins: [ClassGenerator, ColorSelector, TypeSelector],
 
     render: function () {
 
-      var $__0=    this.props,className=$__0.className,color=$__0.color,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,color:1});
+      var $__0=     this.props,className=$__0.className,type=$__0.type,color=$__0.color,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,type:1,color:1});
 
       return (
         React.createElement(Unit, React.__spread({},  other, 
           {className: this.getClassName(defaultClassName), 
-          type: "div", 
+          type: this.getType(), 
           color: this.getColor()}), 
           this.props.children
         )
@@ -726,7 +727,7 @@ module.exports = function (React) {
   return Label;
 }
 
-},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/colorSelector.js":32}],24:[function(require,module,exports){
+},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/colorSelector.js":32,"../mixins/typeSelector.js":33}],24:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -839,14 +840,14 @@ module.exports = function (React) {
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  // var ColorSelector = require('../mixins/colorSelector.js');
+  var ColorSelector = require('../mixins/colorSelector.js')(React);
   var Unit = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui segment';
 
   var Segment = React.createClass({displayName: 'Segment',
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, ColorSelector],
 
     render: function () {
 
@@ -855,8 +856,8 @@ module.exports = function (React) {
       return (
         React.createElement(Unit, React.__spread({},  other, 
           {className: this.getClassName(defaultClassName), 
-          type: "div"
-           })
+          type: "div", 
+          color: this.getColor()})
         )
       );
     }
@@ -865,7 +866,7 @@ module.exports = function (React) {
   return Segment;
 }
 
-},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31}],29:[function(require,module,exports){
+},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/colorSelector.js":32}],29:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 

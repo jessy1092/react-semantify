@@ -282,3 +282,32 @@ is equal to
 ### Properties
 
 - *className*: The className would be part of the `class` attribute.
+
+
+# Segment
+A standard Segment.
+
+### Example
+
+```html
+<Segment className="examplesegment" color="red"></Segment>
+```
+
+You also can write like this:
+```html
+<Segment className="red examplesegment"></Segment>
+```
+
+are equal to 
+
+```html
+<div class="ui segment red examplesegment"></div>
+```
+
+and register the function(this._onClick) on click event.
+
+### Properties
+
+- *className*: The className would be part of the `class` attribute.
+- *color*: The color is equal to Semantic-Ui color.
+- *onClick*: The click event.

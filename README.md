@@ -120,7 +120,7 @@ bower install semantic-ui
   + [Loader](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Loader)
   + [Rail](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Rail) - Pre-release
   + [Reveal](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Reveal) - Pre-release
-  + Segment
+  + [Segment](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#Reveal)
   + Step
 
 - Collections
