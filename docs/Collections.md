@@ -59,7 +59,7 @@ A standard Form.
 is equal to 
 
 ```html
-<div class="ui breadcrumb exampleform">
+<div class="ui form exampleform">
   <div class="two fields">
     <div class="field">
       <div class="ui label">User</div>
@@ -76,6 +76,36 @@ is equal to
       </div>
     </div>
   </div>
+</div>
+```
+
+### Properties
+
+- *className*: The className would be part of the `class` attribute.
+
+
+# Grid
+A standard Grid.
+
+### Example
+
+```html
+<Grid className="examplegrid">
+  <Column className="four wide"/>
+  <Column className="two wide"/>
+  <Column className="four wide"/>
+  <Column className="six wide"/>
+</Grid>
+```
+
+is equal to 
+
+```html
+<div class="ui grid examplegrid">
+  <div class="four wide column"></div>
+  <div class="two wide column"></div>
+  <div class="four wide column"></div>
+  <div class="six wide column"></div>
 </div>
 ```
 
