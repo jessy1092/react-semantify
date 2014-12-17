@@ -112,3 +112,37 @@ is equal to
 ### Properties
 
 - *className*: The className would be part of the `class` attribute.
+
+
+# Menu
+A standard Menu.
+
+### Example
+
+```html
+<Menu className="exampleMenu">
+  <Item className="active" type="link">
+    <Icon className="home" /> Home
+  </Item>
+  <Item type="link">
+    <Icon className="mail"/> Messages
+  </Item>
+</Menu>
+```
+
+is equal to 
+
+```html
+<div class="ui menu examplegrid">
+  <a class="active item">
+    <i class="home icon"></i> Home
+  </a>
+  <a class="item">
+    <i class="mail icon"></i> Messages
+  </a>
+</div>
+```
+
+### Properties
+
+- *className*: The className would be part of the `class` attribute.
