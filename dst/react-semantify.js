@@ -206,7 +206,7 @@ module.exports = function (React) {
       var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
 
       return (
-        React.createElement("div", React.__spread({},  other, {className: this.getClassName(defaultClassName)}), 
+        React.createElement("table", React.__spread({},  other, {className: this.getClassName(defaultClassName)}), 
           this.props.children
         )
       );
