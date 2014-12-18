@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+## Version 0.0.6 - 2014/12/19
+
+- Fix Table bug: use `<table>` tag.
+- Add Docs: Table, Message, Menu, Grid, Collections.
+
 ## Version 0.0.5 - 2014/12/14
 
 - Fix Segment bug: Add color attribute.
