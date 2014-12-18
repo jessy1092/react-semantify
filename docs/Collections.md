@@ -120,7 +120,7 @@ A standard Menu.
 ### Example
 
 ```html
-<Menu className="exampleMenu">
+<Menu className="examplemenu">
   <Item className="active" type="link">
     <Icon className="home" /> Home
   </Item>
@@ -133,13 +133,45 @@ A standard Menu.
 is equal to 
 
 ```html
-<div class="ui menu examplegrid">
+<div class="ui menu examplemenu">
   <a class="active item">
     <i class="home icon"></i> Home
   </a>
   <a class="item">
     <i class="mail icon"></i> Messages
   </a>
+</div>
+```
+
+### Properties
+
+- *className*: The className would be part of the `class` attribute.
+
+
+# Message
+A standard Menu.
+
+### Example
+
+```html
+<Message className="icon examplemessage">
+  <Icon className="notched circle loading" />
+  <Content>
+    <Header>Hello World</Header>
+    <p>This is a test component.</p>
+  </Content>
+</Message>
+```
+
+is equal to 
+
+```html
+<div class="ui icon message examplemessage">
+  <i class="otched circle loading icon"></i>
+  <div class="content">
+    <div class="header">Hello World</div>
+    <p>This is a test component.</p>
+  </div>
 </div>
 ```
 

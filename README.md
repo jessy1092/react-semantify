@@ -129,7 +129,7 @@ bower install semantic-ui
   + [Form](https://github.com/jessy1092/react-semantify/blob/master/docs/Collections.md#stepsstep) - Pre-release
   + [Grid](https://github.com/jessy1092/react-semantify/blob/master/docs/Collections.md#grid) - Pre-release
   + [Menu](https://github.com/jessy1092/react-semantify/blob/master/docs/Collections.md#menu) - Pre-release
-  + Message
+  + [Message](https://github.com/jessy1092/react-semantify/blob/master/docs/Collections.md#message) - Pre-release
   + Table
 
 - Views
