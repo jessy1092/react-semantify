@@ -14,9 +14,9 @@ module.exports = function (React) {
       var {className, ...other} = this.props;
 
       return (
-        <div {...other} className={this.getClassName(defaultClassName)} >
+        <table {...other} className={this.getClassName(defaultClassName)} >
           {this.props.children}
-        </div>
+        </table>
       );
     }
   });

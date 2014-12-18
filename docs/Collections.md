@@ -178,3 +178,49 @@ is equal to
 ### Properties
 
 - *className*: The className would be part of the `class` attribute.
+
+
+# Table
+A standard Menu.
+
+### Example
+
+```html
+<Table className="exampletable">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5566</td>
+      <td>Lee</td>
+    </tr>
+  </tbody>
+</Table>
+```
+
+is equal to 
+
+```html
+<table class="ui table exampletable">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5566</th>
+      <th>Lee</th>
+    </tr>
+  </tbody>
+</table>
+```
+
+### Properties
+
+- *className*: The className would be part of the `class` attribute.
