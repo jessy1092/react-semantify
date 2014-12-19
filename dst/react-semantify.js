@@ -39,8 +39,19 @@ module.exports = global.Semantify = {
   Steps: require('./elements/steps.jsx')(React),
 
   // modules
+  Accordin: require('./modules/accordion.jsx')(React),
+  Checkbox: require('./modules/checkbox.jsx')(React),
   Dimmer: require('./modules/dimmer.jsx')(React),
   Dropdown: require('./modules/dropdown.jsx')(React),
+  Modal: require('./modules/modal.jsx')(React),
+  Popup: require('./modules/popup.jsx')(React),
+  Progress: require('./modules/progress.jsx')(React),
+  Rating: require('./modules/rating.jsx')(React),
+  Search: require('./modules/search.jsx')(React),
+  Shape: require('./modules/shape.jsx')(React),
+  Sidebar: require('./modules/sidebar.jsx')(React),
+  Sticky: require('./modules/sticky.jsx')(React),
+  Tab: require('./modules/tab.jsx')(React),
 
   // views
   Ad: require('./views/advertisement.jsx')(React),
@@ -54,7 +65,7 @@ module.exports = global.Semantify = {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./collections/breadcrumb.jsx":2,"./collections/form.jsx":3,"./collections/grid.jsx":4,"./collections/menu.jsx":5,"./collections/message.jsx":6,"./collections/table.jsx":7,"./commons/column.jsx":8,"./commons/content.jsx":9,"./commons/field.jsx":10,"./commons/fields.jsx":11,"./commons/row.jsx":12,"./commons/section.jsx":13,"./commons/text.jsx":14,"./elements/button.jsx":16,"./elements/divider.jsx":17,"./elements/flag.jsx":18,"./elements/header.jsx":19,"./elements/icon.jsx":20,"./elements/image.jsx":21,"./elements/input.jsx":22,"./elements/label.jsx":23,"./elements/list.jsx":24,"./elements/loader.jsx":25,"./elements/rail.jsx":26,"./elements/reveal.jsx":27,"./elements/segment.jsx":28,"./elements/step.jsx":29,"./elements/steps.jsx":30,"./modules/dimmer.jsx":34,"./modules/dropdown.jsx":35,"./views/advertisement.jsx":36,"./views/card.jsx":37,"./views/comment.jsx":38,"./views/comments.jsx":39,"./views/feed.jsx":40,"./views/item.jsx":41,"./views/items.jsx":42,"./views/statistic.jsx":43}],2:[function(require,module,exports){
+},{"./collections/breadcrumb.jsx":2,"./collections/form.jsx":3,"./collections/grid.jsx":4,"./collections/menu.jsx":5,"./collections/message.jsx":6,"./collections/table.jsx":7,"./commons/column.jsx":8,"./commons/content.jsx":9,"./commons/field.jsx":10,"./commons/fields.jsx":11,"./commons/row.jsx":12,"./commons/section.jsx":13,"./commons/text.jsx":14,"./elements/button.jsx":16,"./elements/divider.jsx":17,"./elements/flag.jsx":18,"./elements/header.jsx":19,"./elements/icon.jsx":20,"./elements/image.jsx":21,"./elements/input.jsx":22,"./elements/label.jsx":23,"./elements/list.jsx":24,"./elements/loader.jsx":25,"./elements/rail.jsx":26,"./elements/reveal.jsx":27,"./elements/segment.jsx":28,"./elements/step.jsx":29,"./elements/steps.jsx":30,"./modules/accordion.jsx":34,"./modules/checkbox.jsx":35,"./modules/dimmer.jsx":36,"./modules/dropdown.jsx":37,"./modules/modal.jsx":38,"./modules/popup.jsx":39,"./modules/progress.jsx":40,"./modules/rating.jsx":41,"./modules/search.jsx":42,"./modules/shape.jsx":43,"./modules/sidebar.jsx":44,"./modules/sticky.jsx":45,"./modules/tab.jsx":46,"./views/advertisement.jsx":47,"./views/card.jsx":48,"./views/comment.jsx":49,"./views/comments.jsx":50,"./views/feed.jsx":51,"./views/item.jsx":52,"./views/items.jsx":53,"./views/statistic.jsx":54}],2:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1020,6 +1031,57 @@ module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
 
+  var defaultClassName = 'ui accordion';
+
+  var Accordion = React.createClass({displayName: 'Accordion',
+
+    mixins: [ClassGenerator],
+
+    render: function () {
+      return (
+        React.createElement("div", {className: this.getClassName(defaultClassName)}, 
+          this.props.children
+        )
+      );
+    },
+    componentDidMount: function () {
+      $(this.getDOMNode()).accordion();
+    }
+  });
+
+  return Accordion;
+}
+
+},{"../mixins/classGenerator.js":31}],35:[function(require,module,exports){
+"use strict";
+module.exports = function (React) {
+
+  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+
+  var defaultClassName = 'ui checkbox';
+
+  var Checkbox = React.createClass({displayName: 'Checkbox',
+
+    mixins: [ClassGenerator],
+
+    render: function () {
+      return (
+        React.createElement("div", {className: this.getClassName(defaultClassName)}, 
+          this.props.children
+        )
+      );
+    }
+  });
+
+  return Checkbox;
+}
+
+},{"../mixins/classGenerator.js":31}],36:[function(require,module,exports){
+"use strict";
+module.exports = function (React) {
+
+  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+
   var defaultClassName = 'ui dimmer';
 
   var Dimmer = React.createClass({displayName: 'Dimmer',
@@ -1038,7 +1100,7 @@ module.exports = function (React) {
   return Dimmer;
 }
 
-},{"../mixins/classGenerator.js":31}],35:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],37:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1068,7 +1130,278 @@ module.exports = function (React) {
   return Dropdown;
 }
 
-},{"../mixins/classGenerator.js":31}],36:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],38:[function(require,module,exports){
+"use strict";
+module.exports = function (React) {
+
+  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+
+  var defaultClassName = 'ui modal';
+
+  var Modal = React.createClass({displayName: 'Modal',
+
+    mixins: [ClassGenerator],
+
+    render: function () {
+      return (
+        React.createElement("div", {className: this.getClassName(defaultClassName)}, 
+          this.props.children
+        )
+      );
+    }
+  });
+
+  return Modal;
+}
+
+},{"../mixins/classGenerator.js":31}],39:[function(require,module,exports){
+"use strict";
+module.exports = function (React) {
+
+  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+
+  var defaultClassName = 'ui popup';
+
+  var Popup = React.createClass({displayName: 'Popup',
+
+    mixins: [ClassGenerator],
+
+    render: function () {
+      return (
+        React.createElement("div", {className: this.getClassName(defaultClassName)}, 
+          this.props.children
+        )
+      );
+    }
+  });
+
+  return Popup;
+}
+
+},{"../mixins/classGenerator.js":31}],40:[function(require,module,exports){
+"use strict";
+module.exports = function (React) {
+
+  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+
+  var defaultClassName = 'ui progress';
+
+  var Progress = React.createClass({displayName: 'Progress',
+
+    mixins: [ClassGenerator],
+
+    render: function () {
+
+      var $__0=      this.props,className=$__0.className,percent=$__0.percent,value=$__0.value,total=$__0.total,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,percent:1,value:1,total:1});
+
+      return (
+        React.createElement("div", React.__spread({},  other, 
+          {className: this.getClassName(defaultClassName), 
+          'data-percent': percent, 
+          'data-value': value, 
+          'data-total': total}), 
+          this.props.children
+        )
+      );
+    },
+    componentDidMount: function () {
+      $(this.getDOMNode()).progress();
+    }
+  });
+
+  return Progress;
+}
+
+},{"../mixins/classGenerator.js":31}],41:[function(require,module,exports){
+"use strict";
+module.exports = function (React) {
+
+  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+
+  var defaultClassName = 'ui rating';
+
+  var Rating = React.createClass({displayName: 'Rating',
+
+    mixins: [ClassGenerator],
+
+    render: function () {
+
+      var $__0=     this.props,className=$__0.className,rating=$__0.rating,max_rating=$__0.max_rating,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,rating:1,max_rating:1});
+
+      return (
+        React.createElement("div", React.__spread({},  other, 
+          {className: this.getClassName(defaultClassName), 
+          'data-rating': rating, 
+          'data-max-rating': max_rating}), 
+          this.props.children
+        )
+      );
+    },
+    componentDidMount: function () {
+      $(this.getDOMNode()).rating();
+    }
+  });
+
+  return Rating;
+}
+
+},{"../mixins/classGenerator.js":31}],42:[function(require,module,exports){
+"use strict";
+module.exports = function (React) {
+
+  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+
+  var defaultClassName = 'ui search';
+
+  var Search = React.createClass({displayName: 'Search',
+
+    mixins: [ClassGenerator],
+
+    render: function () {
+
+      var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
+
+      return (
+        React.createElement("div", React.__spread({},  other, {className: this.getClassName(defaultClassName)}), 
+          this.props.children
+        )
+      );
+    }
+  });
+
+  return Search;
+}
+
+},{"../mixins/classGenerator.js":31}],43:[function(require,module,exports){
+"use strict";
+module.exports = function (React) {
+
+  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+
+  var defaultClassName = 'ui shape';
+
+  var Shape = React.createClass({displayName: 'Shape',
+
+    mixins: [ClassGenerator],
+
+    render: function () {
+
+      var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
+
+      return (
+        React.createElement("div", React.__spread({},  other, {className: this.getClassName(defaultClassName)}), 
+          this.props.children
+        )
+      );
+    },
+    componentDidMount: function () {
+      if (typeof this.props.behavior != 'undefined') {
+        $(this.getDOMNode()).shape(this.props.behavior);
+      } else {
+        $(this.getDOMNode()).shape();
+      }
+    }
+  });
+
+  return Shape;
+}
+
+},{"../mixins/classGenerator.js":31}],44:[function(require,module,exports){
+"use strict";
+module.exports = function (React) {
+
+  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+
+  var defaultClassName = 'ui sidebar';
+
+  var Sidebar = React.createClass({displayName: 'Sidebar',
+
+    mixins: [ClassGenerator],
+
+    render: function () {
+
+      var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
+
+      return (
+        React.createElement("div", React.__spread({},  other, {className: this.getClassName(defaultClassName)}), 
+          this.props.children
+        )
+      );
+    }
+  });
+
+  return Sidebar;
+}
+
+},{"../mixins/classGenerator.js":31}],45:[function(require,module,exports){
+"use strict";
+module.exports = function (React) {
+
+  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+
+  var defaultClassName = 'ui sticky';
+
+  var Sticky = React.createClass({displayName: 'Sticky',
+
+    mixins: [ClassGenerator],
+
+    propTypes: {
+      behavior: React.PropTypes.oneOfType([
+        React.PropTypes.string,
+        React.PropTypes.object
+      ])
+    },
+
+    render: function () {
+
+      var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
+
+      return (
+        React.createElement("div", React.__spread({},  other, {className: this.getClassName(defaultClassName)}), 
+          this.props.children
+        )
+      );
+    },
+    componentDidMount: function () {
+      if (typeof this.props.behavior != 'undefined') {
+        $(this.getDOMNode()).sticky(this.props.behavior);
+      }
+    }
+  });
+
+  return Sticky;
+}
+
+},{"../mixins/classGenerator.js":31}],46:[function(require,module,exports){
+"use strict";
+module.exports = function (React) {
+
+  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+
+  var defaultClassName = 'ui tab';
+
+  var Tab = React.createClass({displayName: 'Tab',
+
+    mixins: [ClassGenerator],
+
+    render: function () {
+
+      var $__0=   this.props,className=$__0.className,tab=$__0.tab,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,tab:1});
+
+      return (
+        React.createElement("div", React.__spread({},  other, 
+          {className: this.getClassName(defaultClassName), 
+          'data-tab': tab}), 
+          this.props.children
+        )
+      );
+    }
+  });
+
+  return Tab;
+}
+
+},{"../mixins/classGenerator.js":31}],47:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1095,7 +1428,7 @@ module.exports = function (React) {
   return Ad;
 }
 
-},{"../mixins/classGenerator.js":31}],37:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],48:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1122,7 +1455,7 @@ module.exports = function (React) {
   return Card;
 }
 
-},{"../mixins/classGenerator.js":31}],38:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],49:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1149,7 +1482,7 @@ module.exports = function (React) {
   return Comment;
 }
 
-},{"../mixins/classGenerator.js":31}],39:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],50:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1176,7 +1509,7 @@ module.exports = function (React) {
   return Comments;
 }
 
-},{"../mixins/classGenerator.js":31}],40:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],51:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1203,7 +1536,7 @@ module.exports = function (React) {
   return Feed;
 }
 
-},{"../mixins/classGenerator.js":31}],41:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],52:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1236,7 +1569,7 @@ module.exports = function (React) {
   return Item;
 }
 
-},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/typeSelector.js":33}],42:[function(require,module,exports){
+},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/typeSelector.js":33}],53:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1273,7 +1606,7 @@ module.exports = function (React) {
   return Items;
 }
 
-},{"../mixins/classGenerator.js":31}],43:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],54:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 

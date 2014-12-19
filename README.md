@@ -4,7 +4,7 @@ React-Semantify
 
 Integrate Semantic-ui with react components. It depends on Semantic-UI and helps you use with react component.
 
-The components' Docs will coming soon.
+[The components' Docs][https://github.com/jessy1092/react-semantify/blob/master/docs]
 
 ## Usage
 
@@ -130,36 +130,36 @@ bower install semantic-ui
   + [Grid](https://github.com/jessy1092/react-semantify/blob/master/docs/Collections.md#grid) - Pre-release
   + [Menu](https://github.com/jessy1092/react-semantify/blob/master/docs/Collections.md#menu) - Pre-release
   + [Message](https://github.com/jessy1092/react-semantify/blob/master/docs/Collections.md#message) - Pre-release
-  + [Table]((https://github.com/jessy1092/react-semantify/blob/master/docs/Collections.md#table) - Pre-release)
+  + [Table](https://github.com/jessy1092/react-semantify/blob/master/docs/Collections.md#table) - Pre-release
 
-- Views
-  + Advertisement
-  + Card
-  + Comment
-  + Feed
-  + Item
-  + Statistic
+- [Views](https://github.com/jessy1092/react-semantify/blob/master/docs/Views.md)
+  + [Advertisement](https://github.com/jessy1092/react-semantify/blob/master/docs/Views.md#advertisement) - Pre-release
+  + [Card](https://github.com/jessy1092/react-semantify/blob/master/docs/Views.md#card) - Pre-release
+  + [Comments/Comment](https://github.com/jessy1092/react-semantify/blob/master/docs/Views.md#commentscomment) - Pre-release
+  + [Feed](https://github.com/jessy1092/react-semantify/blob/master/docs/Views.md#feed) - Pre-release
+  + [Items/Item](https://github.com/jessy1092/react-semantify/blob/master/docs/Views.md#itemsitem) - Pre-release
+  + [Statistic](https://github.com/jessy1092/react-semantify/blob/master/docs/Views.md#statistic) - Pre-release
 
-- Modules
-  + Dimmer
-  + Dropdown
+- [Modules](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md)
+  + Accordion - Pre-release
+  + Checkbox - Pre-release
+  + Dimmer - Pre-release
+  + Dropdown - Pre-release
+  + Modal - Pre-release
+  + Popup - Pre-release
+  + Progress - Pre-release
+  + Rating - Pre-release
+  + Search - Pre-release
+  + Shape - Pre-release
+  + Sidebar - Pre-release
+  + Sticky - Pre-release
+  + Tab - Pre-release
 
 ### Comming Soon
+Wait Semantic-UI Release.
 
 - Modules
-  + Accordin
-  + Checkbox
-  + Modal
   + Nag
-  + Popup
-  + Progress
-  + Rating
-  + Search
-  + Shape
-  + Sidebar
-  + Sticky
-  + Tab
-  + Transition
   + Video
 
 ## Release Notes
@@ -173,7 +173,7 @@ bower install semantic-ui
 2. Create your feature-branch `git checkout -b your-new-feature-branch`
 3. Commit your change `git commit -am 'Add new feature'`
 4. Push to the branch `git push origin your-new-feature-branch`
-5. Create new Pull Request with develop branch
+5. Create new Pull Request with `develop` branch
 
 ## License
 
