@@ -141,7 +141,7 @@ bower install semantic-ui
   + [Statistic](https://github.com/jessy1092/react-semantify/blob/master/docs/Views.md#statistic) - Pre-release
 
 - [Modules](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md)
-  + Accordin - Pre-release
+  + Accordion - Pre-release
   + Checkbox - Pre-release
   + Dimmer - Pre-release
   + Dropdown - Pre-release
@@ -173,7 +173,7 @@ Wait Semantic-UI Release.
 2. Create your feature-branch `git checkout -b your-new-feature-branch`
 3. Commit your change `git commit -am 'Add new feature'`
 4. Push to the branch `git push origin your-new-feature-branch`
-5. Create new Pull Request with develop branch
+5. Create new Pull Request with `develop` branch
 
 ## License
 

@@ -1033,7 +1033,7 @@ module.exports = function (React) {
 
   var defaultClassName = 'ui accordion';
 
-  var Accordin = React.createClass({displayName: 'Accordin',
+  var Accordion = React.createClass({displayName: 'Accordion',
 
     mixins: [ClassGenerator],
 
@@ -1049,7 +1049,7 @@ module.exports = function (React) {
     }
   });
 
-  return Accordin;
+  return Accordion;
 }
 
 },{"../mixins/classGenerator.js":31}],35:[function(require,module,exports){

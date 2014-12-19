@@ -5,7 +5,7 @@ module.exports = function (React) {
 
   var defaultClassName = 'ui accordion';
 
-  var Accordin = React.createClass({
+  var Accordion = React.createClass({
 
     mixins: [ClassGenerator],
 
@@ -21,5 +21,5 @@ module.exports = function (React) {
     }
   });
 
-  return Accordin;
+  return Accordion;
 }

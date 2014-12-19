@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+## Version 0.0.7 - 2014/12/20
+
+- Pre-release Modules.
+  - accordion, checkbox, dimmer, dropbown, modal, popup, progress, rating, search, shape, sidebar, sticky, tab.
+
 ## Version 0.0.6 - 2014/12/19
 
 - Fix Table bug: use `<table>` tag.
