@@ -4,7 +4,7 @@ React-Semantify
 
 Integrate Semantic-ui with react components. It depends on Semantic-UI and helps you use with react component.
 
-The components' Docs will coming soon.
+[The components' Docs][https://github.com/jessy1092/react-semantify/blob/master/docs]
 
 ## Usage
 
@@ -132,7 +132,7 @@ bower install semantic-ui
   + [Message](https://github.com/jessy1092/react-semantify/blob/master/docs/Collections.md#message) - Pre-release
   + [Table](https://github.com/jessy1092/react-semantify/blob/master/docs/Collections.md#table) - Pre-release
 
-- Views
+- [Views](https://github.com/jessy1092/react-semantify/blob/master/docs/Views.md)
   + [Advertisement](https://github.com/jessy1092/react-semantify/blob/master/docs/Views.md#advertisement) - Pre-release
   + [Card](https://github.com/jessy1092/react-semantify/blob/master/docs/Views.md#card) - Pre-release
   + [Comments/Comment](https://github.com/jessy1092/react-semantify/blob/master/docs/Views.md#commentscomment) - Pre-release
@@ -140,26 +140,26 @@ bower install semantic-ui
   + [Items/Item](https://github.com/jessy1092/react-semantify/blob/master/docs/Views.md#itemsitem) - Pre-release
   + [Statistic](https://github.com/jessy1092/react-semantify/blob/master/docs/Views.md#statistic) - Pre-release
 
-- Modules
-  + Dimmer
-  + Dropdown
+- [Modules](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md)
+  + Accordin - Pre-release
+  + Checkbox - Pre-release
+  + Dimmer - Pre-release
+  + Dropdown - Pre-release
+  + Modal - Pre-release
+  + Popup - Pre-release
+  + Progress - Pre-release
+  + Rating - Pre-release
+  + Search - Pre-release
+  + Shape - Pre-release
+  + Sidebar - Pre-release
+  + Sticky - Pre-release
+  + Tab - Pre-release
 
 ### Comming Soon
+Wait Semantic-UI Release.
 
 - Modules
-  + Accordin
-  + Checkbox
-  + Modal
   + Nag
-  + Popup
-  + Progress
-  + Rating
-  + Search
-  + Shape
-  + Sidebar
-  + Sticky
-  + Tab
-  + Transition
   + Video
 
 ## Release Notes
