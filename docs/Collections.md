@@ -149,7 +149,7 @@ is equal to
 
 
 # Message
-A standard Menu.
+A standard Message.
 
 ### Example
 
@@ -181,7 +181,7 @@ is equal to
 
 
 # Table
-A standard Menu.
+A standard Table.
 
 ### Example
 

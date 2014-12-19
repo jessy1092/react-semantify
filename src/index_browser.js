@@ -37,8 +37,19 @@ module.exports = global.Semantify = {
   Steps: require('./elements/steps.jsx')(React),
 
   // modules
+  Accordin: require('./modules/accordion.jsx')(React),
+  Checkbox: require('./modules/checkbox.jsx')(React),
   Dimmer: require('./modules/dimmer.jsx')(React),
   Dropdown: require('./modules/dropdown.jsx')(React),
+  Modal: require('./modules/modal.jsx')(React),
+  Popup: require('./modules/popup.jsx')(React),
+  Progress: require('./modules/progress.jsx')(React),
+  Rating: require('./modules/rating.jsx')(React),
+  Search: require('./modules/search.jsx')(React),
+  Shape: require('./modules/shape.jsx')(React),
+  Sidebar: require('./modules/sidebar.jsx')(React),
+  Sticky: require('./modules/sticky.jsx')(React),
+  Tab: require('./modules/tab.jsx')(React),
 
   // views
   Ad: require('./views/advertisement.jsx')(React),
