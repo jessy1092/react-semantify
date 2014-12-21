@@ -1,5 +1,5 @@
 "use strict";
-React = global.React;
+var React = global.React;
 
 module.exports = global.Semantify = {
   // collections
