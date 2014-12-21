@@ -1,6 +1,10 @@
 Release Notes
 =============
 
+## Version 0.0.8 - 2014/12/21
+
+- Fix the bug: Assign React parameter type.
+
 ## Version 0.0.7 - 2014/12/20
 
 - Pre-release Modules.
