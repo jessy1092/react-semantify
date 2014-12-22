@@ -1,6 +1,8 @@
 "use strict";
 module.exports = function (React) {
 
+  var classSet = React.addons.classSet;
+
   var Unit = React.createClass({
 
     propTypes: {
@@ -12,7 +14,11 @@ module.exports = function (React) {
 
     render: function () {
 
-      var {className, type, color, onClick, value, ...other} = this.props;
+      var {
+        className, type, color, onClick, value,
+        disabled, active, loading,
+        ...other
+      } = this.props;
 
       switch (type) {
 
@@ -21,7 +27,7 @@ module.exports = function (React) {
             <a {...other}
               className={this._generateClassName()}
               onClick={this._onClick}
-              data-value={value} >
+              data-value={value}>
               {this.props.children}
             </a>
           );
@@ -31,9 +37,18 @@ module.exports = function (React) {
             <i {...other}
               className={this._generateClassName()}
               onClick={this._onClick}
-              data-value={value} >
+              data-value={value}>
               {this.props.children}
             </i>
+          );
+
+        case 'img':
+          return (
+            <img {...other}
+              className={this._generateClassName()}
+              onClick={this._onClick}>
+              {this.props.children}
+            </img>
           );
 
         case 'div':
@@ -42,7 +57,7 @@ module.exports = function (React) {
             <div {...other}
               className={this._generateClassName()}
               onClick={this._onClick}
-              data-value={value} >
+              data-value={value}>
               {this.props.children}
             </div>
           );
@@ -55,6 +70,15 @@ module.exports = function (React) {
       if (this.props.color != 'null') {
         className += ' ' + this.props.color;
       }
+
+      className += ' ' + classSet({
+        disabled: this.props.disabled,
+        active: this.props.active,
+        loading: this.props.loading,
+        focus: this.props.focus,
+        error: this.props.error,
+        completed: this.props.completed
+      });
 
       return className;
     },

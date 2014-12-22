@@ -65,7 +65,7 @@ module.exports = global.Semantify = {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./collections/breadcrumb.jsx":2,"./collections/form.jsx":3,"./collections/grid.jsx":4,"./collections/menu.jsx":5,"./collections/message.jsx":6,"./collections/table.jsx":7,"./commons/column.jsx":8,"./commons/content.jsx":9,"./commons/field.jsx":10,"./commons/fields.jsx":11,"./commons/row.jsx":12,"./commons/section.jsx":13,"./commons/text.jsx":14,"./elements/button.jsx":16,"./elements/divider.jsx":17,"./elements/flag.jsx":18,"./elements/header.jsx":19,"./elements/icon.jsx":20,"./elements/image.jsx":21,"./elements/input.jsx":22,"./elements/label.jsx":23,"./elements/list.jsx":24,"./elements/loader.jsx":25,"./elements/rail.jsx":26,"./elements/reveal.jsx":27,"./elements/segment.jsx":28,"./elements/step.jsx":29,"./elements/steps.jsx":30,"./modules/accordion.jsx":34,"./modules/checkbox.jsx":35,"./modules/dimmer.jsx":36,"./modules/dropdown.jsx":37,"./modules/modal.jsx":38,"./modules/popup.jsx":39,"./modules/progress.jsx":40,"./modules/rating.jsx":41,"./modules/search.jsx":42,"./modules/shape.jsx":43,"./modules/sidebar.jsx":44,"./modules/sticky.jsx":45,"./modules/tab.jsx":46,"./views/advertisement.jsx":47,"./views/card.jsx":48,"./views/comment.jsx":49,"./views/comments.jsx":50,"./views/feed.jsx":51,"./views/item.jsx":52,"./views/items.jsx":53,"./views/statistic.jsx":54}],2:[function(require,module,exports){
+},{"./collections/breadcrumb.jsx":2,"./collections/form.jsx":3,"./collections/grid.jsx":4,"./collections/menu.jsx":5,"./collections/message.jsx":6,"./collections/table.jsx":7,"./commons/column.jsx":8,"./commons/content.jsx":9,"./commons/field.jsx":10,"./commons/fields.jsx":11,"./commons/row.jsx":12,"./commons/section.jsx":13,"./commons/text.jsx":14,"./elements/button.jsx":16,"./elements/divider.jsx":17,"./elements/flag.jsx":18,"./elements/header.jsx":19,"./elements/icon.jsx":20,"./elements/image.jsx":21,"./elements/input.jsx":22,"./elements/label.jsx":23,"./elements/list.jsx":24,"./elements/loader.jsx":25,"./elements/rail.jsx":26,"./elements/reveal.jsx":27,"./elements/segment.jsx":28,"./elements/step.jsx":29,"./elements/steps.jsx":30,"./modules/accordion.jsx":35,"./modules/checkbox.jsx":36,"./modules/dimmer.jsx":37,"./modules/dropdown.jsx":38,"./modules/modal.jsx":39,"./modules/popup.jsx":40,"./modules/progress.jsx":41,"./modules/rating.jsx":42,"./modules/search.jsx":43,"./modules/shape.jsx":44,"./modules/sidebar.jsx":45,"./modules/sticky.jsx":46,"./modules/tab.jsx":47,"./views/advertisement.jsx":48,"./views/card.jsx":49,"./views/comment.jsx":50,"./views/comments.jsx":51,"./views/feed.jsx":52,"./views/item.jsx":53,"./views/items.jsx":54,"./views/statistic.jsx":55}],2:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -395,7 +395,7 @@ module.exports = function (React) {
   return Section;
 }
 
-},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/colorSelector.js":32,"../mixins/typeSelector.js":33}],14:[function(require,module,exports){
+},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/colorSelector.js":32,"../mixins/typeSelector.js":34}],14:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -426,6 +426,8 @@ module.exports = function (React) {
 "use strict";
 module.exports = function (React) {
 
+  var classSet = React.addons.classSet;
+
   var Unit = React.createClass({displayName: 'Unit',
 
     propTypes: {
@@ -437,7 +439,11 @@ module.exports = function (React) {
 
     render: function () {
 
-      var $__0=       this.props,className=$__0.className,type=$__0.type,color=$__0.color,onClick=$__0.onClick,value=$__0.value,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,type:1,color:1,onClick:1,value:1});
+      var $__0=
+            
+          
+        
+        this.props,className=$__0.className,type=$__0.type,color=$__0.color,onClick=$__0.onClick,value=$__0.value,disabled=$__0.disabled,active=$__0.active,loading=$__0.loading,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,type:1,color:1,onClick:1,value:1,disabled:1,active:1,loading:1});
 
       switch (type) {
 
@@ -457,6 +463,15 @@ module.exports = function (React) {
               {className: this._generateClassName(), 
               onClick: this._onClick, 
               'data-value': value}), 
+              this.props.children
+            )
+          );
+
+        case 'img':
+          return (
+            React.createElement("img", React.__spread({},  other, 
+              {className: this._generateClassName(), 
+              onClick: this._onClick}), 
               this.props.children
             )
           );
@@ -481,6 +496,15 @@ module.exports = function (React) {
         className += ' ' + this.props.color;
       }
 
+      className += ' ' + classSet({
+        disabled: this.props.disabled,
+        active: this.props.active,
+        loading: this.props.loading,
+        focus: this.props.focus,
+        error: this.props.error,
+        completed: this.props.completed
+      });
+
       return className;
     },
 
@@ -500,23 +524,27 @@ module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
   var ColorSelector  = require('../mixins/colorSelector.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
   var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui button';
 
   var Button = React.createClass({displayName: 'Button',
 
-    mixins: [ClassGenerator, ColorSelector],
+    mixins: [ClassGenerator, ColorSelector, StateSelector],
 
     render: function () {
 
-      var $__0=    this.props,className=$__0.className,color=$__0.color,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,color:1});
+      var $__0=     this.props,className=$__0.className,color=$__0.color,disabled=$__0.disabled,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,color:1,disabled:1});
 
       return (
         React.createElement(Unit, React.__spread({},  other, 
           {className: this.getClassName(defaultClassName), 
           type: "div", 
-          color: this.getColor()}), 
+          color: this.getColor(), 
+          disabled: this.getDisabled(), 
+          active: this.getActive(), 
+          loading: this.getLoading()}), 
           this.props.children
         )
       );
@@ -527,7 +555,7 @@ module.exports = function (React) {
 }
 
 
-},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/colorSelector.js":32}],17:[function(require,module,exports){
+},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/colorSelector.js":32,"../mixins/stateSelector.js":33}],17:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -593,13 +621,14 @@ module.exports = function (React) {
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
   var ColorSelector  = require('../mixins/colorSelector.js')(React);
   var TypeSelector   = require('../mixins/typeSelector.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
   var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui header';
 
   var Header = React.createClass({displayName: 'Header',
 
-    mixins: [ClassGenerator, ColorSelector, TypeSelector],
+    mixins: [ClassGenerator, ColorSelector, TypeSelector, StateSelector],
 
     render: function () {
 
@@ -609,7 +638,8 @@ module.exports = function (React) {
         React.createElement(Unit, React.__spread({},  other, 
           {className: this.getClassName(defaultClassName), 
           type: this.getType(), 
-          color: this.getColor()}), 
+          color: this.getColor(), 
+          disabled: this.getDisabled()}), 
           this.props.children
         )
       );
@@ -619,19 +649,20 @@ module.exports = function (React) {
   return Header;
 }
 
-},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/colorSelector.js":32,"../mixins/typeSelector.js":33}],20:[function(require,module,exports){
+},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/colorSelector.js":32,"../mixins/stateSelector.js":33,"../mixins/typeSelector.js":34}],20:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
   var ColorSelector  = require('../mixins/colorSelector.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
   var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'icon';
 
   var Icon = React.createClass({displayName: 'Icon',
 
-    mixins: [ClassGenerator, ColorSelector],
+    mixins: [ClassGenerator, ColorSelector, StateSelector],
 
     render: function () {
 
@@ -641,7 +672,9 @@ module.exports = function (React) {
         React.createElement(Unit, React.__spread({},  other, 
           {className: this.getClassName(defaultClassName), 
           type: "icon", 
-          color: this.getColor()})
+          color: this.getColor(), 
+          disabled: this.getDisabled(), 
+          loading: this.getLoading()})
         )
       );
     }
@@ -651,24 +684,30 @@ module.exports = function (React) {
 }
 
 
-},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/colorSelector.js":32}],21:[function(require,module,exports){
+},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/colorSelector.js":32,"../mixins/stateSelector.js":33}],21:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
+  var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui image';
 
   var Image = React.createClass({displayName: 'Image',
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
-      var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
+      var $__0=     this.props,className=$__0.className,type=$__0.type,disabled=$__0.disabled,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,type:1,disabled:1});
 
       return (
-        React.createElement("img", React.__spread({},  other, {className: this.getClassName(defaultClassName)}), 
+        React.createElement(Unit, React.__spread({},  other, 
+          {className: this.getClassName(defaultClassName), 
+          type: "img", 
+          color: "null", 
+          disabled: this.getDisabled()}), 
           this.props.children
         )
       );
@@ -678,24 +717,32 @@ module.exports = function (React) {
   return Image;
 }
 
-},{"../mixins/classGenerator.js":31}],22:[function(require,module,exports){
+},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/stateSelector.js":33}],22:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
+  var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui input';
 
   var Input = React.createClass({displayName: 'Input',
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
       var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
 
       return (
-        React.createElement("div", React.__spread({},  other, {className: this.getClassName(defaultClassName)}), 
+        React.createElement(Unit, React.__spread({},  other, 
+          {className: this.getClassName(defaultClassName), 
+          type: "div", 
+          color: "null", 
+          loading: this.getLoading(), 
+          focus: this.getFocus(), 
+          error: this.getError()}), 
           this.props.children
         )
       );
@@ -705,7 +752,7 @@ module.exports = function (React) {
   return Input;
 }
 
-},{"../mixins/classGenerator.js":31}],23:[function(require,module,exports){
+},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/stateSelector.js":33}],23:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -738,7 +785,7 @@ module.exports = function (React) {
   return Label;
 }
 
-},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/colorSelector.js":32,"../mixins/typeSelector.js":33}],24:[function(require,module,exports){
+},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/colorSelector.js":32,"../mixins/typeSelector.js":34}],24:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -770,19 +817,26 @@ module.exports = function (React) {
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
+  var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui loader';
 
   var Loader = React.createClass({displayName: 'Loader',
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
       var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
 
       return (
-        React.createElement("div", React.__spread({},  other, {className: this.getClassName(defaultClassName)}), 
+        React.createElement(Unit, React.__spread({},  other, 
+          {className: this.getClassName(defaultClassName), 
+          type: "div", 
+          color: "null", 
+          disabled: this.getDisabled(), 
+          active: this.getActive()}), 
           this.props.children
         )
       );
@@ -792,7 +846,7 @@ module.exports = function (React) {
   return Loader;
 }
 
-},{"../mixins/classGenerator.js":31}],26:[function(require,module,exports){
+},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/stateSelector.js":33}],26:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -824,19 +878,25 @@ module.exports = function (React) {
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
+  var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui reveal';
 
   var Reveal = React.createClass({displayName: 'Reveal',
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
       var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
 
       return (
-        React.createElement("div", React.__spread({},  other, {className: this.getClassName(defaultClassName)}), 
+        React.createElement(Unit, React.__spread({},  other, 
+          {className: this.getClassName(defaultClassName), 
+          type: "div", 
+          color: "null", 
+          disabled: this.getDisabled()}), 
           this.props.children
         )
       );
@@ -846,19 +906,20 @@ module.exports = function (React) {
   return Reveal;
 }
 
-},{"../mixins/classGenerator.js":31}],28:[function(require,module,exports){
+},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/stateSelector.js":33}],28:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
   var ColorSelector = require('../mixins/colorSelector.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
   var Unit = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui segment';
 
   var Segment = React.createClass({displayName: 'Segment',
 
-    mixins: [ClassGenerator, ColorSelector],
+    mixins: [ClassGenerator, ColorSelector, StateSelector],
 
     render: function () {
 
@@ -868,7 +929,9 @@ module.exports = function (React) {
         React.createElement(Unit, React.__spread({},  other, 
           {className: this.getClassName(defaultClassName), 
           type: "div", 
-          color: this.getColor()})
+          color: this.getColor(), 
+          disabled: this.getDisabled(), 
+          loading: this.getLoading()})
         )
       );
     }
@@ -877,24 +940,32 @@ module.exports = function (React) {
   return Segment;
 }
 
-},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/colorSelector.js":32}],29:[function(require,module,exports){
+},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/colorSelector.js":32,"../mixins/stateSelector.js":33}],29:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
+  var Unit = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'step';
 
   var Step = React.createClass({displayName: 'Step',
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
       var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
 
       return (
-        React.createElement("div", React.__spread({},  other, {className: this.getClassName(defaultClassName)}), 
+        React.createElement(Unit, React.__spread({},  other, 
+          {className: this.getClassName(defaultClassName), 
+          type: "div", 
+          color: "null", 
+          active: this.getActive(), 
+          completed: this.getCompleted(), 
+          disabled: this.getDisabled()}), 
           this.props.children
         )
       );
@@ -904,7 +975,7 @@ module.exports = function (React) {
   return Step;
 }
 
-},{"../mixins/classGenerator.js":31}],30:[function(require,module,exports){
+},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/stateSelector.js":33}],30:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1002,6 +1073,87 @@ module.exports = function (React) {
 
   var classSet = React.addons.classSet;
 
+  var StateSelector = {
+
+    propTypes: {
+      disabled: React.PropTypes.bool,
+      active: React.PropTypes.bool,
+      loading: React.PropTypes.bool,
+      focus: React.PropTypes.bool,
+      error: React.PropTypes.bool,
+      completed: React.PropTypes.bool
+    },
+
+    getDisabled: function () {
+      var disabled = false;
+
+      if (typeof this.props.disabled != 'undefined') {
+        disabled = this.props.disabled;
+      }
+
+      return disabled;
+    },
+
+    getActive: function () {
+      var active = false;
+
+      if (typeof this.props.active != 'undefined') {
+        active = this.props.active;
+      }
+
+      return active;
+    },
+
+    getLoading: function () {
+      var loading = false;
+
+      if (typeof this.props.loading != 'undefined') {
+        loading = this.props.loading;
+      }
+
+      return loading;
+    },
+
+    getFocus: function () {
+      var focus = false;
+
+      if (typeof this.props.focus != 'undefined') {
+        focus = this.props.focus;
+      }
+
+      return focus;
+    },
+
+    getError: function () {
+      var error = false;
+
+      if (typeof this.props.error != 'undefined') {
+        error = this.props.error;
+      }
+
+      return error;
+    },
+
+    getCompleted: function () {
+      var completed = false;
+
+      if (typeof this.props.completed != 'undefined') {
+        completed = this.props.completed;
+      }
+
+      return completed;
+    }
+  };
+
+  return StateSelector;
+}
+
+},{}],34:[function(require,module,exports){
+"use strict";
+module.exports = function (React) {
+
+  var classSet = React.addons.classSet;
+
   var typeArray = ['div', 'link', 'icon'];
 
   var TypeSelector = {
@@ -1025,7 +1177,7 @@ module.exports = function (React) {
   return TypeSelector;
 }
 
-},{}],34:[function(require,module,exports){
+},{}],35:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1052,7 +1204,7 @@ module.exports = function (React) {
   return Accordion;
 }
 
-},{"../mixins/classGenerator.js":31}],35:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],36:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1076,7 +1228,7 @@ module.exports = function (React) {
   return Checkbox;
 }
 
-},{"../mixins/classGenerator.js":31}],36:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],37:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1100,7 +1252,7 @@ module.exports = function (React) {
   return Dimmer;
 }
 
-},{"../mixins/classGenerator.js":31}],37:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],38:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1130,7 +1282,7 @@ module.exports = function (React) {
   return Dropdown;
 }
 
-},{"../mixins/classGenerator.js":31}],38:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],39:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1154,7 +1306,7 @@ module.exports = function (React) {
   return Modal;
 }
 
-},{"../mixins/classGenerator.js":31}],39:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],40:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1178,7 +1330,7 @@ module.exports = function (React) {
   return Popup;
 }
 
-},{"../mixins/classGenerator.js":31}],40:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],41:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1212,7 +1364,7 @@ module.exports = function (React) {
   return Progress;
 }
 
-},{"../mixins/classGenerator.js":31}],41:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],42:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1245,7 +1397,7 @@ module.exports = function (React) {
   return Rating;
 }
 
-},{"../mixins/classGenerator.js":31}],42:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],43:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1272,7 +1424,7 @@ module.exports = function (React) {
   return Search;
 }
 
-},{"../mixins/classGenerator.js":31}],43:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],44:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1306,7 +1458,7 @@ module.exports = function (React) {
   return Shape;
 }
 
-},{"../mixins/classGenerator.js":31}],44:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],45:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1333,7 +1485,7 @@ module.exports = function (React) {
   return Sidebar;
 }
 
-},{"../mixins/classGenerator.js":31}],45:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],46:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1372,7 +1524,7 @@ module.exports = function (React) {
   return Sticky;
 }
 
-},{"../mixins/classGenerator.js":31}],46:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],47:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1401,7 +1553,7 @@ module.exports = function (React) {
   return Tab;
 }
 
-},{"../mixins/classGenerator.js":31}],47:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],48:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1428,7 +1580,7 @@ module.exports = function (React) {
   return Ad;
 }
 
-},{"../mixins/classGenerator.js":31}],48:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],49:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1455,7 +1607,7 @@ module.exports = function (React) {
   return Card;
 }
 
-},{"../mixins/classGenerator.js":31}],49:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],50:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1482,7 +1634,7 @@ module.exports = function (React) {
   return Comment;
 }
 
-},{"../mixins/classGenerator.js":31}],50:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],51:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1509,7 +1661,7 @@ module.exports = function (React) {
   return Comments;
 }
 
-},{"../mixins/classGenerator.js":31}],51:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],52:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1536,7 +1688,7 @@ module.exports = function (React) {
   return Feed;
 }
 
-},{"../mixins/classGenerator.js":31}],52:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],53:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1569,7 +1721,7 @@ module.exports = function (React) {
   return Item;
 }
 
-},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/typeSelector.js":33}],53:[function(require,module,exports){
+},{"../commons/unit.jsx":15,"../mixins/classGenerator.js":31,"../mixins/typeSelector.js":34}],54:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1606,7 +1758,7 @@ module.exports = function (React) {
   return Items;
 }
 
-},{"../mixins/classGenerator.js":31}],54:[function(require,module,exports){
+},{"../mixins/classGenerator.js":31}],55:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 

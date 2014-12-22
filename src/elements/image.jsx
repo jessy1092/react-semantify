@@ -2,21 +2,27 @@
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
+  var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui image';
 
   var Image = React.createClass({
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
-      var {className, ...other} = this.props;
+      var {className, type, disabled, ...other} = this.props;
 
       return (
-        <img {...other} className={this.getClassName(defaultClassName)} >
+        <Unit {...other}
+          className={this.getClassName(defaultClassName)}
+          type="img"
+          color="null"
+          disabled={this.getDisabled()}>
           {this.props.children}
-        </img>
+        </Unit>
       );
     }
   });

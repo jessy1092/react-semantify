@@ -11,7 +11,7 @@ module.exports = function (React) {
 
     render: function () {
       return (
-        <div className={this.getClassName(defaultClassName)} >
+        <div className={this.getClassName(defaultClassName)}>
           {this.props.children}
         </div>
       );
