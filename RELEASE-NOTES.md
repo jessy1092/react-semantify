@@ -1,6 +1,20 @@
 Release Notes
 =============
 
+## Version 0.1.0 - 2014/12/22
+
+- Add State attribute: Disabled, Focus, Active, Loading, Error, Completed.
+- Below elements can support thease attributes.
+  + Button: `active`, `disable`, `loading`
+  + Header: `disable`
+  + Icon: `disable`, `loading`
+  + Image: `disable`
+  + Input: `loading`, `focus`, 'error'
+  + Loader: `disable`
+  + Reveal: `disable`
+  + Segment: `disable`, `loading`
+  + Step: `active`, `disable`, `completed`
+
 ## Version 0.0.8 - 2014/12/21
 
 - Fix the bug: Assign React parameter type.
