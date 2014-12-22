@@ -8,18 +8,18 @@ A standard Button.
 ### Example
 
 ```html
-<Button className="examplebutton" color="red" onClick={this._onClick}></Button>
+<Button className="examplebutton" color="red" onClick={this._onClick} disabled={true}></Button>
 ```
 
 You also can write like this:
 ```html
-<Button className="red examplebutton" onClick={this._onClick}></Button>
+<Button className="red disabled examplebutton" onClick={this._onClick}></Button>
 ```
 
 are equal to 
 
 ```html
-<div class="ui button red examplebutton"></div>
+<div class="ui button red disabled examplebutton"></div>
 ```
 
 and register the function(this._onClick) on click event.
@@ -29,6 +29,9 @@ and register the function(this._onClick) on click event.
 - *className*: The className would be part of the `class` attribute.
 - *color*: The color is equal to Semantic-Ui color.
 - *onClick*: The click event.
+- *active*: This is a booling type. If `true`, the `active` would be part of `class` attribute.
+- *disabled*: This is a booling type. If `true`, the `disabled` would be part of `class` attribute.
+- *loading*: This is a booling type. If `true`, the `loading` would be part of `class` attribute.
 
 
 # Divider
@@ -80,18 +83,18 @@ A standard Header.
 ### Example
 
 ```html
-<Header className="exampleheader" color="red" type="div" onClick={this._onClick}></Header>
+<Header className="exampleheader" color="red" type="div" onClick={this._onClick} disabled={true}></Header>
 ```
 
 You also can write like this:
 ```html
-<Header className="red exampleheader" type="div" onClick={this._onClick}></Header>
+<Header className="red disabled exampleheader" type="div" onClick={this._onClick}></Header>
 ```
 
 are equal to 
 
 ```html
-<div class="ui header red exampleheader"></div>
+<div class="ui header red disabled exampleheader"></div>
 ```
 
 and register the function(this._onClick) on click event.
@@ -102,6 +105,7 @@ and register the function(this._onClick) on click event.
 - *color*: The color is equal to Semantic-Ui color.
 - *type*: Generate the html tag. `type="div"` would be `<div><\div>`. `type="link"` would be `<a><\a>`
 - *onClick*: The click event.
+- *disabled*: This is a booling type. If `true`, the `disabled` would be part of `class` attribute.
 
 
 # Icon
@@ -110,18 +114,18 @@ A standard Icon.
 ### Example
 
 ```html
-<Icon className="cloud" color="red" onClick={this._onClick}></Icon>
+<Icon className="cloud" color="red" onClick={this._onClick} disabled={true}></Icon>
 ```
 
 You also can write like this:
 ```html
-<Icon className="red cloud" onClick={this._onClick}></Icon>
+<Icon className="red disabled cloud" onClick={this._onClick}></Icon>
 ```
 
 are equal to 
 
 ```html
-<i class="icon red cloud"></i>
+<i class="icon red disabled cloud"></i>
 ```
 
 and register the function(this._onClick) on click event.
@@ -131,6 +135,8 @@ and register the function(this._onClick) on click event.
 - *className*: The className would be part of the `class` attribute.
 - *color*: The color is equal to Semantic-Ui color.
 - *onClick*: The click event.
+- *disabled*: This is a booling type. If `true`, the `disabled` would be part of `class` attribute.
+- *loading*: This is a booling type. If `true`, the `loading` would be part of `class` attribute.
 
 
 # Image
@@ -139,19 +145,20 @@ A standard Image.
 ### Example
 
 ```html
-<Image className="medium" src="./example/example.jpg"></Image>
+<Image className="medium" src="./example/example.jpg" disabled={true}></Image>
 ```
 
 is equal to 
 
 ```html
-<img class="ui image medium" src="./example/example.jpg"></img>
+<img class="ui image medium disabled" src="./example/example.jpg"></img>
 ```
 
 ### Properties
 
 - *className*: The className would be part of the `class` attribute.
 - *src*: The image's source file.
+- *disabled*: This is a booling type. If `true`, the `disabled` would be part of `class` attribute.
 
 
 # Input
@@ -160,18 +167,21 @@ A standard Input.
 ### Example
 
 ```html
-<Input className="exampleinput"></Input>
+<Input className="exampleinput" error={true}></Input>
 ```
 
 is equal to 
 
 ```html
-<div class="ui input exampleinput"></div>
+<div class="ui input error exampleinput"></div>
 ```
 
 ### Properties
 
 - *className*: The className would be part of the `class` attribute.
+- *loading*: This is a booling type. If `true`, the `loading` would be part of `class` attribute.
+- *focus*: This is a booling type. If `true`, the `focus` would be part of `class` attribute.
+- *error*: This is a booling type. If `true`, the `error` would be part of `class` attribute.
 
 
 # Label
@@ -230,18 +240,20 @@ A standard Loader.
 ### Example
 
 ```html
-<Loader className="exampleloader"></Loader>
+<Loader className="exampleloader" disabled={true}></Loader>
 ```
 
 is equal to 
 
 ```html
-<div class="ui loader exampleloader"></div>
+<div class="ui loader disabled exampleloader"></div>
 ```
 
 ### Properties
 
 - *className*: The className would be part of the `class` attribute.
+- *active*: This is a booling type. If `true`, the `active` would be part of `class` attribute.
+- *disabled*: This is a booling type. If `true`, the `disabled` would be part of `class` attribute.
 
 
 # Rail
@@ -270,18 +282,19 @@ A standard Reveal.
 ### Example
 
 ```html
-<Reveal className="examplereveal"></Reveal>
+<Reveal className="examplereveal" disabled={true}></Reveal>
 ```
 
 is equal to 
 
 ```html
-<div class="ui reveal examplereveal"></div>
+<div class="ui reveal disabled examplereveal"></div>
 ```
 
 ### Properties
 
 - *className*: The className would be part of the `class` attribute.
+- *disabled*: This is a booling type. If `true`, the `disabled` would be part of `class` attribute.
 
 
 # Segment
@@ -290,18 +303,18 @@ A standard Segment.
 ### Example
 
 ```html
-<Segment className="examplesegment" color="red"></Segment>
+<Segment className="examplesegment" color="red" disabled={true}></Segment>
 ```
 
 You also can write like this:
 ```html
-<Segment className="red examplesegment"></Segment>
+<Segment className="red disabled examplesegment"></Segment>
 ```
 
 are equal to 
 
 ```html
-<div class="ui segment red examplesegment"></div>
+<div class="ui segment red disabled examplesegment"></div>
 ```
 
 and register the function(this._onClick) on click event.
@@ -311,6 +324,8 @@ and register the function(this._onClick) on click event.
 - *className*: The className would be part of the `class` attribute.
 - *color*: The color is equal to Semantic-Ui color.
 - *onClick*: The click event.
+- *disabled*: This is a booling type. If `true`, the `disabled` would be part of `class` attribute.
+- *loading*: This is a booling type. If `true`, the `loading` would be part of `class` attribute.
 
 
 # Steps/Step
@@ -320,7 +335,7 @@ A standard Steps/Step.
 
 ```html
 <Steps className="examplestep">
-  <Step>123</Step>
+  <Step disabled={true}>123</Step>
 </Steps>
 ```
 
@@ -328,10 +343,13 @@ is equal to
 
 ```html
 <div class="ui steps examplestep">
-  <div class="step">123</div>
+  <div class="step disabled">123</div>
 </div>
 ```
 
 ### Properties
 
 - *className*: The className would be part of the `class` attribute.
+- *active*: This is a booling type. If `true`, the `active` would be part of `class` attribute.
+- *disabled*: This is a booling type. If `true`, the `disabled` would be part of `class` attribute.
+- *completed*: This is a booling type. If `true`, the `completed` would be part of `class` attribute.
