@@ -11,13 +11,24 @@ module.exports = function (React) {
 
     render: function () {
       return (
-        <div className={this.getClassName(defaultClassName)} >
+        <div className={this.getClassName(defaultClassName)}>
           {this.props.children}
         </div>
       );
     },
+
     componentDidMount: function () {
-      $(this.getDOMNode()).accordion();
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === false) {
+          return;
+        }
+
+        if (this.props.init === true) {
+          $(this.getDOMNode()).accordion();
+        } else {
+          $(this.getDOMNode()).accordion(this.props.init);
+        }
+      }
     }
   });
 

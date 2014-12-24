@@ -19,8 +19,19 @@ module.exports = function (React) {
         </div>
       );
     },
+
     componentDidMount: function () {
-      $(this.getDOMNode()).dropdown();
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === false) {
+          return;
+        }
+
+        if (this.props.init === true) {
+          $(this.getDOMNode()).dropdown();
+        } else {
+          $(this.getDOMNode()).dropdown(this.props.init);
+        }
+      }
     }
   });
 

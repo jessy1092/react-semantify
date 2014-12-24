@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+## Version 0.1.1 - 2014/12/25
+
+- Support `init` property in all module components. let it initializes easily.
+- Fix the bug: Accordion typo.
+
 ## Version 0.1.0 - 2014/12/22
 
 - Add State attribute: Disabled, Focus, Active, Loading, Error, Completed.
@@ -9,7 +14,7 @@ Release Notes
   + Header: `disable`
   + Icon: `disable`, `loading`
   + Image: `disable`
-  + Input: `loading`, `focus`, 'error'
+  + Input: `loading`, `focus`, `error`
   + Loader: `disable`
   + Reveal: `disable`
   + Segment: `disable`, `loading`
