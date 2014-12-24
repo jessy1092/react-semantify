@@ -26,9 +26,14 @@ module.exports = function (React) {
         </div>
       );
     },
+
     componentDidMount: function () {
-      if (typeof this.props.behavior != 'undefined') {
-        $(this.getDOMNode()).sticky(this.props.behavior);
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === true) {
+          $(this.getDOMNode()).sticky();
+        } else {
+          $(this.getDOMNode()).sticky(this.props.init);
+        }
       }
     }
   });

@@ -23,8 +23,15 @@ module.exports = function (React) {
         </div>
       );
     },
+
     componentDidMount: function () {
-      $(this.getDOMNode()).progress();
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === true) {
+          $(this.getDOMNode()).progress();
+        } else {
+          $(this.getDOMNode()).progress(this.props.init);
+        }
+      }
     }
   });
 

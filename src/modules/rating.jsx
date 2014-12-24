@@ -22,8 +22,15 @@ module.exports = function (React) {
         </div>
       );
     },
+
     componentDidMount: function () {
-      $(this.getDOMNode()).rating();
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === true) {
+          $(this.getDOMNode()).rating();
+        } else {
+          $(this.getDOMNode()).rating(this.props.init);
+        }
+      }
     }
   });
 

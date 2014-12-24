@@ -19,11 +19,14 @@ module.exports = function (React) {
         </div>
       );
     },
+
     componentDidMount: function () {
-      if (typeof this.props.behavior != 'undefined') {
-        $(this.getDOMNode()).shape(this.props.behavior);
-      } else {
-        $(this.getDOMNode()).shape();
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === true) {
+          $(this.getDOMNode()).shape();
+        } else {
+          $(this.getDOMNode()).shape(this.props.init);
+        }
       }
     }
   });

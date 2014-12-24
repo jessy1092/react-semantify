@@ -20,6 +20,16 @@ module.exports = function (React) {
           {this.props.children}
         </div>
       );
+    },
+
+    componentDidMount: function () {
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === true) {
+          $(this.getDOMNode()).tab();
+        } else {
+          $(this.getDOMNode()).tab(this.props.init);
+        }
+      }
     }
   });
 

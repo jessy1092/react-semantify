@@ -15,6 +15,16 @@ module.exports = function (React) {
           {this.props.children}
         </div>
       );
+    },
+
+    componentDidMount: function () {
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === true) {
+          $(this.getDOMNode()).dimmer();
+        } else {
+          $(this.getDOMNode()).dimmer(this.props.init);
+        }
+      }
     }
   });
 

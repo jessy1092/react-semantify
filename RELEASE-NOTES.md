@@ -9,7 +9,7 @@ Release Notes
   + Header: `disable`
   + Icon: `disable`, `loading`
   + Image: `disable`
-  + Input: `loading`, `focus`, 'error'
+  + Input: `loading`, `focus`, `error`
   + Loader: `disable`
   + Reveal: `disable`
   + Segment: `disable`, `loading`
