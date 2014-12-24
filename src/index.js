@@ -37,7 +37,7 @@ module.exports = {
   Steps: require('./elements/steps.jsx')(React),
 
   // modules
-  Accordin: require('./modules/accordion.jsx')(React),
+  Accordion: require('./modules/accordion.jsx')(React),
   Checkbox: require('./modules/checkbox.jsx')(React),
   Dimmer: require('./modules/dimmer.jsx')(React),
   Dropdown: require('./modules/dropdown.jsx')(React),

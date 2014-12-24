@@ -26,6 +26,10 @@ module.exports = function (React) {
 
     componentDidMount: function () {
       if (typeof this.props.init != 'undefined') {
+        if (this.props.init === false) {
+          return;
+        }
+
         if (this.props.init === true) {
           $(this.getDOMNode()).progress();
         } else {

@@ -39,7 +39,7 @@ module.exports = global.Semantify = {
   Steps: require('./elements/steps.jsx')(React),
 
   // modules
-  Accordin: require('./modules/accordion.jsx')(React),
+  Accordion: require('./modules/accordion.jsx')(React),
   Checkbox: require('./modules/checkbox.jsx')(React),
   Dimmer: require('./modules/dimmer.jsx')(React),
   Dropdown: require('./modules/dropdown.jsx')(React),
@@ -1196,8 +1196,19 @@ module.exports = function (React) {
         )
       );
     },
+
     componentDidMount: function () {
-      $(this.getDOMNode()).accordion();
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === false) {
+          return;
+        }
+
+        if (this.props.init === true) {
+          $(this.getDOMNode()).accordion();
+        } else {
+          $(this.getDOMNode()).accordion(this.props.init);
+        }
+      }
     }
   });
 
@@ -1222,6 +1233,20 @@ module.exports = function (React) {
           this.props.children
         )
       );
+    },
+
+    componentDidMount: function () {
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === false) {
+          return;
+        }
+
+        if (this.props.init === true) {
+          $(this.getDOMNode()).checkbox();
+        } else {
+          $(this.getDOMNode()).checkbox(this.props.init);
+        }
+      }
     }
   });
 
@@ -1246,6 +1271,20 @@ module.exports = function (React) {
           this.props.children
         )
       );
+    },
+
+    componentDidMount: function () {
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === false) {
+          return;
+        }
+
+        if (this.props.init === true) {
+          $(this.getDOMNode()).dimmer();
+        } else {
+          $(this.getDOMNode()).dimmer(this.props.init);
+        }
+      }
     }
   });
 
@@ -1274,8 +1313,19 @@ module.exports = function (React) {
         )
       );
     },
+
     componentDidMount: function () {
-      $(this.getDOMNode()).dropdown();
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === false) {
+          return;
+        }
+
+        if (this.props.init === true) {
+          $(this.getDOMNode()).dropdown();
+        } else {
+          $(this.getDOMNode()).dropdown(this.props.init);
+        }
+      }
     }
   });
 
@@ -1300,6 +1350,20 @@ module.exports = function (React) {
           this.props.children
         )
       );
+    },
+
+    componentDidMount: function () {
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === false) {
+          return;
+        }
+
+        if (this.props.init === true) {
+          $(this.getDOMNode()).modal();
+        } else {
+          $(this.getDOMNode()).modal(this.props.init);
+        }
+      }
     }
   });
 
@@ -1324,6 +1388,20 @@ module.exports = function (React) {
           this.props.children
         )
       );
+    },
+
+    componentDidMount: function () {
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === false) {
+          return;
+        }
+
+        if (this.props.init === true) {
+          $(this.getDOMNode()).popup();
+        } else {
+          $(this.getDOMNode()).popup(this.props.init);
+        }
+      }
     }
   });
 
@@ -1356,8 +1434,19 @@ module.exports = function (React) {
         )
       );
     },
+
     componentDidMount: function () {
-      $(this.getDOMNode()).progress();
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === false) {
+          return;
+        }
+
+        if (this.props.init === true) {
+          $(this.getDOMNode()).progress();
+        } else {
+          $(this.getDOMNode()).progress(this.props.init);
+        }
+      }
     }
   });
 
@@ -1389,8 +1478,19 @@ module.exports = function (React) {
         )
       );
     },
+
     componentDidMount: function () {
-      $(this.getDOMNode()).rating();
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === false) {
+          return;
+        }
+
+        if (this.props.init === true) {
+          $(this.getDOMNode()).rating();
+        } else {
+          $(this.getDOMNode()).rating(this.props.init);
+        }
+      }
     }
   });
 
@@ -1418,6 +1518,20 @@ module.exports = function (React) {
           this.props.children
         )
       );
+    },
+
+    componentDidMount: function () {
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === false) {
+          return;
+        }
+
+        if (this.props.init === true) {
+          $(this.getDOMNode()).search();
+        } else {
+          $(this.getDOMNode()).search(this.props.init);
+        }
+      }
     }
   });
 
@@ -1446,11 +1560,18 @@ module.exports = function (React) {
         )
       );
     },
+
     componentDidMount: function () {
-      if (typeof this.props.behavior != 'undefined') {
-        $(this.getDOMNode()).shape(this.props.behavior);
-      } else {
-        $(this.getDOMNode()).shape();
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === false) {
+          return;
+        }
+
+        if (this.props.init === true) {
+          $(this.getDOMNode()).shape();
+        } else {
+          $(this.getDOMNode()).shape(this.props.init);
+        }
       }
     }
   });
@@ -1479,6 +1600,20 @@ module.exports = function (React) {
           this.props.children
         )
       );
+    },
+
+    componentDidMount: function () {
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === false) {
+          return;
+        }
+
+        if (this.props.init === true) {
+          $(this.getDOMNode()).sidebar();
+        } else {
+          $(this.getDOMNode()).sidebar(this.props.init);
+        }
+      }
     }
   });
 
@@ -1514,9 +1649,18 @@ module.exports = function (React) {
         )
       );
     },
+
     componentDidMount: function () {
-      if (typeof this.props.behavior != 'undefined') {
-        $(this.getDOMNode()).sticky(this.props.behavior);
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === false) {
+          return;
+        }
+
+        if (this.props.init === true) {
+          $(this.getDOMNode()).sticky();
+        } else {
+          $(this.getDOMNode()).sticky(this.props.init);
+        }
       }
     }
   });
@@ -1547,6 +1691,20 @@ module.exports = function (React) {
           this.props.children
         )
       );
+    },
+
+    componentDidMount: function () {
+      if (typeof this.props.init != 'undefined') {
+        if (this.props.init === false) {
+          return;
+        }
+
+        if (this.props.init === true) {
+          $(this.getDOMNode()).tab();
+        } else {
+          $(this.getDOMNode()).tab(this.props.init);
+        }
+      }
     }
   });
 
