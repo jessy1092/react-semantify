@@ -10,20 +10,15 @@ module.exports = function (React) {
 
     mixins: [ClassGenerator],
 
-    propTypes: {
-      onClick: React.PropTypes.func
-    },
-
     render: function () {
 
-      var {className, ...other} = this.props;
+      var {className, type, color, ...other} = this.props;
 
       return (
         <Unit {...other}
           className={this.getClassName(defaultClassName)}
           type="icon"
-          color="null"
-          onClick={this.props.onClick} >
+          color="null">
         </Unit>
       );
     }
