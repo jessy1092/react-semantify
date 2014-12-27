@@ -72,12 +72,13 @@ module.exports = function (React) {
       }
 
       className += ' ' + classSet({
-        disabled: this.props.disabled,
-        active: this.props.active,
-        loading: this.props.loading,
-        focus: this.props.focus,
-        error: this.props.error,
-        completed: this.props.completed
+        'disabled': this.props.disabled,
+        'active': this.props.active,
+        'loading': this.props.loading,
+        'focus': this.props.focus,
+        'error': this.props.error,
+        'completed': this.props.completed,
+        'read-only': this.props.readOnly
       });
 
       return className;

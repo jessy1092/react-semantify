@@ -2,18 +2,28 @@
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
+  var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui checkbox';
 
   var Checkbox = React.createClass({
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
+
+      var {className, color, type, disabled, readOnly, ...other} = this.props;
+
       return (
-        <div className={this.getClassName(defaultClassName)} >
+        <Unit {...other}
+          className={this.getClassName(defaultClassName)}
+          color="null"
+          type="div"
+          disabled={this.getDisabled()}
+          readOnly={this.getReadOnly()}>
           {this.props.children}
-        </div>
+        </Unit>
       );
     },
 

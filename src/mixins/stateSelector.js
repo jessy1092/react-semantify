@@ -11,7 +11,8 @@ module.exports = function (React) {
       loading: React.PropTypes.bool,
       focus: React.PropTypes.bool,
       error: React.PropTypes.bool,
-      completed: React.PropTypes.bool
+      completed: React.PropTypes.bool,
+      readOnly: React.PropTypes.bool
     },
 
     getDisabled: function () {
@@ -72,6 +73,16 @@ module.exports = function (React) {
       }
 
       return completed;
+    },
+
+    getReadOnly: function () {
+      var readOnly = false;
+
+      if (typeof this.props.readOnly != 'undefined') {
+        readOnly = this.props.readOnly;
+      }
+
+      return readOnly;
     }
   };
 

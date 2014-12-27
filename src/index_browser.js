@@ -18,6 +18,7 @@ module.exports = global.Semantify = {
   Row: require('./commons/row.jsx')(React),
   Section: require('./commons/section.jsx')(React),
   Text: require('./commons/text.jsx')(React),
+  Title: require('./commons/title.jsx')(React),
 
   // elements
   Button: require('./elements/button.jsx')(React),

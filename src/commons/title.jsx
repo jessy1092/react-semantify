@@ -5,9 +5,9 @@ module.exports = function (React) {
   var StateSelector  = require('../mixins/stateSelector.js')(React);
   var Unit           = require('../commons/unit.jsx')(React);
 
-  var defaultClassName = 'content';
+  var defaultClassName = 'title';
 
-  var Content = React.createClass({
+  var Title = React.createClass({
 
     mixins: [ClassGenerator, StateSelector],
 
@@ -27,5 +27,5 @@ module.exports = function (React) {
     }
   });
 
-  return Content;
+  return Title;
 }
