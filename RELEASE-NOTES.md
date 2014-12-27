@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+## Version 0.1.2 - 2014/12/27
+
+- Add `<Title>` component for Accordion.
+- update checkbox: support `disabled`, `readOnly`, `init` property.
+- update dimmer: support `disabled`, `active`, `init` property.
+
 ## Version 0.1.1 - 2014/12/25
 
 - Support `init` property in all module components. let it initializes easily.
