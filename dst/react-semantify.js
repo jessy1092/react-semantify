@@ -1278,7 +1278,7 @@ module.exports = function (React) {
 
     render: function () {
 
-      var $__0=       this.props,className=$__0.className,color=$__0.color,type=$__0.type,disabled=$__0.disabled,loading=$__0.loading,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,color:1,type:1,disabled:1,loading:1});
+      var $__0=       this.props,className=$__0.className,color=$__0.color,type=$__0.type,disabled=$__0.disabled,readOnly=$__0.readOnly,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,color:1,type:1,disabled:1,readOnly:1});
 
       return (
         React.createElement(Unit, React.__spread({},  other, 
@@ -1315,16 +1315,26 @@ module.exports = function (React) {
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
+  var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui dimmer';
 
   var Dimmer = React.createClass({displayName: "Dimmer",
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
+
+      var $__0=       this.props,className=$__0.className,color=$__0.color,type=$__0.type,disabled=$__0.disabled,active=$__0.active,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,color:1,type:1,disabled:1,active:1});
+
       return (
-        React.createElement("div", {className: this.getClassName(defaultClassName)}, 
+        React.createElement(Unit, {
+          className: this.getClassName(defaultClassName), 
+          color: "null", 
+          type: "div", 
+          disabled: this.getDisabled(), 
+          active: this.getActive()}, 
           this.props.children
         )
       );
@@ -1348,7 +1358,7 @@ module.exports = function (React) {
   return Dimmer;
 }
 
-},{"../mixins/classGenerator.js":32}],39:[function(require,module,exports){
+},{"../commons/unit.jsx":16,"../mixins/classGenerator.js":32,"../mixins/stateSelector.js":34}],39:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 

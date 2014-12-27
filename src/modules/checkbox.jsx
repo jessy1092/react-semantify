@@ -13,7 +13,7 @@ module.exports = function (React) {
 
     render: function () {
 
-      var {className, color, type, disabled, loading, ...other} = this.props;
+      var {className, color, type, disabled, readOnly, ...other} = this.props;
 
       return (
         <Unit {...other}

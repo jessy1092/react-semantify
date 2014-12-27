@@ -96,3 +96,43 @@ $('.ui.checkbox').checkbox({uncheckable: false});
 - *init*: You can see [Checkbox usage](http://semantic-ui.com/modules/checkbox.html#/usage) on the Semantic-ui web site.
 - *disabled*: This is a booling type. If `true`, the `disabled` would be part of `class` attribute.
 - *readOnly*: This is a booling type. If `true`, the `read-only` would be part of `class` attribute.
+
+
+# Dimmer
+A standard Dimmer.
+
+### Example
+
+```html
+<Dimmer className="exampledimmer" init={true}></Dimmer>
+```
+
+is equal to 
+
+```html
+<div class="ui dimmer exampledimmer"></div>
+```
+
+and call below Sementic-ui init function when element in the `componentDidMount` life cycle.
+```js
+$('.ui.dimmer').dimmer();
+```
+
+You also can use `init={param}` to transfer parameter.
+
+ex. 
+```js
+<Dimmer init={{on: 'hover'}}></Dimmer>
+```
+
+will transfer `{{on: 'hover'}}` to init function.
+
+```js
+$('.ui.dimmer').dimmer({on: 'hover'});
+```
+
+### Properties
+
+- *init*: You can see [Checkbox usage](http://semantic-ui.com/modules/checkbox.html#/usage) on the Semantic-ui web site.
+- *disabled*: This is a booling type. If `true`, the `disabled` would be part of `class` attribute.
+- *active*: This is a booling type. If `true`, the `active` would be part of `class` attribute.
