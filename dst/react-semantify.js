@@ -1363,19 +1363,31 @@ module.exports = function (React) {
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
+  var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui dropdown';
 
   var Dropdown = React.createClass({displayName: "Dropdown",
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
-      var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
+      var $__0=        this.props,className=$__0.className,color=$__0.color,type=$__0.type,error=$__0.error,disable=$__0.disable,active=$__0.active,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,color:1,type:1,error:1,disable:1,active:1});
+
+      if (this.getActive() || this.getDisabled()) {
+        defaultClassName += ' simple';
+      }
 
       return (
-        React.createElement("div", React.__spread({},  other, {className: this.getClassName(defaultClassName)}), 
+        React.createElement(Unit, React.__spread({},  other, 
+          {className: this.getClassName(defaultClassName), 
+          color: "null", 
+          type: "div", 
+          error: this.getError(), 
+          disable: this.getDisabled(), 
+          active: this.getActive()}), 
           this.props.children
         )
       );
@@ -1399,7 +1411,7 @@ module.exports = function (React) {
   return Dropdown;
 }
 
-},{"../mixins/classGenerator.js":32}],40:[function(require,module,exports){
+},{"../commons/unit.jsx":16,"../mixins/classGenerator.js":32,"../mixins/stateSelector.js":34}],40:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
