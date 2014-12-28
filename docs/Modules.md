@@ -133,6 +133,47 @@ $('.ui.dimmer').dimmer({on: 'hover'});
 
 ### Properties
 
-- *init*: You can see [Checkbox usage](http://semantic-ui.com/modules/checkbox.html#/usage) on the Semantic-ui web site.
+- *init*: You can see [Dimmer usage](http://semantic-ui.com/modules/dimmer.html#/usage) on the Semantic-ui web site.
 - *disabled*: This is a booling type. If `true`, the `disabled` would be part of `class` attribute.
 - *active*: This is a booling type. If `true`, the `active` would be part of `class` attribute.
+
+
+# Dropdown
+A standard Dropdown.
+
+### Example
+
+```html
+<Dropdown className="exampledropdown" init={true}></Dropdown>
+```
+
+is equal to 
+
+```html
+<div class="ui dropdown exampledropdown"></div>
+```
+
+and call below Sementic-ui init function when element in the `componentDidMount` life cycle.
+```js
+$('.ui.dropdown').dropdown();
+```
+
+You also can use `init={param}` to transfer parameter.
+
+ex. 
+```js
+<Dropdown init={{transition: 'drop'}}></Dropdown>
+```
+
+will transfer `{{transition: 'drop'}}` to init function.
+
+```js
+$('.ui.dropdown').dropdown({transition: 'drop'});
+```
+
+### Properties
+
+- *init*: You can see [Dropdown usage](http://semantic-ui.com/modules/dropdown.html#/usage) on the Semantic-ui web site.
+- *disabled*: This is a booling type. If `true`, the `disabled` would be part of `class` attribute.
+- *active*: This is a booling type. If `true`, the `active` would be part of `class` attribute.
+- *error*: This is a booling type. If `true`, the `error` would be part of `class` attribute.

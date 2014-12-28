@@ -144,7 +144,7 @@ bower install semantic-ui
   + [Accordion](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#accordion) - Pre-release
   + [Checkbox](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#checkbox) - Pre-release
   + [Dimmer](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#dimmer) - Pre-release
-  + Dropdown - Pre-release
+  + [Dropdown](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#dropdown) - Pre-release
   + Modal - Pre-release
   + Popup - Pre-release
   + Progress - Pre-release
