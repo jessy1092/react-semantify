@@ -215,3 +215,33 @@ $('.ui.modal').modal('show');
 
 - *init*: You can see [Modal usage](http://semantic-ui.com/modules/modal.html#/usage) on the Semantic-ui web site.
 - *active*: This is a booling type. If `true`, the `active` would be part of `class` attribute.
+
+
+# Popup
+A standard Popup. This is a Pre-Existing popup usage. The inline popup will comming.
+
+### Example
+
+```html
+<Popup className="examplepopup"></Popup>
+```
+
+is equal to 
+
+```html
+<div class="ui popup examplepopup"></div>
+```
+
+and you can trigger popup by jQuery method.
+```js
+$('.custom.button').popup({
+  popup: $('.custom.popup'),
+  on: 'click'
+});
+```
+```html
+<Button className="custom">Show custom popup</Button>
+<Popup className="custom">Hi! I'm custom popup</Popup>
+```
+
+### Properties

@@ -1476,20 +1476,6 @@ module.exports = function (React) {
           this.props.children
         )
       );
-    },
-
-    componentDidMount: function () {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).popup();
-        } else {
-          $(this.getDOMNode()).popup(this.props.init);
-        }
-      }
     }
   });
 
