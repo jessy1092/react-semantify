@@ -1519,7 +1519,12 @@ module.exports = function (React) {
 
     render: function () {
 
-      var $__0=      this.props,className=$__0.className,percent=$__0.percent,value=$__0.value,total=$__0.total,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,percent:1,value:1,total:1});
+      var $__0=
+        
+          
+            
+        
+        this.props,className=$__0.className,percent=$__0.percent,value=$__0.value,total=$__0.total,active=$__0.active,success=$__0.success,warning=$__0.warning,error=$__0.error,disabled=$__0.disabled,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,percent:1,value:1,total:1,active:1,success:1,warning:1,error:1,disabled:1});
 
       var state = {
         active: this.getActive(),
@@ -1534,12 +1539,7 @@ module.exports = function (React) {
           {className: this.getClassName(defaultClassName, state), 
           "data-percent": percent, 
           "data-value": value, 
-          "data-total": total, 
-          active: this.getActive(), 
-          success: this.getSuccess(), 
-          warning: this.getWarning(), 
-          error: this.getError(), 
-          disabled: this.getDisabled()}), 
+          "data-total": total}), 
           this.props.children
         )
       );

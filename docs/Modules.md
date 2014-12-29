@@ -283,6 +283,9 @@ $('.ui.progress').progress({percent: 22});
 ### Properties
 
 - *init*: You can see [Progress usage](http://semantic-ui.com/modules/progress.html#/usage) on the Semantic-ui web site.
+- *percent*: This is a string type. Use to be a progress `data-percent` state. You can see [Alternate bar labels](http://semantic-ui.com/modules/progress.html#/usage)
+- *value*: This is a string type. Use to be a progress `data-value` state. You can see [Alternate bar labels](http://semantic-ui.com/modules/progress.html#/usage)
+- *total*: This is a string type. Use to be a progress `data-total` state. You can see [Alternate bar labels](http://semantic-ui.com/modules/progress.html#/usage)
 - *active*: This is a booling type. If `true`, the `active` would be part of `class` attribute.
 - *success*: This is a booling type. If `true`, the `success` would be part of `class` attribute.
 - *warning*: This is a booling type. If `true`, the `warning` would be part of `class` attribute.

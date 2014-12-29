@@ -12,7 +12,12 @@ module.exports = function (React) {
 
     render: function () {
 
-      var {className, percent, value, total, ...other} = this.props;
+      var {
+        className,
+        percent, value, total,
+        active, success, warning, error, disabled,
+        ...other
+      } = this.props;
 
       var state = {
         active: this.getActive(),
@@ -27,12 +32,7 @@ module.exports = function (React) {
           className={this.getClassName(defaultClassName, state)}
           data-percent={percent}
           data-value={value}
-          data-total={total}
-          active={this.getActive()}
-          success={this.getSuccess()}
-          warning={this.getWarning()}
-          error={this.getError()}
-          disabled={this.getDisabled()}>
+          data-total={total}>
           {this.props.children}
         </div>
       );
