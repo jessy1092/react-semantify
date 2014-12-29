@@ -44,7 +44,7 @@ You also can use `init={param}` to transfer parameter.
 
 ex. 
 ```js
-<Accordion init={'refresh'}></Accordion>
+<Accordion init='refresh'></Accordion>
 ```
 
 will transfer `'refresh'` to init function.
@@ -177,3 +177,41 @@ $('.ui.dropdown').dropdown({transition: 'drop'});
 - *disabled*: This is a booling type. If `true`, the `disabled` would be part of `class` attribute.
 - *active*: This is a booling type. If `true`, the `active` would be part of `class` attribute.
 - *error*: This is a booling type. If `true`, the `error` would be part of `class` attribute.
+
+# Modal
+A standard Modal.
+
+### Example
+
+```html
+<Modal className="examplemodal" init={true}></Modal>
+```
+
+is equal to 
+
+```html
+<div class="ui modal examplemodal"></div>
+```
+
+and call below Sementic-ui init function when element in the `componentDidMount` life cycle.
+```js
+$('.ui.modal').modal();
+```
+
+You also can use `init={param}` to transfer parameter.
+
+ex. 
+```js
+<Modal init='show'></Modal>
+```
+
+will transfer `'show'` to init function.
+
+```js
+$('.ui.modal').modal('show');
+```
+
+### Properties
+
+- *init*: You can see [Modal usage](http://semantic-ui.com/modules/modal.html#/usage) on the Semantic-ui web site.
+- *active*: This is a booling type. If `true`, the `active` would be part of `class` attribute.

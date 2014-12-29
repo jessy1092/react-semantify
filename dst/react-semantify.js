@@ -1416,16 +1416,25 @@ module.exports = function (React) {
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
+  var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui modal';
 
   var Modal = React.createClass({displayName: "Modal",
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
+
+      var $__0=      this.props,className=$__0.className,color=$__0.color,type=$__0.type,active=$__0.active,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,color:1,type:1,active:1});
+
       return (
-        React.createElement("div", {className: this.getClassName(defaultClassName)}, 
+        React.createElement(Unit, React.__spread({},  other, 
+          {className: this.getClassName(defaultClassName), 
+          color: "null", 
+          type: "div", 
+          active: this.getActive()}), 
           this.props.children
         )
       );
@@ -1449,7 +1458,7 @@ module.exports = function (React) {
   return Modal;
 }
 
-},{"../mixins/classGenerator.js":32}],41:[function(require,module,exports){
+},{"../commons/unit.jsx":16,"../mixins/classGenerator.js":32,"../mixins/stateSelector.js":34}],41:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
