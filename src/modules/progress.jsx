@@ -2,23 +2,37 @@
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
 
   var defaultClassName = 'ui progress';
 
   var Progress = React.createClass({
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
       var {className, percent, value, total, ...other} = this.props;
 
+      var state = {
+        active: this.getActive(),
+        success: this.getSuccess(),
+        warning: this.getWarning(),
+        error: this.getError(),
+        disabled: this.getDisabled()
+      };
+
       return (
         <div {...other}
-          className={this.getClassName(defaultClassName)}
+          className={this.getClassName(defaultClassName, state)}
           data-percent={percent}
           data-value={value}
-          data-total={total}>
+          data-total={total}
+          active={this.getActive()}
+          success={this.getSuccess()}
+          warning={this.getWarning()}
+          error={this.getError()}
+          disabled={this.getDisabled()}>
           {this.props.children}
         </div>
       );

@@ -146,8 +146,8 @@ bower install semantic-ui
   + [Dimmer](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#dimmer) - Pre-release
   + [Dropdown](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#dropdown) - Pre-release
   + [Modal](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#modal) - Pre-release
-  + Popup - Pre-release
-  + Progress - Pre-release
+  + [Popup](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#popup) - Pre-release
+  + [Progress](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#progress) - Pre-release
   + Rating - Pre-release
   + Search - Pre-release
   + Shape - Pre-release

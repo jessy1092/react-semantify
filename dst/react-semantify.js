@@ -1118,7 +1118,9 @@ module.exports = function (React) {
       focus: React.PropTypes.bool,
       error: React.PropTypes.bool,
       completed: React.PropTypes.bool,
-      readOnly: React.PropTypes.bool
+      readOnly: React.PropTypes.bool,
+      success: React.PropTypes.bool,
+      warning: React.PropTypes.bool
     },
 
     getDisabled: function () {
@@ -1189,6 +1191,26 @@ module.exports = function (React) {
       }
 
       return readOnly;
+    },
+
+    getSuccess: function () {
+      var success = false;
+
+      if (typeof this.props.success != 'undefined') {
+        success = this.props.success;
+      }
+
+      return success;
+    },
+
+    getWarning: function () {
+      var warning = false;
+
+      if (typeof this.props.warning != 'undefined') {
+        warning = this.props.warning;
+      }
+
+      return warning;
     }
   };
 
@@ -1487,23 +1509,37 @@ module.exports = function (React) {
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
 
   var defaultClassName = 'ui progress';
 
   var Progress = React.createClass({displayName: "Progress",
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
       var $__0=      this.props,className=$__0.className,percent=$__0.percent,value=$__0.value,total=$__0.total,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,percent:1,value:1,total:1});
 
+      var state = {
+        active: this.getActive(),
+        success: this.getSuccess(),
+        warning: this.getWarning(),
+        error: this.getError(),
+        disabled: this.getDisabled()
+      };
+
       return (
         React.createElement("div", React.__spread({},  other, 
-          {className: this.getClassName(defaultClassName), 
+          {className: this.getClassName(defaultClassName, state), 
           "data-percent": percent, 
           "data-value": value, 
-          "data-total": total}), 
+          "data-total": total, 
+          active: this.getActive(), 
+          success: this.getSuccess(), 
+          warning: this.getWarning(), 
+          error: this.getError(), 
+          disabled: this.getDisabled()}), 
           this.props.children
         )
       );
@@ -1527,7 +1563,7 @@ module.exports = function (React) {
   return Progress;
 }
 
-},{"../mixins/classGenerator.js":32}],43:[function(require,module,exports){
+},{"../mixins/classGenerator.js":32,"../mixins/stateSelector.js":34}],43:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 

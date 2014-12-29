@@ -245,3 +245,46 @@ $('.custom.button').popup({
 ```
 
 ### Properties
+
+
+# Progress
+A standard Progress.
+
+### Example
+
+```html
+<Progress className="exampleprogress" init={true}></Progress>
+```
+
+is equal to 
+
+```html
+<div class="ui progress exampleprogress"></div>
+```
+
+and call below Sementic-ui init function when element in the `componentDidMount` life cycle.
+```js
+$('.ui.progress').progress();
+```
+
+You also can use `init={param}` to transfer parameter.
+
+ex. 
+```js
+<Progress init={{percent: 22}}></Progress>
+```
+
+will transfer `{percent: 22}` to init function.
+
+```js
+$('.ui.progress').progress({percent: 22});
+```
+
+### Properties
+
+- *init*: You can see [Progress usage](http://semantic-ui.com/modules/progress.html#/usage) on the Semantic-ui web site.
+- *active*: This is a booling type. If `true`, the `active` would be part of `class` attribute.
+- *success*: This is a booling type. If `true`, the `success` would be part of `class` attribute.
+- *warning*: This is a booling type. If `true`, the `warning` would be part of `class` attribute.
+- *error*: This is a booling type. If `true`, the `error` would be part of `class` attribute.
+- *disabled*: This is a booling type. If `true`, the `disabled` would be part of `class` attribute.
