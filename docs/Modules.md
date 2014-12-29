@@ -291,3 +291,43 @@ $('.ui.progress').progress({percent: 22});
 - *warning*: This is a booling type. If `true`, the `warning` would be part of `class` attribute.
 - *error*: This is a booling type. If `true`, the `error` would be part of `class` attribute.
 - *disabled*: This is a booling type. If `true`, the `disabled` would be part of `class` attribute.
+
+
+# Rating
+A standard Rating.
+
+### Example
+
+```html
+<Rating className="examplerating" init={true}></Rating>
+```
+
+is equal to 
+
+```html
+<div class="ui rating examplerating"></div>
+```
+
+and call below Sementic-ui init function when element in the `componentDidMount` life cycle.
+```js
+$('.ui.rating').rating();
+```
+
+You also can use `init={param}` to transfer parameter.
+
+ex. 
+```js
+<Progress init={{rating: 3, maxRating: 5}}></Progress>
+```
+
+will transfer `{rating: 3, maxRating: 5}` to init function.
+
+```js
+$('.ui.rating').rating({rating: 3, maxRating: 5});
+```
+
+### Properties
+
+- *init*: You can see [Rating usage](http://semantic-ui.com/modules/rating.html#/usage) on the Semantic-ui web site.
+- *rating*: This is a string type. Use to be a rating `data-rating` state. You can see [Alternate bar labels](http://semantic-ui.com/modules/rating.html#/usage)
+- *maxRating*: This is a string type. Use to be a rating `data-max-rating` state. You can see [Alternate bar labels](http://semantic-ui.com/modules/rating.html#/usage)
