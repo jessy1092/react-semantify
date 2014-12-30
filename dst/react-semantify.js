@@ -1577,13 +1577,13 @@ module.exports = function (React) {
 
     render: function () {
 
-      var $__0=     this.props,className=$__0.className,rating=$__0.rating,max_rating=$__0.max_rating,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,rating:1,max_rating:1});
+      var $__0=     this.props,className=$__0.className,rating=$__0.rating,maxRating=$__0.maxRating,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,rating:1,maxRating:1});
 
       return (
         React.createElement("div", React.__spread({},  other, 
           {className: this.getClassName(defaultClassName), 
           "data-rating": rating, 
-          "data-max-rating": max_rating}), 
+          "data-max-rating": maxRating}), 
           this.props.children
         )
       );
@@ -1612,19 +1612,23 @@ module.exports = function (React) {
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
+  var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui search';
 
   var Search = React.createClass({displayName: "Search",
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
       var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
 
       return (
-        React.createElement("div", React.__spread({},  other, {className: this.getClassName(defaultClassName)}), 
+        React.createElement(Unit, React.__spread({},  other, 
+          {className: this.getClassName(defaultClassName), 
+          loading: this.getLoading()}), 
           this.props.children
         )
       );
@@ -1648,7 +1652,7 @@ module.exports = function (React) {
   return Search;
 }
 
-},{"../mixins/classGenerator.js":32}],45:[function(require,module,exports){
+},{"../commons/unit.jsx":16,"../mixins/classGenerator.js":32,"../mixins/stateSelector.js":34}],45:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
