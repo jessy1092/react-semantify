@@ -1623,11 +1623,13 @@ module.exports = function (React) {
 
     render: function () {
 
-      var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
+      var $__0=      this.props,className=$__0.className,color=$__0.color,type=$__0.type,active=$__0.active,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,color:1,type:1,active:1});
 
       return (
         React.createElement(Unit, React.__spread({},  other, 
           {className: this.getClassName(defaultClassName), 
+          color: "null", 
+          type: "div", 
           loading: this.getLoading()}), 
           this.props.children
         )
@@ -1787,20 +1789,26 @@ module.exports = function (React) {
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
 
   var defaultClassName = 'ui tab';
 
   var Tab = React.createClass({displayName: "Tab",
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
-      var $__0=   this.props,className=$__0.className,tab=$__0.tab,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,tab:1});
+      var $__0=      this.props,className=$__0.className,active=$__0.active,loading=$__0.loading,tab=$__0.tab,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,active:1,loading:1,tab:1});
+
+      var state = {
+        active: this.getActive(),
+        loading: this.getLoading()
+      };
 
       return (
         React.createElement("div", React.__spread({},  other, 
-          {className: this.getClassName(defaultClassName), 
+          {className: this.getClassName(defaultClassName, state), 
           "data-tab": tab}), 
           this.props.children
         )
@@ -1825,7 +1833,7 @@ module.exports = function (React) {
   return Tab;
 }
 
-},{"../mixins/classGenerator.js":32}],49:[function(require,module,exports){
+},{"../mixins/classGenerator.js":32,"../mixins/stateSelector.js":34}],49:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 

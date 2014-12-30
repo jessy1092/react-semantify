@@ -2,20 +2,26 @@
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
 
   var defaultClassName = 'ui tab';
 
   var Tab = React.createClass({
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
-      var {className, tab,...other} = this.props;
+      var {className, active, loading, tab, ...other} = this.props;
+
+      var state = {
+        active: this.getActive(),
+        loading: this.getLoading()
+      };
 
       return (
         <div {...other}
-          className={this.getClassName(defaultClassName)}
+          className={this.getClassName(defaultClassName, state)}
           data-tab={tab}>
           {this.props.children}
         </div>

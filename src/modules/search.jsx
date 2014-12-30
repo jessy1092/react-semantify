@@ -13,11 +13,13 @@ module.exports = function (React) {
 
     render: function () {
 
-      var {className, ...other} = this.props;
+      var {className, color, type, active, ...other} = this.props;
 
       return (
         <Unit {...other}
           className={this.getClassName(defaultClassName)}
+          color="null"
+          type="div"
           loading={this.getLoading()}>
           {this.props.children}
         </Unit>
