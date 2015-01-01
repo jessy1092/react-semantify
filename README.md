@@ -149,7 +149,7 @@ bower install semantic-ui
   + [Popup](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#popup) - Pre-release
   + [Progress](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#progress) - Pre-release
   + [Rating](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#rating) - Pre-release
-  + Search - Pre-release
+  + [Search](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#search) - Pre-release
   + Shape - Pre-release
   + Sidebar - Pre-release
   + Sticky - Pre-release

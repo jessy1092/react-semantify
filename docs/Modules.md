@@ -331,3 +331,42 @@ $('.ui.rating').rating({rating: 3, maxRating: 5});
 - *init*: You can see [Rating usage](http://semantic-ui.com/modules/rating.html#/usage) on the Semantic-ui web site.
 - *rating*: This is a string type. Use to be a rating `data-rating` state. You can see [Alternate bar labels](http://semantic-ui.com/modules/rating.html#/usage)
 - *maxRating*: This is a string type. Use to be a rating `data-max-rating` state. You can see [Alternate bar labels](http://semantic-ui.com/modules/rating.html#/usage)
+
+
+# Search
+A standard Search.
+
+### Example
+
+```html
+<Search className="examplesearch" init={true}></Search>
+```
+
+is equal to 
+
+```html
+<div class="ui search examplesearch"></div>
+```
+
+and call below Sementic-ui init function when element in the `componentDidMount` life cycle.
+```js
+$('.ui.search').search();
+```
+
+You also can use `init={param}` to transfer parameter.
+
+ex. 
+```js
+<Progress init={{type: 'category'}}></Progress>
+```
+
+will transfer `{type: 'category'}` to init function.
+
+```js
+$('.ui.search').search({type: 'category'});
+```
+
+### Properties
+
+- *init*: You can see [Search usage](http://semantic-ui.com/modules/search.html#/usage) on the Semantic-ui web site.
+- *loading*: This is a booling type. If `true`, the `loading` would be part of `class` attribute.
