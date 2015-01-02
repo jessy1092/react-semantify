@@ -207,5 +207,5 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 [david-dm-dev-image]: https://david-dm.org/jessy1092/react-semantify/dev-status.svg?style=flat-square
 [david-dm-dev-url]: https://david-dm.org/jessy1092/react-semantify#info=devDependencies
 
-[travis-ci-image]: https://travis-ci.org/jessy1092/react-semantify.svg
+[travis-ci-image]: https://img.shields.io/travis/jessy1092/react-semantify.svg?style=flat-square
 [travis-ci-url]: https://travis-ci.org/jessy1092/react-semantify
