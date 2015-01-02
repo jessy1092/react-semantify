@@ -317,7 +317,7 @@ You also can use `init={param}` to transfer parameter.
 
 ex. 
 ```js
-<Progress init={{rating: 3, maxRating: 5}}></Progress>
+<Rating init={{rating: 3, maxRating: 5}}></Rating>
 ```
 
 will transfer `{rating: 3, maxRating: 5}` to init function.
@@ -357,7 +357,7 @@ You also can use `init={param}` to transfer parameter.
 
 ex. 
 ```js
-<Progress init={{type: 'category'}}></Progress>
+<Search init={{type: 'category'}}></Search>
 ```
 
 will transfer `{type: 'category'}` to init function.
@@ -396,7 +396,7 @@ You also can use `init={param}` to transfer parameter.
 
 ex. 
 ```js
-<Progress init={{type: 'category'}}></Progress>
+<Shape init='flip up'}></Shape>
 ```
 
 will transfer `'flip up'` to init function.
@@ -408,3 +408,41 @@ $('.ui.shape').shape('flip up');
 ### Properties
 
 - *init*: You can see [Shape usage](http://semantic-ui.com/modules/shape.html#/usage) on the Semantic-ui web site.
+
+
+# Sidebar
+A standard Sidebar.
+
+### Example
+
+```html
+<Sidebar className="examplesidebar" init={true}></Sidebar>
+```
+
+is equal to 
+
+```html
+<div class="ui sidebar examplesidebar"></div>
+```
+
+and call below Sementic-ui init function when element in the `componentDidMount` life cycle.
+```js
+$('.ui.sidebar').sidebar();
+```
+
+You also can use `init={param}` to transfer parameter.
+
+ex. 
+```js
+<Sidebar init='show'></Sidebar>
+```
+
+will transfer `'show'` to init function.
+
+```js
+$('.ui.sidebar').sidebar('show');
+```
+
+### Properties
+
+- *init*: You can see [Sidebar usage](http://semantic-ui.com/modules/sidebar.html#/usage) on the Semantic-ui web site.
