@@ -16,6 +16,14 @@ describe('Button', function () {
     expect(instance.getDOMNode().className).toMatch('button');
   });
 
+  it('should have child by default', function () {
+    var instance = TestUtils.renderIntoDocument(
+      <Button>123</Button>
+    );
+
+    expect(instance.getDOMNode().textContent).toMatch('123');
+  });
+
   it('should have custom class with custom className', function () {
     var instance = TestUtils.renderIntoDocument(
       <Button className="custom"></Button>
