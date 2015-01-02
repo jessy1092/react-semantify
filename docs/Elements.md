@@ -167,13 +167,15 @@ A standard Input.
 ### Example
 
 ```html
-<Input className="exampleinput" error={true}></Input>
+<Input className="exampleinput" error={true} placeholder="Search..." type="text"></Input>
 ```
 
-is equal to 
+is equal to (If you didn't have children component, it would auto generate `<input>` tag.)
 
 ```html
-<div class="ui input error exampleinput"></div>
+<div class="ui input error exampleinput">
+  <input placeholder="Search..." type="text"></input>>
+</div>
 ```
 
 ### Properties

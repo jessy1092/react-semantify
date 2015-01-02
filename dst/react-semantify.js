@@ -771,17 +771,34 @@ module.exports = function (React) {
 
       var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
 
-      return (
-        React.createElement(Unit, React.__spread({},  other, 
-          {className: this.getClassName(defaultClassName), 
-          type: "div", 
-          color: "null", 
-          loading: this.getLoading(), 
-          focus: this.getFocus(), 
-          error: this.getError()}), 
-          this.props.children
+      if (typeof this.props.children != 'undefined') {
+        return (
+          React.createElement(Unit, React.__spread({},  other, 
+            {className: this.getClassName(defaultClassName), 
+            type: "div", 
+            color: "null", 
+            loading: this.getLoading(), 
+            focus: this.getFocus(), 
+            error: this.getError()}), 
+            this.props.children
+          )
+        );
+      } else {
+        return (
+          React.createElement(Unit, {
+            className: this.getClassName(defaultClassName), 
+            type: "div", 
+            color: "null", 
+            loading: this.getLoading(), 
+            focus: this.getFocus(), 
+            error: this.getError()}, 
+            React.createElement("input", React.__spread({},  other, 
+              {placeholder: this.props.placeholder, 
+              type: this.props.type}))
+          )
         )
-      );
+      }
+
     }
   });
 

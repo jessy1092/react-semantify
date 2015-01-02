@@ -141,19 +141,19 @@ bower install semantic-ui
   + [Statistic](https://github.com/jessy1092/react-semantify/blob/master/docs/Views.md#statistic) - Pre-release
 
 - [Modules](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md)
-  + [Accordion](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#accordion) - Pre-release
-  + [Checkbox](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#checkbox) - Pre-release
-  + [Dimmer](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#dimmer) - Pre-release
-  + [Dropdown](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#dropdown) - Pre-release
-  + [Modal](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#modal) - Pre-release
+  + [Accordion](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#accordion)
+  + [Checkbox](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#checkbox)
+  + [Dimmer](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#dimmer)
+  + [Dropdown](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#dropdown)
+  + [Modal](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#modal)
   + [Popup](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#popup) - Pre-release
-  + [Progress](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#progress) - Pre-release
-  + [Rating](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#rating) - Pre-release
-  + [Search](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#search) - Pre-release
-  + [Shape](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#shape) - Pre-release
-  + [Sidebar](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#sidebar) - Pre-release
-  + [Sticky](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#sticky) - Pre-release
-  + [Tab](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#tab) - Pre-release
+  + [Progress](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#progress)
+  + [Rating](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#rating)
+  + [Search](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#search)
+  + [Shape](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#shape)
+  + [Sidebar](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#sidebar)
+  + [Sticky](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#sticky)
+  + [Tab](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#tab)
 
 ### Comming Soon
 Wait Semantic-UI Release.
