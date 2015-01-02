@@ -12,7 +12,9 @@ module.exports = function (React) {
       focus: React.PropTypes.bool,
       error: React.PropTypes.bool,
       completed: React.PropTypes.bool,
-      readOnly: React.PropTypes.bool
+      readOnly: React.PropTypes.bool,
+      success: React.PropTypes.bool,
+      warning: React.PropTypes.bool
     },
 
     getDisabled: function () {
@@ -83,6 +85,26 @@ module.exports = function (React) {
       }
 
       return readOnly;
+    },
+
+    getSuccess: function () {
+      var success = false;
+
+      if (typeof this.props.success != 'undefined') {
+        success = this.props.success;
+      }
+
+      return success;
+    },
+
+    getWarning: function () {
+      var warning = false;
+
+      if (typeof this.props.warning != 'undefined') {
+        warning = this.props.warning;
+      }
+
+      return warning;
     }
   };
 

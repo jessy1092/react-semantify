@@ -11,13 +11,13 @@ module.exports = function (React) {
 
     render: function () {
 
-      var {className, rating, max_rating, ...other} = this.props;
+      var {className, rating, maxRating, ...other} = this.props;
 
       return (
         <div {...other}
           className={this.getClassName(defaultClassName)}
           data-rating={rating}
-          data-max-rating={max_rating}>
+          data-max-rating={maxRating}>
           {this.props.children}
         </div>
       );

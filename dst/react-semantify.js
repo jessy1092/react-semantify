@@ -771,17 +771,34 @@ module.exports = function (React) {
 
       var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
 
-      return (
-        React.createElement(Unit, React.__spread({},  other, 
-          {className: this.getClassName(defaultClassName), 
-          type: "div", 
-          color: "null", 
-          loading: this.getLoading(), 
-          focus: this.getFocus(), 
-          error: this.getError()}), 
-          this.props.children
+      if (typeof this.props.children != 'undefined') {
+        return (
+          React.createElement(Unit, React.__spread({},  other, 
+            {className: this.getClassName(defaultClassName), 
+            type: "div", 
+            color: "null", 
+            loading: this.getLoading(), 
+            focus: this.getFocus(), 
+            error: this.getError()}), 
+            this.props.children
+          )
+        );
+      } else {
+        return (
+          React.createElement(Unit, {
+            className: this.getClassName(defaultClassName), 
+            type: "div", 
+            color: "null", 
+            loading: this.getLoading(), 
+            focus: this.getFocus(), 
+            error: this.getError()}, 
+            React.createElement("input", React.__spread({},  other, 
+              {placeholder: this.props.placeholder, 
+              type: this.props.type}))
+          )
         )
-      );
+      }
+
     }
   });
 
@@ -1118,7 +1135,9 @@ module.exports = function (React) {
       focus: React.PropTypes.bool,
       error: React.PropTypes.bool,
       completed: React.PropTypes.bool,
-      readOnly: React.PropTypes.bool
+      readOnly: React.PropTypes.bool,
+      success: React.PropTypes.bool,
+      warning: React.PropTypes.bool
     },
 
     getDisabled: function () {
@@ -1189,6 +1208,26 @@ module.exports = function (React) {
       }
 
       return readOnly;
+    },
+
+    getSuccess: function () {
+      var success = false;
+
+      if (typeof this.props.success != 'undefined') {
+        success = this.props.success;
+      }
+
+      return success;
+    },
+
+    getWarning: function () {
+      var warning = false;
+
+      if (typeof this.props.warning != 'undefined') {
+        warning = this.props.warning;
+      }
+
+      return warning;
     }
   };
 
@@ -1363,19 +1402,31 @@ module.exports = function (React) {
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
+  var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui dropdown';
 
   var Dropdown = React.createClass({displayName: "Dropdown",
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
-      var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
+      var $__0=        this.props,className=$__0.className,color=$__0.color,type=$__0.type,error=$__0.error,disable=$__0.disable,active=$__0.active,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,color:1,type:1,error:1,disable:1,active:1});
+
+      if (this.getActive() || this.getDisabled()) {
+        defaultClassName += ' simple';
+      }
 
       return (
-        React.createElement("div", React.__spread({},  other, {className: this.getClassName(defaultClassName)}), 
+        React.createElement(Unit, React.__spread({},  other, 
+          {className: this.getClassName(defaultClassName), 
+          color: "null", 
+          type: "div", 
+          error: this.getError(), 
+          disable: this.getDisabled(), 
+          active: this.getActive()}), 
           this.props.children
         )
       );
@@ -1399,21 +1450,30 @@ module.exports = function (React) {
   return Dropdown;
 }
 
-},{"../mixins/classGenerator.js":32}],40:[function(require,module,exports){
+},{"../commons/unit.jsx":16,"../mixins/classGenerator.js":32,"../mixins/stateSelector.js":34}],40:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
+  var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui modal';
 
   var Modal = React.createClass({displayName: "Modal",
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
+
+      var $__0=      this.props,className=$__0.className,color=$__0.color,type=$__0.type,active=$__0.active,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,color:1,type:1,active:1});
+
       return (
-        React.createElement("div", {className: this.getClassName(defaultClassName)}, 
+        React.createElement(Unit, React.__spread({},  other, 
+          {className: this.getClassName(defaultClassName), 
+          color: "null", 
+          type: "div", 
+          active: this.getActive()}), 
           this.props.children
         )
       );
@@ -1437,7 +1497,7 @@ module.exports = function (React) {
   return Modal;
 }
 
-},{"../mixins/classGenerator.js":32}],41:[function(require,module,exports){
+},{"../commons/unit.jsx":16,"../mixins/classGenerator.js":32,"../mixins/stateSelector.js":34}],41:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1455,20 +1515,6 @@ module.exports = function (React) {
           this.props.children
         )
       );
-    },
-
-    componentDidMount: function () {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).popup();
-        } else {
-          $(this.getDOMNode()).popup(this.props.init);
-        }
-      }
     }
   });
 
@@ -1480,20 +1526,34 @@ module.exports = function (React) {
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
 
   var defaultClassName = 'ui progress';
 
   var Progress = React.createClass({displayName: "Progress",
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
-      var $__0=      this.props,className=$__0.className,percent=$__0.percent,value=$__0.value,total=$__0.total,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,percent:1,value:1,total:1});
+      var $__0=
+        
+          
+            
+        
+        this.props,className=$__0.className,percent=$__0.percent,value=$__0.value,total=$__0.total,active=$__0.active,success=$__0.success,warning=$__0.warning,error=$__0.error,disabled=$__0.disabled,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,percent:1,value:1,total:1,active:1,success:1,warning:1,error:1,disabled:1});
+
+      var state = {
+        active: this.getActive(),
+        success: this.getSuccess(),
+        warning: this.getWarning(),
+        error: this.getError(),
+        disabled: this.getDisabled()
+      };
 
       return (
         React.createElement("div", React.__spread({},  other, 
-          {className: this.getClassName(defaultClassName), 
+          {className: this.getClassName(defaultClassName, state), 
           "data-percent": percent, 
           "data-value": value, 
           "data-total": total}), 
@@ -1520,7 +1580,7 @@ module.exports = function (React) {
   return Progress;
 }
 
-},{"../mixins/classGenerator.js":32}],43:[function(require,module,exports){
+},{"../mixins/classGenerator.js":32,"../mixins/stateSelector.js":34}],43:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1534,13 +1594,13 @@ module.exports = function (React) {
 
     render: function () {
 
-      var $__0=     this.props,className=$__0.className,rating=$__0.rating,max_rating=$__0.max_rating,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,rating:1,max_rating:1});
+      var $__0=     this.props,className=$__0.className,rating=$__0.rating,maxRating=$__0.maxRating,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,rating:1,maxRating:1});
 
       return (
         React.createElement("div", React.__spread({},  other, 
           {className: this.getClassName(defaultClassName), 
           "data-rating": rating, 
-          "data-max-rating": max_rating}), 
+          "data-max-rating": maxRating}), 
           this.props.children
         )
       );
@@ -1569,19 +1629,25 @@ module.exports = function (React) {
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
+  var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui search';
 
   var Search = React.createClass({displayName: "Search",
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
-      var $__0=   this.props,className=$__0.className,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1});
+      var $__0=      this.props,className=$__0.className,color=$__0.color,type=$__0.type,active=$__0.active,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,color:1,type:1,active:1});
 
       return (
-        React.createElement("div", React.__spread({},  other, {className: this.getClassName(defaultClassName)}), 
+        React.createElement(Unit, React.__spread({},  other, 
+          {className: this.getClassName(defaultClassName), 
+          color: "null", 
+          type: "div", 
+          loading: this.getLoading()}), 
           this.props.children
         )
       );
@@ -1605,7 +1671,7 @@ module.exports = function (React) {
   return Search;
 }
 
-},{"../mixins/classGenerator.js":32}],45:[function(require,module,exports){
+},{"../commons/unit.jsx":16,"../mixins/classGenerator.js":32,"../mixins/stateSelector.js":34}],45:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 
@@ -1740,20 +1806,26 @@ module.exports = function (React) {
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
 
   var defaultClassName = 'ui tab';
 
   var Tab = React.createClass({displayName: "Tab",
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
-      var $__0=   this.props,className=$__0.className,tab=$__0.tab,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,tab:1});
+      var $__0=      this.props,className=$__0.className,active=$__0.active,loading=$__0.loading,tab=$__0.tab,other=(function(source, exclusion) {var rest = {};var hasOwn = Object.prototype.hasOwnProperty;if (source == null) {throw new TypeError();}for (var key in source) {if (hasOwn.call(source, key) && !hasOwn.call(exclusion, key)) {rest[key] = source[key];}}return rest;})($__0,{className:1,active:1,loading:1,tab:1});
+
+      var state = {
+        active: this.getActive(),
+        loading: this.getLoading()
+      };
 
       return (
         React.createElement("div", React.__spread({},  other, 
-          {className: this.getClassName(defaultClassName), 
+          {className: this.getClassName(defaultClassName, state), 
           "data-tab": tab}), 
           this.props.children
         )
@@ -1778,7 +1850,7 @@ module.exports = function (React) {
   return Tab;
 }
 
-},{"../mixins/classGenerator.js":32}],49:[function(require,module,exports){
+},{"../mixins/classGenerator.js":32,"../mixins/stateSelector.js":34}],49:[function(require,module,exports){
 "use strict";
 module.exports = function (React) {
 

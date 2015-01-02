@@ -15,17 +15,34 @@ module.exports = function (React) {
 
       var {className, ...other} = this.props;
 
-      return (
-        <Unit {...other}
-          className={this.getClassName(defaultClassName)}
-          type="div"
-          color="null"
-          loading={this.getLoading()}
-          focus={this.getFocus()}
-          error={this.getError()}>
-          {this.props.children}
-        </Unit>
-      );
+      if (typeof this.props.children != 'undefined') {
+        return (
+          <Unit {...other}
+            className={this.getClassName(defaultClassName)}
+            type="div"
+            color="null"
+            loading={this.getLoading()}
+            focus={this.getFocus()}
+            error={this.getError()}>
+            {this.props.children}
+          </Unit>
+        );
+      } else {
+        return (
+          <Unit
+            className={this.getClassName(defaultClassName)}
+            type="div"
+            color="null"
+            loading={this.getLoading()}
+            focus={this.getFocus()}
+            error={this.getError()}>
+            <input {...other}
+              placeholder={this.props.placeholder}
+              type={this.props.type}/>
+          </Unit>
+        )
+      }
+
     }
   });
 

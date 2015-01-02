@@ -2,21 +2,27 @@
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
+  var StateSelector  = require('../mixins/stateSelector.js')(React);
+  var Unit           = require('../commons/unit.jsx')(React);
 
   var defaultClassName = 'ui search';
 
   var Search = React.createClass({
 
-    mixins: [ClassGenerator],
+    mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
-      var {className, ...other} = this.props;
+      var {className, color, type, active, ...other} = this.props;
 
       return (
-        <div {...other} className={this.getClassName(defaultClassName)} >
+        <Unit {...other}
+          className={this.getClassName(defaultClassName)}
+          color="null"
+          type="div"
+          loading={this.getLoading()}>
           {this.props.children}
-        </div>
+        </Unit>
       );
     },
 
