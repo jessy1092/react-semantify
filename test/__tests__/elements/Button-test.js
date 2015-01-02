@@ -16,7 +16,15 @@ describe('Button', function () {
     expect(instance.getDOMNode().className).toMatch('button');
   });
 
-  it('should have blue class with color is blue ', function () {
+  it('should have custom class with custom className', function () {
+    var instance = TestUtils.renderIntoDocument(
+      <Button className="custom"></Button>
+    );
+
+    expect(instance.getDOMNode().className).toMatch('custom');
+  });
+
+  it('should have blue class with color is blue', function () {
     var instance = TestUtils.renderIntoDocument(
       <Button color="blue"></Button>
     );
