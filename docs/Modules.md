@@ -446,3 +446,81 @@ $('.ui.sidebar').sidebar('show');
 ### Properties
 
 - *init*: You can see [Sidebar usage](http://semantic-ui.com/modules/sidebar.html#/usage) on the Semantic-ui web site.
+
+
+# Sticky
+A standard Sticky.
+
+### Example
+
+```html
+<Sticky className="examplesticky" init={true}></Sticky>
+```
+
+is equal to 
+
+```html
+<div class="ui sticky examplesticky"></div>
+```
+
+and call below Sementic-ui init function when element in the `componentDidMount` life cycle.
+```js
+$('.ui.sticky').sticky();
+```
+
+You also can use `init={param}` to transfer parameter.
+
+ex. 
+```js
+<Sticky init={{context: '#example'}}></Sticky>
+```
+
+will transfer `{context: '#example'}` to init function.
+
+```js
+$('.ui.sticky').sticky({context: '#example'});
+```
+
+### Properties
+
+- *init*: You can see [Sticky usage](http://semantic-ui.com/modules/sticky.html#/usage) on the Semantic-ui web site.
+
+
+# Tab
+A standard Tab.
+
+### Example
+
+```html
+<Tab className="exampletab" init={true}></Tab>
+```
+
+is equal to 
+
+```html
+<div class="ui tab exampletab"></div>
+```
+
+and call below Sementic-ui init function when element in the `componentDidMount` life cycle.
+```js
+$('.ui.tab').tab();
+```
+
+You also can use `init={param}` to transfer parameter.
+
+ex. 
+```js
+<Tab init={{history: true, historyType: 'hash'}}></Tab>
+```
+
+will transfer `{history: true, historyType: 'hash'}` to init function.
+
+```js
+$('.ui.tab').tab({history: true, historyType: 'hash'});
+```
+
+### Properties
+
+- *init*: You can see [Tab usage](http://semantic-ui.com/modules/tab.html#/usage) on the Semantic-ui web site.
+- *active*: This is a booling type. If `true`, the `active` would be part of `class` attribute.
+- *loading*: This is a booling type. If `true`, the `loading` would be part of `class` attribute.
