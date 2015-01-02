@@ -23,7 +23,8 @@ module.exports = function (React) {
           color={this.getColor()}
           disabled={this.getDisabled()}
           active={this.getActive()}
-          loading={this.getLoading()}>
+          loading={this.getLoading()}
+          onClick={this.onClick}>
           {this.props.children}
         </Unit>
       );

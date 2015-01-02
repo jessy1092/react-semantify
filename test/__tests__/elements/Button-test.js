@@ -31,4 +31,35 @@ describe('Button', function () {
 
     expect(instance.getDOMNode().className).toMatch('disabled');
   });
+
+  it('should have active class with active is true', function () {
+    var instance = TestUtils.renderIntoDocument(
+      <Button active={true}></Button>
+    );
+
+    expect(instance.getDOMNode().className).toMatch('active');
+  });
+
+  it('should have loading class with loading is true', function () {
+    var instance = TestUtils.renderIntoDocument(
+      <Button loading={true}></Button>
+    );
+
+    expect(instance.getDOMNode().className).toMatch('loading');
+  });
+
+  it('should call onClick callback when button click', function (done) {
+
+    var clickOp = function () {
+      done();
+    };
+
+    var instance = TestUtils.renderIntoDocument(
+      <Button onClick={clickOp}></Button>
+    );
+
+    var button = TestUtils.findRenderedDOMComponentWithClass(instance, 'button');
+
+    TestUtils.Simulate.click(button);
+  });
 });
