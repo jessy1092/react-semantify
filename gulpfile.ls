@@ -1,6 +1,5 @@
 require! <[gulp gulp-util gulp-livereload gulp-uglify gulp-rename]>
-require! <[vinyl-source-stream vinyl-buffer browserify glob karma liveify reactify]>
-require! <[child_process]>
+require! <[vinyl-source-stream vinyl-buffer browserify reactify]>
 
 build_path = 'dst'
 source     = vinyl-source-stream
@@ -10,23 +9,6 @@ rename     = gulp-rename
 
 reactifyES6 = (file) ->
   reactify file, {+es6}
-
-gulp.task 'browserify:test', ->
-  testFiles = glob.sync './test/spec/*.ls'
-  browserify testFiles
-    .transform liveify
-    .bundle!
-    .pipe source 'bundle-test.js'
-    .pipe gulp.dest "./test/spec/"
-
-gulp.task 'test',<[browserify:test]>, (callback)->
-  # karma.server.start { configFile: './test/karma.conf.js' }
-  karmaCmd = './node_modules/karma/bin/karma'
-  karmaConfig = './test/karma.conf.js'
-  exec "#{karmaCmd} start #{karmaConfig}", (err, stdout, stderr)->
-    gulp-util.log stdout
-    gulp-util.log stderr
-    callback err
 
 gulp.task 'browserify', ->
   browserify './src/index_browser.js'
