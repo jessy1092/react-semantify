@@ -1,6 +1,18 @@
 Release Notes
 =============
 
+## Version 0.2.0 - 2015/01/02
+
+- Enhabce [Input component](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#input)
+- Add State in Modules component.
+  + Checkbox support: *disabled*, *readOnly*
+  + Dimmer support: *disabled*, *active*
+  + Dropdown support: *disabled*, *active*, *error*
+  + Modal support: *active*
+  + Progress support: *active*, *success*, *warning*, *error*, *disabled*
+  + Search support: *loading*
+  + Tab support: *active*, *loading*
+
 ## Version 0.1.2 - 2014/12/27
 
 - Add `<Title>` component for Accordion.
