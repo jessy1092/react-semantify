@@ -11,3 +11,9 @@ git:
 branches:
   except:
   - gh-pages
+
+before_install:
+  - "npm install miller-rabin@1.1.1 --save-dev"
+
+script:
+  - "npm test"
