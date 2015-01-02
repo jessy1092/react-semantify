@@ -370,3 +370,41 @@ $('.ui.search').search({type: 'category'});
 
 - *init*: You can see [Search usage](http://semantic-ui.com/modules/search.html#/usage) on the Semantic-ui web site.
 - *loading*: This is a booling type. If `true`, the `loading` would be part of `class` attribute.
+
+
+# Shape
+A standard Shape.
+
+### Example
+
+```html
+<Shape className="exampleshape" init={true}></Shape>
+```
+
+is equal to 
+
+```html
+<div class="ui shape exampleshape"></div>
+```
+
+and call below Sementic-ui init function when element in the `componentDidMount` life cycle.
+```js
+$('.ui.shape').shape();
+```
+
+You also can use `init={param}` to transfer parameter.
+
+ex. 
+```js
+<Progress init={{type: 'category'}}></Progress>
+```
+
+will transfer `'flip up'` to init function.
+
+```js
+$('.ui.shape').shape('flip up');
+```
+
+### Properties
+
+- *init*: You can see [Shape usage](http://semantic-ui.com/modules/shape.html#/usage) on the Semantic-ui web site.
