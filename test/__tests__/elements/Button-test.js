@@ -1,8 +1,10 @@
-jest.dontMock('../../src/elements/button.js');
+/** @jsx React.DOM */
+
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Button    = require('../../src/elements/button.js');
+var Button    = require('../../../src/index.js').Button;
 
 describe('Button', function () {
   it('should have .ui.button class', function () {
@@ -12,5 +14,5 @@ describe('Button', function () {
 
     expect(instance.getDOMNode().className).toMatch('ui');
     expect(instance.getDOMNode().className).toMatch('button');
-  })
-})
+  });
+});

@@ -26,7 +26,7 @@
   "license": "MIT",
   "scripts": {
     "start": "gulp dev",
-    "test": "jest"
+    "test": "node ./node_modules/jest-cli/bin/jest.js"
   },
   "engines":{
     "node": "0.10.x"
@@ -46,7 +46,7 @@
     "reactify": "^0.17.0",
     "vinyl-source-stream": "^1.0.0",
     "vinyl-buffer": "^1.0.0",
-    "jest-cli": "^0.1.8",
+    "jest-cli": "^0.2.0",
     "react-tools": "^0.12.0"
   },
     "browserify": {
@@ -58,12 +58,8 @@
     ]
   },
   "jest": {
-    "scriptPreprocessor": "./test/preprocessor.js",
-    "testPathDirs": [
-      "./test/elements"
-    ],
-    "unmockedModulePathPatterns": [
-      "./node_modules/react"
-    ]
+    "scriptPreprocessor": "<rootDir>/test/preprocessor.js",
+    "testPathDirs": ["<rootDir>/test"],
+    "unmockedModulePathPatterns": ["<rootDir>/node_modules/react"]
   }
 }
