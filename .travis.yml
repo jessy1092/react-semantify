@@ -11,6 +11,3 @@ git:
 branches:
   except:
   - gh-pages
-
-before_script:
-  - npm install miller-rabin@1.1.1 --save-peer
