@@ -18,7 +18,8 @@ module.exports = function (React) {
         <Unit {...other}
           className={this.getClassName(defaultClassName)}
           type="icon"
-          color="null">
+          color="null"
+          onClick={this.onClick}>
         </Unit>
       );
     }
