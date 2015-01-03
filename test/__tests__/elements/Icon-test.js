@@ -4,10 +4,10 @@ jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Icon    = require('../../../src/index.js').Icon;
+var Icon      = require('../../../src/index.js').Icon;
 
 describe('Icon', function () {
-  it('should have .ui.icon class by default', function () {
+  it('should have .icon class by default', function () {
     var instance = TestUtils.renderIntoDocument(
       <Icon></Icon>
     );

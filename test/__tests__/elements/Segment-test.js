@@ -16,6 +16,14 @@ describe('Segment', function () {
     expect(instance.getDOMNode().className).toMatch('segment');
   });
 
+  it('should have child by default', function () {
+    var instance = TestUtils.renderIntoDocument(
+      <Segment>123</Segment>
+    );
+
+    expect(instance.getDOMNode().textContent).toMatch('123');
+  });
+
   it('should have custom class with custom className', function () {
     var instance = TestUtils.renderIntoDocument(
       <Segment className="custom"></Segment>

@@ -7,7 +7,7 @@ var TestUtils = require('react/lib/ReactTestUtils');
 var Flag      = require('../../../src/index.js').Flag;
 
 describe('Flag', function () {
-  it('should have .ui.flag class by default', function () {
+  it('should have .flag class by default', function () {
     var instance = TestUtils.renderIntoDocument(
       <Flag></Flag>
     );
