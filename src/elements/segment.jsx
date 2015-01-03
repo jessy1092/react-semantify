@@ -22,7 +22,8 @@ module.exports = function (React) {
           type="div"
           color={this.getColor()}
           disabled={this.getDisabled()}
-          loading={this.getLoading()}>
+          loading={this.getLoading()}
+          onClick={this.onClick}>
         </Unit>
       );
     }
