@@ -1,6 +1,14 @@
 Release Notes
 =============
 
+## Version 0.2.1 - 2015/01/03
+
+- Fix the onClick function Bug: Use this.props.onClick to get the onClick function.
+  + Segment, Label, Icon, Header, Flag, Button
+- Add Elements Test Function.
+  + Use [Jest](https://facebook.github.io/jest/) for component test.
+  + Use Travis-CI for CI.
+
 ## Version 0.2.0 - 2015/01/02
 
 - Enhabce [Input component](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#input)
