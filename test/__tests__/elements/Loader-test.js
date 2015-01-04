@@ -24,7 +24,6 @@ describe('Loader', function () {
     expect(instance.getDOMNode().textContent).toMatch('123');
   });
 
-
   it('should have custom class with custom className', function () {
     var instance = TestUtils.renderIntoDocument(
       <Loader className="custom"></Loader>
