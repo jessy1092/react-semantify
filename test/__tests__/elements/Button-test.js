@@ -63,19 +63,4 @@ describe('Button', function () {
 
     expect(instance.getDOMNode().className).toMatch('loading');
   });
-
-  it('should call onClick callback when button click', function (done) {
-
-    var clickOp = function () {
-      done();
-    };
-
-    var instance = TestUtils.renderIntoDocument(
-      <Button onClick={clickOp}></Button>
-    );
-
-    var button = TestUtils.findRenderedDOMComponentWithClass(instance, 'button');
-
-    TestUtils.Simulate.click(button);
-  });
 });

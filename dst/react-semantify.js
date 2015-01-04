@@ -585,8 +585,7 @@ module.exports = function (React) {
           color: this.getColor(), 
           disabled: this.getDisabled(), 
           active: this.getActive(), 
-          loading: this.getLoading(), 
-          onClick: this.onClick}), 
+          loading: this.getLoading()}), 
           this.props.children
         )
       );
@@ -642,8 +641,7 @@ module.exports = function (React) {
         React.createElement(Unit, React.__spread({},  other, 
           {className: this.getClassName(defaultClassName), 
           type: "icon", 
-          color: "null", 
-          onClick: this.onClick})
+          color: "null"})
         )
       );
     }
@@ -677,8 +675,7 @@ module.exports = function (React) {
           {className: this.getClassName(defaultClassName), 
           type: this.getType(), 
           color: this.getColor(), 
-          disabled: this.getDisabled(), 
-          onClick: this.onClick}), 
+          disabled: this.getDisabled()}), 
           this.props.children
         )
       );
@@ -713,8 +710,7 @@ module.exports = function (React) {
           type: "icon", 
           color: this.getColor(), 
           disabled: this.getDisabled(), 
-          loading: this.getLoading(), 
-          onClick: this.onClick})
+          loading: this.getLoading()})
         )
       );
     }
@@ -832,8 +828,7 @@ module.exports = function (React) {
         React.createElement(Unit, React.__spread({},  other, 
           {className: this.getClassName(defaultClassName), 
           type: this.getType(), 
-          color: this.getColor(), 
-          onClick: this.onClick}), 
+          color: this.getColor()}), 
           this.props.children
         )
       );
@@ -989,8 +984,7 @@ module.exports = function (React) {
           type: "div", 
           color: this.getColor(), 
           disabled: this.getDisabled(), 
-          loading: this.getLoading(), 
-          onClick: this.onClick})
+          loading: this.getLoading()})
         )
       );
     }
