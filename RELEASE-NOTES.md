@@ -1,6 +1,13 @@
 Release Notes
 =============
 
+## Version 0.2.2 - 2015/01/05
+
+- Fix the onClick function Bug. [issue #7](https://github.com/jessy1092/react-semantify/issues/7)
+  + Remove onClick Function Test on elements.
+    - Segment, Label, Icon, Header, Flag, Button
+- Add Collections and Views Test Function.
+
 ## Version 0.2.1 - 2015/01/03
 
 - Fix the onClick function Bug: Use this.props.onClick to get the onClick function.
