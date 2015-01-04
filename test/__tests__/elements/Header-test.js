@@ -55,19 +55,4 @@ describe('Header', function () {
 
     expect(TestUtils.findRenderedDOMComponentWithTag(instance, 'a')).toBeDefined();
   });
-
-  it('should call onClick callback when header click', function (done) {
-
-    var clickOp = function () {
-      done();
-    };
-
-    var instance = TestUtils.renderIntoDocument(
-      <Header onClick={clickOp}></Header>
-    );
-
-    var header = TestUtils.findRenderedDOMComponentWithClass(instance, 'header');
-
-    TestUtils.Simulate.click(header);
-  });
 });

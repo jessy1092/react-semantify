@@ -24,7 +24,6 @@ describe('List', function () {
     expect(instance.getDOMNode().textContent).toMatch('123');
   });
 
-
   it('should have custom class with custom className', function () {
     var instance = TestUtils.renderIntoDocument(
       <List className="custom"></List>

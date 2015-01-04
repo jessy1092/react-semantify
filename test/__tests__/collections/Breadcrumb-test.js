@@ -2,23 +2,23 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Rail      = require('../../../src/index.js').Rail;
+var React       = require('react');
+var TestUtils   = require('react/lib/ReactTestUtils');
+var Breadcrumb = require('../../../src/index.js').Breadcrumb;
 
-describe('Rail', function () {
-  it('should have .ui.rail class by default', function () {
+describe('Breadcrumb', function () {
+  it('should have .ui.breadcrumb class by default', function () {
     var instance = TestUtils.renderIntoDocument(
-      <Rail></Rail>
+      <Breadcrumb></Breadcrumb>
     );
 
     expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('rail');
+    expect(instance.getDOMNode().className).toMatch('breadcrumb');
   });
 
   it('should have child by default', function () {
     var instance = TestUtils.renderIntoDocument(
-      <Rail>123</Rail>
+      <Breadcrumb>123</Breadcrumb>
     );
 
     expect(instance.getDOMNode().textContent).toMatch('123');
@@ -26,7 +26,7 @@ describe('Rail', function () {
 
   it('should have custom class with custom className', function () {
     var instance = TestUtils.renderIntoDocument(
-      <Rail className="custom"></Rail>
+      <Breadcrumb className="custom"></Breadcrumb>
     );
 
     expect(instance.getDOMNode().className).toMatch('custom');

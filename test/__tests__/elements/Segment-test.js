@@ -55,19 +55,4 @@ describe('Segment', function () {
 
     expect(instance.getDOMNode().className).toMatch('loading');
   });
-
-  it('should call onClick callback when segment click', function (done) {
-
-    var clickOp = function () {
-      done();
-    };
-
-    var instance = TestUtils.renderIntoDocument(
-      <Segment onClick={clickOp}></Segment>
-    );
-
-    var segment = TestUtils.findRenderedDOMComponentWithClass(instance, 'segment');
-
-    TestUtils.Simulate.click(segment);
-  });
 });

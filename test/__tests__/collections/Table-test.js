@@ -4,21 +4,21 @@ jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Rail      = require('../../../src/index.js').Rail;
+var Table     = require('../../../src/index.js').Table;
 
-describe('Rail', function () {
-  it('should have .ui.rail class by default', function () {
+describe('Table', function () {
+  it('should have .ui.table class by default', function () {
     var instance = TestUtils.renderIntoDocument(
-      <Rail></Rail>
+      <Table></Table>
     );
 
     expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('rail');
+    expect(instance.getDOMNode().className).toMatch('table');
   });
 
   it('should have child by default', function () {
     var instance = TestUtils.renderIntoDocument(
-      <Rail>123</Rail>
+      <Table>123</Table>
     );
 
     expect(instance.getDOMNode().textContent).toMatch('123');
@@ -26,7 +26,7 @@ describe('Rail', function () {
 
   it('should have custom class with custom className', function () {
     var instance = TestUtils.renderIntoDocument(
-      <Rail className="custom"></Rail>
+      <Table className="custom"></Table>
     );
 
     expect(instance.getDOMNode().className).toMatch('custom');

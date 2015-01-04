@@ -4,21 +4,20 @@ jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Label     = require('../../../src/index.js').Label;
+var Item      = require('../../../src/index.js').Item;
 
-describe('Label', function () {
-  it('should have .ui.label class by default', function () {
+describe('Item', function () {
+  it('should have .item class by default', function () {
     var instance = TestUtils.renderIntoDocument(
-      <Label></Label>
+      <Item></Item>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('label');
+    expect(instance.getDOMNode().className).toMatch('item');
   });
 
   it('should have child by default', function () {
     var instance = TestUtils.renderIntoDocument(
-      <Label>123</Label>
+      <Item>123</Item>
     );
 
     expect(instance.getDOMNode().textContent).toMatch('123');
@@ -26,25 +25,25 @@ describe('Label', function () {
 
   it('should have custom class with custom className', function () {
     var instance = TestUtils.renderIntoDocument(
-      <Label className="custom"></Label>
+      <Item className="custom"></Item>
     );
 
     expect(instance.getDOMNode().className).toMatch('custom');
   });
 
-  it('should have blue class with color is blue', function () {
+  it('should be <a> with link', function () {
     var instance = TestUtils.renderIntoDocument(
-      <Label color="blue"></Label>
+      <Item type='link'></Item>
     );
 
-    expect(instance.getDOMNode().className).toMatch('blue');
+    expect(TestUtils.findRenderedDOMComponentWithTag(instance, 'a')).toBeDefined();
   });
 
-  it('should be <div> if type is div', function () {
+  it('should have value for item data-value', function () {
     var instance = TestUtils.renderIntoDocument(
-      <Label type="div"></Label>
+      <Item value="1"></Item>
     );
 
-    expect(TestUtils.findRenderedDOMComponentWithTag(instance, 'div')).toBeDefined();
+    expect(instance.getDOMNode().getAttribute('data-value')).toMatch('1');
   });
 });

@@ -22,19 +22,4 @@ describe('Flag', function () {
 
     expect(instance.getDOMNode().className).toMatch('custom');
   });
-
-  it('should call onClick callback when flag click', function (done) {
-
-    var clickOp = function () {
-      done();
-    };
-
-    var instance = TestUtils.renderIntoDocument(
-      <Flag onClick={clickOp}></Flag>
-    );
-
-    var flag = TestUtils.findRenderedDOMComponentWithClass(instance, 'flag');
-
-    TestUtils.Simulate.click(flag);
-  });
 });
