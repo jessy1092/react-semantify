@@ -24,7 +24,6 @@ describe('Label', function () {
     expect(instance.getDOMNode().textContent).toMatch('123');
   });
 
-
   it('should have custom class with custom className', function () {
     var instance = TestUtils.renderIntoDocument(
       <Label className="custom"></Label>

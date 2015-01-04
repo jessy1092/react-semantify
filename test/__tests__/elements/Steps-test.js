@@ -31,6 +31,4 @@ describe('Steps', function () {
 
     expect(instance.getDOMNode().className).toMatch('custom');
   });
-
-
 });

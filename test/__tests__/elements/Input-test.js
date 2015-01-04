@@ -26,7 +26,6 @@ describe('Input', function () {
     expect(instance.getDOMNode().children[0].getAttribute('placeholder')).toMatch('Search');
   });
 
-
   it('should have custom class with custom className', function () {
     var instance = TestUtils.renderIntoDocument(
       <Input className="custom"></Input>
