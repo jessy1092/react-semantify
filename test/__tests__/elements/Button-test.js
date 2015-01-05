@@ -63,4 +63,17 @@ describe('Button', function () {
 
     expect(instance.getDOMNode().className).toMatch('loading');
   });
+
+  it('should call onClick callback when unit click', function () {
+
+    var clickOp = jest.genMockFunction();
+
+    var instance = TestUtils.renderIntoDocument(
+      <Button onClick={clickOp}></Button>
+    );
+
+    TestUtils.Simulate.click(instance.getDOMNode());
+
+    expect(clickOp).toBeCalled();
+  });
 });

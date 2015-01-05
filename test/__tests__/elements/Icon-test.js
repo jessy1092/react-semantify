@@ -54,4 +54,17 @@ describe('Icon', function () {
 
     expect(TestUtils.findRenderedDOMComponentWithTag(instance, 'i')).toBeDefined();
   });
+
+  it('should call onClick callback when unit click', function () {
+
+    var clickOp = jest.genMockFunction();
+
+    var instance = TestUtils.renderIntoDocument(
+      <Icon onClick={clickOp}></Icon>
+    );
+
+    TestUtils.Simulate.click(instance.getDOMNode());
+
+    expect(clickOp).toBeCalled();
+  });
 });

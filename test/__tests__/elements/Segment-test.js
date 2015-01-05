@@ -55,4 +55,17 @@ describe('Segment', function () {
 
     expect(instance.getDOMNode().className).toMatch('loading');
   });
+
+  it('should call onClick callback when unit click', function () {
+
+    var clickOp = jest.genMockFunction();
+
+    var instance = TestUtils.renderIntoDocument(
+      <Segment onClick={clickOp}></Segment>
+    );
+
+    TestUtils.Simulate.click(instance.getDOMNode());
+
+    expect(clickOp).toBeCalled();
+  });
 });
