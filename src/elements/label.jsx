@@ -20,8 +20,7 @@ module.exports = function (React) {
         <Unit {...other}
           className={this.getClassName(defaultClassName)}
           type={this.getType()}
-          color={this.getColor()}
-          onClick={this.onClick}>
+          color={this.getColor()}>
           {this.props.children}
         </Unit>
       );

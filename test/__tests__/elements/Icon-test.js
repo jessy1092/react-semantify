@@ -54,19 +54,4 @@ describe('Icon', function () {
 
     expect(TestUtils.findRenderedDOMComponentWithTag(instance, 'i')).toBeDefined();
   });
-
-  it('should call onClick callback when icon click', function (done) {
-
-    var clickOp = function () {
-      done();
-    };
-
-    var instance = TestUtils.renderIntoDocument(
-      <Icon onClick={clickOp}></Icon>
-    );
-
-    var icon = TestUtils.findRenderedDOMComponentWithClass(instance, 'icon');
-
-    TestUtils.Simulate.click(icon);
-  });
 });

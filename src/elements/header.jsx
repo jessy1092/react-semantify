@@ -22,8 +22,7 @@ module.exports = function (React) {
           className={this.getClassName(defaultClassName)}
           type={this.getType()}
           color={this.getColor()}
-          disabled={this.getDisabled()}
-          onClick={this.onClick}>
+          disabled={this.getDisabled()}>
           {this.props.children}
         </Unit>
       );

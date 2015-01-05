@@ -47,19 +47,4 @@ describe('Label', function () {
 
     expect(TestUtils.findRenderedDOMComponentWithTag(instance, 'div')).toBeDefined();
   });
-
-  it('should call onClick callback when icon click', function (done) {
-
-    var clickOp = function () {
-      done();
-    };
-
-    var instance = TestUtils.renderIntoDocument(
-      <Label onClick={clickOp}></Label>
-    );
-
-    var label = TestUtils.findRenderedDOMComponentWithClass(instance, 'label');
-
-    TestUtils.Simulate.click(label);
-  });
 });
