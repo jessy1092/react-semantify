@@ -1,8 +1,6 @@
 "use strict";
 module.exports = function (React) {
 
-  var classSet = React.addons.classSet;
-
   var typeArray = ['div', 'link', 'icon'];
 
   var TypeSelector = {
@@ -15,7 +13,7 @@ module.exports = function (React) {
       var type = 'div';
 
       if (typeof this.props.type !== 'undefined') {
-        if (typeArray.indexOf(this.props.type) != -1) {
+        if (typeArray.indexOf(this.props.type) !== -1) {
           type = this.props.type;
         }
       }

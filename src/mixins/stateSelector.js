@@ -1,8 +1,6 @@
 "use strict";
 module.exports = function (React) {
 
-  var classSet = React.addons.classSet;
-
   var StateSelector = {
 
     propTypes: {

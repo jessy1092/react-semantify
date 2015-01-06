@@ -16,7 +16,7 @@ module.exports = function (React) {
 
       if (typeof this.props.color !== 'undefined') {
 
-        if (colorArray.indexOf(this.props.color) != -1) {
+        if (colorArray.indexOf(this.props.color) !== -1) {
           color = this.props.color;
         }
       }

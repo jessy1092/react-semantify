@@ -1,6 +1,6 @@
 React-Semantify
 =============
-[![Dependency Status][david-dm-image]][david-dm-url] [![Build Status][travis-ci-image]][travis-ci-url][![Coverage Status][coverage-status-image]][coverage-status-url]
+[![Dependency Status][david-dm-image]][david-dm-url] [![Build Status][travis-ci-image]][travis-ci-url] [![Coverage Status][coverage-status-image]][coverage-status-url] [![Code Climate][code-climate-image]][code-climate-url]
 
 Integrate Semantic-ui with react components. It depends on Semantic-UI and helps you use with react component.
 
@@ -218,3 +218,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [coverage-status-image]: https://img.shields.io/coveralls/jessy1092/react-semantify.svg?style=flat-square
 [coverage-status-url]: https://coveralls.io/r/jessy1092/react-semantify
+
+[code-climate-image]: https://img.shields.io/codeclimate/coverage/github/jessy1092/react-semantify.svg?style=flat-square
+[code-climate-url]: https://codeclimate.com/github/jessy1092/react-semantify
