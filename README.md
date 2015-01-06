@@ -219,5 +219,5 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 [coverage-status-image]: https://img.shields.io/coveralls/jessy1092/react-semantify.svg?style=flat-square
 [coverage-status-url]: https://coveralls.io/r/jessy1092/react-semantify
 
-[code-climate-image]: https://img.shields.io/codeclimate/coverage/github/jessy1092/react-semantify.svg?style=flat-square
+[code-climate-image]: https://img.shields.io/codeclimate/github/jessy1092/react-semantify.svg?style=flat-square
 [code-climate-url]: https://codeclimate.com/github/jessy1092/react-semantify
