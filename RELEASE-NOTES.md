@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+## Version 0.2.3 - 2015/01/07
+
+- Add Commons and Modules Test Function
+- Use covrage status.
+- Use jest.genMockFunction to test onClick Function.
+
 ## Version 0.2.2 - 2015/01/05
 
 - Fix the onClick function Bug. [issue #7](https://github.com/jessy1092/react-semantify/issues/7)

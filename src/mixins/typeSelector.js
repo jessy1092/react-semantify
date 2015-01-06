@@ -14,14 +14,14 @@ module.exports = function (React) {
     getType: function () {
       var type = 'div';
 
-      if (typeof this.props.type != 'undefined') {
+      if (typeof this.props.type !== 'undefined') {
         if (typeArray.indexOf(this.props.type) != -1) {
           type = this.props.type;
         }
       }
       return type;
     }
-  }
+  };
 
   return TypeSelector;
-}
+};

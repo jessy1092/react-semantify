@@ -1,6 +1,6 @@
 React-Semantify
 =============
-[![Dependency Status][david-dm-image]][david-dm-url] [![Build Status][travis-ci-image]][travis-ci-url]
+[![Dependency Status][david-dm-image]][david-dm-url] [![Build Status][travis-ci-image]][travis-ci-url][![Coverage Status][coverage-status-image]][coverage-status-url]
 
 Integrate Semantic-ui with react components. It depends on Semantic-UI and helps you use with react component.
 
@@ -175,6 +175,12 @@ Wait Semantic-UI Release.
 4. Push to the branch `git push origin your-new-feature-branch`
 5. Create new Pull Request with `develop` branch
 
+## Run Test
+
+- `git clone git@github.com:jessy1092/react-semantify.git`
+- `npm i`
+- `npm test`
+
 ## License
 
 The MIT License (MIT)
@@ -209,3 +215,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [travis-ci-image]: https://img.shields.io/travis/jessy1092/react-semantify.svg?style=flat-square
 [travis-ci-url]: https://travis-ci.org/jessy1092/react-semantify
+
+[coverage-status-image]: https://img.shields.io/coveralls/jessy1092/react-semantify.svg?style=flat-square
+[coverage-status-url]: https://coveralls.io/r/jessy1092/react-semantify
