@@ -9,13 +9,6 @@ module.exports = function (React) {
 
     mixins: [ClassGenerator],
 
-    propTypes: {
-      behavior: React.PropTypes.oneOfType([
-        React.PropTypes.string,
-        React.PropTypes.object
-      ])
-    },
-
     render: function () {
 
       var {className, ...other} = this.props;

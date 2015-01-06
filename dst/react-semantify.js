@@ -1070,11 +1070,11 @@ module.exports = function (React) {
     getClassName: function (defaultClassName, addClassName) {
       var classResult = defaultClassName;
 
-      if (typeof this.props.className != 'undefined') {
+      if (typeof this.props.className !== 'undefined') {
         classResult += ' ' + this.props.className;
       }
 
-      if (typeof addClassName != 'undefined') {
+      if (typeof addClassName !== 'undefined') {
         if (typeof addClassName === 'object') {
           classResult += ' ' + classSet(addClassName);
         } else {
@@ -1084,10 +1084,10 @@ module.exports = function (React) {
 
       return classResult;
     }
-  }
+  };
 
   return ClassGenerator;
-}
+};
 
 },{}],33:[function(require,module,exports){
 "use strict";
@@ -1106,7 +1106,7 @@ module.exports = function (React) {
     getColor: function () {
       var color = 'null';
 
-      if (typeof this.props.color != 'undefined') {
+      if (typeof this.props.color !== 'undefined') {
 
         if (colorArray.indexOf(this.props.color) != -1) {
           color = this.props.color;
@@ -1115,10 +1115,10 @@ module.exports = function (React) {
 
       return color;
     }
-  }
+  };
 
   return ColorSelector;
-}
+};
 
 },{}],34:[function(require,module,exports){
 "use strict";
@@ -1143,7 +1143,7 @@ module.exports = function (React) {
     getDisabled: function () {
       var disabled = false;
 
-      if (typeof this.props.disabled != 'undefined') {
+      if (typeof this.props.disabled !== 'undefined') {
         disabled = this.props.disabled;
       }
 
@@ -1153,7 +1153,7 @@ module.exports = function (React) {
     getActive: function () {
       var active = false;
 
-      if (typeof this.props.active != 'undefined') {
+      if (typeof this.props.active !== 'undefined') {
         active = this.props.active;
       }
 
@@ -1163,7 +1163,7 @@ module.exports = function (React) {
     getLoading: function () {
       var loading = false;
 
-      if (typeof this.props.loading != 'undefined') {
+      if (typeof this.props.loading !== 'undefined') {
         loading = this.props.loading;
       }
 
@@ -1173,7 +1173,7 @@ module.exports = function (React) {
     getFocus: function () {
       var focus = false;
 
-      if (typeof this.props.focus != 'undefined') {
+      if (typeof this.props.focus !== 'undefined') {
         focus = this.props.focus;
       }
 
@@ -1183,7 +1183,7 @@ module.exports = function (React) {
     getError: function () {
       var error = false;
 
-      if (typeof this.props.error != 'undefined') {
+      if (typeof this.props.error !== 'undefined') {
         error = this.props.error;
       }
 
@@ -1193,7 +1193,7 @@ module.exports = function (React) {
     getCompleted: function () {
       var completed = false;
 
-      if (typeof this.props.completed != 'undefined') {
+      if (typeof this.props.completed !== 'undefined') {
         completed = this.props.completed;
       }
 
@@ -1203,7 +1203,7 @@ module.exports = function (React) {
     getReadOnly: function () {
       var readOnly = false;
 
-      if (typeof this.props.readOnly != 'undefined') {
+      if (typeof this.props.readOnly !== 'undefined') {
         readOnly = this.props.readOnly;
       }
 
@@ -1213,7 +1213,7 @@ module.exports = function (React) {
     getSuccess: function () {
       var success = false;
 
-      if (typeof this.props.success != 'undefined') {
+      if (typeof this.props.success !== 'undefined') {
         success = this.props.success;
       }
 
@@ -1223,7 +1223,7 @@ module.exports = function (React) {
     getWarning: function () {
       var warning = false;
 
-      if (typeof this.props.warning != 'undefined') {
+      if (typeof this.props.warning !== 'undefined') {
         warning = this.props.warning;
       }
 
@@ -1232,7 +1232,7 @@ module.exports = function (React) {
   };
 
   return StateSelector;
-}
+};
 
 },{}],35:[function(require,module,exports){
 "use strict";
@@ -1251,17 +1251,17 @@ module.exports = function (React) {
     getType: function () {
       var type = 'div';
 
-      if (typeof this.props.type != 'undefined') {
+      if (typeof this.props.type !== 'undefined') {
         if (typeArray.indexOf(this.props.type) != -1) {
           type = this.props.type;
         }
       }
       return type;
     }
-  }
+  };
 
   return TypeSelector;
-}
+};
 
 },{}],36:[function(require,module,exports){
 "use strict";
@@ -1764,13 +1764,6 @@ module.exports = function (React) {
   var Sticky = React.createClass({displayName: "Sticky",
 
     mixins: [ClassGenerator],
-
-    propTypes: {
-      behavior: React.PropTypes.oneOfType([
-        React.PropTypes.string,
-        React.PropTypes.object
-      ])
-    },
 
     render: function () {
 

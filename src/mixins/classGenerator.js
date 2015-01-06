@@ -12,11 +12,11 @@ module.exports = function (React) {
     getClassName: function (defaultClassName, addClassName) {
       var classResult = defaultClassName;
 
-      if (typeof this.props.className != 'undefined') {
+      if (typeof this.props.className !== 'undefined') {
         classResult += ' ' + this.props.className;
       }
 
-      if (typeof addClassName != 'undefined') {
+      if (typeof addClassName !== 'undefined') {
         if (typeof addClassName === 'object') {
           classResult += ' ' + classSet(addClassName);
         } else {
@@ -26,7 +26,7 @@ module.exports = function (React) {
 
       return classResult;
     }
-  }
+  };
 
   return ClassGenerator;
-}
+};

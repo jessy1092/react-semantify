@@ -55,4 +55,17 @@ describe('Header', function () {
 
     expect(TestUtils.findRenderedDOMComponentWithTag(instance, 'a')).toBeDefined();
   });
+
+  it('should call onClick callback when unit click', function () {
+
+    var clickOp = jest.genMockFunction();
+
+    var instance = TestUtils.renderIntoDocument(
+      <Header onClick={clickOp}></Header>
+    );
+
+    TestUtils.Simulate.click(instance.getDOMNode());
+
+    expect(clickOp).toBeCalled();
+  });
 });

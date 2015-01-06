@@ -47,4 +47,17 @@ describe('Label', function () {
 
     expect(TestUtils.findRenderedDOMComponentWithTag(instance, 'div')).toBeDefined();
   });
+
+  it('should call onClick callback when unit click', function () {
+
+    var clickOp = jest.genMockFunction();
+
+    var instance = TestUtils.renderIntoDocument(
+      <Label onClick={clickOp}></Label>
+    );
+
+    TestUtils.Simulate.click(instance.getDOMNode());
+
+    expect(clickOp).toBeCalled();
+  });
 });

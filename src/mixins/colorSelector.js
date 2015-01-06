@@ -14,7 +14,7 @@ module.exports = function (React) {
     getColor: function () {
       var color = 'null';
 
-      if (typeof this.props.color != 'undefined') {
+      if (typeof this.props.color !== 'undefined') {
 
         if (colorArray.indexOf(this.props.color) != -1) {
           color = this.props.color;
@@ -23,7 +23,7 @@ module.exports = function (React) {
 
       return color;
     }
-  }
+  };
 
   return ColorSelector;
-}
+};

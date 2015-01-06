@@ -22,4 +22,17 @@ describe('Flag', function () {
 
     expect(instance.getDOMNode().className).toMatch('custom');
   });
+
+  it('should call onClick callback when unit click', function () {
+
+    var clickOp = jest.genMockFunction();
+
+    var instance = TestUtils.renderIntoDocument(
+      <Flag onClick={clickOp}></Flag>
+    );
+
+    TestUtils.Simulate.click(instance.getDOMNode());
+
+    expect(clickOp).toBeCalled();
+  });
 });
