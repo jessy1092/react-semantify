@@ -44,6 +44,7 @@ gulp.task 'watch', ->
   gulp.watch './client/data/*', <[data]> .on \change, gulp-livereload.changed
   gulp.watch './client/styles/*.css', <[css]> .on \change, gulp-livereload.changed
   gulp.watch './client/scripts/**/*', <[browserify]> .on \changed, gulp-livereload.changed
+  gulp.watch './src/**/*', <[browserify]> .on \changed, gulp-livereload.changed
 
 gulp.task 'build', <[jade browserify css]>
 gulp.task 'dev', <[build server watch]>
