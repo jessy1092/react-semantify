@@ -9,8 +9,16 @@ body {
 
 /*-------------------------| Sidebar |-------------------------*/
 
-.sidebar.menu .active.item {
-    color: #6DFFFF !important;
+.pusher .attached.button {
+    position: fixed;
+    top: 70px;
+    float: left;
+    width: 55px;
+}
+
+.container {
+    width: 756px;
+    margin: 0px auto;
 }
 
 /*-------------------------| Footer |-------------------------*/
