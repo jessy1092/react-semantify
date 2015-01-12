@@ -1,57 +1,49 @@
 "use strict";
-var React       = require('react/addons');
-var Semantify   = require('react-semantify');
-var RouteConfig = require('./RouteConfig.js');
-
-var {Menu, Item, Header} = Semantify;
+var React        = require('react/addons');
+var RouteStore   = require('./store/RouteStore.js');
+var IndexPage    = require('./pages/IndexPage.jsx');
 
 module.exports = React.createClass({
 
   getInitialState: function () {
     return {
-      routes: RouteConfig.map(function (entry) {
-        entry.status = false;
-        return entry;
-      })
-    };
+      routes: RouteStore.getAll()
+    }
+  },
+
+  componentDidMount: function () {
+    RouteStore.addChangeListener(this._onChange);
+  },
+
+  componentWillUnmount: function () {
+    RouteStore.removeChangeListener(this._onChange);
   },
 
   render: function () {
-    return (
-      <Item>
-        <div className="menu">
-          <Header className="small inverted">Elements</Header>
-          {this.renderElements()}
-        </div>
-      </Item>
-    );
-  },
-
-  renderElements: function () {
-    return (
-      this.state.routes.map(function (entry, index) {
-        return (
-          <Item type="link"
-                href={'#/' + entry.name}
-                active={entry.status}
-                onClick={this._onClick.bind(this, index)}>
-            {entry.name}
-          </Item>
-        );
-      }.bind(this))
-    );
-  },
-
-  _onClick: function (index) {
     var {routes} = this.state;
+    var pageIndex = -1;
+    var PageComponent;
 
-    routes = routes.map(function (entry, id) {
-      entry.status = (id == index) ? true : false;
-      return entry;
+    routes.forEach(function (entry, index) {
+      if (entry.status === true) {
+        pageIndex = index;
+        PageComponent = entry.page;
+      }
     });
-    this.setState({routes});
 
-    React.render(React.createElement(routes[index].page, null), document.getElementsByClassName('pusher')[0]);
+    if (pageIndex >= 0) {
+      return (
+        <PageComponent />
+      );
+    } else {
+      return (
+        <IndexPage />
+      );
+    }
+  },
+
+  _onChange: function () {
+    this.setState(RouteStore.getAll());
   }
 
 });

@@ -2,9 +2,9 @@
 module.exports = [
   {
     name: 'Home',
-    page: require('./pages/IndexPage.jsx')
+    page: require('../pages/IndexPage.jsx')
   }, {
     name: 'Button',
-    page: require('./pages/ButtonPage.jsx')
+    page: require('../pages/ButtonPage.jsx')
   }
 ];
