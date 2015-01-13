@@ -3,22 +3,30 @@
 /*-------------------------| Common |-------------------------*/
 
 body {
-    font-family:'微軟正黑體';
-    padding:0; margin:0; overflow-x:hidden;
+  font-family:'微軟正黑體';
+  padding:0; margin:0; overflow-x:hidden;
 }
 
 /*-------------------------| Sidebar |-------------------------*/
 
 .pusher .attached.button {
-    position: fixed;
-    top: 70px;
-    float: left;
-    width: 55px;
+  position: fixed;
+  top: 70px;
+  width: 55px;
 }
 
 .container {
-    width: 756px;
-    margin: 0px auto;
+  width: 756px;
+  margin: 0px auto;
+}
+
+/*-------------------------|  Page  |-------------------------*/
+.example.block {
+  margin-top: 35px;
+}
+
+.example.block .icon {
+  cursor: pointer;
 }
 
 /*-------------------------| Footer |-------------------------*/

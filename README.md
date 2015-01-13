@@ -8,8 +8,12 @@ The Document Website. Welcome to contribute and report issue.
   + scripts
   + styles
 - src
+  + actions
   + components
+  + constants
+  + dispatcher
   + pages
+  + stores
 
 ## Development
 

@@ -1,6 +1,6 @@
 "use strict";
 var React        = require('react/addons');
-var RouteStore   = require('./store/RouteStore.js');
+var RouteStore   = require('./stores/RouteStore.js');
 var IndexPage    = require('./pages/IndexPage.jsx');
 
 module.exports = React.createClass({

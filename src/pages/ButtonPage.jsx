@@ -1,6 +1,7 @@
 "use strict";
-var React     = require('react/addons');
-var Semantify = require('react-semantify');
+var React         = require('react/addons');
+var Semantify     = require('react-semantify');
+var ExampleBlock  = require('../components/ExampleBlock.jsx');
 var SidebarButton = require('../components/SidebarButton.jsx');
 
 var {Button, Divider, Header, Segment} = Semantify;
@@ -20,11 +21,10 @@ module.exports = React.createClass({
           </div>
         </Segment>
         <div className="container">
-          <Header className="large dividing">Basic</Header>
-          <Header className="small" >
-            Button
-            <Header className="sub">A standard button</Header>
-          </Header>
+          <Header className="large dividing">Type</Header>
+          <ExampleBlock header="Button" sub="A standard button" codeBlock="<Button>Button</Button>">
+            <Button>Button</Button>
+          </ExampleBlock>
         </div>
         <SidebarButton />
       </div>

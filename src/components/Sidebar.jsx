@@ -1,7 +1,7 @@
 "use strict";
 var React       = require('react/addons');
 var Semantify   = require('react-semantify');
-var RouteStore  = require('../store/RouteStore.js');
+var RouteStore  = require('../stores/RouteStore.js');
 var RouteActions = require('../actions/RouteActions.js');
 
 var {Menu, Item, Header} = Semantify;
