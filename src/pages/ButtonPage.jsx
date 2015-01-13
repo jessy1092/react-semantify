@@ -2,7 +2,6 @@
 var React         = require('react/addons');
 var Semantify     = require('react-semantify');
 var ExampleBlock  = require('../components/ExampleBlock.jsx');
-var SidebarButton = require('../components/SidebarButton.jsx');
 
 var {Button, Divider, Header, Segment} = Semantify;
 
@@ -17,16 +16,41 @@ module.exports = React.createClass({
               Button
               <Header className="sub">A button indicates a possible user action</Header>
             </Header>
-            <Divider />
           </div>
         </Segment>
-        <div className="container">
+        <div className="main container">
           <Header className="large dividing">Type</Header>
-          <ExampleBlock header="Button" sub="A standard button" codeBlock="<Button>Button</Button>">
+          <ExampleBlock header="Button"
+                        sub="A standard button"
+                        codeBlock="<Button>Button</Button>">
             <Button>Button</Button>
           </ExampleBlock>
+
+          <Header className="large dividing">States</Header>
+
+          <ExampleBlock header="Active"
+                        sub="A button can show it is in active mode"
+                        codeBlock="<Button active={true} >Button</Button>">
+            <Button active={true}>Button</Button>
+          </ExampleBlock>
+
+          <Divider/>
+
+          <ExampleBlock header="Disabled"
+                        sub="A button can show it is in Disabled mode"
+                        codeBlock="<Button disabled={true} >Button</Button>">
+            <Button disabled={true}>Button</Button>
+          </ExampleBlock>
+
+          <Divider/>
+
+          <ExampleBlock header="Loading"
+                        sub="A button can show it is in Loading mode"
+                        codeBlock="<Button loading={true} >Button</Button>">
+            <Button loading={true}>Button</Button>
+          </ExampleBlock>
+
         </div>
-        <SidebarButton />
       </div>
     );
   }

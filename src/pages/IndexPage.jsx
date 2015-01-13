@@ -1,7 +1,6 @@
 "use strict";
 var React     = require('react/addons');
 var Semantify = require('react-semantify');
-var SidebarButton = require('../components/SidebarButton.jsx');
 
 var {Button, Content, Divider, Header, Icon, Items, Item, Segment} = Semantify;
 
@@ -17,7 +16,6 @@ module.exports = React.createClass({
               React-Semantify
               <Header className="sub">Integrate Semantic-ui with react components</Header>
             </Header>
-            <Divider />
           </div>
         </Segment>
         <div className="container">
@@ -36,7 +34,7 @@ module.exports = React.createClass({
             <Header className="sub">A standard button</Header>
           </Header>
         </div>
-        <SidebarButton />
+
       </div>
     );
   }

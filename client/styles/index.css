@@ -9,10 +9,11 @@ body {
 
 /*-------------------------| Sidebar |-------------------------*/
 
-.pusher .attached.button {
+.ui.launch.button {
   position: fixed;
   top: 70px;
   width: 55px;
+  z-index: 10;
 }
 
 .container {
@@ -20,9 +21,17 @@ body {
   margin: 0px auto;
 }
 
+.main.container {
+  background-color: #FFF;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.05);
+  border: 1px solid #DDD;
+  padding: 20px 30px 20px;
+}
+
 /*-------------------------|  Page  |-------------------------*/
 .example.block {
   margin-top: 35px;
+  margin-bottom: 35px;
 }
 
 .example.block .icon {

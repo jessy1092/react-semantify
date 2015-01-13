@@ -14,3 +14,7 @@ React.render(<Sidebar />, document.getElementsByClassName('ui sidebar')[0]);
 React.render(<App />, document.getElementsByClassName('pusher')[0]);
 
 RouteActions.updatePath(pathName);
+
+$('.ui.launch.button').on('click', function () {
+  $('.ui.sidebar').sidebar('show');
+})

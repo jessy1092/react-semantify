@@ -20,7 +20,10 @@ module.exports = React.createClass({
 
     var iconNode = this.getDOMNode().querySelectorAll('.icon.code');
 
-    $(iconNode).popup();
+    $(iconNode[0]).popup();
+    $(iconNode[0]).mouseleave(function () {
+      $(iconNode[0]).popup('remove popup');
+    });
   },
 
   componentDidUpdate: function () {
