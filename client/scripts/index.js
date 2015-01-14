@@ -17,4 +17,4 @@ RouteActions.updatePath(pathName);
 
 $('.ui.launch.button').on('click', function () {
   $('.ui.sidebar').sidebar('show');
-})
+});
