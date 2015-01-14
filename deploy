@@ -4,7 +4,7 @@ git --version
 upstream=$1
 : ${upstream:=origin}
 : ${REPO:=git@github.com:jessy1092/react-semantify}
-git fetch $upstream
+# git fetch $upstream
 if [ `git rev-list HEAD...$upstream/website --count` -ne 0 ]; then
   echo "not deploying"
   exit 1
