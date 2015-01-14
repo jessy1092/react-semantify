@@ -1,0 +1,24 @@
+#!/bin/sh
+set -e -x
+git --version
+upstream=$1
+: ${upstream:=origin}
+: ${REPO:=git@github.com:jessy1092/react-semantify}
+git fetch $upstream
+if [ `git rev-list HEAD...$upstream/website --count` -ne 0 ]; then
+  echo "not deploying"
+  exit 1
+fi
+npm i
+rm -rf _public
+# XXX: use --reference when not in shallow clone
+#git clone $REPO --reference . -b gh-pages _public
+git clone $REPO -b gh-pages _public
+
+REV=`git describe --always`
+BUILD=git-$REV ./node_modules/.bin/gulp build
+cd _public
+git add -A .
+echo "regen for $REV" | git commit-tree `git write-tree` -p `git rev-parse HEAD` -p $REV | xargs git reset --hard
+git push origin gh-pages
+cd ..
