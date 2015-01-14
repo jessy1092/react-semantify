@@ -1,6 +1,6 @@
 "use strict";
 var React = require('react/addons');
-var highlight = require('highlight.js');
+var CodeBlock = require('./CodeBlock.jsx');
 var Semantify = require('react-semantify');
 
 var {Content, Icon, Header, Segment, Label} = Semantify;
@@ -14,9 +14,6 @@ module.exports = React.createClass({
   },
 
   componentDidMount: function () {
-    if (this.state.code) {
-      this._highlightCode();
-    }
 
     var iconNode = this.getDOMNode().querySelectorAll('.icon.code');
 
@@ -24,12 +21,6 @@ module.exports = React.createClass({
     $(iconNode[0]).mouseleave(function () {
       $(iconNode[0]).popup('remove popup');
     });
-  },
-
-  componentDidUpdate: function () {
-    if (this.state.code) {
-      this._highlightCode();
-    }
   },
 
   render: function () {
@@ -60,9 +51,9 @@ module.exports = React.createClass({
       return (
         <Segment className="top attached">
           <Label className="top attached">Example</Label>
-          <pre><code className="html">
+          <CodeBlock language="html">
             {this.props.codeBlock}
-          </code></pre>
+          </CodeBlock>
         </Segment>
       );
     } else {
@@ -78,21 +69,5 @@ module.exports = React.createClass({
     var code;
     code = !this.state.code;
     this.setState({code});
-  },
-
-  _transferToHTML:function () {
-    var codeNodes = this.getDOMNode().querySelectorAll('pre code');
-
-    return codeNodes[0].innerHTML;
-  },
-
-  _highlightCode: function () {
-
-    var codeNodes = this.getDOMNode().querySelectorAll('pre code');
-
-    if (codeNodes.length > 0)
-    {
-      highlight.highlightBlock(codeNodes[0]);
-    }
   }
 })
