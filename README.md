@@ -4,7 +4,8 @@ React-Semantify
 
 Integrate Semantic-ui with react components. It depends on Semantic-UI and helps you use with react component.
 
-[The components' Docs](https://github.com/jessy1092/react-semantify/blob/master/docs)
+[The components' Docs on the website](http://jessy1092.github.io/react-semantify) - Pre-release
+[The components' Docs on the github](https://github.com/jessy1092/react-semantify/blob/master/docs)
 
 ## Usage
 
