@@ -5,12 +5,14 @@ require('semantic-ui/dist/semantic.js');
 
 var React        = require('react/addons');
 var Sidebar      = require('../../src/components/Sidebar.jsx');
+var ForkRibbon   = require('../../src/components/GitHubForkRibbon.jsx');
 var RouteActions = require('../../src/actions/RouteActions.js');
 var App          = require('../../src/App.jsx');
 
 var pathName = location.hash.substring(2);
 
 React.render(<Sidebar />, document.getElementsByClassName('ui sidebar')[0]);
+React.render(<ForkRibbon />, document.getElementsByClassName('github fork ribbon')[0]);
 React.render(<App />, document.getElementsByClassName('pusher')[0]);
 
 RouteActions.updatePath(pathName);
