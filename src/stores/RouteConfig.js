@@ -1,5 +1,6 @@
 "use strict";
-module.exports = [
+
+export default [
   {
     name: 'Home',
     page: require('../pages/IndexPage.jsx')

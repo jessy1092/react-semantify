@@ -1,12 +1,13 @@
 "use strict";
-var AppDispatcher  = require('../dispatcher/AppDispatcher');
-var EventEmitter   = require('events').EventEmitter;
-var util           = require('util');
-var RouteConfig    = require('./RouteConfig.js');
-var RouteConstants = require('../constants/RouteConstants');
+
+import AppDispatcher  from '../dispatcher/AppDispatcher';
+import {EventEmitter} from 'events';
+import util           from 'util';
+import RouteConfig    from './RouteConfig.js';
+import RouteConstants from '../constants/RouteConstants';
 
 function updatePath(pathName) {
-  RouteConfig.map(function (entry) {
+  RouteConfig.map((entry) => {
     if (entry.name === pathName) {
       entry.status = true;
     } else {
@@ -15,29 +16,28 @@ function updatePath(pathName) {
   });
 }
 
-var RouteStore = function () {};
+class RouteStore extends EventEmitter {
 
-util.inherits(RouteStore, EventEmitter);
+  getAll() {
+    return RouteConfig;
+  }
 
-RouteStore.prototype.getAll = function() {
-  return RouteConfig;
-};
+  emitChange() {
+    this.emit(RouteConstants.ROUTE_EVENT);
+  }
 
-RouteStore.prototype.emitChange = function() {
-  this.emit(RouteConstants.ROUTE_EVENT);
-};
+  addChangeListener(listener) {
+    this.on(RouteConstants.ROUTE_EVENT, listener);
+  }
 
-RouteStore.prototype.addChangeListener = function(listener) {
-  this.on(RouteConstants.ROUTE_EVENT, listener);
-};
-
-RouteStore.prototype.removeChangeListener = function(listener) {
-  this.removeListener(RouteConstants.ROUTE_EVENT, listener);
-};
+  removeChangeListener(listener) {
+    this.removeListener(RouteConstants.ROUTE_EVENT, listener)
+  }
+}
 
 var routeStore = new RouteStore();
 
-AppDispatcher.register(function (action) {
+AppDispatcher.register((action) => {
 
   switch(action.actionType) {
     case RouteConstants.ROUTE_UPDATE_PATH:
@@ -49,4 +49,4 @@ AppDispatcher.register(function (action) {
   }
 });
 
-module.exports = routeStore;
+export default routeStore;

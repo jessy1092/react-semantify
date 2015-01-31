@@ -1,14 +1,16 @@
 "use strict";
-var AppDispatcher  = require('../dispatcher/AppDispatcher');
-var RouteConstants = require('../constants/RouteConstants');
 
-var RouteActions = {
-  updatePath: function (pathName) {
+import AppDispatcher  from '../dispatcher/AppDispatcher';
+import RouteConstants from '../constants/RouteConstants';
+
+class RouteActions {
+
+  updatePath(pathName) {
     AppDispatcher.dispatch({
       actionType: RouteConstants.ROUTE_UPDATE_PATH,
-      pathName: pathName
+      pathName
     });
   }
 };
 
-module.exports = RouteActions;
+export default new RouteActions();

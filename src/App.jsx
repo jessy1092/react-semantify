@@ -1,30 +1,31 @@
 "use strict";
-var React        = require('react/addons');
-var RouteStore   = require('./stores/RouteStore.js');
-var IndexPage    = require('./pages/IndexPage.jsx');
 
-module.exports = React.createClass({
+import React      from 'react/addons';
+import RouteStore from './stores/RouteStore.js';
+import IndexPage  from './pages/IndexPage.jsx';
 
-  getInitialState: function () {
+export default React.createClass({
+
+  getInitialState() {
     return {
       routes: RouteStore.getAll()
     }
   },
 
-  componentDidMount: function () {
+  componentDidMount() {
     RouteStore.addChangeListener(this._onChange);
   },
 
-  componentWillUnmount: function () {
+  componentWillUnmount() {
     RouteStore.removeChangeListener(this._onChange);
   },
 
-  render: function () {
+  render() {
     var {routes} = this.state;
     var pageIndex = -1;
     var PageComponent;
 
-    routes.forEach(function (entry, index) {
+    routes.forEach((entry, index) => {
       if (entry.status === true) {
         pageIndex = index;
         PageComponent = entry.page;
@@ -42,7 +43,7 @@ module.exports = React.createClass({
     }
   },
 
-  _onChange: function () {
+  _onChange() {
     this.setState(RouteStore.getAll());
   }
 
