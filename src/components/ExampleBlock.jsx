@@ -1,34 +1,35 @@
 "use strict";
-var React = require('react/addons');
-var CodeBlock = require('./CodeBlock.jsx');
-var Semantify = require('react-semantify');
+
+import React     from 'react/addons';
+import CodeBlock from './CodeBlock.jsx';
+import Semantify from 'react-semantify';
 
 var {Content, Icon, Header, Segment, Label} = Semantify;
 
-module.exports = React.createClass({
+export default React.createClass({
 
-  getInitialState: function () {
+  getInitialState() {
     return {
       code: false
     }
   },
 
-  componentDidMount: function () {
+  componentDidMount() {
 
     var iconNode = this.getDOMNode().querySelectorAll('.icon.code');
 
     $(iconNode[0]).popup();
-    $(iconNode[0]).mouseleave(function () {
+    $(iconNode[0]).mouseleave(() => {
       $(iconNode[0]).popup('remove popup');
     });
   },
 
-  render: function () {
+  render() {
 
-    var {onClick, className, ...other} = this.props;
+    var {onClick, className} = this.props;
 
     return (
-      <div className="example block" {...other}>
+      <div {...this.props} className="example block">
         <Header className="small" >
           <Icon type="link"
                 className="code"
@@ -45,7 +46,7 @@ module.exports = React.createClass({
     );
   },
 
-  _render: function () {
+  _render() {
 
     if (this.state.code) {
       return (
@@ -65,7 +66,7 @@ module.exports = React.createClass({
     }
   },
 
-  _onClick: function () {
+  _onClick() {
     var code;
     code = !this.state.code;
     this.setState({code});

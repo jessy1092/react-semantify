@@ -1,28 +1,29 @@
 "use strict";
-var React       = require('react/addons');
-var Semantify   = require('react-semantify');
-var RouteStore  = require('../stores/RouteStore.js');
-var RouteActions = require('../actions/RouteActions.js');
+
+import React        from 'react/addons';
+import Semantify    from 'react-semantify';
+import RouteStore   from '../stores/RouteStore.js';
+import RouteActions from '../actions/RouteActions.js';
 
 var {Menu, Item, Header} = Semantify;
 
-module.exports = React.createClass({
+export default React.createClass({
 
-  getInitialState: function () {
+  getInitialState() {
     return {
       routes: RouteStore.getAll()
     }
   },
 
-  componentDidMount: function () {
+  componentDidMount() {
     RouteStore.addChangeListener(this._onChange);
   },
 
-  componentWillUnmount: function () {
+  componentWillUnmount() {
     RouteStore.removeChangeListener(this._onChange);
   },
 
-  render: function () {
+  render() {
     return (
       <Item>
         <div className="menu">
@@ -33,9 +34,9 @@ module.exports = React.createClass({
     );
   },
 
-  renderElements: function () {
+  renderElements() {
     return (
-      this.state.routes.map(function (entry, index) {
+      this.state.routes.map((entry, index) => {
         return (
           <Item type="link"
                 href={'#/' + entry.name}
@@ -48,12 +49,12 @@ module.exports = React.createClass({
     );
   },
 
-  _onClick: function (index) {
+  _onClick(index) {
     var {routes} = this.state;
     RouteActions.updatePath(routes[index].name);
   },
 
-  _onChange: function () {
+  _onChange() {
     this.setState(RouteStore.getAll());
   }
 

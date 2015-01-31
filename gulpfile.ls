@@ -1,11 +1,10 @@
 require! <[gulp gulp-util gulp-livereload gulp-jade gulp-plumber]>
 require! <[express connect-livereload path]>
-require! <[vinyl-source-stream browserify reactify]>
+require! <[vinyl-source-stream browserify]>
+require! '6to5ify':to5ify
 
 app = express!
 build_path = '_public'
-reactifyES6 = (file) ->
-  reactify file, {+es6}
 
 gulp.task 'jade', ->
   gulp.src './client/index.jade'
@@ -27,7 +26,7 @@ gulp.task 'css', ->
 
 gulp.task 'browserify', ->
   browserify './client/scripts/index.js'
-    .transform reactifyES6
+    .transform to5ify
     .bundle!
     .pipe vinyl-source-stream 'bundle.js'
     .pipe gulp.dest "#{build_path}/scripts/"

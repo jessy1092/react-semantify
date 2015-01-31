@@ -1,11 +1,11 @@
 "use strict";
 
-var React            = require('react/addons');
-var GitHubForkRibbon = require('react-github-fork-ribbon');
+import React            from 'react/addons';
+import GitHubForkRibbon from 'react-github-fork-ribbon';
 
-module.exports = React.createClass({
+export default React.createClass({
 
-  render: function () {
+  render() {
     return(
       <GitHubForkRibbon position="right"
                         href="//github.com/jessy1092/react-semantify"

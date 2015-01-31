@@ -1,16 +1,17 @@
 "use strict";
-var React     = require('react/addons');
-var Semantify = require('react-semantify');
-var CodeBlock = require('../components/CodeBlock.jsx');
+
+import React     from 'react/addons';
+import Semantify from 'react-semantify';
+import CodeBlock from '../components/CodeBlock.jsx';
 
 var {
   Button, Content, Divider, Header,
   Icon, Items, Item, List, Segment
 } = Semantify;
 
-module.exports = React.createClass({
+export default React.createClass({
 
-  render: function () {
+  render() {
 
     return (
       <div>
@@ -32,7 +33,7 @@ module.exports = React.createClass({
           <Header className="medium dividing" >
             Prerequisites
           </Header>
-          <p>The react-semantify's Dependencies</p>
+          <p>{"The react-semantify's Dependencies"}</p>
 
           <List className="bulleted">
             <Item type="link"

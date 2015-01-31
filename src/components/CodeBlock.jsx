@@ -1,18 +1,19 @@
 "use strict";
-var React = require('react/addons');
-var Highlight = require('highlight.js');
 
-module.exports = React.createClass({
+import React from 'react/addons';
+import Highlight from 'highlight.js';
 
-  componentDidMount: function () {
+export default React.createClass({
+
+  componentDidMount() {
     this._highlightCode();
   },
 
-  componentDidUpdate: function () {
+  componentDidUpdate() {
     this._highlightCode();
   },
 
-  render: function () {
+  render() {
     return (
       <pre><code className={this.props.language}>
         {this.props.children}
@@ -20,7 +21,7 @@ module.exports = React.createClass({
     )
   },
 
-  _highlightCode: function () {
+  _highlightCode() {
 
     var codeNodes = this.getDOMNode().querySelectorAll('pre code');
 

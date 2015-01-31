@@ -1,13 +1,14 @@
 "use strict";
-var React         = require('react/addons');
-var Semantify     = require('react-semantify');
-var ExampleBlock  = require('../components/ExampleBlock.jsx');
+
+import React        from 'react/addons';
+import Semantify    from 'react-semantify';
+import ExampleBlock from '../components/ExampleBlock.jsx';
 
 var {Button, Divider, Header, Segment} = Semantify;
 
-module.exports = React.createClass({
+export default React.createClass({
 
-  render: function () {
+  render() {
     return (
       <div>
         <Segment className="header">
