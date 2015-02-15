@@ -3,22 +3,19 @@
 import React        from 'react/addons';
 import Semantify    from 'react-semantify';
 import ExampleBlock from '../components/ExampleBlock.jsx';
+import PageTitle    from '../components/PageTitle.jsx';
 
-var {Button, Divider, Header, Segment} = Semantify;
+var {Button, Divider, Header} = Semantify;
 
 export default React.createClass({
 
   render() {
     return (
       <div>
-        <Segment className="header">
-          <div className="container">
-            <Header className="huge">
-              Button
-              <Header className="sub">A button indicates a possible user action</Header>
-            </Header>
-          </div>
-        </Segment>
+        <PageTitle title="Button">
+          A button indicates a possible user action
+        </PageTitle>
+
         <div className="main container">
           <Header className="large dividing">Type</Header>
           <ExampleBlock header="Button"

@@ -3,10 +3,11 @@
 import React     from 'react/addons';
 import Semantify from 'react-semantify';
 import CodeBlock from '../components/CodeBlock.jsx';
+import PageTitle from '../components/PageTitle.jsx';
 
 var {
   Button, Content, Divider, Header,
-  Icon, Items, Item, List, Segment
+  Icon, Items, Item, List
 } = Semantify;
 
 export default React.createClass({
@@ -15,16 +16,10 @@ export default React.createClass({
 
     return (
       <div>
-        <Segment className="header">
-          <div className="container">
-            <Header className="huge">
-              React-Semantify
-              <Header className="sub">
-                Integrate Semantic-ui with react components
-              </Header>
-            </Header>
-          </div>
-        </Segment>
+        <PageTitle title="React-Semantify">
+          Integrate Semantic-ui with react components
+        </PageTitle>
+
         <div className="main container">
           <Header className="large dividing">
             Getting Started
