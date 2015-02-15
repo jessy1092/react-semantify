@@ -1,14 +1,20 @@
-require! <[gulp gulp-util gulp-livereload gulp-jade gulp-plumber gulp-uglify]>
+require! <[gulp gulp-util gulp-livereload gulp-jade gulp-plumber gulp-uglify gulp-if]>
 require! <[express connect-livereload path]>
 require! <[vinyl-source-stream vinyl-buffer]>
 require! <[browserify babelify]>
 
+
 app        = express!
 build_path = '_public'
+
 buffer     = vinyl-buffer
+gutil      = gulp-util
+gulpif     = gulp-if
 livereload = gulp-livereload
 source     = vinyl-source-stream
 uglify     = gulp-uglify
+
+production = true if gutil.env.env is \production
 
 gulp.task 'jade', ->
   gulp.src './client/index.jade'
@@ -37,8 +43,8 @@ gulp.task 'browserify', ->
     .transform babelify
     .bundle!
     .pipe source 'bundle.js'
-    .pipe buffer!
-    .pipe uglify!
+    .pipe gulpif production, buffer!
+    .pipe gulpif production, uglify!
     .pipe gulp.dest "#{build_path}/scripts/"
     .pipe livereload!
 
@@ -46,7 +52,7 @@ gulp.task 'server', ->
   app.use connect-livereload!
   app.use express.static path.resolve "#{build_path}"
   app.listen 3000
-  gulp-util.log 'listening on port 3000'
+  gutil.log 'listening on port 3000'
 
 gulp.task 'watch', ->
   livereload.listen start: true

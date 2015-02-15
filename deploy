@@ -16,7 +16,7 @@ rm -rf _public
 git clone $REPO -b gh-pages _public
 
 REV=`git describe --always`
-BUILD=git-$REV ./node_modules/.bin/gulp build
+BUILD=git-$REV ./node_modules/.bin/gulp build --env production
 cd _public
 git add -A .
 echo "regen for $REV" | git commit-tree `git write-tree` -p `git rev-parse HEAD` -p $REV | xargs git reset --hard
