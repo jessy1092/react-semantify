@@ -1,40 +1,46 @@
 require! <[gulp gulp-util gulp-livereload gulp-jade gulp-plumber gulp-uglify]>
 require! <[express connect-livereload path]>
-require! <[vinyl-source-stream vinyl-buffer browserify]>
-require! '6to5ify':to5ify
+require! <[vinyl-source-stream vinyl-buffer]>
+require! <[browserify babelify]>
 
-app = express!
+app        = express!
 build_path = '_public'
-buffer = vinyl-buffer
-source = vinyl-source-stream
-uglify = gulp-uglify
+buffer     = vinyl-buffer
+livereload = gulp-livereload
+source     = vinyl-source-stream
+uglify     = gulp-uglify
 
 gulp.task 'jade', ->
   gulp.src './client/index.jade'
     .pipe gulp-plumber!
     .pipe gulp-jade!
     .pipe gulp.dest "#{build_path}"
+    .pipe livereload!
 
 gulp.task 'images', ->
   gulp.src './client/images/*'
     .pipe gulp.dest "#{build_path}/images/"
+    .pipe livereload!
 
 gulp.task 'data', ->
   gulp.src './client/data/*'
     .pipe gulp.dest "#{build_path}/data/"
+    .pipe livereload!
 
 gulp.task 'css', ->
   gulp.src './client/styles/*.css'
     .pipe gulp.dest "#{build_path}/styles/"
+    .pipe livereload!
 
 gulp.task 'browserify', ->
   browserify './client/scripts/index.js'
-    .transform to5ify
+    .transform babelify
     .bundle!
     .pipe source 'bundle.js'
     .pipe buffer!
     .pipe uglify!
     .pipe gulp.dest "#{build_path}/scripts/"
+    .pipe livereload!
 
 gulp.task 'server', ->
   app.use connect-livereload!
@@ -43,12 +49,12 @@ gulp.task 'server', ->
   gulp-util.log 'listening on port 3000'
 
 gulp.task 'watch', ->
-  gulp-livereload.listen silent: true
-  gulp.watch './client/index.jade', <[jade]> .on \change, gulp-livereload.changed
-  gulp.watch './client/data/*', <[data]> .on \change, gulp-livereload.changed
-  gulp.watch './client/styles/*.css', <[css]> .on \change, gulp-livereload.changed
-  gulp.watch './client/scripts/**/*', <[browserify]> .on \changed, gulp-livereload.changed
-  gulp.watch './src/**/*', <[browserify]> .on \changed, gulp-livereload.changed
+  livereload.listen start: true
+  gulp.watch './client/index.jade', <[jade]>
+  gulp.watch './client/data/*', <[data]>
+  gulp.watch './client/styles/*.css', <[css]>
+  gulp.watch './client/scripts/**/*', <[browserify]>
+  gulp.watch './src/**/*', <[browserify]>
 
 gulp.task 'build', <[jade browserify css]>
 gulp.task 'dev', <[build server watch]>
