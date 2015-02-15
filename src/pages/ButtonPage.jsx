@@ -18,6 +18,7 @@ export default React.createClass({
 
         <div className="main container">
           <Header className="large dividing">Type</Header>
+
           <ExampleBlock header="Button"
                         sub="A standard button"
                         codeBlock="<Button>Button</Button>">

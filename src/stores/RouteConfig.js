@@ -7,5 +7,8 @@ export default [
   }, {
     name: 'Button',
     page: require('../pages/ButtonPage.jsx')
+  }, {
+    name: 'Divider',
+    page: require('../pages/DividerPage.jsx')
   }
 ];
