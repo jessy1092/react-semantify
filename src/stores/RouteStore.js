@@ -7,12 +7,15 @@ import RouteConfig    from './RouteConfig.js';
 import RouteConstants from '../constants/RouteConstants';
 
 function updatePath(pathName) {
-  RouteConfig.map((entry) => {
-    if (entry.name === pathName) {
-      entry.status = true;
-    } else {
-      entry.status = false;
-    }
+
+  ['Basic', 'Elements', 'Collections', 'Views', 'Modules'].forEach((key) => {
+    RouteConfig[key].forEach((entry) => {
+      if (entry.name === pathName) {
+        entry.status = true;
+      } else {
+        entry.status = false;
+      }
+    });
   });
 }
 

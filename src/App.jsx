@@ -25,11 +25,13 @@ export default React.createClass({
     var pageIndex = -1;
     var PageComponent;
 
-    routes.forEach((entry, index) => {
-      if (entry.status === true) {
-        pageIndex = index;
-        PageComponent = entry.page;
-      }
+    ['Basic', 'Elements', 'Collections', 'Views', 'Modules'].forEach((key) => {
+      routes[key].forEach((entry, index) => {
+        if (entry.status === true) {
+          pageIndex = index;
+          PageComponent = entry.page;
+        }
+      });
     });
 
     if (pageIndex >= 0) {

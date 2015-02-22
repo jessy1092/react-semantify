@@ -25,23 +25,33 @@ export default React.createClass({
 
   render() {
     return (
-      <Item>
-        <div className="menu">
-          <Header className="small inverted">Elements</Header>
-          {this.renderElements()}
-        </div>
-      </Item>
+      <div>
+        <Menu className="ui inverted">
+          <Item className="header">Basic</Item>
+          <Item>
+            <Menu className="inverted">
+              {this.renderElements('Basic')}
+            </Menu>
+          </Item>
+          <Item className="header">Elements</Item>
+          <Item>
+            <Menu className="inverted">
+              {this.renderElements('Elements')}
+            </Menu>
+          </Item>
+        </Menu>
+      </div>
     );
   },
 
-  renderElements() {
+  renderElements(kind) {
     return (
-      this.state.routes.map((entry, index) => {
+      this.state.routes[kind].map((entry, index) => {
         return (
           <Item type="link"
                 href={'#/' + entry.name}
                 active={entry.status}
-                onClick={this._onClick.bind(this, index)}>
+                onClick={this._onClick.bind(this, kind, index)}>
             {entry.name}
           </Item>
         );
@@ -49,9 +59,9 @@ export default React.createClass({
     );
   },
 
-  _onClick(index) {
+  _onClick(kind, index) {
     var {routes} = this.state;
-    RouteActions.updatePath(routes[index].name);
+    RouteActions.updatePath(routes[kind][index].name);
   },
 
   _onChange() {
