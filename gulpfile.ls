@@ -3,7 +3,6 @@ require! <[express connect-livereload path]>
 require! <[vinyl-source-stream vinyl-buffer]>
 require! <[browserify babelify]>
 
-
 app        = express!
 build_path = '_public'
 

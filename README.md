@@ -23,6 +23,14 @@ The Document Website. Welcome to contribute and report issue.
 
 and then open `http://localhost:3000/`
 
+## Add Documents
+for [issue #11](https://github.com/jessy1092/react-semantify/issues/11)
+
+1. Create document page in [src/pages](https://github.com/jessy1092/react-semantify/tree/website/src/pages) folder. (The component put in src/components)
+2. And modify [RouteConfig.js](https://github.com/jessy1092/react-semantify/blob/website/src/stores/RouteConfig.js#L4-L23)
+
+If anyone want to help or enhance the document, please feel free to pr. 
+
 ## Contribute
 
 1. Fork it.
@@ -33,6 +41,10 @@ and then open `http://localhost:3000/`
 6. Create new Pull Request with `website` branch
 
 ## Change Log
+
+#### 2015/02/23 v0.1.0
+- Add RouteConfig for add Documents.
+- Add DividerPage, ButtonPage and getting started page.
 
 #### 2015/01/08 v0.0.1
 - init
