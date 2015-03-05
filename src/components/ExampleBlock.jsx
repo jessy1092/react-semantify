@@ -53,7 +53,7 @@ export default React.createClass({
         <Segment className="top attached">
           <Label className="top attached">Example</Label>
           <CodeBlock language="html">
-            {this.props.codeBlock}
+            {this.props.children}
           </CodeBlock>
         </Segment>
       );

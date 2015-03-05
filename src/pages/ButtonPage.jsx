@@ -20,32 +20,28 @@ export default React.createClass({
           <Header className="large dividing">Type</Header>
 
           <ExampleBlock header="Button"
-                        sub="A standard button"
-                        codeBlock="<Button>Button</Button>">
+                        sub="A standard button">
             <Button>Button</Button>
           </ExampleBlock>
 
           <Header className="large dividing">States</Header>
 
           <ExampleBlock header="Active"
-                        sub="A button can show it is in active mode"
-                        codeBlock="<Button active={true} >Button</Button>">
+                        sub="A button can show it is in active mode">
             <Button active={true}>Button</Button>
           </ExampleBlock>
 
           <Divider/>
 
           <ExampleBlock header="Disabled"
-                        sub="A button can show it is in Disabled mode"
-                        codeBlock="<Button disabled={true} >Button</Button>">
+                        sub="A button can show it is in Disabled mode">
             <Button disabled={true}>Button</Button>
           </ExampleBlock>
 
           <Divider/>
 
           <ExampleBlock header="Loading"
-                        sub="A button can show it is in Loading mode"
-                        codeBlock="<Button loading={true} >Button</Button>">
+                        sub="A button can show it is in Loading mode">
             <Button loading={true}>Button</Button>
           </ExampleBlock>
 

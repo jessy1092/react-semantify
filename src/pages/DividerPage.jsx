@@ -20,10 +20,7 @@ export default React.createClass({
           <Header className="large dividing">Type</Header>
 
           <ExampleBlock header="Button"
-                        sub="A standard divider"
-                        codeBlock={["<p>This is the first region</p>",
-                                    "<Divider/>",
-                                    "<p>This is the second region</p>"].join('\n')}>
+                        sub="A standard divider">
             <p>This is the first region</p>
             <Divider/>
             <p>This is the second region</p>
