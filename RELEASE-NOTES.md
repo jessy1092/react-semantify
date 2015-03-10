@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+## Version 0.2.4 - 2015/03/10
+
+- Transpile on prepublish. [issue #13](https://github.com/jessy1092/react-semantify/issues/13)
+- Use gulp 4.0 for build system with es6.
+
 ## Version 0.2.3 - 2015/01/07
 
 - Add Commons and Modules Test Function
