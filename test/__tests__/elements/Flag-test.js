@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Flag      = require('../../../src/index.js').Flag;
+var Flag      = require('../../../lib/index.js').Flag;
 
 describe('Flag', function () {
   it('should have .flag class by default', function () {

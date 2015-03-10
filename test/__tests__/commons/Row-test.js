@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Row       = require('../../../src/index.js').Row;
+var Row       = require('../../../lib/index.js').Row;
 
 describe('Row', function () {
   it('should have .row class by default', function () {

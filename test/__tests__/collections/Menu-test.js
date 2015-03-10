@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Menu      = require('../../../src/index.js').Menu;
+var Menu      = require('../../../lib/index.js').Menu;
 
 describe('Menu', function () {
   it('should have .ui.menu class by default', function () {

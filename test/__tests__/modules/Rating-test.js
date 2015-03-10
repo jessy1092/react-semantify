@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Rating    = require('../../../src/index.js').Rating;
+var Rating    = require('../../../lib/index.js').Rating;
 
 describe('Rating', function () {
   it('should have .ui.rating class by default', function () {

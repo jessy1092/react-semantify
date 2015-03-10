@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Input     = require('../../../src/index.js').Input;
+var Input     = require('../../../lib/index.js').Input;
 
 describe('Input', function () {
   it('should have .ui.input class by default', function () {

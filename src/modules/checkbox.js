@@ -3,24 +3,25 @@ module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
   var StateSelector  = require('../mixins/stateSelector.js')(React);
-  var Unit           = require('../commons/unit.jsx')(React);
+  var Unit           = require('../commons/unit.js')(React);
 
-  var defaultClassName = 'ui modal';
+  var defaultClassName = 'ui checkbox';
 
-  var Modal = React.createClass({
+  var Checkbox = React.createClass({
 
     mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
-      var {className, color, type, active, ...other} = this.props;
+      var {className, color, type, disabled, readOnly, ...other} = this.props;
 
       return (
         <Unit {...other}
           className={this.getClassName(defaultClassName)}
           color="null"
           type="div"
-          active={this.getActive()}>
+          disabled={this.getDisabled()}
+          readOnly={this.getReadOnly()}>
           {this.props.children}
         </Unit>
       );
@@ -33,13 +34,13 @@ module.exports = function (React) {
         }
 
         if (this.props.init === true) {
-          $(this.getDOMNode()).modal();
+          $(this.getDOMNode()).checkbox();
         } else {
-          $(this.getDOMNode()).modal(this.props.init);
+          $(this.getDOMNode()).checkbox(this.props.init);
         }
       }
     }
   });
 
-  return Modal;
+  return Checkbox;
 }

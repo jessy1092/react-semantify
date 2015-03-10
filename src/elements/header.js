@@ -5,7 +5,7 @@ module.exports = function (React) {
   var ColorSelector  = require('../mixins/colorSelector.js')(React);
   var TypeSelector   = require('../mixins/typeSelector.js')(React);
   var StateSelector  = require('../mixins/stateSelector.js')(React);
-  var Unit           = require('../commons/unit.jsx')(React);
+  var Unit           = require('../commons/unit.js')(React);
 
   var defaultClassName = 'ui header';
 

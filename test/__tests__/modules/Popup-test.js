@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Popup     = require('../../../src/index.js').Popup;
+var Popup     = require('../../../lib/index.js').Popup;
 
 describe('Popup', function () {
   it('should have .ui.popup class by default', function () {
