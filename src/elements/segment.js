@@ -4,11 +4,11 @@ module.exports = function (React) {
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
   var ColorSelector  = require('../mixins/colorSelector.js')(React);
   var StateSelector  = require('../mixins/stateSelector.js')(React);
-  var Unit           = require('../commons/unit.jsx')(React);
+  var Unit           = require('../commons/unit.js')(React);
 
-  var defaultClassName = 'icon';
+  var defaultClassName = 'ui segment';
 
-  var Icon = React.createClass({
+  var Segment = React.createClass({
 
     mixins: [ClassGenerator, ColorSelector, StateSelector],
 
@@ -19,7 +19,7 @@ module.exports = function (React) {
       return (
         <Unit {...other}
           className={this.getClassName(defaultClassName)}
-          type="icon"
+          type="div"
           color={this.getColor()}
           disabled={this.getDisabled()}
           loading={this.getLoading()}>
@@ -28,6 +28,5 @@ module.exports = function (React) {
     }
   });
 
-  return Icon;
+  return Segment;
 }
-

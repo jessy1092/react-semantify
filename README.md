@@ -1,10 +1,11 @@
 React-Semantify
 =============
-[![Dependency Status][david-dm-image]][david-dm-url] [![Build Status][travis-ci-image]][travis-ci-url][![Coverage Status][coverage-status-image]][coverage-status-url]
+[![Dependency Status][david-dm-image]][david-dm-url] [![Build Status][travis-ci-image]][travis-ci-url] [![Coverage Status][coverage-status-image]][coverage-status-url] [![Code Climate][code-climate-image]][code-climate-url]
 
 Integrate Semantic-ui with react components. It depends on Semantic-UI and helps you use with react component.
 
-[The components' Docs](https://github.com/jessy1092/react-semantify/blob/master/docs)
+[The components' Docs on the website](http://jessy1092.github.io/react-semantify) - Pre-release
+[The components' Docs on the github](https://github.com/jessy1092/react-semantify/blob/master/docs)
 
 ## Usage
 
@@ -185,7 +186,7 @@ Wait Semantic-UI Release.
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Lee  < jessy1092@gmail.com >
+Copyright (c) 2014-2015 Lee  < jessy1092@gmail.com >
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -218,3 +219,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [coverage-status-image]: https://img.shields.io/coveralls/jessy1092/react-semantify.svg?style=flat-square
 [coverage-status-url]: https://coveralls.io/r/jessy1092/react-semantify
+
+[code-climate-image]: https://img.shields.io/codeclimate/github/jessy1092/react-semantify.svg?style=flat-square
+[code-climate-url]: https://codeclimate.com/github/jessy1092/react-semantify

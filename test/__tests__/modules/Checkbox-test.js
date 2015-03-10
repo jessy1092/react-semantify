@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Checkbox  = require('../../../src/index.js').Checkbox;
+var Checkbox  = require('../../../lib/index.js').Checkbox;
 
 describe('Checkbox', function () {
   it('should have .ui.checkbox class by default', function () {

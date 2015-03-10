@@ -3,24 +3,23 @@ module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
   var StateSelector  = require('../mixins/stateSelector.js')(React);
-  var Unit           = require('../commons/unit.jsx')(React);
+  var Unit           = require('../commons/unit.js')(React);
 
-  var defaultClassName = 'ui dimmer';
+  var defaultClassName = 'ui modal';
 
-  var Dimmer = React.createClass({
+  var Modal = React.createClass({
 
     mixins: [ClassGenerator, StateSelector],
 
     render: function () {
 
-      var {className, color, type, disabled, active, ...other} = this.props;
+      var {className, color, type, active, ...other} = this.props;
 
       return (
-        <Unit
+        <Unit {...other}
           className={this.getClassName(defaultClassName)}
           color="null"
           type="div"
-          disabled={this.getDisabled()}
           active={this.getActive()}>
           {this.props.children}
         </Unit>
@@ -34,13 +33,13 @@ module.exports = function (React) {
         }
 
         if (this.props.init === true) {
-          $(this.getDOMNode()).dimmer();
+          $(this.getDOMNode()).modal();
         } else {
-          $(this.getDOMNode()).dimmer(this.props.init);
+          $(this.getDOMNode()).modal(this.props.init);
         }
       }
     }
   });
 
-  return Dimmer;
+  return Modal;
 }

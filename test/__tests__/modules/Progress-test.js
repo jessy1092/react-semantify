@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Progress  = require('../../../src/index.js').Progress;
+var Progress  = require('../../../lib/index.js').Progress;
 
 describe('Progress', function () {
   it('should have .ui.progress class by default', function () {

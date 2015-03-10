@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Label     = require('../../../src/index.js').Label;
+var Label     = require('../../../lib/index.js').Label;
 
 describe('Label', function () {
   it('should have .ui.label class by default', function () {

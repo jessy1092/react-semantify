@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Section   = require('../../../src/index.js').Section;
+var Section   = require('../../../lib/index.js').Section;
 
 describe('Section', function () {
   it('should have .section class by default', function () {

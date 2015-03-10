@@ -2,7 +2,7 @@
 module.exports = function (React) {
 
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var Unit           = require('../commons/unit.jsx')(React);
+  var Unit           = require('../commons/unit.js')(React);
 
   var defaultClassName = 'flag';
 

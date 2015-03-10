@@ -4,7 +4,7 @@ module.exports = function (React) {
   var ClassGenerator = require('../mixins/classGenerator.js')(React);
   var ColorSelector  = require('../mixins/colorSelector.js')(React);
   var StateSelector  = require('../mixins/stateSelector.js')(React);
-  var Unit           = require('../commons/unit.jsx')(React);
+  var Unit           = require('../commons/unit.js')(React);
 
   var defaultClassName = 'ui button';
 

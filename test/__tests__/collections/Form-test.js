@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Form      = require('../../../src/index.js').Form;
+var Form      = require('../../../lib/index.js').Form;
 
 describe('Form', function () {
   it('should have .ui.form class by default', function () {

@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
-var React       = require('react');
-var TestUtils   = require('react/lib/ReactTestUtils');
-var Breadcrumb = require('../../../src/index.js').Breadcrumb;
+var React      = require('react');
+var TestUtils  = require('react/lib/ReactTestUtils');
+var Breadcrumb = require('../../../lib/index.js').Breadcrumb;
 
 describe('Breadcrumb', function () {
   it('should have .ui.breadcrumb class by default', function () {

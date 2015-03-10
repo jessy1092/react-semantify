@@ -6,3 +6,7 @@ test/
 # Else
 docs/
 .editorconfig
+
+# Use Transpile file for publish
+src/
+gulpfile.babel.js

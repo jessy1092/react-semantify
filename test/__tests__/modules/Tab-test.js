@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Tab       = require('../../../src/index.js').Tab;
+var Tab       = require('../../../lib/index.js').Tab;
 
 describe('Tab', function () {
   it('should have .ui.tab class by default', function () {

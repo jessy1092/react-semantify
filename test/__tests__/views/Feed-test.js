@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Feed  = require('../../../src/index.js').Feed;
+var Feed      = require('../../../lib/index.js').Feed;
 
 describe('Feed', function () {
   it('should have .ui.feed class by default', function () {

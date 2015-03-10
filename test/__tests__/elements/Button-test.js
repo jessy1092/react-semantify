@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Button    = require('../../../src/index.js').Button;
+var Button    = require('../../../lib/index.js').Button;
 
 describe('Button', function () {
   it('should have .ui.button class by default', function () {

@@ -2,3 +2,9 @@
 node_modules/
 _public/
 *.log
+
+# transpile file
+lib/
+
+# gulpfile is transpile from gulpfile.babel.js
+gulpfile.js

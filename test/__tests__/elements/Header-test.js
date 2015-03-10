@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Header    = require('../../../src/index.js').Header;
+var Header    = require('../../../lib/index.js').Header;
 
 describe('Header', function () {
   it('should have .ui.header class by default', function () {

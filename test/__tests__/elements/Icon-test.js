@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Icon      = require('../../../src/index.js').Icon;
+var Icon      = require('../../../lib/index.js').Icon;
 
 describe('Icon', function () {
   it('should have .icon class by default', function () {

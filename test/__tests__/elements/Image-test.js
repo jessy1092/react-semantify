@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Image     = require('../../../src/index.js').Image;
+var Image     = require('../../../lib/index.js').Image;
 
 describe('Image', function () {
   it('should have .ui.image class by default', function () {

@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../src/index.js');
+jest.dontMock('../../../lib/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Loader    = require('../../../src/index.js').Loader;
+var Loader    = require('../../../lib/index.js').Loader;
 
 describe('Loader', function () {
   it('should have .ui.loader class by default', function () {
