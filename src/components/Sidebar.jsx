@@ -39,6 +39,12 @@ export default React.createClass({
               {this.renderElements('Elements')}
             </Menu>
           </Item>
+          <Item className="header">Modules</Item>
+          <Item>
+            <Menu className="inverted">
+              {this.renderElements('Modules')}
+            </Menu>
+          </Item>
         </Menu>
       </div>
     );

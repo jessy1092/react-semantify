@@ -20,5 +20,8 @@ export default {
 
   'Views': [],
 
-  'Modules': []
+  'Modules': [{
+      name: 'Dropdown',
+      page: require('../pages/DropdownPage.jsx')
+    }]
 };

@@ -46,7 +46,7 @@ export default React.createClass({
   },
 
   _onChange() {
-    this.setState(RouteStore.getAll());
+    this.setState({routes: RouteStore.getAll()});
   }
 
 });
