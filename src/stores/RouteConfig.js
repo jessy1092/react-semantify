@@ -21,6 +21,9 @@ export default {
   'Views': [],
 
   'Modules': [{
+      name: 'Checkbox',
+      page: require('../pages/CheckboxPage.jsx')
+    }, {
       name: 'Dropdown',
       page: require('../pages/DropdownPage.jsx')
     }]

@@ -31,7 +31,7 @@ export default React.createClass({
           {'You also can use init={param} to transfer parameter. '}
           {'You can see '}
           <Item type="link"
-                href="//github.com/jessy1092/react-semantify/releases"
+                href="//semantic-ui.com/modules/dropdown.html#/usage"
                 target="_blank">
             {'Sementic-ui Usage'}
           </Item>
