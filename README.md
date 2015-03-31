@@ -42,6 +42,9 @@ If anyone want to help or enhance the document, please feel free to pr.
 
 ## Change Log
 
+#### 2015/04/01 v0.2.0
+- Update React to v0.13.x
+
 #### 2015/02/23 v0.1.0
 - Add RouteConfig for add Documents.
 - Add DividerPage, ButtonPage and getting started page.

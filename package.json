@@ -1,7 +1,7 @@
 {
   "name"       : "react-semantify-website",
   "description": "Semantic-ui implement by react component. Dev mode.",
-  "version"    : "0.0.1",
+  "version"    : "0.2.0",
   "contributor": [
     {
       "name" : "Lee",
@@ -18,9 +18,9 @@
     "flux": "^2.0.1",
     "highlight.js": "^8.4.0",
     "jquery": "^2.1.1",
-    "react": "^0.12.2",
-    "react-github-fork-ribbon": "^0.1.0",
-    "react-semantify": "^0.2.4",
+    "react": "^0.13.1",
+    "react-github-fork-ribbon": "^0.3.0",
+    "react-semantify": "^0.3.0",
     "react-to-jsx": "^1.2.0",
     "semantic-ui": "~1.8.1"
   },
