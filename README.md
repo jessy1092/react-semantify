@@ -1,11 +1,17 @@
 React-Semantify
 =============
-[![Dependency Status][david-dm-image]][david-dm-url] [![Build Status][travis-ci-image]][travis-ci-url] [![Coverage Status][coverage-status-image]][coverage-status-url] [![Code Climate][code-climate-image]][code-climate-url]
+[![npm][npm-image]][npm-url] [![Dependency Status][david-dm-image]][david-dm-url] [![Build Status][travis-ci-image]][travis-ci-url] [![Coverage Status][coverage-status-image]][coverage-status-url] [![Code Climate][code-climate-image]][code-climate-url]
 
 Integrate Semantic-ui with react components. It depends on Semantic-UI and helps you use with react component.
 
 [The components' Docs on the website](http://jessy1092.github.io/react-semantify) - Pre-release
+
 [The components' Docs on the github](https://github.com/jessy1092/react-semantify/blob/master/docs)
+
+
+|         | React = 0.12 | React >= 0.13 |
+| ------- | ------------ | ------------- |
+| Version | <= 0.2       | >= 0.3        |
 
 ## Usage
 
@@ -209,9 +215,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 [cdnjs-url]: https://cdnjs.com/libraries/semantic-ui
 [react-semantify-url]: https://github.com/jessy1092/react-semantify/releases
 
-[david-dm-image]: https://david-dm.org/jessy1092/react-semantify.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/react-semantify.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/react-semantify
+
+[david-dm-image]: https://img.shields.io/david/jessy1092/react-semantify.svg?style=flat-square
 [david-dm-url]: https://david-dm.org/jessy1092/react-semantify
-[david-dm-dev-image]: https://david-dm.org/jessy1092/react-semantify/dev-status.svg?style=flat-square
+[david-dm-dev-image]: https://img.shields.io/david/dev/jessy1092/react-semantify.svg?style=flat-square
 [david-dm-dev-url]: https://david-dm.org/jessy1092/react-semantify#info=devDependencies
 
 [travis-ci-image]: https://img.shields.io/travis/jessy1092/react-semantify.svg?style=flat-square
