@@ -35,7 +35,8 @@
   },
   "main": "lib/index.js",
   "dependencies": {
-    "react": "^0.12.0"
+    "react": "^0.13.1",
+    "classnames": "^1.2.0"
   },
   "devDependencies": {
     "babel": "^4.7.1",
