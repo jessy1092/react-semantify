@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+## Version 0.3.0 - 2015/04/01
+
+- Support React v0.13.x
+- Use [classnames](https://github.com/JedWatson/classnames) instead of [React.addon.classSet](http://facebook.github.io/react/docs/class-name-manipulation.html)
+
 ## Version 0.2.4 - 2015/03/10
 
 - Transpile on prepublish. [issue #13](https://github.com/jessy1092/react-semantify/issues/13)

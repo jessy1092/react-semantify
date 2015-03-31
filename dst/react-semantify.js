@@ -1,7 +1,6 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function (global){
 "use strict";
-
 var React = global.React;
 
 module.exports = global.Semantify = {
@@ -576,7 +575,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 module.exports = function (React) {
 
-  var classSet = React.addons.classSet;
+  var classSet = require("classnames");
 
   var Unit = React.createClass({
     displayName: "Unit",
@@ -674,7 +673,7 @@ module.exports = function (React) {
 
   return Unit;
 };
-},{}],17:[function(require,module,exports){
+},{"classnames":57}],17:[function(require,module,exports){
 "use strict";
 
 var _objectWithoutProperties = function (obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; };
@@ -723,7 +722,6 @@ module.exports = function (React) {
 };
 },{"../commons/unit.js":16,"../mixins/classGenerator.js":32,"../mixins/colorSelector.js":33,"../mixins/stateSelector.js":34}],18:[function(require,module,exports){
 "use strict";
-
 module.exports = function (React) {
 
   var ClassGenerator = require("../mixins/classGenerator.js")(React);
@@ -1273,10 +1271,9 @@ module.exports = function (React) {
 };
 },{"../mixins/classGenerator.js":32}],32:[function(require,module,exports){
 "use strict";
-
 module.exports = function (React) {
 
-  var classSet = React.addons.classSet;
+  var classSet = require("classnames");
 
   var ClassGenerator = {
 
@@ -1305,9 +1302,8 @@ module.exports = function (React) {
 
   return ClassGenerator;
 };
-},{}],33:[function(require,module,exports){
+},{"classnames":57}],33:[function(require,module,exports){
 "use strict";
-
 module.exports = function (React) {
 
   var colorArray = ["black", "yellow", "green", "blue", "orange", "purple", "red", "teal"];
@@ -1336,7 +1332,6 @@ module.exports = function (React) {
 };
 },{}],34:[function(require,module,exports){
 "use strict";
-
 module.exports = function (React) {
 
   var StateSelector = {
@@ -1448,7 +1443,6 @@ module.exports = function (React) {
 };
 },{}],35:[function(require,module,exports){
 "use strict";
-
 module.exports = function (React) {
 
   var typeArray = ["div", "link", "icon"];
@@ -1475,7 +1469,6 @@ module.exports = function (React) {
 };
 },{}],36:[function(require,module,exports){
 "use strict";
-
 module.exports = function (React) {
 
   var ClassGenerator = require("../mixins/classGenerator.js")(React);
@@ -1752,7 +1745,6 @@ module.exports = function (React) {
 };
 },{"../commons/unit.js":16,"../mixins/classGenerator.js":32,"../mixins/stateSelector.js":34}],41:[function(require,module,exports){
 "use strict";
-
 module.exports = function (React) {
 
   var ClassGenerator = require("../mixins/classGenerator.js")(React);
@@ -2370,7 +2362,6 @@ module.exports = function (React) {
 };
 },{"../commons/unit.js":16,"../mixins/classGenerator.js":32,"../mixins/typeSelector.js":35}],55:[function(require,module,exports){
 "use strict";
-
 module.exports = function (React) {
 
   var ClassGenerator = require("../mixins/classGenerator.js")(React);
@@ -2440,4 +2431,36 @@ module.exports = function (React) {
 
   return Statistic;
 };
-},{"../mixins/classGenerator.js":32}]},{},[1]);
+},{"../mixins/classGenerator.js":32}],57:[function(require,module,exports){
+function classNames() {
+	var classes = '';
+	var arg;
+
+	for (var i = 0; i < arguments.length; i++) {
+		arg = arguments[i];
+		if (!arg) {
+			continue;
+		}
+
+		if ('string' === typeof arg || 'number' === typeof arg) {
+			classes += ' ' + arg;
+		} else if (Object.prototype.toString.call(arg) === '[object Array]') {
+			classes += ' ' + classNames.apply(null, arg);
+		} else if ('object' === typeof arg) {
+			for (var key in arg) {
+				if (!arg.hasOwnProperty(key) || !arg[key]) {
+					continue;
+				}
+				classes += ' ' + key;
+			}
+		}
+	}
+	return classes.substr(1);
+}
+
+// safely export classNames in case the script is included directly on a page
+if (typeof module !== 'undefined' && module.exports) {
+	module.exports = classNames;
+}
+
+},{}]},{},[1]);
