@@ -26,5 +26,8 @@ export default {
     }, {
       name: 'Dropdown',
       page: require('../pages/DropdownPage.jsx')
+    }, {
+      name: 'Rating',
+      page: require('../pages/RatingPage.jsx')
     }]
 };

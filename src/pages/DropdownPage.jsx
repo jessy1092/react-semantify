@@ -24,8 +24,6 @@ export default React.createClass({
           {'or use ES6'}
           <CodeBlock language="js">{"import {Dropdown} from 'react-semantify';"}</CodeBlock>
 
-          <Divider/>
-
           <Header className="large dividing">Initialize</Header>
           {'It would call Sementic-ui init function when element in the componentDidMount life cycle. '}
           {'You also can use init={param} to transfer parameter. '}

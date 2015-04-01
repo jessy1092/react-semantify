@@ -19,7 +19,7 @@ export default React.createClass({
         <div className="main container">
           <Header className="large dividing">Type</Header>
 
-          <ExampleBlock header="Button"
+          <ExampleBlock header="Divider"
                         sub="A standard divider">
             <p>This is the first region</p>
             <Divider/>

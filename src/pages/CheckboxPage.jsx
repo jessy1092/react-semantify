@@ -24,8 +24,6 @@ export default React.createClass({
           {'or use ES6'}
           <CodeBlock language="js">{"import {Checkbox} from 'react-semantify';"}</CodeBlock>
 
-          <Divider/>
-
           <Header className="large dividing">Initialize</Header>
           {'It would call Sementic-ui init function when element in the componentDidMount life cycle. '}
           {'You also can use init={param} to transfer parameter. '}
@@ -65,7 +63,7 @@ export default React.createClass({
             </Checkbox>
           </ExampleBlock>
 
-          <Divider/>
+          <Header className="large dividing">States</Header>
 
           <ExampleBlock header="Read-only"
                         sub="A checkbox can be read-only and cannot change states">
