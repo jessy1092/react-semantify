@@ -26,7 +26,7 @@
   "homepage": "http://jessy1092.github.io/react-semantify",
   "license": "MIT",
   "scripts": {
-    "start": "gulp dev",
+    "start": "babel gulpfile.babel.js --out-file gulpfile.js && gulp dev",
     "prepublish": "babel gulpfile.babel.js --out-file gulpfile.js && gulp transpile",
     "test": "node ./node_modules/jest-cli/bin/jest.js"
   },

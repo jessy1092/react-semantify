@@ -583,8 +583,7 @@ module.exports = function (React) {
     propTypes: {
       className: React.PropTypes.string.isRequired,
       type: React.PropTypes.string.isRequired,
-      color: React.PropTypes.string.isRequired,
-      onClick: React.PropTypes.func
+      color: React.PropTypes.string.isRequired
     },
 
     render: function render() {
@@ -592,13 +591,12 @@ module.exports = function (React) {
       var className = _props.className;
       var type = _props.type;
       var color = _props.color;
-      var onClick = _props.onClick;
       var value = _props.value;
       var disabled = _props.disabled;
       var active = _props.active;
       var loading = _props.loading;
 
-      var other = _objectWithoutProperties(_props, ["className", "type", "color", "onClick", "value", "disabled", "active", "loading"]);
+      var other = _objectWithoutProperties(_props, ["className", "type", "color", "value", "disabled", "active", "loading"]);
 
       switch (type) {
 
@@ -607,7 +605,6 @@ module.exports = function (React) {
             "a",
             _extends({}, other, {
               className: this._generateClassName(),
-              onClick: this._onClick,
               "data-value": value }),
             this.props.children
           );
@@ -617,7 +614,6 @@ module.exports = function (React) {
             "i",
             _extends({}, other, {
               className: this._generateClassName(),
-              onClick: this._onClick,
               "data-value": value }),
             this.props.children
           );
@@ -626,8 +622,7 @@ module.exports = function (React) {
           return React.createElement(
             "img",
             _extends({}, other, {
-              className: this._generateClassName(),
-              onClick: this._onClick }),
+              className: this._generateClassName() }),
             this.props.children
           );
 
@@ -637,7 +632,6 @@ module.exports = function (React) {
             "div",
             _extends({}, other, {
               className: this._generateClassName(),
-              onClick: this._onClick,
               "data-value": value }),
             this.props.children
           );
@@ -662,12 +656,6 @@ module.exports = function (React) {
       });
 
       return className;
-    },
-
-    _onClick: function _onClick() {
-      if (typeof this.props.onClick != "undefined") {
-        this.props.onClick();
-      }
     }
   });
 
