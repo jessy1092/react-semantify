@@ -265,9 +265,9 @@ $('.ui.progress').progress({percent: 22});
 ### Properties
 
 - *init*: You can see [Progress usage](http://semantic-ui.com/modules/progress.html#/usage) on the Semantic-ui web site.
-- *percent*: This is a string type. Use to be a progress `data-percent` state. You can see [Alternate bar labels](http://semantic-ui.com/modules/progress.html#/usage)
-- *value*: This is a string type. Use to be a progress `data-value` state. You can see [Alternate bar labels](http://semantic-ui.com/modules/progress.html#/usage)
-- *total*: This is a string type. Use to be a progress `data-total` state. You can see [Alternate bar labels](http://semantic-ui.com/modules/progress.html#/usage)
+- *percent*: This is a string type. Use to be a progress `data-percent` state. You can see [Progress usage](http://semantic-ui.com/modules/progress.html#/usage) for more detail.
+- *value*: This is a string type. Use to be a progress `data-value` state. You can see [Progress usage](http://semantic-ui.com/modules/progress.html#/usage) for more detail.
+- *total*: This is a string type. Use to be a progress `data-total` state. You can see [Progress usage](http://semantic-ui.com/modules/progress.html#/usage) for more detail.
 - *active*: This is a booling type. If `true`, the `active` would be part of `class` attribute.
 - *success*: This is a booling type. If `true`, the `success` would be part of `class` attribute.
 - *warning*: This is a booling type. If `true`, the `warning` would be part of `class` attribute.
@@ -299,20 +299,20 @@ You also can use `init={param}` to transfer parameter.
 
 ex. 
 ```js
-<Rating init={{rating: 3, maxRating: 5}}></Rating>
+<Rating init={{initialRating: 3, maxRating: 5}}></Rating>
 ```
 
-will transfer `{rating: 3, maxRating: 5}` to init function.
+will transfer `{initialRating: 3, maxRating: 5}` to init function.
 
 ```js
-$('.ui.rating').rating({rating: 3, maxRating: 5});
+$('.ui.rating').rating({initialRating: 3, maxRating: 5});
 ```
 
 ### Properties
 
 - *init*: You can see [Rating usage](http://semantic-ui.com/modules/rating.html#/usage) on the Semantic-ui web site.
-- *rating*: This is a string type. Use to be a rating `data-rating` state. You can see [Alternate bar labels](http://semantic-ui.com/modules/rating.html#/usage)
-- *maxRating*: This is a string type. Use to be a rating `data-max-rating` state. You can see [Alternate bar labels](http://semantic-ui.com/modules/rating.html#/usage)
+- *rating*: This is a string type. Use to be a rating `data-rating` state. You can see [Rating usage](http://semantic-ui.com/modules/rating.html#/usage) for more detail.
+- *maxRating*: This is a string type. Use to be a rating `data-max-rating` state. You can see [Rating usage](http://semantic-ui.com/modules/rating.html#/usage) for more detail.
 
 
 # Search

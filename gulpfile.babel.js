@@ -29,7 +29,7 @@ gulp.task('browserify', () => {
 });
 
 gulp.task('watch', (done) => {
-  gulp.watch('./src/**/*', 'build');
+  gulp.watch('./src/**/*', gulp.series('build'));
   done();
 });
 

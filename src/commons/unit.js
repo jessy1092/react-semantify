@@ -8,14 +8,13 @@ module.exports = function (React) {
     propTypes: {
       className: React.PropTypes.string.isRequired,
       type: React.PropTypes.string.isRequired,
-      color: React.PropTypes.string.isRequired,
-      onClick: React.PropTypes.func
+      color: React.PropTypes.string.isRequired
     },
 
     render: function () {
 
       var {
-        className, type, color, onClick, value,
+        className, type, color, value,
         disabled, active, loading,
         ...other
       } = this.props;
@@ -26,7 +25,6 @@ module.exports = function (React) {
           return (
             <a {...other}
               className={this._generateClassName()}
-              onClick={this._onClick}
               data-value={value}>
               {this.props.children}
             </a>
@@ -36,7 +34,6 @@ module.exports = function (React) {
           return (
             <i {...other}
               className={this._generateClassName()}
-              onClick={this._onClick}
               data-value={value}>
               {this.props.children}
             </i>
@@ -45,8 +42,7 @@ module.exports = function (React) {
         case 'img':
           return (
             <img {...other}
-              className={this._generateClassName()}
-              onClick={this._onClick}>
+              className={this._generateClassName()}>
               {this.props.children}
             </img>
           );
@@ -56,7 +52,6 @@ module.exports = function (React) {
           return (
             <div {...other}
               className={this._generateClassName()}
-              onClick={this._onClick}
               data-value={value}>
               {this.props.children}
             </div>
@@ -82,12 +77,6 @@ module.exports = function (React) {
       });
 
       return className;
-    },
-
-    _onClick: function () {
-      if (typeof this.props.onClick != 'undefined') {
-        this.props.onClick();
-      }
     }
   });
 
