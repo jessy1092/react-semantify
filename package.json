@@ -1,7 +1,7 @@
 {
   "name"       : "react-semantify",
   "description": "Integrate Semantic-ui with react components.",
-  "version"    : "0.3.0",
+  "version"    : "0.3.1",
   "keywords": [
     "react",
     "semantic-ui",

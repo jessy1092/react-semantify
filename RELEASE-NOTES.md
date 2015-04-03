@@ -1,6 +1,10 @@
 Release Notes
 =============
 
+## Version 0.3.1 - 2015/04/03
+
+- Remove Unit Component onClick function. [issue #19](https://github.com/jessy1092/react-semantify/issues/19)
+
 ## Version 0.3.0 - 2015/04/01
 
 - Support React v0.13.x
