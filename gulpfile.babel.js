@@ -13,7 +13,7 @@ let transpile_path = 'lib';
 
 gulp.task('transpile', () => {
   return gulp.src('./src/**/*')
-    .pipe(gbabel({experimental: true}))
+    .pipe(gbabel({stage: 0}))
     .pipe(gulp.dest(transpile_path));
 });
 
