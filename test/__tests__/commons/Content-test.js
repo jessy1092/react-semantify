@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Content   = require('../../../lib/index.js').Content;
+var Content   = require('../../../src/index.js').Content;
 
 describe('Content', function () {
   it('should have .content class by default', function () {

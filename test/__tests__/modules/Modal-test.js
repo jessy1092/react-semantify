@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Modal     = require('../../../lib/index.js').Modal;
+var Modal     = require('../../../src/index.js').Modal;
 
 describe('Modal', function () {
   it('should have .ui.modal class by default', function () {

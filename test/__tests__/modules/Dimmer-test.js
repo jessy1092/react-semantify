@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Dimmer    = require('../../../lib/index.js').Dimmer;
+var Dimmer    = require('../../../src/index.js').Dimmer;
 
 describe('Dimmer', function () {
   it('should have .ui.dimmer class by default', function () {

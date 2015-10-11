@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Comments  = require('../../../lib/index.js').Comments;
+var Comments  = require('../../../src/index.js').Comments;
 
 describe('Comments', function () {
   it('should have .ui.comments class by default', function () {

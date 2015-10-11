@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Statistic = require('../../../lib/index.js').Statistic;
+var Statistic = require('../../../src/index.js').Statistic;
 
 describe('Statistic', function () {
   it('should have .ui.statistic class by default', function () {

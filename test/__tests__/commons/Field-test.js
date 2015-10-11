@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Field     = require('../../../lib/index.js').Field;
+var Field     = require('../../../src/index.js').Field;
 
 describe('Field', function () {
   it('should have .field class by default', function () {

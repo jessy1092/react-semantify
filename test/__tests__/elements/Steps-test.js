@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Steps     = require('../../../lib/index.js').Steps;
+var Steps     = require('../../../src/index.js').Steps;
 
 describe('Steps', function () {
   it('should have .ui.steps class by default', function () {

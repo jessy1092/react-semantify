@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Divider   = require('../../../lib/index.js').Divider;
+var Divider   = require('../../../src/index.js').Divider;
 
 describe('Divider', function () {
   it('should have .ui.divider class by default', function () {
