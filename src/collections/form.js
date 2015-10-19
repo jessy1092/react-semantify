@@ -14,9 +14,9 @@ module.exports = function (React) {
       var {className, ...other} = this.props;
 
       return (
-        <div {...other} className={this.getClassName(defaultClassName)} >
+        <form {...other} className={this.getClassName(defaultClassName)} >
           {this.props.children}
-        </div>
+        </form>
       );
     }
   });
