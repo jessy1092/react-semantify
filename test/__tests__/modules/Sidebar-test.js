@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Sidebar   = require('../../../lib/index.js').Sidebar;
+var Sidebar   = require('../../../src/index.js').Sidebar;
 
 describe('Sidebar', function () {
   it('should have .ui.sidebar class by default', function () {

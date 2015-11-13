@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Search    = require('../../../lib/index.js').Search;
+var Search    = require('../../../src/index.js').Search;
 
 describe('Search', function () {
   it('should have .ui.search class by default', function () {

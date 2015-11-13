@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Rail      = require('../../../lib/index.js').Rail;
+var Rail      = require('../../../src/index.js').Rail;
 
 describe('Rail', function () {
   it('should have .ui.rail class by default', function () {

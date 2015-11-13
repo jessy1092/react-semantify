@@ -8,7 +8,7 @@ module.exports = {
     if (filename.indexOf('node_modules') === -1 && babel.canCompile(filename)) {
       var option = {
         filename: filename,
-        experimental: true
+        stage: 0
       }
       return babel.transform(src, option).code;
     }

@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Column    = require('../../../lib/index.js').Column;
+var Column    = require('../../../src/index.js').Column;
 
 describe('Column', function () {
   it('should have .column class by default', function () {

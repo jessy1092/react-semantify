@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Card      = require('../../../lib/index.js').Card;
+var Card      = require('../../../src/index.js').Card;
 
 describe('Card', function () {
   it('should have .ui.card class by default', function () {

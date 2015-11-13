@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Grid      = require('../../../lib/index.js').Grid;
+var Grid      = require('../../../src/index.js').Grid;
 
 describe('Grid', function () {
   it('should have .ui.grid class by default', function () {
