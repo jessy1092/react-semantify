@@ -5,10 +5,10 @@ var babel = require('babel-core');
 module.exports = {
   process: function (src, filename) {
 
-    if (filename.indexOf('node_modules') === -1 && babel.canCompile(filename)) {
+    if (filename.indexOf('node_modules') === -1 && babel.util.canCompile(filename)) {
       var option = {
         filename: filename,
-        stage: 0
+        presets: ['es2015', 'react', 'stage-0']
       }
       return babel.transform(src, option).code;
     }

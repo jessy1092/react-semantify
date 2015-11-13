@@ -1,5 +1,3 @@
-"use strict";
-
 import gulp       from 'gulp';
 import uglify     from 'gulp-uglify';
 import grename    from 'gulp-rename';
@@ -7,18 +5,21 @@ import source     from 'vinyl-source-stream';
 import buffer     from 'vinyl-buffer';
 import browserify from 'browserify';
 import gbabel     from 'gulp-babel';
+import globalShim from 'browserify-global-shim';
 
 let build_path     = 'dst';
 let transpile_path = 'lib';
 
 gulp.task('transpile', () => {
   return gulp.src('./src/**/*')
-    .pipe(gbabel({stage: 0}))
+    .pipe(gbabel({presets: ['es2015', 'react', 'stage-0']}))
     .pipe(gulp.dest(transpile_path));
 });
 
 gulp.task('browserify', () => {
-  return browserify(`./${transpile_path}/index_browser.js`)
+  return browserify('./src/index.js', {standalone: 'Semantify'})
+    .transform('babelify', {presets: ['es2015', 'react', 'stage-0']})
+    .transform(globalShim.configure({'react': 'React'}))
     .bundle()
     .pipe(source('react-semantify.js'))
     .pipe(gulp.dest(build_path))
