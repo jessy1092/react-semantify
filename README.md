@@ -9,9 +9,9 @@ Integrate Semantic-ui with react components. It depends on Semantic-UI and helps
 [The components' Docs on the github](https://github.com/jessy1092/react-semantify/blob/master/docs)
 
 
-|         | React = 0.12 | React >= 0.13 |
-| ------- | ------------ | ------------- |
-| Version | <= 0.2       | >= 0.3        |
+|         | React = 0.12 | React = 0.13.* | React = 0.14.* |
+| ------- | ------------ | -------------- | -------------- |
+| Version | <= 0.2       |  0.3.*         | 0.4.* (Comming)|
 
 ## Usage
 
@@ -96,7 +96,7 @@ React.render(
 );
 ```
 
-And then you should include `jQuery` and `semantic-ui` in your browser. 
+And then you should include `jQuery` and `semantic-ui` in your browser.
 
 Use [cdnjs][cdnjs-url] or [bower][bower-url]
 
@@ -180,7 +180,11 @@ Wait Semantic-UI Release.
 2. Create your feature-branch `git checkout -b your-new-feature-branch`
 3. Commit your change `git commit -am 'Add new feature'`
 4. Push to the branch `git push origin your-new-feature-branch`
-5. Create new Pull Request with `develop` branch
+5. Create new Pull Request with `master` branch
+
+### Commit Message Style
+
+Now Commit message style following [angular](https://github.com/ajoslin/conventional-changelog/blob/master/conventions/angular.md).
 
 ## Run Test
 
