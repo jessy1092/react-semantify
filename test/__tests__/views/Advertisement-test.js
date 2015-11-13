@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Ad        = require('../../../src/index.js').Ad;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Ad        = require('../../../src/index.js').Ad;
 
 describe('Ad', function () {
   it('should have .ui.ad class by default', function () {
@@ -12,8 +13,8 @@ describe('Ad', function () {
       <Ad></Ad>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('ad');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ad');
   });
 
   it('should have child by default', function () {
@@ -21,7 +22,7 @@ describe('Ad', function () {
       <Ad>123</Ad>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -29,6 +30,6 @@ describe('Ad', function () {
       <Ad className="custom"></Ad>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 });

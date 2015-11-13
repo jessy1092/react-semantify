@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Content   = require('../../../src/index.js').Content;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Content   = require('../../../src/index.js').Content;
 
 describe('Content', function () {
   it('should have .content class by default', function () {
@@ -12,7 +13,7 @@ describe('Content', function () {
       <Content></Content>
     );
 
-    expect(instance.getDOMNode().className).toMatch('content');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('content');
   });
 
   it('should have child by default', function () {
@@ -20,7 +21,7 @@ describe('Content', function () {
       <Content>123</Content>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -28,6 +29,6 @@ describe('Content', function () {
       <Content className="custom"></Content>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 });

@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Reveal    = require('../../../src/index.js').Reveal;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Reveal    = require('../../../src/index.js').Reveal;
 
 describe('Reveal', function () {
   it('should have .ui.reveal class by default', function () {
@@ -12,8 +13,8 @@ describe('Reveal', function () {
       <Reveal></Reveal>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('reveal');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('reveal');
   });
 
   it('should have child by default', function () {
@@ -21,7 +22,7 @@ describe('Reveal', function () {
       <Reveal>123</Reveal>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -29,7 +30,7 @@ describe('Reveal', function () {
       <Reveal className="custom"></Reveal>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have disabled class with disabled is true', function () {
@@ -37,6 +38,6 @@ describe('Reveal', function () {
       <Reveal disabled={true}></Reveal>
     );
 
-    expect(instance.getDOMNode().className).toMatch('disabled');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('disabled');
   });
 });

@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Section   = require('../../../src/index.js').Section;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Section   = require('../../../src/index.js').Section;
 
 describe('Section', function () {
   it('should have .section class by default', function () {
@@ -12,7 +13,7 @@ describe('Section', function () {
       <Section></Section>
     );
 
-    expect(instance.getDOMNode().className).toMatch('section');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('section');
   });
 
   it('should have child by default', function () {
@@ -20,7 +21,7 @@ describe('Section', function () {
       <Section>123</Section>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -28,7 +29,7 @@ describe('Section', function () {
       <Section className="custom"></Section>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have blue class with color is blue', function () {
@@ -36,7 +37,7 @@ describe('Section', function () {
       <Section color="blue"></Section>
     );
 
-    expect(instance.getDOMNode().className).toMatch('blue');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('blue');
   });
 
   it('should be <a> with link type', function () {

@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Row       = require('../../../src/index.js').Row;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Row       = require('../../../src/index.js').Row;
 
 describe('Row', function () {
   it('should have .row class by default', function () {
@@ -12,7 +13,7 @@ describe('Row', function () {
       <Row></Row>
     );
 
-    expect(instance.getDOMNode().className).toMatch('row');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('row');
   });
 
   it('should have child by default', function () {
@@ -20,7 +21,7 @@ describe('Row', function () {
       <Row>123</Row>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -28,6 +29,6 @@ describe('Row', function () {
       <Row className="custom"></Row>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 });

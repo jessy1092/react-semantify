@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Rating    = require('../../../src/index.js').Rating;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Rating    = require('../../../src/index.js').Rating;
 
 describe('Rating', function () {
   it('should have .ui.rating class by default', function () {
@@ -12,8 +13,8 @@ describe('Rating', function () {
       <Rating></Rating>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('rating');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('rating');
   });
 
   it('should have child by default', function () {
@@ -21,7 +22,7 @@ describe('Rating', function () {
       <Rating>123</Rating>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -29,7 +30,7 @@ describe('Rating', function () {
       <Rating className="custom"></Rating>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have rating for item data-rating', function () {
@@ -37,7 +38,7 @@ describe('Rating', function () {
       <Rating rating="1"></Rating>
     );
 
-    expect(instance.getDOMNode().getAttribute('data-rating')).toMatch('1');
+    expect(ReactDOM.findDOMNode(instance).getAttribute('data-rating')).toEqual('1');
   });
 
   it('should have maxRating for item data-max-rating', function () {
@@ -45,6 +46,6 @@ describe('Rating', function () {
       <Rating maxRating="1"></Rating>
     );
 
-    expect(instance.getDOMNode().getAttribute('data-max-rating')).toMatch('1');
+    expect(ReactDOM.findDOMNode(instance).getAttribute('data-max-rating')).toEqual('1');
   });
 });

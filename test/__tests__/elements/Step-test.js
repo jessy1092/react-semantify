@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Step      = require('../../../src/index.js').Step;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Step      = require('../../../src/index.js').Step;
 
 describe('Step', function () {
   it('should have .step class by default', function () {
@@ -12,7 +13,7 @@ describe('Step', function () {
       <Step></Step>
     );
 
-    expect(instance.getDOMNode().className).toMatch('step');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('step');
   });
 
   it('should have child by default', function () {
@@ -20,7 +21,7 @@ describe('Step', function () {
       <Step>123</Step>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -28,7 +29,7 @@ describe('Step', function () {
       <Step className="custom"></Step>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have disabled class with disabled is true', function () {
@@ -36,7 +37,7 @@ describe('Step', function () {
       <Step disabled={true}></Step>
     );
 
-    expect(instance.getDOMNode().className).toMatch('disabled');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('disabled');
   });
 
   it('should have active class with active is true', function () {
@@ -44,7 +45,7 @@ describe('Step', function () {
       <Step active={true}></Step>
     );
 
-    expect(instance.getDOMNode().className).toMatch('active');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('active');
   });
 
   it('should have completed class with completed is true', function () {
@@ -52,6 +53,6 @@ describe('Step', function () {
       <Step completed={true}></Step>
     );
 
-    expect(instance.getDOMNode().className).toMatch('completed');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('completed');
   });
 });

@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Title     = require('../../../src/index.js').Title;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Title     = require('../../../src/index.js').Title;
 
 describe('Title', function () {
   it('should have .title class by default', function () {
@@ -12,7 +13,7 @@ describe('Title', function () {
       <Title></Title>
     );
 
-    expect(instance.getDOMNode().className).toMatch('title');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('title');
   });
 
   it('should have child by default', function () {
@@ -20,7 +21,7 @@ describe('Title', function () {
       <Title>123</Title>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -28,7 +29,7 @@ describe('Title', function () {
       <Title className="custom"></Title>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have active class with active is true', function () {
@@ -36,6 +37,6 @@ describe('Title', function () {
       <Title active={true}></Title>
     );
 
-    expect(instance.getDOMNode().className).toMatch('active');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('active');
   });
 });

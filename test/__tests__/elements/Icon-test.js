@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Icon      = require('../../../src/index.js').Icon;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Icon      = require('../../../src/index.js').Icon;
 
 describe('Icon', function () {
   it('should have .icon class by default', function () {
@@ -12,7 +13,7 @@ describe('Icon', function () {
       <Icon></Icon>
     );
 
-    expect(instance.getDOMNode().className).toMatch('icon');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('icon');
   });
 
   it('should have custom class with custom className', function () {
@@ -20,7 +21,7 @@ describe('Icon', function () {
       <Icon className="custom"></Icon>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have blue class with color is blue', function () {
@@ -28,7 +29,7 @@ describe('Icon', function () {
       <Icon color="blue"></Icon>
     );
 
-    expect(instance.getDOMNode().className).toMatch('blue');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('blue');
   });
 
   it('should have disabled class with disabled is true', function () {
@@ -36,7 +37,7 @@ describe('Icon', function () {
       <Icon disabled={true}></Icon>
     );
 
-    expect(instance.getDOMNode().className).toMatch('disabled');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('disabled');
   });
 
   it('should have loading class with loading is true', function () {
@@ -44,7 +45,7 @@ describe('Icon', function () {
       <Icon loading={true}></Icon>
     );
 
-    expect(instance.getDOMNode().className).toMatch('loading');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('loading');
   });
 
   it('should be <i>', function () {
@@ -63,7 +64,7 @@ describe('Icon', function () {
       <Icon onClick={clickOp}></Icon>
     );
 
-    TestUtils.Simulate.click(instance.getDOMNode());
+    TestUtils.Simulate.click(ReactDOM.findDOMNode(instance));
 
     expect(clickOp).toBeCalled();
   });

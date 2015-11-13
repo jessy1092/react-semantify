@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Button    = require('../../../src/index.js').Button;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Button    = require('../../../src/index.js').Button;
 
 describe('Button', function () {
   it('should have .ui.button class by default', function () {
@@ -12,8 +13,8 @@ describe('Button', function () {
       <Button></Button>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('button');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('button');
   });
 
   it('should have child by default', function () {
@@ -21,7 +22,7 @@ describe('Button', function () {
       <Button>123</Button>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -29,7 +30,7 @@ describe('Button', function () {
       <Button className="custom"></Button>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have blue class with color is blue', function () {
@@ -37,7 +38,7 @@ describe('Button', function () {
       <Button color="blue"></Button>
     );
 
-    expect(instance.getDOMNode().className).toMatch('blue');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('blue');
   });
 
   it('should have disabled class with disabled is true', function () {
@@ -45,7 +46,7 @@ describe('Button', function () {
       <Button disabled={true}></Button>
     );
 
-    expect(instance.getDOMNode().className).toMatch('disabled');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('disabled');
   });
 
   it('should have active class with active is true', function () {
@@ -53,7 +54,7 @@ describe('Button', function () {
       <Button active={true}></Button>
     );
 
-    expect(instance.getDOMNode().className).toMatch('active');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('active');
   });
 
   it('should have loading class with loading is true', function () {
@@ -61,7 +62,7 @@ describe('Button', function () {
       <Button loading={true}></Button>
     );
 
-    expect(instance.getDOMNode().className).toMatch('loading');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('loading');
   });
 
   it('should call onClick callback when unit click', function () {
@@ -72,7 +73,7 @@ describe('Button', function () {
       <Button onClick={clickOp}></Button>
     );
 
-    TestUtils.Simulate.click(instance.getDOMNode());
+    TestUtils.Simulate.click(ReactDOM.findDOMNode(instance));
 
     expect(clickOp).toBeCalled();
   });

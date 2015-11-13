@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Checkbox  = require('../../../src/index.js').Checkbox;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Checkbox  = require('../../../src/index.js').Checkbox;
 
 describe('Checkbox', function () {
   it('should have .ui.checkbox class by default', function () {
@@ -12,8 +13,8 @@ describe('Checkbox', function () {
       <Checkbox></Checkbox>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('checkbox');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('checkbox');
   });
 
   it('should have child by default', function () {
@@ -21,7 +22,7 @@ describe('Checkbox', function () {
       <Checkbox>123</Checkbox>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -29,7 +30,7 @@ describe('Checkbox', function () {
       <Checkbox className="custom"></Checkbox>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have disabled class with disabled is true', function () {
@@ -37,7 +38,7 @@ describe('Checkbox', function () {
       <Checkbox disabled={true}></Checkbox>
     );
 
-    expect(instance.getDOMNode().className).toMatch('disabled');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('disabled');
   });
 
   it('should have readOnly class with readOnly is true', function () {
@@ -45,6 +46,6 @@ describe('Checkbox', function () {
       <Checkbox readOnly={true}></Checkbox>
     );
 
-    expect(instance.getDOMNode().className).toMatch('read-only');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('read-only');
   });
 });

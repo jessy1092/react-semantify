@@ -1274,68 +1274,72 @@ module.exports = function (React) {
 },{"../mixins/classGenerator.js":33}],32:[function(require,module,exports){
 "use strict";
 
-var React = (window.React);
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = {
   // collections
-  Breadcrumb: require('./collections/breadcrumb.js')(React),
-  Form: require('./collections/form.js')(React),
-  Grid: require('./collections/grid.js')(React),
-  Menu: require('./collections/menu.js')(React),
-  Message: require('./collections/message.js')(React),
-  Table: require('./collections/table.js')(React),
+  Breadcrumb: require('./collections/breadcrumb.js')(_react2.default),
+  Form: require('./collections/form.js')(_react2.default),
+  Grid: require('./collections/grid.js')(_react2.default),
+  Menu: require('./collections/menu.js')(_react2.default),
+  Message: require('./collections/message.js')(_react2.default),
+  Table: require('./collections/table.js')(_react2.default),
 
   // commons
-  Column: require('./commons/column.js')(React),
-  Content: require('./commons/content.js')(React),
-  Field: require('./commons/field.js')(React),
-  Fields: require('./commons/fields.js')(React),
-  Row: require('./commons/row.js')(React),
-  Section: require('./commons/section.js')(React),
-  Text: require('./commons/text.js')(React),
-  Title: require('./commons/title.js')(React),
+  Column: require('./commons/column.js')(_react2.default),
+  Content: require('./commons/content.js')(_react2.default),
+  Field: require('./commons/field.js')(_react2.default),
+  Fields: require('./commons/fields.js')(_react2.default),
+  Row: require('./commons/row.js')(_react2.default),
+  Section: require('./commons/section.js')(_react2.default),
+  Text: require('./commons/text.js')(_react2.default),
+  Title: require('./commons/title.js')(_react2.default),
 
   // elements
-  Button: require('./elements/button.js')(React),
-  Divider: require('./elements/divider.js')(React),
-  Flag: require('./elements/flag.js')(React),
-  Header: require('./elements/header.js')(React),
-  Icon: require('./elements/icon.js')(React),
-  Image: require('./elements/image.js')(React),
-  Input: require('./elements/input.js')(React),
-  Label: require('./elements/label.js')(React),
-  List: require('./elements/list.js')(React),
-  Loader: require('./elements/loader.js')(React),
-  Rail: require('./elements/rail.js')(React),
-  Reveal: require('./elements/reveal.js')(React),
-  Segment: require('./elements/segment.js')(React),
-  Step: require('./elements/step.js')(React),
-  Steps: require('./elements/steps.js')(React),
+  Button: require('./elements/button.js')(_react2.default),
+  Divider: require('./elements/divider.js')(_react2.default),
+  Flag: require('./elements/flag.js')(_react2.default),
+  Header: require('./elements/header.js')(_react2.default),
+  Icon: require('./elements/icon.js')(_react2.default),
+  Image: require('./elements/image.js')(_react2.default),
+  Input: require('./elements/input.js')(_react2.default),
+  Label: require('./elements/label.js')(_react2.default),
+  List: require('./elements/list.js')(_react2.default),
+  Loader: require('./elements/loader.js')(_react2.default),
+  Rail: require('./elements/rail.js')(_react2.default),
+  Reveal: require('./elements/reveal.js')(_react2.default),
+  Segment: require('./elements/segment.js')(_react2.default),
+  Step: require('./elements/step.js')(_react2.default),
+  Steps: require('./elements/steps.js')(_react2.default),
 
   // modules
-  Accordion: require('./modules/accordion.js')(React),
-  Checkbox: require('./modules/checkbox.js')(React),
-  Dimmer: require('./modules/dimmer.js')(React),
-  Dropdown: require('./modules/dropdown.js')(React),
-  Modal: require('./modules/modal.js')(React),
-  Popup: require('./modules/popup.js')(React),
-  Progress: require('./modules/progress.js')(React),
-  Rating: require('./modules/rating.js')(React),
-  Search: require('./modules/search.js')(React),
-  Shape: require('./modules/shape.js')(React),
-  Sidebar: require('./modules/sidebar.js')(React),
-  Sticky: require('./modules/sticky.js')(React),
-  Tab: require('./modules/tab.js')(React),
+  Accordion: require('./modules/accordion.js')(_react2.default),
+  Checkbox: require('./modules/checkbox.js')(_react2.default),
+  Dimmer: require('./modules/dimmer.js')(_react2.default),
+  Dropdown: require('./modules/dropdown.js')(_react2.default),
+  Modal: require('./modules/modal.js')(_react2.default),
+  Popup: require('./modules/popup.js')(_react2.default),
+  Progress: require('./modules/progress.js')(_react2.default),
+  Rating: require('./modules/rating.js')(_react2.default),
+  Search: require('./modules/search.js')(_react2.default),
+  Shape: require('./modules/shape.js')(_react2.default),
+  Sidebar: require('./modules/sidebar.js')(_react2.default),
+  Sticky: require('./modules/sticky.js')(_react2.default),
+  Tab: require('./modules/tab.js')(_react2.default),
 
   // views
-  Ad: require('./views/advertisement.js')(React),
-  Card: require('./views/card.js')(React),
-  Comment: require('./views/comment.js')(React),
-  Comments: require('./views/comments.js')(React),
-  Feed: require('./views/feed.js')(React),
-  Item: require('./views/item.js')(React),
-  Items: require('./views/items.js')(React),
-  Statistic: require('./views/statistic.js')(React)
+  Ad: require('./views/advertisement.js')(_react2.default),
+  Card: require('./views/card.js')(_react2.default),
+  Comment: require('./views/comment.js')(_react2.default),
+  Comments: require('./views/comments.js')(_react2.default),
+  Feed: require('./views/feed.js')(_react2.default),
+  Item: require('./views/item.js')(_react2.default),
+  Items: require('./views/items.js')(_react2.default),
+  Statistic: require('./views/statistic.js')(_react2.default)
 };
 
 },{"./collections/breadcrumb.js":2,"./collections/form.js":3,"./collections/grid.js":4,"./collections/menu.js":5,"./collections/message.js":6,"./collections/table.js":7,"./commons/column.js":8,"./commons/content.js":9,"./commons/field.js":10,"./commons/fields.js":11,"./commons/row.js":12,"./commons/section.js":13,"./commons/text.js":14,"./commons/title.js":15,"./elements/button.js":17,"./elements/divider.js":18,"./elements/flag.js":19,"./elements/header.js":20,"./elements/icon.js":21,"./elements/image.js":22,"./elements/input.js":23,"./elements/label.js":24,"./elements/list.js":25,"./elements/loader.js":26,"./elements/rail.js":27,"./elements/reveal.js":28,"./elements/segment.js":29,"./elements/step.js":30,"./elements/steps.js":31,"./modules/accordion.js":37,"./modules/checkbox.js":38,"./modules/dimmer.js":39,"./modules/dropdown.js":40,"./modules/modal.js":41,"./modules/popup.js":42,"./modules/progress.js":43,"./modules/rating.js":44,"./modules/search.js":45,"./modules/shape.js":46,"./modules/sidebar.js":47,"./modules/sticky.js":48,"./modules/tab.js":49,"./views/advertisement.js":50,"./views/card.js":51,"./views/comment.js":52,"./views/comments.js":53,"./views/feed.js":54,"./views/item.js":55,"./views/items.js":56,"./views/statistic.js":57}],33:[function(require,module,exports){

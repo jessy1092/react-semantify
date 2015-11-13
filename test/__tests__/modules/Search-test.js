@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Search    = require('../../../src/index.js').Search;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Search    = require('../../../src/index.js').Search;
 
 describe('Search', function () {
   it('should have .ui.search class by default', function () {
@@ -12,8 +13,8 @@ describe('Search', function () {
       <Search></Search>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('search');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('search');
   });
 
   it('should have child by default', function () {
@@ -21,7 +22,7 @@ describe('Search', function () {
       <Search>123</Search>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -29,7 +30,7 @@ describe('Search', function () {
       <Search className="custom"></Search>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have loading class with loading is true', function () {
@@ -37,6 +38,6 @@ describe('Search', function () {
       <Search loading={true}></Search>
     );
 
-    expect(instance.getDOMNode().className).toMatch('loading');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('loading');
   });
 });

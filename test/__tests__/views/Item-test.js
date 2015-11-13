@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Item      = require('../../../src/index.js').Item;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Item      = require('../../../src/index.js').Item;
 
 describe('Item', function () {
   it('should have .item class by default', function () {
@@ -12,7 +13,7 @@ describe('Item', function () {
       <Item></Item>
     );
 
-    expect(instance.getDOMNode().className).toMatch('item');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('item');
   });
 
   it('should have child by default', function () {
@@ -20,7 +21,7 @@ describe('Item', function () {
       <Item>123</Item>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -28,7 +29,7 @@ describe('Item', function () {
       <Item className="custom"></Item>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should be <a> with link', function () {
@@ -44,6 +45,6 @@ describe('Item', function () {
       <Item value="1"></Item>
     );
 
-    expect(instance.getDOMNode().getAttribute('data-value')).toMatch('1');
+    expect(ReactDOM.findDOMNode(instance).getAttribute('data-value')).toEqual('1');
   });
 });

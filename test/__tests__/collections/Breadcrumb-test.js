@@ -1,9 +1,10 @@
 
-jest.dontMock('../../../src/collections/breadcrumb.js');
+jest.dontMock('../../../src/index.js');
 
-var React      = require('react');
-var TestUtils  = require('react/lib/ReactTestUtils');
-var Breadcrumb = require('../../../src/collections/breadcrumb.js')(React);
+let ReactDOM   = require('react-dom');
+let React      = require('react');
+let TestUtils  = require('react-addons-test-utils');
+let Breadcrumb = require('../../../src/index.js').Breadcrumb;
 
 describe('Breadcrumb', function () {
   it('should have .ui.breadcrumb class by default', function () {
@@ -11,8 +12,8 @@ describe('Breadcrumb', function () {
       <Breadcrumb></Breadcrumb>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('breadcrumb');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('breadcrumb');
   });
 
   it('should have child by default', function () {
@@ -20,7 +21,7 @@ describe('Breadcrumb', function () {
       <Breadcrumb>123</Breadcrumb>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -28,6 +29,6 @@ describe('Breadcrumb', function () {
       <Breadcrumb className="custom"></Breadcrumb>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 });

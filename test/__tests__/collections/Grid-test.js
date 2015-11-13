@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Grid      = require('../../../src/index.js').Grid;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Grid      = require('../../../src/index.js').Grid;
 
 describe('Grid', function () {
   it('should have .ui.grid class by default', function () {
@@ -12,8 +13,8 @@ describe('Grid', function () {
       <Grid></Grid>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('grid');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('grid');
   });
 
   it('should have child by default', function () {
@@ -21,7 +22,7 @@ describe('Grid', function () {
       <Grid>123</Grid>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -29,6 +30,6 @@ describe('Grid', function () {
       <Grid className="custom"></Grid>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 });

@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Sticky    = require('../../../src/index.js').Sticky;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Sticky    = require('../../../src/index.js').Sticky;
 
 describe('Sticky', function () {
   it('should have .ui.sticky class by default', function () {
@@ -12,8 +13,8 @@ describe('Sticky', function () {
       <Sticky></Sticky>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('sticky');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('sticky');
   });
 
   it('should have child by default', function () {
@@ -21,7 +22,7 @@ describe('Sticky', function () {
       <Sticky>123</Sticky>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -29,6 +30,6 @@ describe('Sticky', function () {
       <Sticky className="custom"></Sticky>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 });

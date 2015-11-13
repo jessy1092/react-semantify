@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Image     = require('../../../src/index.js').Image;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Image     = require('../../../src/index.js').Image;
 
 describe('Image', function () {
   it('should have .ui.image class by default', function () {
@@ -12,8 +13,8 @@ describe('Image', function () {
       <Image></Image>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('image');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('image');
   });
 
   it('should have custom class with custom className', function () {
@@ -21,7 +22,7 @@ describe('Image', function () {
       <Image className="custom"></Image>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have disabled class with disabled is true', function () {
@@ -29,7 +30,7 @@ describe('Image', function () {
       <Image disabled={true}></Image>
     );
 
-    expect(instance.getDOMNode().className).toMatch('disabled');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('disabled');
   });
 
   it('should have src for image path', function () {
@@ -38,7 +39,7 @@ describe('Image', function () {
       <Image src="./example.jpg"></Image>
     );
 
-    expect(instance.getDOMNode().getAttribute('src')).toMatch('./example.jpg');
+    expect(ReactDOM.findDOMNode(instance).getAttribute('src')).toEqual('./example.jpg');
   });
 
   it('should be <img>', function () {
