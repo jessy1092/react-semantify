@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Dropdown  = require('../../../lib/index.js').Dropdown;
+var Dropdown  = require('../../../src/index.js').Dropdown;
 
 describe('Dropdown', function () {
   it('should have .ui.dropdown class by default', function () {

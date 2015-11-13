@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Text      = require('../../../lib/index.js').Text;
+var Text      = require('../../../src/index.js').Text;
 
 describe('Text', function () {
   it('should have .text class by default', function () {

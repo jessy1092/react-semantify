@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/commons/unit.js');
+jest.dontMock('../../../src/commons/unit.js');
 
-var React     = require('react/addons');
+var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Unit      = require('../../../lib/commons/unit.js')(React);
+var Unit      = require('../../../src/commons/unit.js')(React);
 
 describe('Unit', function () {
   it('should have child by default', function () {

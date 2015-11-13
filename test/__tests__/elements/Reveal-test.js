@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Reveal    = require('../../../lib/index.js').Reveal;
+var Reveal    = require('../../../src/index.js').Reveal;
 
 describe('Reveal', function () {
   it('should have .ui.reveal class by default', function () {

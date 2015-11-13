@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Accordion = require('../../../lib/index.js').Accordion;
+var Accordion = require('../../../src/index.js').Accordion;
 
 describe('Accordion', function () {
   it('should have .ui.accordion class by default', function () {

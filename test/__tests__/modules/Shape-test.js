@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Shape     = require('../../../lib/index.js').Shape;
+var Shape     = require('../../../src/index.js').Shape;
 
 describe('Shape', function () {
   it('should have .ui.shape class by default', function () {

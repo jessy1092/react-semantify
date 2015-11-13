@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+## Version 0.3.2 - 2015/11/13
+
+- Form should use a <form> tag. [PR #29](https://github.com/jessy1092/react-semantify/pull/29)
+- chore: Update dependency version.
+- Update nodejs version on travis-ci. Now use NodeJS 4.x for development
+
 ## Version 0.3.1 - 2015/04/03
 
 - Remove Unit Component onClick function. [issue #19](https://github.com/jessy1092/react-semantify/issues/19)

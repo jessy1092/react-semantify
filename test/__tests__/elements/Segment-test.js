@@ -1,10 +1,10 @@
 "use strict";
 
-jest.dontMock('../../../lib/index.js');
+jest.dontMock('../../../src/index.js');
 
 var React     = require('react');
 var TestUtils = require('react/lib/ReactTestUtils');
-var Segment   = require('../../../lib/index.js').Segment;
+var Segment   = require('../../../src/index.js').Segment;
 
 describe('Segment', function () {
   it('should have .ui.segment class by default', function () {
