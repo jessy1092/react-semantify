@@ -4,7 +4,7 @@ import Unit from '../commons/unit';
 
 let defaultClassName = 'flag';
 
-module.exports = React.createClass({
+const Flag = React.createClass({
 
   mixins: [ClassGenerator],
 
@@ -21,3 +21,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Flag;

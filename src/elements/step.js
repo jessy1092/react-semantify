@@ -5,7 +5,7 @@ import Unit from '../commons/unit';
 
 let defaultClassName = 'step';
 
-module.exports = React.createClass({
+const Step = React.createClass({
 
   mixins: [ClassGenerator, StateSelector],
 
@@ -26,3 +26,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Step;

@@ -5,7 +5,7 @@ import Unit from '../commons/unit';
 
 let defaultClassName = 'ui input';
 
-module.exports = React.createClass({
+const Input = React.createClass({
 
   mixins: [ClassGenerator, StateSelector],
 
@@ -43,3 +43,5 @@ module.exports = React.createClass({
 
   }
 });
+
+export default Input;

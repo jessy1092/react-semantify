@@ -1,7 +1,7 @@
 import React from 'react';
 import classSet from 'classnames';
 
-module.exports = React.createClass({
+export default React.createClass({
 
   propTypes: {
     className: React.PropTypes.string.isRequired,

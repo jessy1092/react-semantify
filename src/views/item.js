@@ -5,7 +5,7 @@ import Unit from '../commons/unit';
 
 let defaultClassName = 'item';
 
-module.exports = React.createClass({
+const Item = React.createClass({
 
   mixins: [ClassGenerator, TypeSelector],
 
@@ -24,3 +24,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Item;

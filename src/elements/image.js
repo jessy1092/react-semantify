@@ -5,7 +5,7 @@ import Unit from '../commons/unit';
 
 let defaultClassName = 'ui image';
 
-module.exports = React.createClass({
+const Image = React.createClass({
 
   mixins: [ClassGenerator, StateSelector],
 
@@ -24,3 +24,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Image;

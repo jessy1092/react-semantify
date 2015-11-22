@@ -6,7 +6,7 @@ import Unit from '../commons/unit';
 
 let defaultClassName = 'ui label';
 
-module.exports = React.createClass({
+const Label = React.createClass({
 
   mixins: [ClassGenerator, ColorSelector, TypeSelector],
 
@@ -24,3 +24,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Label;

@@ -6,7 +6,7 @@ import Unit from './unit';
 
 let defaultClassName = 'section';
 
-module.exports = React.createClass({
+const Section = React.createClass({
 
   mixins: [ClassGenerator, ColorSelector, TypeSelector],
 
@@ -24,3 +24,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Section;

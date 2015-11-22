@@ -6,7 +6,7 @@ import Unit from '../commons/unit';
 
 let defaultClassName = 'ui button';
 
-module.exports = React.createClass({
+const Button = React.createClass({
 
   mixins: [ClassGenerator, ColorSelector, StateSelector],
 
@@ -27,3 +27,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Button;

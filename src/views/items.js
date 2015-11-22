@@ -3,7 +3,7 @@ import ClassGenerator from '../mixins/classGenerator';
 
 let defaultClassName = 'ui items';
 
-module.exports = React.createClass({
+const Items = React.createClass({
 
   mixins: [ClassGenerator],
 
@@ -28,3 +28,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Items;

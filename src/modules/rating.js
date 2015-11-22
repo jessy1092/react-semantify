@@ -3,7 +3,7 @@ import ClassGenerator from '../mixins/classGenerator';
 
 let defaultClassName = 'ui rating';
 
-module.exports = React.createClass({
+const Rating = React.createClass({
 
   mixins: [ClassGenerator],
 
@@ -36,3 +36,5 @@ module.exports = React.createClass({
     }
   }
 });
+
+export default Rating;

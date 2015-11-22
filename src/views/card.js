@@ -3,7 +3,7 @@ import ClassGenerator from '../mixins/classGenerator';
 
 let defaultClassName = 'ui card';
 
-module.exports = React.createClass({
+const Card = React.createClass({
 
   mixins: [ClassGenerator],
 
@@ -18,3 +18,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Card;

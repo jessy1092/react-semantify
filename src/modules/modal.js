@@ -6,7 +6,7 @@ import Unit from '../commons/unit';
 
 let defaultClassName = 'ui modal';
 
-module.exports = React.createClass({
+const Modal = React.createClass({
 
   mixins: [ClassGenerator, StateSelector],
 
@@ -39,3 +39,5 @@ module.exports = React.createClass({
     }
   }
 });
+
+export default Modal;

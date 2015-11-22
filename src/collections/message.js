@@ -3,7 +3,7 @@ import ClassGenerator from '../mixins/classGenerator';
 
 let defaultClassName = 'ui message';
 
-module.exports = React.createClass({
+const Message = React.createClass({
 
   mixins: [ClassGenerator],
 
@@ -18,3 +18,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Message;

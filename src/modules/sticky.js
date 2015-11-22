@@ -3,7 +3,7 @@ import ClassGenerator from '../mixins/classGenerator';
 
 let defaultClassName = 'ui sticky';
 
-module.exports = React.createClass({
+const Sticky = React.createClass({
 
   mixins: [ClassGenerator],
 
@@ -32,3 +32,5 @@ module.exports = React.createClass({
     }
   }
 });
+
+export default Sticky;

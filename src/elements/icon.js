@@ -6,7 +6,7 @@ import Unit from '../commons/unit';
 
 let defaultClassName = 'icon';
 
-module.exports = React.createClass({
+const Icon = React.createClass({
 
   mixins: [ClassGenerator, ColorSelector, StateSelector],
 
@@ -25,3 +25,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Icon;

@@ -1,63 +1,60 @@
-import React from 'react';
 
-module.exports = {
-  // collections
-  Breadcrumb: require('./collections/breadcrumb.js'),
-  Form: require('./collections/form.js'),
-  Grid: require('./collections/grid.js'),
-  Menu: require('./collections/menu.js'),
-  Message: require('./collections/message.js'),
-  Table: require('./collections/table.js'),
+// collections
+export Breadcrumb from './collections/breadcrumb';
+export Form from './collections/form';
+export Grid from './collections/grid';
+export Menu from './collections/menu';
+export Message from './collections/message';
+export Table from './collections/table';
 
-  // commons
-  Column: require('./commons/column.js'),
-  Content: require('./commons/content.js'),
-  Field: require('./commons/field.js'),
-  Fields: require('./commons/fields.js'),
-  Row: require('./commons/row.js'),
-  Section: require('./commons/section.js'),
-  Text: require('./commons/text.js'),
-  Title: require('./commons/title.js'),
+// commons
+export Column from './commons/column';
+export Content from './commons/content';
+export Field from './commons/field';
+export Fields from './commons/fields';
+export Row from './commons/row';
+export Section from './commons/section';
+export Text from './commons/text';
+export Title from './commons/title';
 
-  // elements
-  Button: require('./elements/button.js'),
-  Divider: require('./elements/divider.js'),
-  Flag: require('./elements/flag.js'),
-  Header: require('./elements/header.js'),
-  Icon: require('./elements/icon.js'),
-  Image: require('./elements/image.js'),
-  Input: require('./elements/input.js'),
-  Label: require('./elements/label.js'),
-  List: require('./elements/list.js'),
-  Loader: require('./elements/loader.js'),
-  Rail: require('./elements/rail.js'),
-  Reveal: require('./elements/reveal.js'),
-  Segment: require('./elements/segment.js'),
-  Step: require('./elements/step.js'),
-  Steps: require('./elements/steps.js'),
+// elements
+export Button from './elements/button';
+export Divider from './elements/divider';
+export Flag from './elements/flag';
+export Header from './elements/header';
+export Icon from './elements/icon';
+export Image from './elements/image';
+export Input from './elements/input';
+export Label from './elements/label';
+export List from './elements/list';
+export Loader from './elements/loader';
+export Rail from './elements/rail';
+export Reveal from './elements/reveal';
+export Segment from './elements/segment';
+export Step from './elements/step';
+export Steps from './elements/steps';
 
-  // modules
-  Accordion: require('./modules/accordion.js'),
-  Checkbox: require('./modules/checkbox.js'),
-  Dimmer: require('./modules/dimmer.js'),
-  Dropdown: require('./modules/dropdown.js'),
-  Modal: require('./modules/modal.js'),
-  Popup: require('./modules/popup.js'),
-  Progress: require('./modules/progress.js'),
-  Rating: require('./modules/rating.js'),
-  Search: require('./modules/search.js'),
-  Shape: require('./modules/shape.js'),
-  Sidebar: require('./modules/sidebar.js'),
-  Sticky: require('./modules/sticky.js'),
-  Tab: require('./modules/tab.js'),
+// modules
+export Accordion from './modules/accordion';
+export Checkbox from './modules/checkbox';
+export Dimmer from './modules/dimmer';
+export Dropdown from './modules/dropdown';
+export Modal from './modules/modal';
+export Popup from './modules/popup';
+export Progress from './modules/progress';
+export Rating from './modules/rating';
+export Search from './modules/search';
+export Shape from './modules/shape';
+export Sidebar from './modules/sidebar';
+export Sticky from './modules/sticky';
+export Tab from './modules/tab';
 
-  // views
-  Ad: require('./views/advertisement.js'),
-  Card: require('./views/card.js'),
-  Comment: require('./views/comment.js'),
-  Comments: require('./views/comments.js'),
-  Feed: require('./views/feed.js'),
-  Item: require('./views/item.js'),
-  Items: require('./views/items.js'),
-  Statistic: require('./views/statistic.js')
-};
+// views
+export Ad from './views/advertisement';
+export Card from './views/card';
+export Comment from './views/comment';
+export Comments from './views/comments';
+export Feed from './views/feed';
+export Item from './views/item';
+export Items from './views/items';
+export Statistic from './views/statistic';

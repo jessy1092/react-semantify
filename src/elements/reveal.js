@@ -5,7 +5,7 @@ import Unit from '../commons/unit';
 
 let defaultClassName = 'ui reveal';
 
-module.exports = React.createClass({
+const Reveal = React.createClass({
 
   mixins: [ClassGenerator, StateSelector],
 
@@ -24,3 +24,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Reveal;
