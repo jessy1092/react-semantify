@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import ClassGenerator from '../mixins/classGenerator';
 import StateSelector from '../mixins/stateSelector';
 import Unit from '../commons/unit';
@@ -32,9 +33,9 @@ module.exports = React.createClass({
       }
 
       if (this.props.init === true) {
-        $(this.getDOMNode()).checkbox();
+        $(ReactDOM.findDOMNode(this)).checkbox();
       } else {
-        $(this.getDOMNode()).checkbox(this.props.init);
+        $(ReactDOM.findDOMNode(this)).checkbox(this.props.init);
       }
     }
   }

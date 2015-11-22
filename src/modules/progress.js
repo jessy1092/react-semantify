@@ -30,7 +30,8 @@ module.exports = React.createClass({
         className={this.getClassName(defaultClassName, state)}
         data-percent={percent}
         data-value={value}
-        data-total={total}>
+        data-total={total}
+        ref="progress">
         {this.props.children}
       </div>
     );
@@ -43,9 +44,9 @@ module.exports = React.createClass({
       }
 
       if (this.props.init === true) {
-        $(this.getDOMNode()).progress();
+        $(this.refs.progress).progress();
       } else {
-        $(this.getDOMNode()).progress(this.props.init);
+        $(this.refs.progress).progress(this.props.init);
       }
     }
   }

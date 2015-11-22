@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import ClassGenerator from '../mixins/classGenerator';
 import StateSelector from '../mixins/stateSelector';
 import Unit from '../commons/unit';
@@ -32,9 +33,9 @@ module.exports = React.createClass({
       }
 
       if (this.props.init === true) {
-        $(this.getDOMNode()).dimmer();
+        $(ReactDOM.findDOMNode(this)).dimmer();
       } else {
-        $(this.getDOMNode()).dimmer(this.props.init);
+        $(ReactDOM.findDOMNode(this)).dimmer(this.props.init);
       }
     }
   }

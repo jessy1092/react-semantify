@@ -12,7 +12,7 @@ module.exports = React.createClass({
     let {className, ...other} = this.props;
 
     return (
-      <div {...other} className={this.getClassName(defaultClassName)} >
+      <div {...other} className={this.getClassName(defaultClassName)} ref="sidebar">
         {this.props.children}
       </div>
     );
@@ -25,9 +25,9 @@ module.exports = React.createClass({
       }
 
       if (this.props.init === true) {
-        $(this.getDOMNode()).sidebar();
+        $(this.refs.sidebar).sidebar();
       } else {
-        $(this.getDOMNode()).sidebar(this.props.init);
+        $(this.refs.sidebar).sidebar(this.props.init);
       }
     }
   }

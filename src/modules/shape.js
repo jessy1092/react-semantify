@@ -12,7 +12,7 @@ module.exports = React.createClass({
     let {className, ...other} = this.props;
 
     return (
-      <div {...other} className={this.getClassName(defaultClassName)} >
+      <div {...other} className={this.getClassName(defaultClassName)} ref="shape">
         {this.props.children}
       </div>
     );
@@ -25,9 +25,9 @@ module.exports = React.createClass({
       }
 
       if (this.props.init === true) {
-        $(this.getDOMNode()).shape();
+        $(this.refs.shape).shape();
       } else {
-        $(this.getDOMNode()).shape(this.props.init);
+        $(this.refs.shape).shape(this.props.init);
       }
     }
   }

@@ -9,7 +9,7 @@ module.exports = React.createClass({
 
   render: function () {
     return (
-      <div className={this.getClassName(defaultClassName)}>
+      <div className={this.getClassName(defaultClassName)} ref="accordion">
         {this.props.children}
       </div>
     );
@@ -22,9 +22,9 @@ module.exports = React.createClass({
       }
 
       if (this.props.init === true) {
-        $(this.getDOMNode()).accordion();
+        $(this.refs.accordion).accordion();
       } else {
-        $(this.getDOMNode()).accordion(this.props.init);
+        $(this.refs.accordion).accordion(this.props.init);
       }
     }
   }

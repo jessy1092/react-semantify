@@ -15,7 +15,8 @@ module.exports = React.createClass({
       <div {...other}
         className={this.getClassName(defaultClassName)}
         data-rating={rating}
-        data-max-rating={maxRating}>
+        data-max-rating={maxRating}
+        ref="rating">
         {this.props.children}
       </div>
     );
@@ -28,9 +29,9 @@ module.exports = React.createClass({
       }
 
       if (this.props.init === true) {
-        $(this.getDOMNode()).rating();
+        $(this.refs.rating).rating();
       } else {
-        $(this.getDOMNode()).rating(this.props.init);
+        $(this.refs.rating).rating(this.props.init);
       }
     }
   }

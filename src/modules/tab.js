@@ -20,7 +20,8 @@ module.exports = React.createClass({
     return (
       <div {...other}
         className={this.getClassName(defaultClassName, state)}
-        data-tab={tab}>
+        data-tab={tab}
+        ref="tab">
         {this.props.children}
       </div>
     );
@@ -33,9 +34,9 @@ module.exports = React.createClass({
       }
 
       if (this.props.init === true) {
-        $(this.getDOMNode()).tab();
+        $(this.refs.tab).tab();
       } else {
-        $(this.getDOMNode()).tab(this.props.init);
+        $(this.refs.tab).tab(this.props.init);
       }
     }
   }

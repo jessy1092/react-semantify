@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import ClassGenerator from '../mixins/classGenerator';
 import StateSelector from '../mixins/stateSelector';
 import Unit from '../commons/unit';
@@ -31,9 +32,9 @@ module.exports = React.createClass({
       }
 
       if (this.props.init === true) {
-        $(this.getDOMNode()).search();
+        $(ReactDOM.findDOMNode(this)).search();
       } else {
-        $(this.getDOMNode()).search(this.props.init);
+        $(ReactDOM.findDOMNode(this)).search(this.props.init);
       }
     }
   }
