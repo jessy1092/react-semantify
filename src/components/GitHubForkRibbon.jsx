@@ -1,6 +1,6 @@
 "use strict";
 
-import React            from 'react/addons';
+import React            from 'react';
 import GitHubForkRibbon from 'react-github-fork-ribbon';
 
 export default React.createClass({

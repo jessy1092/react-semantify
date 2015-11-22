@@ -1,6 +1,7 @@
 "use strict";
 
-import React     from 'react/addons';
+import React     from 'react';
+import ReactDOM  from 'react-dom';
 import CodeBlock from './CodeBlock.jsx';
 import Semantify from 'react-semantify';
 
@@ -16,11 +17,11 @@ export default React.createClass({
 
   componentDidMount() {
 
-    var iconNode = this.getDOMNode().querySelectorAll('.icon.code');
+    var iconNode = ReactDOM.findDOMNode(this.refs.icon);
 
-    $(iconNode[0]).popup();
-    $(iconNode[0]).mouseleave(() => {
-      $(iconNode[0]).popup('remove popup');
+    $(iconNode).popup();
+    $(iconNode).mouseleave(() => {
+      $(iconNode).popup('remove popup');
     });
   },
 
@@ -35,7 +36,8 @@ export default React.createClass({
                 className="code"
                 onClick={this._onClick}
                 data-content="View Source"
-                data-variation="inverted"></Icon>
+                data-variation="inverted"
+                ref="icon"/>
           <Content>
             {this.props.header}
             <Header className="sub">{this.props.sub}</Header>

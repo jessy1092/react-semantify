@@ -1,6 +1,6 @@
 "use strict";
 
-import React from 'react/addons';
+import React from 'react';
 import Highlight from 'highlight.js';
 import ReactToJsx from 'react-to-jsx';
 
@@ -25,19 +25,13 @@ export default React.createClass({
     }
 
     return (
-      <pre><code className={this.props.language}>
+      <pre><code className={this.props.language} ref="code">
         {displayString}
       </code></pre>
     )
   },
 
   _highlightCode() {
-
-    let codeNodes = this.getDOMNode().querySelectorAll('pre code');
-
-    if (codeNodes.length > 0)
-    {
-      Highlight.highlightBlock(codeNodes[0]);
-    }
+    Highlight.highlightBlock(this.refs.code);
   }
 })

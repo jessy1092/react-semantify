@@ -1,6 +1,6 @@
 "use strict";
 
-import React     from 'react/addons';
+import React     from 'react';
 import Semantify from 'react-semantify';
 import CodeBlock from '../components/CodeBlock.jsx';
 import PageTitle from '../components/PageTitle.jsx';
