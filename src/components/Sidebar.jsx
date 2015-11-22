@@ -1,6 +1,6 @@
 "use strict";
 
-import React        from 'react/addons';
+import React        from 'react';
 import Semantify    from 'react-semantify';
 import RouteStore   from '../stores/RouteStore.js';
 import RouteActions from '../actions/RouteActions.js';

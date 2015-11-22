@@ -1,27 +1,28 @@
 {
-  "name"       : "react-semantify-website",
+  "name": "react-semantify-website",
   "description": "Semantic-ui implement by react component. Dev mode.",
-  "version"    : "0.2.0",
+  "version": "0.2.0",
   "contributor": [
     {
-      "name" : "Lee",
+      "name": "Lee",
       "email": "jessy1092@gmail.com"
     }
   ],
   "scripts": {
     "start": "gulp dev"
   },
-  "engines":{
+  "engines": {
     "node": "0.10.x"
   },
   "dependencies": {
     "flux": "^2.0.1",
     "highlight.js": "^8.4.0",
     "jquery": "^2.1.1",
-    "react": "^0.13.1",
-    "react-github-fork-ribbon": "^0.3.0",
-    "react-semantify": "^0.3.0",
-    "react-to-jsx": "^1.2.0",
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2",
+    "react-github-fork-ribbon": "^0.4.2",
+    "react-semantify": "^0.4.0",
+    "react-to-jsx": "^1.3.1",
     "semantic-ui": "~1.8.1"
   },
   "devDependencies": {
@@ -44,7 +45,7 @@
   "repository": [
     {
       "type": "git",
-      "url" : "https://github.com/jessy1092/react-senta-ui-dev"
+      "url": "https://github.com/jessy1092/react-senta-ui-dev"
     }
   ],
   "license": "MIT"
