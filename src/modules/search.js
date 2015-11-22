@@ -1,45 +1,40 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ClassGenerator from '../mixins/classGenerator';
+import StateSelector from '../mixins/stateSelector';
+import Unit from '../commons/unit';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector  = require('../mixins/stateSelector.js')(React);
-  var Unit           = require('../commons/unit.js')(React);
+let defaultClassName = 'ui search';
 
-  var defaultClassName = 'ui search';
+module.exports = React.createClass({
 
-  var Search = React.createClass({
+  mixins: [ClassGenerator, StateSelector],
 
-    mixins: [ClassGenerator, StateSelector],
+  render: function () {
 
-    render: function () {
+    let {className, color, type, active, ...other} = this.props;
 
-      var {className, color, type, active, ...other} = this.props;
+    return (
+      <Unit {...other}
+        className={this.getClassName(defaultClassName)}
+        color="null"
+        type="div"
+        loading={this.getLoading()}>
+        {this.props.children}
+      </Unit>
+    );
+  },
 
-      return (
-        <Unit {...other}
-          className={this.getClassName(defaultClassName)}
-          color="null"
-          type="div"
-          loading={this.getLoading()}>
-          {this.props.children}
-        </Unit>
-      );
-    },
+  componentDidMount: function () {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
 
-    componentDidMount: function () {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).search();
-        } else {
-          $(this.getDOMNode()).search(this.props.init);
-        }
+      if (this.props.init === true) {
+        $(this.getDOMNode()).search();
+      } else {
+        $(this.getDOMNode()).search(this.props.init);
       }
     }
-  });
-
-  return Search;
-}
+  }
+});

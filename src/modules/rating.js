@@ -1,42 +1,37 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ClassGenerator from '../mixins/classGenerator';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+let defaultClassName = 'ui rating';
 
-  var defaultClassName = 'ui rating';
+module.exports = React.createClass({
 
-  var Rating = React.createClass({
+  mixins: [ClassGenerator],
 
-    mixins: [ClassGenerator],
+  render: function () {
 
-    render: function () {
+    let {className, rating, maxRating, ...other} = this.props;
 
-      var {className, rating, maxRating, ...other} = this.props;
+    return (
+      <div {...other}
+        className={this.getClassName(defaultClassName)}
+        data-rating={rating}
+        data-max-rating={maxRating}>
+        {this.props.children}
+      </div>
+    );
+  },
 
-      return (
-        <div {...other}
-          className={this.getClassName(defaultClassName)}
-          data-rating={rating}
-          data-max-rating={maxRating}>
-          {this.props.children}
-        </div>
-      );
-    },
+  componentDidMount: function () {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
 
-    componentDidMount: function () {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).rating();
-        } else {
-          $(this.getDOMNode()).rating(this.props.init);
-        }
+      if (this.props.init === true) {
+        $(this.getDOMNode()).rating();
+      } else {
+        $(this.getDOMNode()).rating(this.props.init);
       }
     }
-  });
-
-  return Rating;
-}
+  }
+});

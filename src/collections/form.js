@@ -1,25 +1,20 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ClassGenerator from '../mixins/classGenerator';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+let defaultClassName = 'ui form';
 
-  var defaultClassName = 'ui form';
+module.exports = React.createClass({
 
-  var Form = React.createClass({
+  mixins: [ClassGenerator],
 
-    mixins: [ClassGenerator],
+  render: function () {
 
-    render: function () {
+    let {className, ...other} = this.props;
 
-      var {className, ...other} = this.props;
-
-      return (
-        <form {...other} className={this.getClassName(defaultClassName)} >
-          {this.props.children}
-        </form>
-      );
-    }
-  });
-
-  return Form;
-}
+    return (
+      <form {...other} className={this.getClassName(defaultClassName)} >
+        {this.props.children}
+      </form>
+    );
+  }
+});

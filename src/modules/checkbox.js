@@ -1,46 +1,41 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ClassGenerator from '../mixins/classGenerator';
+import StateSelector from '../mixins/stateSelector';
+import Unit from '../commons/unit';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector  = require('../mixins/stateSelector.js')(React);
-  var Unit           = require('../commons/unit.js')(React);
+let defaultClassName = 'ui checkbox';
 
-  var defaultClassName = 'ui checkbox';
+module.exports = React.createClass({
 
-  var Checkbox = React.createClass({
+  mixins: [ClassGenerator, StateSelector],
 
-    mixins: [ClassGenerator, StateSelector],
+  render: function () {
 
-    render: function () {
+    let {className, color, type, disabled, readOnly, ...other} = this.props;
 
-      var {className, color, type, disabled, readOnly, ...other} = this.props;
+    return (
+      <Unit {...other}
+        className={this.getClassName(defaultClassName)}
+        color="null"
+        type="div"
+        disabled={this.getDisabled()}
+        readOnly={this.getReadOnly()}>
+        {this.props.children}
+      </Unit>
+    );
+  },
 
-      return (
-        <Unit {...other}
-          className={this.getClassName(defaultClassName)}
-          color="null"
-          type="div"
-          disabled={this.getDisabled()}
-          readOnly={this.getReadOnly()}>
-          {this.props.children}
-        </Unit>
-      );
-    },
+  componentDidMount: function () {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
 
-    componentDidMount: function () {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).checkbox();
-        } else {
-          $(this.getDOMNode()).checkbox(this.props.init);
-        }
+      if (this.props.init === true) {
+        $(this.getDOMNode()).checkbox();
+      } else {
+        $(this.getDOMNode()).checkbox(this.props.init);
       }
     }
-  });
-
-  return Checkbox;
-}
+  }
+});

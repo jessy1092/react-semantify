@@ -1,47 +1,42 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ClassGenerator from '../mixins/classGenerator';
+import StateSelector from '../mixins/stateSelector';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector  = require('../mixins/stateSelector.js')(React);
+let defaultClassName = 'ui tab';
 
-  var defaultClassName = 'ui tab';
+module.exports = React.createClass({
 
-  var Tab = React.createClass({
+  mixins: [ClassGenerator, StateSelector],
 
-    mixins: [ClassGenerator, StateSelector],
+  render: function () {
 
-    render: function () {
+    let {className, active, loading, tab, ...other} = this.props;
 
-      var {className, active, loading, tab, ...other} = this.props;
+    let state = {
+      active: this.getActive(),
+      loading: this.getLoading()
+    };
 
-      var state = {
-        active: this.getActive(),
-        loading: this.getLoading()
-      };
+    return (
+      <div {...other}
+        className={this.getClassName(defaultClassName, state)}
+        data-tab={tab}>
+        {this.props.children}
+      </div>
+    );
+  },
 
-      return (
-        <div {...other}
-          className={this.getClassName(defaultClassName, state)}
-          data-tab={tab}>
-          {this.props.children}
-        </div>
-      );
-    },
+  componentDidMount: function () {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
 
-    componentDidMount: function () {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).tab();
-        } else {
-          $(this.getDOMNode()).tab(this.props.init);
-        }
+      if (this.props.init === true) {
+        $(this.getDOMNode()).tab();
+      } else {
+        $(this.getDOMNode()).tab(this.props.init);
       }
     }
-  });
-
-  return Tab;
-}
+  }
+});

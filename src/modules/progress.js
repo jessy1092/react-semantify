@@ -1,57 +1,52 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ClassGenerator from '../mixins/classGenerator';
+import StateSelector from '../mixins/stateSelector';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector  = require('../mixins/stateSelector.js')(React);
+let defaultClassName = 'ui progress';
 
-  var defaultClassName = 'ui progress';
+module.exports = React.createClass({
 
-  var Progress = React.createClass({
+  mixins: [ClassGenerator, StateSelector],
 
-    mixins: [ClassGenerator, StateSelector],
+  render: function () {
 
-    render: function () {
+    let {
+      className,
+      percent, value, total,
+      active, success, warning, error, disabled,
+      ...other
+    } = this.props;
 
-      var {
-        className,
-        percent, value, total,
-        active, success, warning, error, disabled,
-        ...other
-      } = this.props;
+    let state = {
+      active: this.getActive(),
+      success: this.getSuccess(),
+      warning: this.getWarning(),
+      error: this.getError(),
+      disabled: this.getDisabled()
+    };
 
-      var state = {
-        active: this.getActive(),
-        success: this.getSuccess(),
-        warning: this.getWarning(),
-        error: this.getError(),
-        disabled: this.getDisabled()
-      };
+    return (
+      <div {...other}
+        className={this.getClassName(defaultClassName, state)}
+        data-percent={percent}
+        data-value={value}
+        data-total={total}>
+        {this.props.children}
+      </div>
+    );
+  },
 
-      return (
-        <div {...other}
-          className={this.getClassName(defaultClassName, state)}
-          data-percent={percent}
-          data-value={value}
-          data-total={total}>
-          {this.props.children}
-        </div>
-      );
-    },
+  componentDidMount: function () {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
 
-    componentDidMount: function () {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).progress();
-        } else {
-          $(this.getDOMNode()).progress(this.props.init);
-        }
+      if (this.props.init === true) {
+        $(this.getDOMNode()).progress();
+      } else {
+        $(this.getDOMNode()).progress(this.props.init);
       }
     }
-  });
-
-  return Progress;
-}
+  }
+});

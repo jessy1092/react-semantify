@@ -1,46 +1,41 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ClassGenerator from '../mixins/classGenerator';
+import StateSelector from '../mixins/stateSelector';
+import Unit from '../commons/unit';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector  = require('../mixins/stateSelector.js')(React);
-  var Unit           = require('../commons/unit.js')(React);
+let defaultClassName = 'ui dimmer';
 
-  var defaultClassName = 'ui dimmer';
+module.exports = React.createClass({
 
-  var Dimmer = React.createClass({
+  mixins: [ClassGenerator, StateSelector],
 
-    mixins: [ClassGenerator, StateSelector],
+  render: function () {
 
-    render: function () {
+    let {className, color, type, disabled, active, ...other} = this.props;
 
-      var {className, color, type, disabled, active, ...other} = this.props;
+    return (
+      <Unit
+        className={this.getClassName(defaultClassName)}
+        color="null"
+        type="div"
+        disabled={this.getDisabled()}
+        active={this.getActive()}>
+        {this.props.children}
+      </Unit>
+    );
+  },
 
-      return (
-        <Unit
-          className={this.getClassName(defaultClassName)}
-          color="null"
-          type="div"
-          disabled={this.getDisabled()}
-          active={this.getActive()}>
-          {this.props.children}
-        </Unit>
-      );
-    },
+  componentDidMount: function () {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
 
-    componentDidMount: function () {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).dimmer();
-        } else {
-          $(this.getDOMNode()).dimmer(this.props.init);
-        }
+      if (this.props.init === true) {
+        $(this.getDOMNode()).dimmer();
+      } else {
+        $(this.getDOMNode()).dimmer(this.props.init);
       }
     }
-  });
-
-  return Dimmer;
-}
+  }
+});

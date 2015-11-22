@@ -1,32 +1,27 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import classSet from 'classnames';
 
-  var classSet = require('classnames');
+module.exports = {
 
-  var ClassGenerator = {
+  propTypes: {
+    className: React.PropTypes.string
+  },
 
-    propTypes: {
-      className: React.PropTypes.string
-    },
+  getClassName: function (defaultClassName, addClassName) {
+    let classResult = defaultClassName;
 
-    getClassName: function (defaultClassName, addClassName) {
-      var classResult = defaultClassName;
-
-      if (typeof this.props.className !== 'undefined') {
-        classResult += ' ' + this.props.className;
-      }
-
-      if (typeof addClassName !== 'undefined') {
-        if (typeof addClassName === 'object') {
-          classResult += ' ' + classSet(addClassName);
-        } else {
-          classResult += ' ' + addClassName;
-        }
-      }
-
-      return classResult;
+    if (typeof this.props.className !== 'undefined') {
+      classResult += ' ' + this.props.className;
     }
-  };
 
-  return ClassGenerator;
+    if (typeof addClassName !== 'undefined') {
+      if (typeof addClassName === 'object') {
+        classResult += ' ' + classSet(addClassName);
+      } else {
+        classResult += ' ' + addClassName;
+      }
+    }
+
+    return classResult;
+  }
 };

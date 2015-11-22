@@ -1,39 +1,34 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ClassGenerator from '../mixins/classGenerator';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+let defaultClassName = 'ui sidebar';
 
-  var defaultClassName = 'ui sidebar';
+module.exports = React.createClass({
 
-  var Sidebar = React.createClass({
+  mixins: [ClassGenerator],
 
-    mixins: [ClassGenerator],
+  render: function () {
 
-    render: function () {
+    let {className, ...other} = this.props;
 
-      var {className, ...other} = this.props;
+    return (
+      <div {...other} className={this.getClassName(defaultClassName)} >
+        {this.props.children}
+      </div>
+    );
+  },
 
-      return (
-        <div {...other} className={this.getClassName(defaultClassName)} >
-          {this.props.children}
-        </div>
-      );
-    },
+  componentDidMount: function () {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
 
-    componentDidMount: function () {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).sidebar();
-        } else {
-          $(this.getDOMNode()).sidebar(this.props.init);
-        }
+      if (this.props.init === true) {
+        $(this.getDOMNode()).sidebar();
+      } else {
+        $(this.getDOMNode()).sidebar(this.props.init);
       }
     }
-  });
-
-  return Sidebar;
-}
+  }
+});

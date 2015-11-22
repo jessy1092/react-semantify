@@ -1,33 +1,27 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ClassGenerator from '../mixins/classGenerator';
+import ColorSelector from '../mixins/colorSelector';
+import StateSelector from '../mixins/stateSelector';
+import Unit from '../commons/unit';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var ColorSelector  = require('../mixins/colorSelector.js')(React);
-  var StateSelector  = require('../mixins/stateSelector.js')(React);
-  var Unit           = require('../commons/unit.js')(React);
+let defaultClassName = 'icon';
 
-  var defaultClassName = 'icon';
+module.exports = React.createClass({
 
-  var Icon = React.createClass({
+  mixins: [ClassGenerator, ColorSelector, StateSelector],
 
-    mixins: [ClassGenerator, ColorSelector, StateSelector],
+  render: function () {
 
-    render: function () {
+    let {className, color, ...other} = this.props;
 
-      var {className, color, ...other} = this.props;
-
-      return (
-        <Unit {...other}
-          className={this.getClassName(defaultClassName)}
-          type="icon"
-          color={this.getColor()}
-          disabled={this.getDisabled()}
-          loading={this.getLoading()}>
-        </Unit>
-      );
-    }
-  });
-
-  return Icon;
-}
-
+    return (
+      <Unit {...other}
+        className={this.getClassName(defaultClassName)}
+        type="icon"
+        color={this.getColor()}
+        disabled={this.getDisabled()}
+        loading={this.getLoading()}>
+      </Unit>
+    );
+  }
+});

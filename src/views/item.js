@@ -1,31 +1,26 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ClassGenerator from '../mixins/classGenerator';
+import TypeSelector from '../mixins/typeSelector';
+import Unit from '../commons/unit';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var TypeSelector   = require('../mixins/typeSelector.js')(React);
-  var Unit           = require('../commons/unit.js')(React);
+let defaultClassName = 'item';
 
-  var defaultClassName = 'item';
+module.exports = React.createClass({
 
-  var Item = React.createClass({
+  mixins: [ClassGenerator, TypeSelector],
 
-    mixins: [ClassGenerator, TypeSelector],
+  render: function () {
 
-    render: function () {
+    let {className, type, ...other} = this.props;
 
-      var {className, type, ...other} = this.props;
-
-      return (
-        <Unit {...other}
-          className={this.getClassName(defaultClassName)}
-          type={this.getType()}
-          color="null"
-          value={this.props.value} >
-          {this.props.children}
-        </Unit>
-      );
-    }
-  });
-
-  return Item;
-}
+    return (
+      <Unit {...other}
+        className={this.getClassName(defaultClassName)}
+        type={this.getType()}
+        color="null"
+        value={this.props.value} >
+        {this.props.children}
+      </Unit>
+    );
+  }
+});
