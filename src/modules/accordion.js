@@ -3,7 +3,7 @@ import ClassGenerator from '../mixins/classGenerator';
 
 let defaultClassName = 'ui accordion';
 
-module.exports = React.createClass({
+const Accordion = React.createClass({
 
   mixins: [ClassGenerator],
 
@@ -29,3 +29,5 @@ module.exports = React.createClass({
     }
   }
 });
+
+export default Accordion;

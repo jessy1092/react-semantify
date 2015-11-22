@@ -3,11 +3,11 @@ import ClassGenerator from '../mixins/classGenerator';
 import ColorSelector from '../mixins/colorSelector';
 import TypeSelector from '../mixins/typeSelector';
 import StateSelector from '../mixins/stateSelector';
-import Unit from '../commons/unit';
+import {Unit} from '../commons/unit';
 
 let defaultClassName = 'ui header';
 
-module.exports = React.createClass({
+const Header = React.createClass({
 
   mixins: [ClassGenerator, ColorSelector, TypeSelector, StateSelector],
 
@@ -26,3 +26,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Header;

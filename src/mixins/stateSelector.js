@@ -1,6 +1,6 @@
 import React from 'react';
 
-module.exports = {
+export default {
 
   propTypes: {
     disabled: React.PropTypes.bool,

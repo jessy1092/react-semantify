@@ -3,7 +3,7 @@ import ClassGenerator from '../mixins/classGenerator';
 
 let defaultClassName = 'ui sidebar';
 
-module.exports = React.createClass({
+const Sidebar = React.createClass({
 
   mixins: [ClassGenerator],
 
@@ -32,3 +32,5 @@ module.exports = React.createClass({
     }
   }
 });
+
+export default Sidebar;

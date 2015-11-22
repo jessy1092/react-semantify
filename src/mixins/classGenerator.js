@@ -1,7 +1,7 @@
 import React from 'react';
 import classSet from 'classnames';
 
-module.exports = {
+export default {
 
   propTypes: {
     className: React.PropTypes.string

@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ClassGenerator from '../mixins/classGenerator';
 import StateSelector from '../mixins/stateSelector';
-import Unit from '../commons/unit';
+import {Unit} from '../commons/unit';
 
 let defaultClassName = 'ui search';
 
-module.exports = React.createClass({
+const Search = React.createClass({
 
   mixins: [ClassGenerator, StateSelector],
 
@@ -39,3 +39,5 @@ module.exports = React.createClass({
     }
   }
 });
+
+export default Search;

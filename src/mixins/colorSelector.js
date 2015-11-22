@@ -5,7 +5,7 @@ let colorArray = [
   'orange', 'purple', 'red', 'teal'
 ];
 
-module.exports = {
+export default {
 
   propTypes: {
     color: React.PropTypes.oneOf(colorArray)

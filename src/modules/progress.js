@@ -4,7 +4,7 @@ import StateSelector from '../mixins/stateSelector';
 
 let defaultClassName = 'ui progress';
 
-module.exports = React.createClass({
+const Progress = React.createClass({
 
   mixins: [ClassGenerator, StateSelector],
 
@@ -51,3 +51,5 @@ module.exports = React.createClass({
     }
   }
 });
+
+export default Progress;

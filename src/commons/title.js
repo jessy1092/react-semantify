@@ -1,11 +1,11 @@
 import React from 'react';
 import ClassGenerator from '../mixins/classGenerator';
 import StateSelector from '../mixins/stateSelector';
-import Unit from './unit';
+import {Unit} from './unit';
 
 let defaultClassName = 'title';
 
-module.exports = React.createClass({
+const Title = React.createClass({
 
   mixins: [ClassGenerator, StateSelector],
 
@@ -24,3 +24,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Title;

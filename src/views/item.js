@@ -1,11 +1,11 @@
 import React from 'react';
 import ClassGenerator from '../mixins/classGenerator';
 import TypeSelector from '../mixins/typeSelector';
-import Unit from '../commons/unit';
+import {Unit} from '../commons/unit';
 
 let defaultClassName = 'item';
 
-module.exports = React.createClass({
+const Item = React.createClass({
 
   mixins: [ClassGenerator, TypeSelector],
 
@@ -24,3 +24,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Item;

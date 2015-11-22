@@ -2,11 +2,11 @@ import React from 'react';
 import ClassGenerator from '../mixins/classGenerator';
 import ColorSelector from '../mixins/colorSelector';
 import StateSelector from '../mixins/stateSelector';
-import Unit from '../commons/unit';
+import {Unit} from '../commons/unit';
 
 let defaultClassName = 'ui segment';
 
-module.exports = React.createClass({
+const Segment = React.createClass({
 
   mixins: [ClassGenerator, ColorSelector, StateSelector],
 
@@ -25,3 +25,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Segment;

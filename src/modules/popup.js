@@ -3,7 +3,7 @@ import ClassGenerator from '../mixins/classGenerator';
 
 let defaultClassName = 'ui popup';
 
-module.exports = React.createClass({
+const Popup = React.createClass({
 
   mixins: [ClassGenerator],
 
@@ -15,3 +15,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default Popup;

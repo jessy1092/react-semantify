@@ -2,7 +2,7 @@ import React from 'react';
 
 let typeArray = ['div', 'link', 'icon'];
 
-module.exports =  {
+export default  {
 
   propTypes: {
     type: React.PropTypes.oneOf(typeArray)

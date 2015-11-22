@@ -4,7 +4,7 @@ import StateSelector from '../mixins/stateSelector';
 
 let defaultClassName = 'ui tab';
 
-module.exports = React.createClass({
+const Tab = React.createClass({
 
   mixins: [ClassGenerator, StateSelector],
 
@@ -41,3 +41,5 @@ module.exports = React.createClass({
     }
   }
 });
+
+export default Tab;
