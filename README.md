@@ -11,7 +11,7 @@ Integrate Semantic-ui with react components. It depends on Semantic-UI and helps
 
 |         | React = 0.12 | React = 0.13.* | React = 0.14.* |
 | ------- | ------------ | -------------- | -------------- |
-| Version | <= 0.2       |  0.3.*         | 0.4.* (Comming)|
+| Version | <= 0.2       |  0.3.*         | 0.4.*          |
 
 ## Usage
 
@@ -24,13 +24,15 @@ And then include in your html.
 You should include dependency.
 - jQuery
 - Semantic-Ui
-- React with Addons
-- JSXTransformer (If you write jsx in browser.)
+- React
+- ReactDOM
+- Babel (If you write jsx in browser.)
 
 Ex. Write a simple button in browser.
 ```html
-<script src="//cdnjs.cloudflare.com/ajax/libs/react/0.12.1/react-with-addons.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/react/0.12.1/JSXTransformer.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-dom.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.js"></script>
@@ -39,10 +41,10 @@ Ex. Write a simple button in browser.
 
 ```js
 <div id="content"></div>
-<script type="text/jsx">
-  var Button = Semantify.Button;
+<script type="text/babel">
+  let Button = Semantify.Button;
 
-  var HelloBox = React.createClass({
+  let HelloBox = React.createClass({
 
     _onClick: function () {
       console.log('hello world!');
@@ -57,7 +59,7 @@ Ex. Write a simple button in browser.
     }
   });
 
-  React.render(
+  ReactDOM.render(
     <HelloBox />,
     document.getElementById('content')
   );
@@ -72,10 +74,11 @@ npm install react-semantify
 
 Ex.
 ```js
-var React = require('react');
-var Button = require('react-semantify').Button;
+import React from 'react';
+import ReactDOM from 'react-dom';
+let Button = require('react-semantify').Button;
 
-var HelloBox = React.createClass({
+let HelloBox = React.createClass({
 
   _onClick: function () {
     console.log('hello world!');
@@ -90,7 +93,7 @@ var HelloBox = React.createClass({
   }
 });
 
-React.render(
+ReactDOM.render(
   <HelloBox />,
   document.getElementById('content')
 );

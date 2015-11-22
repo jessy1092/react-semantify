@@ -49,1230 +49,1422 @@
 }());
 
 },{}],2:[function(require,module,exports){
-"use strict";
+'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-module.exports = function (React) {
+var defaultClassName = 'ui breadcrumb';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-  var defaultClassName = 'ui breadcrumb';
+  mixins: [_classGenerator2.default],
 
-  var Breadcrumb = React.createClass({
-    displayName: 'Breadcrumb',
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
 
-    mixins: [ClassGenerator],
+    var other = _objectWithoutProperties(_props, ['className']);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
 
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return Breadcrumb;
-};
-
-},{"../mixins/classGenerator.js":33}],3:[function(require,module,exports){
-"use strict";
+},{"../mixins/classGenerator":33}],3:[function(require,module,exports){
+'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-module.exports = function (React) {
+var defaultClassName = 'ui form';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-  var defaultClassName = 'ui form';
+  mixins: [_classGenerator2.default],
 
-  var Form = React.createClass({
-    displayName: 'Form',
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
 
-    mixins: [ClassGenerator],
+    var other = _objectWithoutProperties(_props, ['className']);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
+    return _react2.default.createElement(
+      'form',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
 
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'form',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return Form;
-};
-
-},{"../mixins/classGenerator.js":33}],4:[function(require,module,exports){
-"use strict";
+},{"../mixins/classGenerator":33}],4:[function(require,module,exports){
+'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-module.exports = function (React) {
+var defaultClassName = 'ui grid';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-  var defaultClassName = 'ui grid';
+  mixins: [_classGenerator2.default],
 
-  var Grid = React.createClass({
-    displayName: 'Grid',
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
 
-    mixins: [ClassGenerator],
+    var other = _objectWithoutProperties(_props, ['className']);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
 
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return Grid;
-};
-
-},{"../mixins/classGenerator.js":33}],5:[function(require,module,exports){
-"use strict";
+},{"../mixins/classGenerator":33}],5:[function(require,module,exports){
+'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-module.exports = function (React) {
+var defaultClassName = 'ui menu';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-  var defaultClassName = 'ui menu';
+  mixins: [_classGenerator2.default],
 
-  var Menu = React.createClass({
-    displayName: 'Menu',
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
 
-    mixins: [ClassGenerator],
+    var other = _objectWithoutProperties(_props, ['className']);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
 
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return Menu;
-};
-
-},{"../mixins/classGenerator.js":33}],6:[function(require,module,exports){
-"use strict";
+},{"../mixins/classGenerator":33}],6:[function(require,module,exports){
+'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-module.exports = function (React) {
+var defaultClassName = 'ui message';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-  var defaultClassName = 'ui message';
+  mixins: [_classGenerator2.default],
 
-  var Message = React.createClass({
-    displayName: 'Message',
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
 
-    mixins: [ClassGenerator],
+    var other = _objectWithoutProperties(_props, ['className']);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
 
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return Message;
-};
-
-},{"../mixins/classGenerator.js":33}],7:[function(require,module,exports){
-"use strict";
+},{"../mixins/classGenerator":33}],7:[function(require,module,exports){
+'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-module.exports = function (React) {
+var defaultClassName = 'ui table';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-  var defaultClassName = 'ui table';
+  mixins: [_classGenerator2.default],
 
-  var Table = React.createClass({
-    displayName: 'Table',
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
 
-    mixins: [ClassGenerator],
+    var other = _objectWithoutProperties(_props, ['className']);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
+    return _react2.default.createElement(
+      'table',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
 
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'table',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return Table;
-};
-
-},{"../mixins/classGenerator.js":33}],8:[function(require,module,exports){
-"use strict";
+},{"../mixins/classGenerator":33}],8:[function(require,module,exports){
+'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-module.exports = function (React) {
+var defaultClassName = 'column';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-  var defaultClassName = 'column';
+  mixins: [_classGenerator2.default],
 
-  var Column = React.createClass({
-    displayName: 'Column',
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
 
-    mixins: [ClassGenerator],
+    var other = _objectWithoutProperties(_props, ['className']);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
 
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return Column;
-};
-
-},{"../mixins/classGenerator.js":33}],9:[function(require,module,exports){
-"use strict";
+},{"../mixins/classGenerator":33}],9:[function(require,module,exports){
+'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+var _react = (window.React);
 
-module.exports = function (React) {
+var _react2 = _interopRequireDefault(_react);
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
+var _classGenerator = require('../mixins/classGenerator');
 
-  var defaultClassName = 'content';
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
 
-  var Content = React.createClass({
-    displayName: 'Content',
+var _stateSelector = require('../mixins/stateSelector');
 
-    mixins: [ClassGenerator, StateSelector],
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var type = _props.type;
-      var color = _props.color;
-      var active = _props.active;
+var _unit = require('./unit');
 
-      var other = _objectWithoutProperties(_props, ['className', 'type', 'color', 'active']);
+var _unit2 = _interopRequireDefault(_unit);
 
-      return React.createElement(
-        Unit,
-        _extends({}, other, {
-          className: this.getClassName(defaultClassName),
-          type: 'div',
-          color: 'null',
-          active: this.getActive() }),
-        this.props.children
-      );
-    }
-  });
-
-  return Content;
-};
-
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/stateSelector.js":35}],10:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-module.exports = function (React) {
+var defaultClassName = 'content';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-  var defaultClassName = 'field';
+  mixins: [_classGenerator2.default, _stateSelector2.default],
 
-  var Field = React.createClass({
-    displayName: 'Field',
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var type = _props.type;
+    var color = _props.color;
+    var active = _props.active;
 
-    mixins: [ClassGenerator],
+    var other = _objectWithoutProperties(_props, ['className', 'type', 'color', 'active']);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return Field;
-};
-
-},{"../mixins/classGenerator.js":33}],11:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-
-  var defaultClassName = 'fields';
-
-  var Fields = React.createClass({
-    displayName: 'Fields',
-
-    mixins: [ClassGenerator],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return Fields;
-};
-
-},{"../mixins/classGenerator.js":33}],12:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-
-  var defaultClassName = 'row';
-
-  var Row = React.createClass({
-    displayName: 'Row',
-
-    mixins: [ClassGenerator],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return Row;
-};
-
-},{"../mixins/classGenerator.js":33}],13:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var ColorSelector = require('../mixins/colorSelector.js')(React);
-  var TypeSelector = require('../mixins/typeSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
-
-  var defaultClassName = 'section';
-
-  var Section = React.createClass({
-    displayName: 'Section',
-
-    mixins: [ClassGenerator, ColorSelector, TypeSelector],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var color = _props.color;
-
-      var other = _objectWithoutProperties(_props, ['className', 'color']);
-
-      return React.createElement(
-        Unit,
-        _extends({}, other, {
-          className: this.getClassName(defaultClassName),
-          type: this.getType(),
-          color: this.getColor() }),
-        this.props.children
-      );
-    }
-  });
-
-  return Section;
-};
-
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/colorSelector.js":34,"../mixins/typeSelector.js":36}],14:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-
-  var defaultClassName = 'text';
-
-  var Text = React.createClass({
-    displayName: 'Text',
-
-    mixins: [ClassGenerator],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return Text;
-};
-
-},{"../mixins/classGenerator.js":33}],15:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
-
-  var defaultClassName = 'title';
-
-  var Title = React.createClass({
-    displayName: 'Title',
-
-    mixins: [ClassGenerator, StateSelector],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var type = _props.type;
-      var color = _props.color;
-      var active = _props.active;
-
-      var other = _objectWithoutProperties(_props, ['className', 'type', 'color', 'active']);
-
-      return React.createElement(
-        Unit,
-        _extends({}, other, {
-          className: this.getClassName(defaultClassName),
-          type: 'div',
-          color: 'null',
-          active: this.getActive() }),
-        this.props.children
-      );
-    }
-  });
-
-  return Title;
-};
-
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/stateSelector.js":35}],16:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var classSet = require('classnames');
-
-  var Unit = React.createClass({
-    displayName: 'Unit',
-
-    propTypes: {
-      className: React.PropTypes.string.isRequired,
-      type: React.PropTypes.string.isRequired,
-      color: React.PropTypes.string.isRequired
-    },
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var type = _props.type;
-      var color = _props.color;
-      var value = _props.value;
-      var disabled = _props.disabled;
-      var active = _props.active;
-      var loading = _props.loading;
-
-      var other = _objectWithoutProperties(_props, ['className', 'type', 'color', 'value', 'disabled', 'active', 'loading']);
-
-      switch (type) {
-
-        case 'link':
-          return React.createElement(
-            'a',
-            _extends({}, other, {
-              className: this._generateClassName(),
-              'data-value': value }),
-            this.props.children
-          );
-
-        case 'icon':
-          return React.createElement(
-            'i',
-            _extends({}, other, {
-              className: this._generateClassName(),
-              'data-value': value }),
-            this.props.children
-          );
-
-        case 'img':
-          return React.createElement(
-            'img',
-            _extends({}, other, {
-              className: this._generateClassName() }),
-            this.props.children
-          );
-
-        case 'div':
-        default:
-          return React.createElement(
-            'div',
-            _extends({}, other, {
-              className: this._generateClassName(),
-              'data-value': value }),
-            this.props.children
-          );
-      }
-    },
-
-    _generateClassName: function _generateClassName() {
-      var className = this.props.className;
-
-      if (this.props.color != 'null') {
-        className += ' ' + this.props.color;
-      }
-
-      className += ' ' + classSet({
-        'disabled': this.props.disabled,
-        'active': this.props.active,
-        'loading': this.props.loading,
-        'focus': this.props.focus,
-        'error': this.props.error,
-        'completed': this.props.completed,
-        'read-only': this.props.readOnly
-      });
-
-      return className;
-    }
-  });
-
-  return Unit;
-};
-
-},{"classnames":1}],17:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var ColorSelector = require('../mixins/colorSelector.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
-
-  var defaultClassName = 'ui button';
-
-  var Button = React.createClass({
-    displayName: 'Button',
-
-    mixins: [ClassGenerator, ColorSelector, StateSelector],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var color = _props.color;
-      var disabled = _props.disabled;
-      var active = _props.active;
-      var loading = _props.loading;
-
-      var other = _objectWithoutProperties(_props, ['className', 'color', 'disabled', 'active', 'loading']);
-
-      return React.createElement(
-        Unit,
-        _extends({}, other, {
-          className: this.getClassName(defaultClassName),
-          type: 'div',
-          color: this.getColor(),
-          disabled: this.getDisabled(),
-          active: this.getActive(),
-          loading: this.getLoading() }),
-        this.props.children
-      );
-    }
-  });
-
-  return Button;
-};
-
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/colorSelector.js":34,"../mixins/stateSelector.js":35}],18:[function(require,module,exports){
-"use strict";
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-
-  var defaultClassName = 'ui divider';
-
-  var Divider = React.createClass({
-    displayName: 'Divider',
-
-    mixins: [ClassGenerator],
-
-    render: function render() {
-      return React.createElement(
-        'div',
-        { className: this.getClassName(defaultClassName) },
-        this.props.children
-      );
-    }
-  });
-
-  return Divider;
-};
-
-},{"../mixins/classGenerator.js":33}],19:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var Unit = require('../commons/unit.js')(React);
-
-  var defaultClassName = 'flag';
-
-  var Flag = React.createClass({
-    displayName: 'Flag',
-
-    mixins: [ClassGenerator],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var type = _props.type;
-      var color = _props.color;
-
-      var other = _objectWithoutProperties(_props, ['className', 'type', 'color']);
-
-      return React.createElement(Unit, _extends({}, other, {
+    return _react2.default.createElement(
+      _unit2.default,
+      _extends({}, other, {
         className: this.getClassName(defaultClassName),
-        type: 'icon',
-        color: 'null' }));
-    }
-  });
+        type: 'div',
+        color: 'null',
+        active: this.getActive() }),
+      this.props.children
+    );
+  }
+});
 
-  return Flag;
-};
-
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33}],20:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var ColorSelector = require('../mixins/colorSelector.js')(React);
-  var TypeSelector = require('../mixins/typeSelector.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
-
-  var defaultClassName = 'ui header';
-
-  var Header = React.createClass({
-    displayName: 'Header',
-
-    mixins: [ClassGenerator, ColorSelector, TypeSelector, StateSelector],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var type = _props.type;
-      var color = _props.color;
-
-      var other = _objectWithoutProperties(_props, ['className', 'type', 'color']);
-
-      return React.createElement(
-        Unit,
-        _extends({}, other, {
-          className: this.getClassName(defaultClassName),
-          type: this.getType(),
-          color: this.getColor(),
-          disabled: this.getDisabled() }),
-        this.props.children
-      );
-    }
-  });
-
-  return Header;
-};
-
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/colorSelector.js":34,"../mixins/stateSelector.js":35,"../mixins/typeSelector.js":36}],21:[function(require,module,exports){
-"use strict";
+},{"../mixins/classGenerator":33,"../mixins/stateSelector":35,"./unit":16}],10:[function(require,module,exports){
+'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-module.exports = function (React) {
+var defaultClassName = 'field';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var ColorSelector = require('../mixins/colorSelector.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-  var defaultClassName = 'icon';
+  mixins: [_classGenerator2.default],
 
-  var Icon = React.createClass({
-    displayName: 'Icon',
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
 
-    mixins: [ClassGenerator, ColorSelector, StateSelector],
+    var other = _objectWithoutProperties(_props, ['className']);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var color = _props.color;
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
 
-      var other = _objectWithoutProperties(_props, ['className', 'color']);
+},{"../mixins/classGenerator":33}],11:[function(require,module,exports){
+'use strict';
 
-      return React.createElement(Unit, _extends({}, other, {
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'fields';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
+
+},{"../mixins/classGenerator":33}],12:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'row';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
+
+},{"../mixins/classGenerator":33}],13:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _colorSelector = require('../mixins/colorSelector');
+
+var _colorSelector2 = _interopRequireDefault(_colorSelector);
+
+var _typeSelector = require('../mixins/typeSelector');
+
+var _typeSelector2 = _interopRequireDefault(_typeSelector);
+
+var _unit = require('./unit');
+
+var _unit2 = _interopRequireDefault(_unit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'section';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default, _colorSelector2.default, _typeSelector2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var color = _props.color;
+
+    var other = _objectWithoutProperties(_props, ['className', 'color']);
+
+    return _react2.default.createElement(
+      _unit2.default,
+      _extends({}, other, {
         className: this.getClassName(defaultClassName),
-        type: 'icon',
-        color: this.getColor(),
-        disabled: this.getDisabled(),
-        loading: this.getLoading() }));
-    }
-  });
+        type: this.getType(),
+        color: this.getColor() }),
+      this.props.children
+    );
+  }
+});
 
-  return Icon;
-};
-
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/colorSelector.js":34,"../mixins/stateSelector.js":35}],22:[function(require,module,exports){
-"use strict";
+},{"../mixins/classGenerator":33,"../mixins/colorSelector":34,"../mixins/typeSelector":36,"./unit":16}],14:[function(require,module,exports){
+'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-module.exports = function (React) {
+var defaultClassName = 'text';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-  var defaultClassName = 'ui image';
+  mixins: [_classGenerator2.default],
 
-  var Image = React.createClass({
-    displayName: 'Image',
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
 
-    mixins: [ClassGenerator, StateSelector],
+    var other = _objectWithoutProperties(_props, ['className']);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var type = _props.type;
-      var disabled = _props.disabled;
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
 
-      var other = _objectWithoutProperties(_props, ['className', 'type', 'disabled']);
-
-      return React.createElement(
-        Unit,
-        _extends({}, other, {
-          className: this.getClassName(defaultClassName),
-          type: 'img',
-          color: 'null',
-          disabled: this.getDisabled() }),
-        this.props.children
-      );
-    }
-  });
-
-  return Image;
-};
-
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/stateSelector.js":35}],23:[function(require,module,exports){
-"use strict";
+},{"../mixins/classGenerator":33}],15:[function(require,module,exports){
+'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _stateSelector = require('../mixins/stateSelector');
+
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
+
+var _unit = require('./unit');
+
+var _unit2 = _interopRequireDefault(_unit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-module.exports = function (React) {
+var defaultClassName = 'title';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-  var defaultClassName = 'ui input';
+  mixins: [_classGenerator2.default, _stateSelector2.default],
 
-  var Input = React.createClass({
-    displayName: 'Input',
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var type = _props.type;
+    var color = _props.color;
+    var active = _props.active;
 
-    mixins: [ClassGenerator, StateSelector],
+    var other = _objectWithoutProperties(_props, ['className', 'type', 'color', 'active']);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
+    return _react2.default.createElement(
+      _unit2.default,
+      _extends({}, other, {
+        className: this.getClassName(defaultClassName),
+        type: 'div',
+        color: 'null',
+        active: this.getActive() }),
+      this.props.children
+    );
+  }
+});
 
-      var other = _objectWithoutProperties(_props, ['className']);
+},{"../mixins/classGenerator":33,"../mixins/stateSelector":35,"./unit":16}],16:[function(require,module,exports){
+'use strict';
 
-      if (typeof this.props.children != 'undefined') {
-        return React.createElement(
-          Unit,
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  propTypes: {
+    className: _react2.default.PropTypes.string.isRequired,
+    type: _react2.default.PropTypes.string.isRequired,
+    color: _react2.default.PropTypes.string.isRequired
+  },
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var type = _props.type;
+    var color = _props.color;
+    var value = _props.value;
+    var disabled = _props.disabled;
+    var active = _props.active;
+    var loading = _props.loading;
+
+    var other = _objectWithoutProperties(_props, ['className', 'type', 'color', 'value', 'disabled', 'active', 'loading']);
+
+    switch (type) {
+
+      case 'link':
+        return _react2.default.createElement(
+          'a',
           _extends({}, other, {
-            className: this.getClassName(defaultClassName),
-            type: 'div',
-            color: 'null',
-            loading: this.getLoading(),
-            focus: this.getFocus(),
-            error: this.getError() }),
+            className: this._generateClassName(),
+            'data-value': value }),
           this.props.children
         );
-      } else {
-        return React.createElement(
-          Unit,
-          {
-            className: this.getClassName(defaultClassName),
-            type: 'div',
-            color: 'null',
-            loading: this.getLoading(),
-            focus: this.getFocus(),
-            error: this.getError() },
-          React.createElement('input', _extends({}, other, {
-            placeholder: this.props.placeholder,
-            type: this.props.type }))
+
+      case 'icon':
+        return _react2.default.createElement(
+          'i',
+          _extends({}, other, {
+            className: this._generateClassName(),
+            'data-value': value }),
+          this.props.children
         );
-      }
+
+      case 'img':
+        return _react2.default.createElement(
+          'img',
+          _extends({}, other, {
+            className: this._generateClassName() }),
+          this.props.children
+        );
+
+      case 'div':
+      default:
+        return _react2.default.createElement(
+          'div',
+          _extends({}, other, {
+            className: this._generateClassName(),
+            'data-value': value }),
+          this.props.children
+        );
     }
-  });
+  },
 
-  return Input;
-};
+  _generateClassName: function _generateClassName() {
+    var className = this.props.className;
 
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/stateSelector.js":35}],24:[function(require,module,exports){
-"use strict";
+    if (this.props.color != 'null') {
+      className += ' ' + this.props.color;
+    }
+
+    className += ' ' + (0, _classnames2.default)({
+      'disabled': this.props.disabled,
+      'active': this.props.active,
+      'loading': this.props.loading,
+      'focus': this.props.focus,
+      'error': this.props.error,
+      'completed': this.props.completed,
+      'read-only': this.props.readOnly
+    });
+
+    return className;
+  }
+});
+
+},{"classnames":1}],17:[function(require,module,exports){
+'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+var _react = (window.React);
 
-module.exports = function (React) {
+var _react2 = _interopRequireDefault(_react);
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var ColorSelector = require('../mixins/colorSelector.js')(React);
-  var TypeSelector = require('../mixins/typeSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
+var _classGenerator = require('../mixins/classGenerator');
 
-  var defaultClassName = 'ui label';
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
 
-  var Label = React.createClass({
-    displayName: 'Label',
+var _colorSelector = require('../mixins/colorSelector');
 
-    mixins: [ClassGenerator, ColorSelector, TypeSelector],
+var _colorSelector2 = _interopRequireDefault(_colorSelector);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var type = _props.type;
-      var color = _props.color;
+var _stateSelector = require('../mixins/stateSelector');
 
-      var other = _objectWithoutProperties(_props, ['className', 'type', 'color']);
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
 
-      return React.createElement(
-        Unit,
-        _extends({}, other, {
-          className: this.getClassName(defaultClassName),
-          type: this.getType(),
-          color: this.getColor() }),
-        this.props.children
-      );
-    }
-  });
+var _unit = require('../commons/unit');
 
-  return Label;
-};
+var _unit2 = _interopRequireDefault(_unit);
 
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/colorSelector.js":34,"../mixins/typeSelector.js":36}],25:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-module.exports = function (React) {
+var defaultClassName = 'ui button';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-  var defaultClassName = 'ui list';
+  mixins: [_classGenerator2.default, _colorSelector2.default, _stateSelector2.default],
 
-  var List = React.createClass({
-    displayName: 'List',
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var color = _props.color;
+    var disabled = _props.disabled;
+    var active = _props.active;
+    var loading = _props.loading;
 
-    mixins: [ClassGenerator],
+    var other = _objectWithoutProperties(_props, ['className', 'color', 'disabled', 'active', 'loading']);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return List;
-};
-
-},{"../mixins/classGenerator.js":33}],26:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
-
-  var defaultClassName = 'ui loader';
-
-  var Loader = React.createClass({
-    displayName: 'Loader',
-
-    mixins: [ClassGenerator, StateSelector],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        Unit,
-        _extends({}, other, {
-          className: this.getClassName(defaultClassName),
-          type: 'div',
-          color: 'null',
-          disabled: this.getDisabled(),
-          active: this.getActive() }),
-        this.props.children
-      );
-    }
-  });
-
-  return Loader;
-};
-
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/stateSelector.js":35}],27:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-
-  var defaultClassName = 'ui rail';
-
-  var Rail = React.createClass({
-    displayName: 'Rail',
-
-    mixins: [ClassGenerator],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return Rail;
-};
-
-},{"../mixins/classGenerator.js":33}],28:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
-
-  var defaultClassName = 'ui reveal';
-
-  var Reveal = React.createClass({
-    displayName: 'Reveal',
-
-    mixins: [ClassGenerator, StateSelector],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        Unit,
-        _extends({}, other, {
-          className: this.getClassName(defaultClassName),
-          type: 'div',
-          color: 'null',
-          disabled: this.getDisabled() }),
-        this.props.children
-      );
-    }
-  });
-
-  return Reveal;
-};
-
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/stateSelector.js":35}],29:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var ColorSelector = require('../mixins/colorSelector.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
-
-  var defaultClassName = 'ui segment';
-
-  var Segment = React.createClass({
-    displayName: 'Segment',
-
-    mixins: [ClassGenerator, ColorSelector, StateSelector],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var color = _props.color;
-
-      var other = _objectWithoutProperties(_props, ['className', 'color']);
-
-      return React.createElement(Unit, _extends({}, other, {
+    return _react2.default.createElement(
+      _unit2.default,
+      _extends({}, other, {
         className: this.getClassName(defaultClassName),
         type: 'div',
         color: this.getColor(),
         disabled: this.getDisabled(),
-        loading: this.getLoading() }));
-    }
-  });
+        active: this.getActive(),
+        loading: this.getLoading() }),
+      this.props.children
+    );
+  }
+});
 
-  return Segment;
-};
+},{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/colorSelector":34,"../mixins/stateSelector":35}],18:[function(require,module,exports){
+'use strict';
 
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/colorSelector.js":34,"../mixins/stateSelector.js":35}],30:[function(require,module,exports){
-"use strict";
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var defaultClassName = 'ui divider';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    return _react2.default.createElement(
+      'div',
+      { className: this.getClassName(defaultClassName) },
+      this.props.children
+    );
+  }
+});
+
+},{"../mixins/classGenerator":33}],19:[function(require,module,exports){
+'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _unit = require('../commons/unit');
+
+var _unit2 = _interopRequireDefault(_unit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-module.exports = function (React) {
+var defaultClassName = 'flag';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-  var defaultClassName = 'step';
+  mixins: [_classGenerator2.default],
 
-  var Step = React.createClass({
-    displayName: 'Step',
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var type = _props.type;
+    var color = _props.color;
 
-    mixins: [ClassGenerator, StateSelector],
+    var other = _objectWithoutProperties(_props, ['className', 'type', 'color']);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
+    return _react2.default.createElement(_unit2.default, _extends({}, other, {
+      className: this.getClassName(defaultClassName),
+      type: 'icon',
+      color: 'null' }));
+  }
+});
 
-      var other = _objectWithoutProperties(_props, ['className']);
+},{"../commons/unit":16,"../mixins/classGenerator":33}],20:[function(require,module,exports){
+'use strict';
 
-      return React.createElement(
-        Unit,
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _colorSelector = require('../mixins/colorSelector');
+
+var _colorSelector2 = _interopRequireDefault(_colorSelector);
+
+var _typeSelector = require('../mixins/typeSelector');
+
+var _typeSelector2 = _interopRequireDefault(_typeSelector);
+
+var _stateSelector = require('../mixins/stateSelector');
+
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
+
+var _unit = require('../commons/unit');
+
+var _unit2 = _interopRequireDefault(_unit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui header';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default, _colorSelector2.default, _typeSelector2.default, _stateSelector2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var type = _props.type;
+    var color = _props.color;
+
+    var other = _objectWithoutProperties(_props, ['className', 'type', 'color']);
+
+    return _react2.default.createElement(
+      _unit2.default,
+      _extends({}, other, {
+        className: this.getClassName(defaultClassName),
+        type: this.getType(),
+        color: this.getColor(),
+        disabled: this.getDisabled() }),
+      this.props.children
+    );
+  }
+});
+
+},{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/colorSelector":34,"../mixins/stateSelector":35,"../mixins/typeSelector":36}],21:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _colorSelector = require('../mixins/colorSelector');
+
+var _colorSelector2 = _interopRequireDefault(_colorSelector);
+
+var _stateSelector = require('../mixins/stateSelector');
+
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
+
+var _unit = require('../commons/unit');
+
+var _unit2 = _interopRequireDefault(_unit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'icon';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default, _colorSelector2.default, _stateSelector2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var color = _props.color;
+
+    var other = _objectWithoutProperties(_props, ['className', 'color']);
+
+    return _react2.default.createElement(_unit2.default, _extends({}, other, {
+      className: this.getClassName(defaultClassName),
+      type: 'icon',
+      color: this.getColor(),
+      disabled: this.getDisabled(),
+      loading: this.getLoading() }));
+  }
+});
+
+},{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/colorSelector":34,"../mixins/stateSelector":35}],22:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _stateSelector = require('../mixins/stateSelector');
+
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
+
+var _unit = require('../commons/unit');
+
+var _unit2 = _interopRequireDefault(_unit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui image';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default, _stateSelector2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var type = _props.type;
+    var disabled = _props.disabled;
+
+    var other = _objectWithoutProperties(_props, ['className', 'type', 'disabled']);
+
+    return _react2.default.createElement(
+      _unit2.default,
+      _extends({}, other, {
+        className: this.getClassName(defaultClassName),
+        type: 'img',
+        color: 'null',
+        disabled: this.getDisabled() }),
+      this.props.children
+    );
+  }
+});
+
+},{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],23:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _stateSelector = require('../mixins/stateSelector');
+
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
+
+var _unit = require('../commons/unit');
+
+var _unit2 = _interopRequireDefault(_unit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui input';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default, _stateSelector2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    if (typeof this.props.children != 'undefined') {
+      return _react2.default.createElement(
+        _unit2.default,
         _extends({}, other, {
           className: this.getClassName(defaultClassName),
           type: 'div',
           color: 'null',
-          active: this.getActive(),
-          completed: this.getCompleted(),
-          disabled: this.getDisabled() }),
+          loading: this.getLoading(),
+          focus: this.getFocus(),
+          error: this.getError() }),
         this.props.children
       );
+    } else {
+      return _react2.default.createElement(
+        _unit2.default,
+        {
+          className: this.getClassName(defaultClassName),
+          type: 'div',
+          color: 'null',
+          loading: this.getLoading(),
+          focus: this.getFocus(),
+          error: this.getError() },
+        _react2.default.createElement('input', _extends({}, other, {
+          placeholder: this.props.placeholder,
+          type: this.props.type }))
+      );
     }
-  });
+  }
+});
 
-  return Step;
-};
-
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/stateSelector.js":35}],31:[function(require,module,exports){
-"use strict";
+},{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],24:[function(require,module,exports){
+'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _colorSelector = require('../mixins/colorSelector');
+
+var _colorSelector2 = _interopRequireDefault(_colorSelector);
+
+var _typeSelector = require('../mixins/typeSelector');
+
+var _typeSelector2 = _interopRequireDefault(_typeSelector);
+
+var _unit = require('../commons/unit');
+
+var _unit2 = _interopRequireDefault(_unit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-module.exports = function (React) {
+var defaultClassName = 'ui label';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-  var defaultClassName = 'ui steps';
+  mixins: [_classGenerator2.default, _colorSelector2.default, _typeSelector2.default],
 
-  var Steps = React.createClass({
-    displayName: 'Steps',
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var type = _props.type;
+    var color = _props.color;
 
-    mixins: [ClassGenerator],
+    var other = _objectWithoutProperties(_props, ['className', 'type', 'color']);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
+    return _react2.default.createElement(
+      _unit2.default,
+      _extends({}, other, {
+        className: this.getClassName(defaultClassName),
+        type: this.getType(),
+        color: this.getColor() }),
+      this.props.children
+    );
+  }
+});
 
-      var other = _objectWithoutProperties(_props, ['className']);
+},{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/colorSelector":34,"../mixins/typeSelector":36}],25:[function(require,module,exports){
+'use strict';
 
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-  return Steps;
-};
+var _react = (window.React);
 
-},{"../mixins/classGenerator.js":33}],32:[function(require,module,exports){
-"use strict";
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui list';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
+
+},{"../mixins/classGenerator":33}],26:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _stateSelector = require('../mixins/stateSelector');
+
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
+
+var _unit = require('../commons/unit');
+
+var _unit2 = _interopRequireDefault(_unit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui loader';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default, _stateSelector2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    return _react2.default.createElement(
+      _unit2.default,
+      _extends({}, other, {
+        className: this.getClassName(defaultClassName),
+        type: 'div',
+        color: 'null',
+        disabled: this.getDisabled(),
+        active: this.getActive() }),
+      this.props.children
+    );
+  }
+});
+
+},{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],27:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui rail';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
+
+},{"../mixins/classGenerator":33}],28:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _stateSelector = require('../mixins/stateSelector');
+
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
+
+var _unit = require('../commons/unit');
+
+var _unit2 = _interopRequireDefault(_unit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui reveal';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default, _stateSelector2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    return _react2.default.createElement(
+      _unit2.default,
+      _extends({}, other, {
+        className: this.getClassName(defaultClassName),
+        type: 'div',
+        color: 'null',
+        disabled: this.getDisabled() }),
+      this.props.children
+    );
+  }
+});
+
+},{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],29:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _colorSelector = require('../mixins/colorSelector');
+
+var _colorSelector2 = _interopRequireDefault(_colorSelector);
+
+var _stateSelector = require('../mixins/stateSelector');
+
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
+
+var _unit = require('../commons/unit');
+
+var _unit2 = _interopRequireDefault(_unit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui segment';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default, _colorSelector2.default, _stateSelector2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var color = _props.color;
+
+    var other = _objectWithoutProperties(_props, ['className', 'color']);
+
+    return _react2.default.createElement(_unit2.default, _extends({}, other, {
+      className: this.getClassName(defaultClassName),
+      type: 'div',
+      color: this.getColor(),
+      disabled: this.getDisabled(),
+      loading: this.getLoading() }));
+  }
+});
+
+},{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/colorSelector":34,"../mixins/stateSelector":35}],30:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _stateSelector = require('../mixins/stateSelector');
+
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
+
+var _unit = require('../commons/unit');
+
+var _unit2 = _interopRequireDefault(_unit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'step';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default, _stateSelector2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    return _react2.default.createElement(
+      _unit2.default,
+      _extends({}, other, {
+        className: this.getClassName(defaultClassName),
+        type: 'div',
+        color: 'null',
+        active: this.getActive(),
+        completed: this.getCompleted(),
+        disabled: this.getDisabled() }),
+      this.props.children
+    );
+  }
+});
+
+},{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],31:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui steps';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
+
+},{"../mixins/classGenerator":33}],32:[function(require,module,exports){
+'use strict';
 
 var _react = (window.React);
 
@@ -1282,1261 +1474,1395 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 module.exports = {
   // collections
-  Breadcrumb: require('./collections/breadcrumb.js')(_react2.default),
-  Form: require('./collections/form.js')(_react2.default),
-  Grid: require('./collections/grid.js')(_react2.default),
-  Menu: require('./collections/menu.js')(_react2.default),
-  Message: require('./collections/message.js')(_react2.default),
-  Table: require('./collections/table.js')(_react2.default),
+  Breadcrumb: require('./collections/breadcrumb.js'),
+  Form: require('./collections/form.js'),
+  Grid: require('./collections/grid.js'),
+  Menu: require('./collections/menu.js'),
+  Message: require('./collections/message.js'),
+  Table: require('./collections/table.js'),
 
   // commons
-  Column: require('./commons/column.js')(_react2.default),
-  Content: require('./commons/content.js')(_react2.default),
-  Field: require('./commons/field.js')(_react2.default),
-  Fields: require('./commons/fields.js')(_react2.default),
-  Row: require('./commons/row.js')(_react2.default),
-  Section: require('./commons/section.js')(_react2.default),
-  Text: require('./commons/text.js')(_react2.default),
-  Title: require('./commons/title.js')(_react2.default),
+  Column: require('./commons/column.js'),
+  Content: require('./commons/content.js'),
+  Field: require('./commons/field.js'),
+  Fields: require('./commons/fields.js'),
+  Row: require('./commons/row.js'),
+  Section: require('./commons/section.js'),
+  Text: require('./commons/text.js'),
+  Title: require('./commons/title.js'),
 
   // elements
-  Button: require('./elements/button.js')(_react2.default),
-  Divider: require('./elements/divider.js')(_react2.default),
-  Flag: require('./elements/flag.js')(_react2.default),
-  Header: require('./elements/header.js')(_react2.default),
-  Icon: require('./elements/icon.js')(_react2.default),
-  Image: require('./elements/image.js')(_react2.default),
-  Input: require('./elements/input.js')(_react2.default),
-  Label: require('./elements/label.js')(_react2.default),
-  List: require('./elements/list.js')(_react2.default),
-  Loader: require('./elements/loader.js')(_react2.default),
-  Rail: require('./elements/rail.js')(_react2.default),
-  Reveal: require('./elements/reveal.js')(_react2.default),
-  Segment: require('./elements/segment.js')(_react2.default),
-  Step: require('./elements/step.js')(_react2.default),
-  Steps: require('./elements/steps.js')(_react2.default),
+  Button: require('./elements/button.js'),
+  Divider: require('./elements/divider.js'),
+  Flag: require('./elements/flag.js'),
+  Header: require('./elements/header.js'),
+  Icon: require('./elements/icon.js'),
+  Image: require('./elements/image.js'),
+  Input: require('./elements/input.js'),
+  Label: require('./elements/label.js'),
+  List: require('./elements/list.js'),
+  Loader: require('./elements/loader.js'),
+  Rail: require('./elements/rail.js'),
+  Reveal: require('./elements/reveal.js'),
+  Segment: require('./elements/segment.js'),
+  Step: require('./elements/step.js'),
+  Steps: require('./elements/steps.js'),
 
   // modules
-  Accordion: require('./modules/accordion.js')(_react2.default),
-  Checkbox: require('./modules/checkbox.js')(_react2.default),
-  Dimmer: require('./modules/dimmer.js')(_react2.default),
-  Dropdown: require('./modules/dropdown.js')(_react2.default),
-  Modal: require('./modules/modal.js')(_react2.default),
-  Popup: require('./modules/popup.js')(_react2.default),
-  Progress: require('./modules/progress.js')(_react2.default),
-  Rating: require('./modules/rating.js')(_react2.default),
-  Search: require('./modules/search.js')(_react2.default),
-  Shape: require('./modules/shape.js')(_react2.default),
-  Sidebar: require('./modules/sidebar.js')(_react2.default),
-  Sticky: require('./modules/sticky.js')(_react2.default),
-  Tab: require('./modules/tab.js')(_react2.default),
+  Accordion: require('./modules/accordion.js'),
+  Checkbox: require('./modules/checkbox.js'),
+  Dimmer: require('./modules/dimmer.js'),
+  Dropdown: require('./modules/dropdown.js'),
+  Modal: require('./modules/modal.js'),
+  Popup: require('./modules/popup.js'),
+  Progress: require('./modules/progress.js'),
+  Rating: require('./modules/rating.js'),
+  Search: require('./modules/search.js'),
+  Shape: require('./modules/shape.js'),
+  Sidebar: require('./modules/sidebar.js'),
+  Sticky: require('./modules/sticky.js'),
+  Tab: require('./modules/tab.js'),
 
   // views
-  Ad: require('./views/advertisement.js')(_react2.default),
-  Card: require('./views/card.js')(_react2.default),
-  Comment: require('./views/comment.js')(_react2.default),
-  Comments: require('./views/comments.js')(_react2.default),
-  Feed: require('./views/feed.js')(_react2.default),
-  Item: require('./views/item.js')(_react2.default),
-  Items: require('./views/items.js')(_react2.default),
-  Statistic: require('./views/statistic.js')(_react2.default)
+  Ad: require('./views/advertisement.js'),
+  Card: require('./views/card.js'),
+  Comment: require('./views/comment.js'),
+  Comments: require('./views/comments.js'),
+  Feed: require('./views/feed.js'),
+  Item: require('./views/item.js'),
+  Items: require('./views/items.js'),
+  Statistic: require('./views/statistic.js')
 };
 
 },{"./collections/breadcrumb.js":2,"./collections/form.js":3,"./collections/grid.js":4,"./collections/menu.js":5,"./collections/message.js":6,"./collections/table.js":7,"./commons/column.js":8,"./commons/content.js":9,"./commons/field.js":10,"./commons/fields.js":11,"./commons/row.js":12,"./commons/section.js":13,"./commons/text.js":14,"./commons/title.js":15,"./elements/button.js":17,"./elements/divider.js":18,"./elements/flag.js":19,"./elements/header.js":20,"./elements/icon.js":21,"./elements/image.js":22,"./elements/input.js":23,"./elements/label.js":24,"./elements/list.js":25,"./elements/loader.js":26,"./elements/rail.js":27,"./elements/reveal.js":28,"./elements/segment.js":29,"./elements/step.js":30,"./elements/steps.js":31,"./modules/accordion.js":37,"./modules/checkbox.js":38,"./modules/dimmer.js":39,"./modules/dropdown.js":40,"./modules/modal.js":41,"./modules/popup.js":42,"./modules/progress.js":43,"./modules/rating.js":44,"./modules/search.js":45,"./modules/shape.js":46,"./modules/sidebar.js":47,"./modules/sticky.js":48,"./modules/tab.js":49,"./views/advertisement.js":50,"./views/card.js":51,"./views/comment.js":52,"./views/comments.js":53,"./views/feed.js":54,"./views/item.js":55,"./views/items.js":56,"./views/statistic.js":57}],33:[function(require,module,exports){
-"use strict";
+'use strict';
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
 
-module.exports = function (React) {
+module.exports = {
 
-  var classSet = require('classnames');
+  propTypes: {
+    className: _react2.default.PropTypes.string
+  },
 
-  var ClassGenerator = {
+  getClassName: function getClassName(defaultClassName, addClassName) {
+    var classResult = defaultClassName;
 
-    propTypes: {
-      className: React.PropTypes.string
-    },
-
-    getClassName: function getClassName(defaultClassName, addClassName) {
-      var classResult = defaultClassName;
-
-      if (typeof this.props.className !== 'undefined') {
-        classResult += ' ' + this.props.className;
-      }
-
-      if (typeof addClassName !== 'undefined') {
-        if ((typeof addClassName === 'undefined' ? 'undefined' : _typeof(addClassName)) === 'object') {
-          classResult += ' ' + classSet(addClassName);
-        } else {
-          classResult += ' ' + addClassName;
-        }
-      }
-
-      return classResult;
+    if (typeof this.props.className !== 'undefined') {
+      classResult += ' ' + this.props.className;
     }
-  };
 
-  return ClassGenerator;
+    if (typeof addClassName !== 'undefined') {
+      if ((typeof addClassName === 'undefined' ? 'undefined' : _typeof(addClassName)) === 'object') {
+        classResult += ' ' + (0, _classnames2.default)(addClassName);
+      } else {
+        classResult += ' ' + addClassName;
+      }
+    }
+
+    return classResult;
+  }
 };
 
 },{"classnames":1}],34:[function(require,module,exports){
-"use strict";
+'use strict';
 
-module.exports = function (React) {
+var _react = (window.React);
 
-  var colorArray = ['black', 'yellow', 'green', 'blue', 'orange', 'purple', 'red', 'teal'];
+var _react2 = _interopRequireDefault(_react);
 
-  var ColorSelector = {
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-    propTypes: {
-      color: React.PropTypes.oneOf(colorArray)
-    },
+var colorArray = ['black', 'yellow', 'green', 'blue', 'orange', 'purple', 'red', 'teal'];
 
-    getColor: function getColor() {
-      var color = 'null';
+module.exports = {
 
-      if (typeof this.props.color !== 'undefined') {
+  propTypes: {
+    color: _react2.default.PropTypes.oneOf(colorArray)
+  },
 
-        if (colorArray.indexOf(this.props.color) !== -1) {
-          color = this.props.color;
-        }
+  getColor: function getColor() {
+    var color = 'null';
+
+    if (typeof this.props.color !== 'undefined') {
+
+      if (colorArray.indexOf(this.props.color) !== -1) {
+        color = this.props.color;
       }
-
-      return color;
     }
-  };
 
-  return ColorSelector;
+    return color;
+  }
 };
 
 },{}],35:[function(require,module,exports){
-"use strict";
+'use strict';
 
-module.exports = function (React) {
+var _react = (window.React);
 
-  var StateSelector = {
+var _react2 = _interopRequireDefault(_react);
 
-    propTypes: {
-      disabled: React.PropTypes.bool,
-      active: React.PropTypes.bool,
-      loading: React.PropTypes.bool,
-      focus: React.PropTypes.bool,
-      error: React.PropTypes.bool,
-      completed: React.PropTypes.bool,
-      readOnly: React.PropTypes.bool,
-      success: React.PropTypes.bool,
-      warning: React.PropTypes.bool
-    },
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-    getDisabled: function getDisabled() {
-      var disabled = false;
+module.exports = {
 
-      if (typeof this.props.disabled !== 'undefined') {
-        disabled = this.props.disabled;
-      }
+  propTypes: {
+    disabled: _react2.default.PropTypes.bool,
+    active: _react2.default.PropTypes.bool,
+    loading: _react2.default.PropTypes.bool,
+    focus: _react2.default.PropTypes.bool,
+    error: _react2.default.PropTypes.bool,
+    completed: _react2.default.PropTypes.bool,
+    readOnly: _react2.default.PropTypes.bool,
+    success: _react2.default.PropTypes.bool,
+    warning: _react2.default.PropTypes.bool
+  },
 
-      return disabled;
-    },
+  getDisabled: function getDisabled() {
+    var disabled = false;
 
-    getActive: function getActive() {
-      var active = false;
-
-      if (typeof this.props.active !== 'undefined') {
-        active = this.props.active;
-      }
-
-      return active;
-    },
-
-    getLoading: function getLoading() {
-      var loading = false;
-
-      if (typeof this.props.loading !== 'undefined') {
-        loading = this.props.loading;
-      }
-
-      return loading;
-    },
-
-    getFocus: function getFocus() {
-      var focus = false;
-
-      if (typeof this.props.focus !== 'undefined') {
-        focus = this.props.focus;
-      }
-
-      return focus;
-    },
-
-    getError: function getError() {
-      var error = false;
-
-      if (typeof this.props.error !== 'undefined') {
-        error = this.props.error;
-      }
-
-      return error;
-    },
-
-    getCompleted: function getCompleted() {
-      var completed = false;
-
-      if (typeof this.props.completed !== 'undefined') {
-        completed = this.props.completed;
-      }
-
-      return completed;
-    },
-
-    getReadOnly: function getReadOnly() {
-      var readOnly = false;
-
-      if (typeof this.props.readOnly !== 'undefined') {
-        readOnly = this.props.readOnly;
-      }
-
-      return readOnly;
-    },
-
-    getSuccess: function getSuccess() {
-      var success = false;
-
-      if (typeof this.props.success !== 'undefined') {
-        success = this.props.success;
-      }
-
-      return success;
-    },
-
-    getWarning: function getWarning() {
-      var warning = false;
-
-      if (typeof this.props.warning !== 'undefined') {
-        warning = this.props.warning;
-      }
-
-      return warning;
+    if (typeof this.props.disabled !== 'undefined') {
+      disabled = this.props.disabled;
     }
-  };
 
-  return StateSelector;
+    return disabled;
+  },
+
+  getActive: function getActive() {
+    var active = false;
+
+    if (typeof this.props.active !== 'undefined') {
+      active = this.props.active;
+    }
+
+    return active;
+  },
+
+  getLoading: function getLoading() {
+    var loading = false;
+
+    if (typeof this.props.loading !== 'undefined') {
+      loading = this.props.loading;
+    }
+
+    return loading;
+  },
+
+  getFocus: function getFocus() {
+    var focus = false;
+
+    if (typeof this.props.focus !== 'undefined') {
+      focus = this.props.focus;
+    }
+
+    return focus;
+  },
+
+  getError: function getError() {
+    var error = false;
+
+    if (typeof this.props.error !== 'undefined') {
+      error = this.props.error;
+    }
+
+    return error;
+  },
+
+  getCompleted: function getCompleted() {
+    var completed = false;
+
+    if (typeof this.props.completed !== 'undefined') {
+      completed = this.props.completed;
+    }
+
+    return completed;
+  },
+
+  getReadOnly: function getReadOnly() {
+    var readOnly = false;
+
+    if (typeof this.props.readOnly !== 'undefined') {
+      readOnly = this.props.readOnly;
+    }
+
+    return readOnly;
+  },
+
+  getSuccess: function getSuccess() {
+    var success = false;
+
+    if (typeof this.props.success !== 'undefined') {
+      success = this.props.success;
+    }
+
+    return success;
+  },
+
+  getWarning: function getWarning() {
+    var warning = false;
+
+    if (typeof this.props.warning !== 'undefined') {
+      warning = this.props.warning;
+    }
+
+    return warning;
+  }
 };
 
 },{}],36:[function(require,module,exports){
-"use strict";
+'use strict';
 
-module.exports = function (React) {
+var _react = (window.React);
 
-  var typeArray = ['div', 'link', 'icon'];
+var _react2 = _interopRequireDefault(_react);
 
-  var TypeSelector = {
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-    propTypes: {
-      type: React.PropTypes.oneOf(typeArray)
-    },
+var typeArray = ['div', 'link', 'icon'];
 
-    getType: function getType() {
-      var type = 'div';
+module.exports = {
 
-      if (typeof this.props.type !== 'undefined') {
-        if (typeArray.indexOf(this.props.type) !== -1) {
-          type = this.props.type;
-        }
+  propTypes: {
+    type: _react2.default.PropTypes.oneOf(typeArray)
+  },
+
+  getType: function getType() {
+    var type = 'div';
+
+    if (typeof this.props.type !== 'undefined') {
+      if (typeArray.indexOf(this.props.type) !== -1) {
+        type = this.props.type;
       }
-      return type;
     }
-  };
-
-  return TypeSelector;
+    return type;
+  }
 };
 
 },{}],37:[function(require,module,exports){
-"use strict";
+'use strict';
 
-module.exports = function (React) {
+var _react = (window.React);
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+var _react2 = _interopRequireDefault(_react);
 
-  var defaultClassName = 'ui accordion';
+var _classGenerator = require('../mixins/classGenerator');
 
-  var Accordion = React.createClass({
-    displayName: 'Accordion',
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
 
-    mixins: [ClassGenerator],
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-    render: function render() {
-      return React.createElement(
-        'div',
-        { className: this.getClassName(defaultClassName) },
-        this.props.children
-      );
-    },
+var defaultClassName = 'ui accordion';
 
-    componentDidMount: function componentDidMount() {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-        if (this.props.init === true) {
-          $(this.getDOMNode()).accordion();
-        } else {
-          $(this.getDOMNode()).accordion(this.props.init);
-        }
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    return _react2.default.createElement(
+      'div',
+      { className: this.getClassName(defaultClassName), ref: 'accordion' },
+      this.props.children
+    );
+  },
+
+  componentDidMount: function componentDidMount() {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
+
+      if (this.props.init === true) {
+        $(this.refs.accordion).accordion();
+      } else {
+        $(this.refs.accordion).accordion(this.props.init);
       }
     }
-  });
+  }
+});
 
-  return Accordion;
-};
-
-},{"../mixins/classGenerator.js":33}],38:[function(require,module,exports){
-"use strict";
+},{"../mixins/classGenerator":33}],38:[function(require,module,exports){
+'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+var _react = (window.React);
 
-module.exports = function (React) {
+var _react2 = _interopRequireDefault(_react);
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
+var _reactDom = (window.ReactDOM);
 
-  var defaultClassName = 'ui checkbox';
+var _reactDom2 = _interopRequireDefault(_reactDom);
 
-  var Checkbox = React.createClass({
-    displayName: 'Checkbox',
+var _classGenerator = require('../mixins/classGenerator');
 
-    mixins: [ClassGenerator, StateSelector],
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var color = _props.color;
-      var type = _props.type;
-      var disabled = _props.disabled;
-      var readOnly = _props.readOnly;
+var _stateSelector = require('../mixins/stateSelector');
 
-      var other = _objectWithoutProperties(_props, ['className', 'color', 'type', 'disabled', 'readOnly']);
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
 
-      return React.createElement(
-        Unit,
-        _extends({}, other, {
-          className: this.getClassName(defaultClassName),
-          color: 'null',
-          type: 'div',
-          disabled: this.getDisabled(),
-          readOnly: this.getReadOnly() }),
-        this.props.children
-      );
-    },
+var _unit = require('../commons/unit');
 
-    componentDidMount: function componentDidMount() {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
+var _unit2 = _interopRequireDefault(_unit);
 
-        if (this.props.init === true) {
-          $(this.getDOMNode()).checkbox();
-        } else {
-          $(this.getDOMNode()).checkbox(this.props.init);
-        }
-      }
-    }
-  });
-
-  return Checkbox;
-};
-
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/stateSelector.js":35}],39:[function(require,module,exports){
-"use strict";
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-module.exports = function (React) {
+var defaultClassName = 'ui checkbox';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-  var defaultClassName = 'ui dimmer';
+  mixins: [_classGenerator2.default, _stateSelector2.default],
 
-  var Dimmer = React.createClass({
-    displayName: 'Dimmer',
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var color = _props.color;
+    var type = _props.type;
+    var disabled = _props.disabled;
+    var readOnly = _props.readOnly;
 
-    mixins: [ClassGenerator, StateSelector],
+    var other = _objectWithoutProperties(_props, ['className', 'color', 'type', 'disabled', 'readOnly']);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var color = _props.color;
-      var type = _props.type;
-      var disabled = _props.disabled;
-      var active = _props.active;
+    return _react2.default.createElement(
+      _unit2.default,
+      _extends({}, other, {
+        className: this.getClassName(defaultClassName),
+        color: 'null',
+        type: 'div',
+        disabled: this.getDisabled(),
+        readOnly: this.getReadOnly() }),
+      this.props.children
+    );
+  },
 
-      var other = _objectWithoutProperties(_props, ['className', 'color', 'type', 'disabled', 'active']);
+  componentDidMount: function componentDidMount() {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
 
-      return React.createElement(
-        Unit,
-        {
-          className: this.getClassName(defaultClassName),
-          color: 'null',
-          type: 'div',
-          disabled: this.getDisabled(),
-          active: this.getActive() },
-        this.props.children
-      );
-    },
-
-    componentDidMount: function componentDidMount() {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).dimmer();
-        } else {
-          $(this.getDOMNode()).dimmer(this.props.init);
-        }
+      if (this.props.init === true) {
+        $(_reactDom2.default.findDOMNode(this)).checkbox();
+      } else {
+        $(_reactDom2.default.findDOMNode(this)).checkbox(this.props.init);
       }
     }
-  });
+  }
+});
 
-  return Dimmer;
-};
+},{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],39:[function(require,module,exports){
+'use strict';
 
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/stateSelector.js":35}],40:[function(require,module,exports){
-"use strict";
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = (window.ReactDOM);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _stateSelector = require('../mixins/stateSelector');
+
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
+
+var _unit = require('../commons/unit');
+
+var _unit2 = _interopRequireDefault(_unit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui dimmer';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default, _stateSelector2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var color = _props.color;
+    var type = _props.type;
+    var disabled = _props.disabled;
+    var active = _props.active;
+
+    var other = _objectWithoutProperties(_props, ['className', 'color', 'type', 'disabled', 'active']);
+
+    return _react2.default.createElement(
+      _unit2.default,
+      {
+        className: this.getClassName(defaultClassName),
+        color: 'null',
+        type: 'div',
+        disabled: this.getDisabled(),
+        active: this.getActive() },
+      this.props.children
+    );
+  },
+
+  componentDidMount: function componentDidMount() {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
+
+      if (this.props.init === true) {
+        $(_reactDom2.default.findDOMNode(this)).dimmer();
+      } else {
+        $(_reactDom2.default.findDOMNode(this)).dimmer(this.props.init);
+      }
+    }
+  }
+});
+
+},{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],40:[function(require,module,exports){
+'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+var _react = (window.React);
 
-module.exports = function (React) {
+var _react2 = _interopRequireDefault(_react);
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
+var _reactDom = (window.ReactDOM);
 
-  var defaultClassName = 'ui dropdown';
+var _reactDom2 = _interopRequireDefault(_reactDom);
 
-  var Dropdown = React.createClass({
-    displayName: 'Dropdown',
+var _classGenerator = require('../mixins/classGenerator');
 
-    mixins: [ClassGenerator, StateSelector],
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var color = _props.color;
-      var type = _props.type;
-      var error = _props.error;
-      var disable = _props.disable;
-      var active = _props.active;
+var _stateSelector = require('../mixins/stateSelector');
 
-      var other = _objectWithoutProperties(_props, ['className', 'color', 'type', 'error', 'disable', 'active']);
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
 
-      if (this.getActive() || this.getDisabled()) {
-        defaultClassName += ' simple';
-      }
+var _unit = require('../commons/unit');
 
-      return React.createElement(
-        Unit,
-        _extends({}, other, {
-          className: this.getClassName(defaultClassName),
-          color: 'null',
-          type: 'div',
-          error: this.getError(),
-          disable: this.getDisabled(),
-          active: this.getActive() }),
-        this.props.children
-      );
-    },
+var _unit2 = _interopRequireDefault(_unit);
 
-    componentDidMount: function componentDidMount() {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).dropdown();
-        } else {
-          $(this.getDOMNode()).dropdown(this.props.init);
-        }
-      }
-    }
-  });
-
-  return Dropdown;
-};
-
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/stateSelector.js":35}],41:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-module.exports = function (React) {
+var defaultClassName = 'ui dropdown';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-  var defaultClassName = 'ui modal';
+  mixins: [_classGenerator2.default, _stateSelector2.default],
 
-  var Modal = React.createClass({
-    displayName: 'Modal',
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var color = _props.color;
+    var type = _props.type;
+    var error = _props.error;
+    var disable = _props.disable;
+    var active = _props.active;
 
-    mixins: [ClassGenerator, StateSelector],
+    var other = _objectWithoutProperties(_props, ['className', 'color', 'type', 'error', 'disable', 'active']);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var color = _props.color;
-      var type = _props.type;
-      var active = _props.active;
-
-      var other = _objectWithoutProperties(_props, ['className', 'color', 'type', 'active']);
-
-      return React.createElement(
-        Unit,
-        _extends({}, other, {
-          className: this.getClassName(defaultClassName),
-          color: 'null',
-          type: 'div',
-          active: this.getActive() }),
-        this.props.children
-      );
-    },
-
-    componentDidMount: function componentDidMount() {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).modal();
-        } else {
-          $(this.getDOMNode()).modal(this.props.init);
-        }
-      }
+    if (this.getActive() || this.getDisabled()) {
+      defaultClassName += ' simple';
     }
-  });
 
-  return Modal;
-};
-
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/stateSelector.js":35}],42:[function(require,module,exports){
-"use strict";
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-
-  var defaultClassName = 'ui popup';
-
-  var Popup = React.createClass({
-    displayName: 'Popup',
-
-    mixins: [ClassGenerator],
-
-    render: function render() {
-      return React.createElement(
-        'div',
-        { className: this.getClassName(defaultClassName) },
-        this.props.children
-      );
-    }
-  });
-
-  return Popup;
-};
-
-},{"../mixins/classGenerator.js":33}],43:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-
-  var defaultClassName = 'ui progress';
-
-  var Progress = React.createClass({
-    displayName: 'Progress',
-
-    mixins: [ClassGenerator, StateSelector],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var percent = _props.percent;
-      var value = _props.value;
-      var total = _props.total;
-      var active = _props.active;
-      var success = _props.success;
-      var warning = _props.warning;
-      var error = _props.error;
-      var disabled = _props.disabled;
-
-      var other = _objectWithoutProperties(_props, ['className', 'percent', 'value', 'total', 'active', 'success', 'warning', 'error', 'disabled']);
-
-      var state = {
-        active: this.getActive(),
-        success: this.getSuccess(),
-        warning: this.getWarning(),
+    return _react2.default.createElement(
+      _unit2.default,
+      _extends({}, other, {
+        className: this.getClassName(defaultClassName),
+        color: 'null',
+        type: 'div',
         error: this.getError(),
-        disabled: this.getDisabled()
-      };
-
-      return React.createElement(
-        'div',
-        _extends({}, other, {
-          className: this.getClassName(defaultClassName, state),
-          'data-percent': percent,
-          'data-value': value,
-          'data-total': total }),
-        this.props.children
-      );
-    },
-
-    componentDidMount: function componentDidMount() {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).progress();
-        } else {
-          $(this.getDOMNode()).progress(this.props.init);
-        }
-      }
-    }
-  });
-
-  return Progress;
-};
-
-},{"../mixins/classGenerator.js":33,"../mixins/stateSelector.js":35}],44:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-
-  var defaultClassName = 'ui rating';
-
-  var Rating = React.createClass({
-    displayName: 'Rating',
-
-    mixins: [ClassGenerator],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var rating = _props.rating;
-      var maxRating = _props.maxRating;
-
-      var other = _objectWithoutProperties(_props, ['className', 'rating', 'maxRating']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, {
-          className: this.getClassName(defaultClassName),
-          'data-rating': rating,
-          'data-max-rating': maxRating }),
-        this.props.children
-      );
-    },
-
-    componentDidMount: function componentDidMount() {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).rating();
-        } else {
-          $(this.getDOMNode()).rating(this.props.init);
-        }
-      }
-    }
-  });
-
-  return Rating;
-};
-
-},{"../mixins/classGenerator.js":33}],45:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
-
-  var defaultClassName = 'ui search';
-
-  var Search = React.createClass({
-    displayName: 'Search',
-
-    mixins: [ClassGenerator, StateSelector],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var color = _props.color;
-      var type = _props.type;
-      var active = _props.active;
-
-      var other = _objectWithoutProperties(_props, ['className', 'color', 'type', 'active']);
-
-      return React.createElement(
-        Unit,
-        _extends({}, other, {
-          className: this.getClassName(defaultClassName),
-          color: 'null',
-          type: 'div',
-          loading: this.getLoading() }),
-        this.props.children
-      );
-    },
-
-    componentDidMount: function componentDidMount() {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).search();
-        } else {
-          $(this.getDOMNode()).search(this.props.init);
-        }
-      }
-    }
-  });
-
-  return Search;
-};
-
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/stateSelector.js":35}],46:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-
-  var defaultClassName = 'ui shape';
-
-  var Shape = React.createClass({
-    displayName: 'Shape',
-
-    mixins: [ClassGenerator],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    },
-
-    componentDidMount: function componentDidMount() {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).shape();
-        } else {
-          $(this.getDOMNode()).shape(this.props.init);
-        }
-      }
-    }
-  });
-
-  return Shape;
-};
-
-},{"../mixins/classGenerator.js":33}],47:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-
-  var defaultClassName = 'ui sidebar';
-
-  var Sidebar = React.createClass({
-    displayName: 'Sidebar',
-
-    mixins: [ClassGenerator],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    },
-
-    componentDidMount: function componentDidMount() {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).sidebar();
-        } else {
-          $(this.getDOMNode()).sidebar(this.props.init);
-        }
-      }
-    }
-  });
-
-  return Sidebar;
-};
-
-},{"../mixins/classGenerator.js":33}],48:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-
-  var defaultClassName = 'ui sticky';
-
-  var Sticky = React.createClass({
-    displayName: 'Sticky',
-
-    mixins: [ClassGenerator],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    },
-
-    componentDidMount: function componentDidMount() {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).sticky();
-        } else {
-          $(this.getDOMNode()).sticky(this.props.init);
-        }
-      }
-    }
-  });
-
-  return Sticky;
-};
-
-},{"../mixins/classGenerator.js":33}],49:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector = require('../mixins/stateSelector.js')(React);
-
-  var defaultClassName = 'ui tab';
-
-  var Tab = React.createClass({
-    displayName: 'Tab',
-
-    mixins: [ClassGenerator, StateSelector],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var active = _props.active;
-      var loading = _props.loading;
-      var tab = _props.tab;
-
-      var other = _objectWithoutProperties(_props, ['className', 'active', 'loading', 'tab']);
-
-      var state = {
-        active: this.getActive(),
-        loading: this.getLoading()
-      };
-
-      return React.createElement(
-        'div',
-        _extends({}, other, {
-          className: this.getClassName(defaultClassName, state),
-          'data-tab': tab }),
-        this.props.children
-      );
-    },
-
-    componentDidMount: function componentDidMount() {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).tab();
-        } else {
-          $(this.getDOMNode()).tab(this.props.init);
-        }
-      }
-    }
-  });
-
-  return Tab;
-};
-
-},{"../mixins/classGenerator.js":33,"../mixins/stateSelector.js":35}],50:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-
-  var defaultClassName = 'ui ad';
-
-  var Ad = React.createClass({
-    displayName: 'Ad',
-
-    mixins: [ClassGenerator],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return Ad;
-};
-
-},{"../mixins/classGenerator.js":33}],51:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-
-  var defaultClassName = 'ui card';
-
-  var Card = React.createClass({
-    displayName: 'Card',
-
-    mixins: [ClassGenerator],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return Card;
-};
-
-},{"../mixins/classGenerator.js":33}],52:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-
-  var defaultClassName = 'comment';
-
-  var Comment = React.createClass({
-    displayName: 'Comment',
-
-    mixins: [ClassGenerator],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return Comment;
-};
-
-},{"../mixins/classGenerator.js":33}],53:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-
-  var defaultClassName = 'ui comments';
-
-  var Comments = React.createClass({
-    displayName: 'Comments',
-
-    mixins: [ClassGenerator],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return Comments;
-};
-
-},{"../mixins/classGenerator.js":33}],54:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-
-  var defaultClassName = 'ui feed';
-
-  var Feed = React.createClass({
-    displayName: 'Feed',
-
-    mixins: [ClassGenerator],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-
-      var other = _objectWithoutProperties(_props, ['className']);
-
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
-    }
-  });
-
-  return Feed;
-};
-
-},{"../mixins/classGenerator.js":33}],55:[function(require,module,exports){
-"use strict";
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var TypeSelector = require('../mixins/typeSelector.js')(React);
-  var Unit = require('../commons/unit.js')(React);
-
-  var defaultClassName = 'item';
-
-  var Item = React.createClass({
-    displayName: 'Item',
-
-    mixins: [ClassGenerator, TypeSelector],
-
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var type = _props.type;
-
-      var other = _objectWithoutProperties(_props, ['className', 'type']);
-
-      return React.createElement(
-        Unit,
-        _extends({}, other, {
-          className: this.getClassName(defaultClassName),
-          type: this.getType(),
-          color: 'null',
-          value: this.props.value }),
-        this.props.children
-      );
-    }
-  });
-
-  return Item;
-};
-
-},{"../commons/unit.js":16,"../mixins/classGenerator.js":33,"../mixins/typeSelector.js":36}],56:[function(require,module,exports){
-"use strict";
-
-module.exports = function (React) {
-
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-
-  var defaultClassName = 'ui items';
-
-  var Items = React.createClass({
-    displayName: 'Items',
-
-    mixins: [ClassGenerator],
-
-    propTypes: {
-      className: React.PropTypes.string,
-      type: React.PropTypes.string
-    },
-
-    render: function render() {
-      var type = '';
-
-      if (typeof this.props.type != 'undefined') {
-        if (this.props.type == 'link') {
-          type = 'link';
-        }
+        disable: this.getDisabled(),
+        active: this.getActive() }),
+      this.props.children
+    );
+  },
+
+  componentDidMount: function componentDidMount() {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
       }
 
-      return React.createElement(
-        'div',
-        { className: this.getClassName(defaultClassName, type) },
-        this.props.children
-      );
+      if (this.props.init === true) {
+        $(_reactDom2.default.findDOMNode(this)).dropdown();
+      } else {
+        $(_reactDom2.default.findDOMNode(this)).dropdown(this.props.init);
+      }
     }
-  });
+  }
+});
 
-  return Items;
-};
-
-},{"../mixins/classGenerator.js":33}],57:[function(require,module,exports){
-"use strict";
+},{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],41:[function(require,module,exports){
+'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = (window.ReactDOM);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _stateSelector = require('../mixins/stateSelector');
+
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
+
+var _unit = require('../commons/unit');
+
+var _unit2 = _interopRequireDefault(_unit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-module.exports = function (React) {
+var defaultClassName = 'ui modal';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
 
-  var defaultClassName = 'ui statistic';
+  mixins: [_classGenerator2.default, _stateSelector2.default],
 
-  var Statistic = React.createClass({
-    displayName: 'Statistic',
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var color = _props.color;
+    var type = _props.type;
+    var active = _props.active;
 
-    mixins: [ClassGenerator],
+    var other = _objectWithoutProperties(_props, ['className', 'color', 'type', 'active']);
 
-    render: function render() {
-      var _props = this.props;
-      var className = _props.className;
+    return _react2.default.createElement(
+      _unit2.default,
+      _extends({}, other, {
+        className: this.getClassName(defaultClassName),
+        color: 'null',
+        type: 'div',
+        active: this.getActive() }),
+      this.props.children
+    );
+  },
 
-      var other = _objectWithoutProperties(_props, ['className']);
+  componentDidMount: function componentDidMount() {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
 
-      return React.createElement(
-        'div',
-        _extends({}, other, { className: this.getClassName(defaultClassName) }),
-        this.props.children
-      );
+      if (this.props.init === true) {
+        $(_reactDom2.default.findDOMNode(this)).modal();
+      } else {
+        $(_reactDom2.default.findDOMNode(this)).modal(this.props.init);
+      }
     }
-  });
+  }
+});
 
-  return Statistic;
-};
+},{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],42:[function(require,module,exports){
+'use strict';
 
-},{"../mixins/classGenerator.js":33}]},{},[32])(32)
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var defaultClassName = 'ui popup';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    return _react2.default.createElement(
+      'div',
+      { className: this.getClassName(defaultClassName) },
+      this.props.children
+    );
+  }
+});
+
+},{"../mixins/classGenerator":33}],43:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _stateSelector = require('../mixins/stateSelector');
+
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui progress';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default, _stateSelector2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var percent = _props.percent;
+    var value = _props.value;
+    var total = _props.total;
+    var active = _props.active;
+    var success = _props.success;
+    var warning = _props.warning;
+    var error = _props.error;
+    var disabled = _props.disabled;
+
+    var other = _objectWithoutProperties(_props, ['className', 'percent', 'value', 'total', 'active', 'success', 'warning', 'error', 'disabled']);
+
+    var state = {
+      active: this.getActive(),
+      success: this.getSuccess(),
+      warning: this.getWarning(),
+      error: this.getError(),
+      disabled: this.getDisabled()
+    };
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, {
+        className: this.getClassName(defaultClassName, state),
+        'data-percent': percent,
+        'data-value': value,
+        'data-total': total,
+        ref: 'progress' }),
+      this.props.children
+    );
+  },
+
+  componentDidMount: function componentDidMount() {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
+
+      if (this.props.init === true) {
+        $(this.refs.progress).progress();
+      } else {
+        $(this.refs.progress).progress(this.props.init);
+      }
+    }
+  }
+});
+
+},{"../mixins/classGenerator":33,"../mixins/stateSelector":35}],44:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui rating';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var rating = _props.rating;
+    var maxRating = _props.maxRating;
+
+    var other = _objectWithoutProperties(_props, ['className', 'rating', 'maxRating']);
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, {
+        className: this.getClassName(defaultClassName),
+        'data-rating': rating,
+        'data-max-rating': maxRating,
+        ref: 'rating' }),
+      this.props.children
+    );
+  },
+
+  componentDidMount: function componentDidMount() {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
+
+      if (this.props.init === true) {
+        $(this.refs.rating).rating();
+      } else {
+        $(this.refs.rating).rating(this.props.init);
+      }
+    }
+  }
+});
+
+},{"../mixins/classGenerator":33}],45:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = (window.ReactDOM);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _stateSelector = require('../mixins/stateSelector');
+
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
+
+var _unit = require('../commons/unit');
+
+var _unit2 = _interopRequireDefault(_unit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui search';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default, _stateSelector2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var color = _props.color;
+    var type = _props.type;
+    var active = _props.active;
+
+    var other = _objectWithoutProperties(_props, ['className', 'color', 'type', 'active']);
+
+    return _react2.default.createElement(
+      _unit2.default,
+      _extends({}, other, {
+        className: this.getClassName(defaultClassName),
+        color: 'null',
+        type: 'div',
+        loading: this.getLoading() }),
+      this.props.children
+    );
+  },
+
+  componentDidMount: function componentDidMount() {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
+
+      if (this.props.init === true) {
+        $(_reactDom2.default.findDOMNode(this)).search();
+      } else {
+        $(_reactDom2.default.findDOMNode(this)).search(this.props.init);
+      }
+    }
+  }
+});
+
+},{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],46:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui shape';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName), ref: 'shape' }),
+      this.props.children
+    );
+  },
+
+  componentDidMount: function componentDidMount() {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
+
+      if (this.props.init === true) {
+        $(this.refs.shape).shape();
+      } else {
+        $(this.refs.shape).shape(this.props.init);
+      }
+    }
+  }
+});
+
+},{"../mixins/classGenerator":33}],47:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui sidebar';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName), ref: 'sidebar' }),
+      this.props.children
+    );
+  },
+
+  componentDidMount: function componentDidMount() {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
+
+      if (this.props.init === true) {
+        $(this.refs.sidebar).sidebar();
+      } else {
+        $(this.refs.sidebar).sidebar(this.props.init);
+      }
+    }
+  }
+});
+
+},{"../mixins/classGenerator":33}],48:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui sticky';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  },
+
+  componentDidMount: function componentDidMount() {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
+
+      if (this.props.init === true) {
+        $(this.getDOMNode()).sticky();
+      } else {
+        $(this.getDOMNode()).sticky(this.props.init);
+      }
+    }
+  }
+});
+
+},{"../mixins/classGenerator":33}],49:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _stateSelector = require('../mixins/stateSelector');
+
+var _stateSelector2 = _interopRequireDefault(_stateSelector);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui tab';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default, _stateSelector2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var active = _props.active;
+    var loading = _props.loading;
+    var tab = _props.tab;
+
+    var other = _objectWithoutProperties(_props, ['className', 'active', 'loading', 'tab']);
+
+    var state = {
+      active: this.getActive(),
+      loading: this.getLoading()
+    };
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, {
+        className: this.getClassName(defaultClassName, state),
+        'data-tab': tab,
+        ref: 'tab' }),
+      this.props.children
+    );
+  },
+
+  componentDidMount: function componentDidMount() {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
+
+      if (this.props.init === true) {
+        $(this.refs.tab).tab();
+      } else {
+        $(this.refs.tab).tab(this.props.init);
+      }
+    }
+  }
+});
+
+},{"../mixins/classGenerator":33,"../mixins/stateSelector":35}],50:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui ad';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
+
+},{"../mixins/classGenerator":33}],51:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui card';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
+
+},{"../mixins/classGenerator":33}],52:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'comment';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
+
+},{"../mixins/classGenerator":33}],53:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui comments';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
+
+},{"../mixins/classGenerator":33}],54:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui feed';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
+
+},{"../mixins/classGenerator":33}],55:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+var _typeSelector = require('../mixins/typeSelector');
+
+var _typeSelector2 = _interopRequireDefault(_typeSelector);
+
+var _unit = require('../commons/unit');
+
+var _unit2 = _interopRequireDefault(_unit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'item';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default, _typeSelector2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+    var type = _props.type;
+
+    var other = _objectWithoutProperties(_props, ['className', 'type']);
+
+    return _react2.default.createElement(
+      _unit2.default,
+      _extends({}, other, {
+        className: this.getClassName(defaultClassName),
+        type: this.getType(),
+        color: 'null',
+        value: this.props.value }),
+      this.props.children
+    );
+  }
+});
+
+},{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/typeSelector":36}],56:[function(require,module,exports){
+'use strict';
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var defaultClassName = 'ui items';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  propTypes: {
+    className: _react2.default.PropTypes.string,
+    type: _react2.default.PropTypes.string
+  },
+
+  render: function render() {
+    var type = '';
+
+    if (typeof this.props.type != 'undefined') {
+      if (this.props.type == 'link') {
+        type = 'link';
+      }
+    }
+
+    return _react2.default.createElement(
+      'div',
+      { className: this.getClassName(defaultClassName, type) },
+      this.props.children
+    );
+  }
+});
+
+},{"../mixins/classGenerator":33}],57:[function(require,module,exports){
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classGenerator = require('../mixins/classGenerator');
+
+var _classGenerator2 = _interopRequireDefault(_classGenerator);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var defaultClassName = 'ui statistic';
+
+module.exports = _react2.default.createClass({
+  displayName: 'exports',
+
+  mixins: [_classGenerator2.default],
+
+  render: function render() {
+    var _props = this.props;
+    var className = _props.className;
+
+    var other = _objectWithoutProperties(_props, ['className']);
+
+    return _react2.default.createElement(
+      'div',
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
+      this.props.children
+    );
+  }
+});
+
+},{"../mixins/classGenerator":33}]},{},[32])(32)
 });
