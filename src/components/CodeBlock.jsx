@@ -2,8 +2,7 @@
 
 import React from 'react';
 import Highlight from 'highlight.js';
-// import ReactToJsx from 'react-to-jsx';
-import ReactToJsx from 'react-element-to-jsx-string';
+import ReactToJsx from 'react-to-jsx';
 
 export default React.createClass({
 

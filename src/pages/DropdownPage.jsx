@@ -1,12 +1,13 @@
 "use strict";
 
 import React        from 'react';
-import Semantify    from 'react-semantify';
 import ExampleBlock from '../components/ExampleBlock.jsx';
 import CodeBlock    from '../components/CodeBlock.jsx';
 import PageTitle    from '../components/PageTitle.jsx';
 
-var {Dropdown, Divider, Header, Icon, Item, Menu, Text} = Semantify;
+import {
+  Dropdown, Divider, Header, Icon, Item, Menu, Text
+} from 'react-semantify';
 
 export default React.createClass({
 

@@ -3,9 +3,10 @@
 import React     from 'react';
 import ReactDOM  from 'react-dom';
 import CodeBlock from './CodeBlock.jsx';
-import Semantify from 'react-semantify';
 
-var {Content, Icon, Header, Segment, Label} = Semantify;
+import {
+  Content, Icon, Header, Segment, Label
+} from 'react-semantify';
 
 export default React.createClass({
 

@@ -1,11 +1,10 @@
 "use strict";
 
 import React        from 'react';
-import Semantify    from 'react-semantify';
 import ExampleBlock from '../components/ExampleBlock.jsx';
 import PageTitle    from '../components/PageTitle.jsx';
 
-var {Button, Divider, Header} = Semantify;
+import {Button, Divider, Header} from 'react-semantify';
 
 export default React.createClass({
 
