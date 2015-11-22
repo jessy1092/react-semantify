@@ -66,7 +66,7 @@ Ex. Write a simple button in browser.
 </script>
 ```
 
-### With Browserify
+### With Browserify or Webpack
 
 ```sh
 npm install react-semantify
@@ -76,7 +76,13 @@ Ex.
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-let Button = require('react-semantify').Button;
+import {Button} from 'react-semantify';
+// or
+// import * as Semantify from 'react-semantify';
+// let {Button} = Semantify;
+// or
+// use ES5
+// let Button = require('react-semantify').Button;
 
 let HelloBox = React.createClass({
 
