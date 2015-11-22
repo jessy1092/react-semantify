@@ -1,7 +1,21 @@
+<a name="0.4.1"></a>
+## [0.4.1](//compare/v0.4.0...v0.4.1) (2015-11-22)
+
+
+### Bug Fixes
+
+* **export:** Fix Unit component export 6bfcbbf
+
+### Features
+
+* **export:** Use ES6 export for exporting component 23ea253 PR #34
+
+
+
 <a name="0.4.0"></a>
 # [0.4.0](//compare/v0.3.2...v0.4.0) (2015-11-22)
 
-- Support React 0.14.* 
+- Support React 0.14.*
 
 
 ## Version 0.3.2 - 2015/11/13
