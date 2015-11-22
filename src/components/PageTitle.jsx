@@ -1,9 +1,8 @@
 "use strict";
 
-import React     from 'react';
-import Semantify from 'react-semantify';
+import React from 'react';
 
-var {Segment, Header} = Semantify;
+import {Segment, Header} from 'react-semantify';
 
 export default React.createClass({
 

@@ -1,14 +1,13 @@
 "use strict";
 
 import React     from 'react';
-import Semantify from 'react-semantify';
 import CodeBlock from '../components/CodeBlock.jsx';
 import PageTitle from '../components/PageTitle.jsx';
 
-var {
+import {
   Button, Content, Divider, Header,
   Icon, Items, Item, List
-} = Semantify;
+} from 'react-semantify';
 
 export default React.createClass({
 
@@ -71,9 +70,11 @@ export default React.createClass({
           <Header className="small">With Browserify or Webpack</Header>
 
           <CodeBlock language="js">
-            {["var React = require('react'); ",
-             "var Button = require('react-semantify').Button; ",
-             "var HelloBox = React.createClass({ ",
+            {["import React from 'react'; ",
+             "import ReactDOM from 'react-dom'; ",
+             "import {Button} from 'react-semantify'; ",
+             "",
+             "let HelloBox = React.createClass({ ",
              "  _onClick: function () { ",
              "    console.log('hello world!'); ",
              "  }, ",
@@ -99,9 +100,10 @@ export default React.createClass({
 
           <CodeBlock language="html">
             {["<div id=\"content\"></div>",
-             "<script type=\"text/jsx\">",
-             "  var Button = Semantify.Button;",
-             "  var HelloBox = React.createClass({",
+             "<script type=\"text/babel\">",
+             "  let Button = Semantify.Button;",
+             "",
+             "  let HelloBox = React.createClass({",
              "    _onClick: function () {",
              "      console.log('hello world!');",
              "    },",
@@ -115,7 +117,7 @@ export default React.createClass({
              "    }",
              "  });",
              "",
-             "  React.render(",
+             "  ReactDOM.render(",
              "    <HelloBox />,",
              "    document.getElementById('content')",
              "  );",
@@ -127,13 +129,15 @@ export default React.createClass({
           <List className="bulleted">
             <Item>jQuery</Item>
             <Item>Semantic-UI</Item>
-            <Item>React with Addons</Item>
-            <Item>JSXTransformer (If you write jsx in browser.)</Item>
+            <Item>React</Item>
+            <Item>ReactDOM </Item>
+            <Item>Babel (If you write jsx in browser.)</Item>
           </List>
 
           <CodeBlock language="html">
-            {['<script src="//cdnjs.cloudflare.com/ajax/libs/react/0.12.1/react-with-addons.min.js"></script>',
-              '<script src="//cdnjs.cloudflare.com/ajax/libs/react/0.12.1/JSXTransformer.js"></script>',
+            {['<script src="//cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-dom.min.js"></script>',
+              '<script src="//cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.min.js"></script>',
+              '<script src="//cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.min.js"></script>',
               '<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>',
               '<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.css">',
               '<script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.js"></script>',

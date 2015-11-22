@@ -1,11 +1,10 @@
 "use strict";
 
 import React        from 'react';
-import Semantify    from 'react-semantify';
 import RouteStore   from '../stores/RouteStore.js';
 import RouteActions from '../actions/RouteActions.js';
 
-var {Menu, Item, Header} = Semantify;
+import {Menu, Item, Header} from 'react-semantify';
 
 export default React.createClass({
 
