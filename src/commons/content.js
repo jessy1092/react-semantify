@@ -1,7 +1,7 @@
 import React from 'react';
 import ClassGenerator from '../mixins/classGenerator';
 import StateSelector from '../mixins/stateSelector';
-import Unit from './unit';
+import {Unit} from './unit';
 
 let defaultClassName = 'content';
 

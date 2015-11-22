@@ -2,7 +2,7 @@ import React from 'react';
 import ClassGenerator from '../mixins/classGenerator';
 import ColorSelector from '../mixins/colorSelector';
 import TypeSelector from '../mixins/typeSelector';
-import Unit from './unit';
+import {Unit} from './unit';
 
 let defaultClassName = 'section';
 

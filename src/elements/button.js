@@ -2,7 +2,7 @@ import React from 'react';
 import ClassGenerator from '../mixins/classGenerator';
 import ColorSelector from '../mixins/colorSelector';
 import StateSelector from '../mixins/stateSelector';
-import Unit from '../commons/unit';
+import {Unit} from '../commons/unit';
 
 let defaultClassName = 'ui button';
 

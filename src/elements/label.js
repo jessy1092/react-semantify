@@ -2,7 +2,7 @@ import React from 'react';
 import ClassGenerator from '../mixins/classGenerator';
 import ColorSelector from '../mixins/colorSelector';
 import TypeSelector from '../mixins/typeSelector';
-import Unit from '../commons/unit';
+import {Unit} from '../commons/unit';
 
 let defaultClassName = 'ui label';
 
