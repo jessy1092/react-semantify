@@ -1,35 +1,29 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ClassGenerator from '../mixins/classGenerator';
+import ColorSelector from '../mixins/colorSelector';
+import StateSelector from '../mixins/stateSelector';
+import Unit from '../commons/unit';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var ColorSelector  = require('../mixins/colorSelector.js')(React);
-  var StateSelector  = require('../mixins/stateSelector.js')(React);
-  var Unit           = require('../commons/unit.js')(React);
+let defaultClassName = 'ui button';
 
-  var defaultClassName = 'ui button';
+module.exports = React.createClass({
 
-  var Button = React.createClass({
+  mixins: [ClassGenerator, ColorSelector, StateSelector],
 
-    mixins: [ClassGenerator, ColorSelector, StateSelector],
+  render: function () {
 
-    render: function () {
+    let {className, color, disabled, active, loading, ...other} = this.props;
 
-      var {className, color, disabled, active, loading, ...other} = this.props;
-
-      return (
-        <Unit {...other}
-          className={this.getClassName(defaultClassName)}
-          type="div"
-          color={this.getColor()}
-          disabled={this.getDisabled()}
-          active={this.getActive()}
-          loading={this.getLoading()}>
-          {this.props.children}
-        </Unit>
-      );
-    }
-  });
-
-  return Button;
-}
-
+    return (
+      <Unit {...other}
+        className={this.getClassName(defaultClassName)}
+        type="div"
+        color={this.getColor()}
+        disabled={this.getDisabled()}
+        active={this.getActive()}
+        loading={this.getLoading()}>
+        {this.props.children}
+      </Unit>
+    );
+  }
+});

@@ -1,33 +1,28 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ClassGenerator from '../mixins/classGenerator';
+import ColorSelector from '../mixins/colorSelector';
+import TypeSelector from '../mixins/typeSelector';
+import StateSelector from '../mixins/stateSelector';
+import Unit from '../commons/unit';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var ColorSelector  = require('../mixins/colorSelector.js')(React);
-  var TypeSelector   = require('../mixins/typeSelector.js')(React);
-  var StateSelector  = require('../mixins/stateSelector.js')(React);
-  var Unit           = require('../commons/unit.js')(React);
+let defaultClassName = 'ui header';
 
-  var defaultClassName = 'ui header';
+module.exports = React.createClass({
 
-  var Header = React.createClass({
+  mixins: [ClassGenerator, ColorSelector, TypeSelector, StateSelector],
 
-    mixins: [ClassGenerator, ColorSelector, TypeSelector, StateSelector],
+  render: function () {
 
-    render: function () {
+    let {className, type, color, ...other} = this.props;
 
-      var {className, type, color, ...other} = this.props;
-
-      return (
-        <Unit {...other}
-          className={this.getClassName(defaultClassName)}
-          type={this.getType()}
-          color={this.getColor()}
-          disabled={this.getDisabled()}>
-          {this.props.children}
-        </Unit>
-      );
-    }
-  });
-
-  return Header;
-}
+    return (
+      <Unit {...other}
+        className={this.getClassName(defaultClassName)}
+        type={this.getType()}
+        color={this.getColor()}
+        disabled={this.getDisabled()}>
+        {this.props.children}
+      </Unit>
+    );
+  }
+});

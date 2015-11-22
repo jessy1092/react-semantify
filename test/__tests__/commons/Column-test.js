@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Column    = require('../../../src/index.js').Column;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Column    = require('../../../src/index.js').Column;
 
 describe('Column', function () {
   it('should have .column class by default', function () {
@@ -12,7 +13,7 @@ describe('Column', function () {
       <Column></Column>
     );
 
-    expect(instance.getDOMNode().className).toMatch('column');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('column');
   });
 
   it('should have child by default', function () {
@@ -20,7 +21,7 @@ describe('Column', function () {
       <Column>123</Column>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -28,6 +29,6 @@ describe('Column', function () {
       <Column className="custom"></Column>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 });

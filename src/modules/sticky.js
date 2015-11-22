@@ -1,39 +1,34 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ClassGenerator from '../mixins/classGenerator';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+let defaultClassName = 'ui sticky';
 
-  var defaultClassName = 'ui sticky';
+module.exports = React.createClass({
 
-  var Sticky = React.createClass({
+  mixins: [ClassGenerator],
 
-    mixins: [ClassGenerator],
+  render: function () {
 
-    render: function () {
+    let {className, ...other} = this.props;
 
-      var {className, ...other} = this.props;
+    return (
+      <div {...other} className={this.getClassName(defaultClassName)} >
+        {this.props.children}
+      </div>
+    );
+  },
 
-      return (
-        <div {...other} className={this.getClassName(defaultClassName)} >
-          {this.props.children}
-        </div>
-      );
-    },
+  componentDidMount: function () {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
 
-    componentDidMount: function () {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).sticky();
-        } else {
-          $(this.getDOMNode()).sticky(this.props.init);
-        }
+      if (this.props.init === true) {
+        $(this.getDOMNode()).sticky();
+      } else {
+        $(this.getDOMNode()).sticky(this.props.init);
       }
     }
-  });
-
-  return Sticky;
-}
+  }
+});

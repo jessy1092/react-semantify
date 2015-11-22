@@ -1,45 +1,41 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ClassGenerator from '../mixins/classGenerator';
+import StateSelector from '../mixins/stateSelector';
+import Unit from '../commons/unit';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector  = require('../mixins/stateSelector.js')(React);
-  var Unit           = require('../commons/unit.js')(React);
+let defaultClassName = 'ui modal';
 
-  var defaultClassName = 'ui modal';
+module.exports = React.createClass({
 
-  var Modal = React.createClass({
+  mixins: [ClassGenerator, StateSelector],
 
-    mixins: [ClassGenerator, StateSelector],
+  render: function () {
 
-    render: function () {
+    let {className, color, type, active, ...other} = this.props;
 
-      var {className, color, type, active, ...other} = this.props;
+    return (
+      <Unit {...other}
+        className={this.getClassName(defaultClassName)}
+        color="null"
+        type="div"
+        active={this.getActive()}>
+        {this.props.children}
+      </Unit>
+    );
+  },
 
-      return (
-        <Unit {...other}
-          className={this.getClassName(defaultClassName)}
-          color="null"
-          type="div"
-          active={this.getActive()}>
-          {this.props.children}
-        </Unit>
-      );
-    },
+  componentDidMount: function () {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
+      }
 
-    componentDidMount: function () {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).modal();
-        } else {
-          $(this.getDOMNode()).modal(this.props.init);
-        }
+      if (this.props.init === true) {
+        $(ReactDOM.findDOMNode(this)).modal();
+      } else {
+        $(ReactDOM.findDOMNode(this)).modal(this.props.init);
       }
     }
-  });
-
-  return Modal;
-}
+  }
+});

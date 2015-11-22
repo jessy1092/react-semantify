@@ -1,25 +1,20 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ClassGenerator from '../mixins/classGenerator';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
+let defaultClassName = 'ui feed';
 
-  var defaultClassName = 'ui feed';
+module.exports = React.createClass({
 
-  var Feed = React.createClass({
+  mixins: [ClassGenerator],
 
-    mixins: [ClassGenerator],
+  render: function () {
 
-    render: function () {
+    let {className, ...other} = this.props;
 
-      var {className, ...other} = this.props;
-
-      return (
-        <div {...other} className={this.getClassName(defaultClassName)} >
-          {this.props.children}
-        </div>
-      );
-    }
-  });
-
-  return Feed;
-}
+    return (
+      <div {...other} className={this.getClassName(defaultClassName)} >
+        {this.props.children}
+      </div>
+    );
+  }
+});

@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Flag      = require('../../../src/index.js').Flag;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Flag      = require('../../../src/index.js').Flag;
 
 describe('Flag', function () {
   it('should have .flag class by default', function () {
@@ -12,7 +13,7 @@ describe('Flag', function () {
       <Flag></Flag>
     );
 
-    expect(instance.getDOMNode().className).toMatch('flag');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('flag');
   });
 
   it('should have custom class with custom className', function () {
@@ -20,7 +21,7 @@ describe('Flag', function () {
       <Flag className="custom"></Flag>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should call onClick callback when unit click', function () {
@@ -31,7 +32,7 @@ describe('Flag', function () {
       <Flag onClick={clickOp}></Flag>
     );
 
-    TestUtils.Simulate.click(instance.getDOMNode());
+    TestUtils.Simulate.click(ReactDOM.findDOMNode(instance));
 
     expect(clickOp).toBeCalled();
   });

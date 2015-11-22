@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Segment   = require('../../../src/index.js').Segment;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Segment   = require('../../../src/index.js').Segment;
 
 describe('Segment', function () {
   it('should have .ui.segment class by default', function () {
@@ -12,8 +13,8 @@ describe('Segment', function () {
       <Segment></Segment>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('segment');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('segment');
   });
 
   it('should have child by default', function () {
@@ -21,7 +22,7 @@ describe('Segment', function () {
       <Segment>123</Segment>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -29,7 +30,7 @@ describe('Segment', function () {
       <Segment className="custom"></Segment>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have blue class with color is blue', function () {
@@ -37,7 +38,7 @@ describe('Segment', function () {
       <Segment color="blue"></Segment>
     );
 
-    expect(instance.getDOMNode().className).toMatch('blue');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('blue');
   });
 
   it('should have disabled class with disabled is true', function () {
@@ -45,7 +46,7 @@ describe('Segment', function () {
       <Segment disabled={true}></Segment>
     );
 
-    expect(instance.getDOMNode().className).toMatch('disabled');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('disabled');
   });
 
   it('should have loading class with loading is true', function () {
@@ -53,7 +54,7 @@ describe('Segment', function () {
       <Segment loading={true}></Segment>
     );
 
-    expect(instance.getDOMNode().className).toMatch('loading');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('loading');
   });
 
   it('should call onClick callback when unit click', function () {
@@ -64,7 +65,7 @@ describe('Segment', function () {
       <Segment onClick={clickOp}></Segment>
     );
 
-    TestUtils.Simulate.click(instance.getDOMNode());
+    TestUtils.Simulate.click(ReactDOM.findDOMNode(instance));
 
     expect(clickOp).toBeCalled();
   });

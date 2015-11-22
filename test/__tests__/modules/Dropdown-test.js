@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Dropdown  = require('../../../src/index.js').Dropdown;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Dropdown  = require('../../../src/index.js').Dropdown;
 
 describe('Dropdown', function () {
   it('should have .ui.dropdown class by default', function () {
@@ -12,8 +13,8 @@ describe('Dropdown', function () {
       <Dropdown></Dropdown>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('dropdown');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('dropdown');
   });
 
   it('should have child by default', function () {
@@ -21,7 +22,7 @@ describe('Dropdown', function () {
       <Dropdown>123</Dropdown>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -29,7 +30,7 @@ describe('Dropdown', function () {
       <Dropdown className="custom"></Dropdown>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have disabled class with disabled is true', function () {
@@ -37,8 +38,8 @@ describe('Dropdown', function () {
       <Dropdown disabled={true}></Dropdown>
     );
 
-    expect(instance.getDOMNode().className).toMatch('disabled');
-    expect(instance.getDOMNode().className).toMatch('simple');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('disabled');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('simple');
   });
 
   it('should have active class with active is true', function () {
@@ -46,8 +47,8 @@ describe('Dropdown', function () {
       <Dropdown active={true}></Dropdown>
     );
 
-    expect(instance.getDOMNode().className).toMatch('active');
-    expect(instance.getDOMNode().className).toMatch('simple');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('active');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('simple');
   });
 
   it('should have error class with error is true', function () {
@@ -55,6 +56,6 @@ describe('Dropdown', function () {
       <Dropdown error={true}></Dropdown>
     );
 
-    expect(instance.getDOMNode().className).toMatch('error');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('error');
   });
 });

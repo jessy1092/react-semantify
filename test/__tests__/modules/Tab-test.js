@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Tab       = require('../../../src/index.js').Tab;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Tab       = require('../../../src/index.js').Tab;
 
 describe('Tab', function () {
   it('should have .ui.tab class by default', function () {
@@ -12,8 +13,8 @@ describe('Tab', function () {
       <Tab></Tab>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('tab');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('tab');
   });
 
   it('should have child by default', function () {
@@ -21,7 +22,7 @@ describe('Tab', function () {
       <Tab>123</Tab>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -29,7 +30,7 @@ describe('Tab', function () {
       <Tab className="custom"></Tab>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have loading class with loading is true', function () {
@@ -37,7 +38,7 @@ describe('Tab', function () {
       <Tab loading={true}></Tab>
     );
 
-    expect(instance.getDOMNode().className).toMatch('loading');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('loading');
   });
 
   it('should have active class with active is true', function () {
@@ -45,7 +46,7 @@ describe('Tab', function () {
       <Tab active={true}></Tab>
     );
 
-    expect(instance.getDOMNode().className).toMatch('active');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('active');
   });
 
   it('should have tab for item data-tab', function () {
@@ -53,6 +54,6 @@ describe('Tab', function () {
       <Tab tab="1"></Tab>
     );
 
-    expect(instance.getDOMNode().getAttribute('data-tab')).toMatch('1');
+    expect(ReactDOM.findDOMNode(instance).getAttribute('data-tab')).toMatch('1');
   });
 });

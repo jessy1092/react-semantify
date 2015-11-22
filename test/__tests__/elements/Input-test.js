@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Input     = require('../../../src/index.js').Input;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Input     = require('../../../src/index.js').Input;
 
 describe('Input', function () {
   it('should have .ui.input class by default', function () {
@@ -12,8 +13,8 @@ describe('Input', function () {
       <Input></Input>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('input');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('input');
   });
 
   it('should have child by default', function () {
@@ -23,7 +24,7 @@ describe('Input', function () {
       </Input>
     );
 
-    expect(instance.getDOMNode().children[0].getAttribute('placeholder')).toMatch('Search');
+    expect(ReactDOM.findDOMNode(instance).children[0].getAttribute('placeholder')).toMatch('Search');
   });
 
   it('should have custom class with custom className', function () {
@@ -31,7 +32,7 @@ describe('Input', function () {
       <Input className="custom"></Input>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have loading class with loading is true', function () {
@@ -39,7 +40,7 @@ describe('Input', function () {
       <Input loading={true}></Input>
     );
 
-    expect(instance.getDOMNode().className).toMatch('loading');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('loading');
   });
 
   it('should have focus class with focus is true', function () {
@@ -47,7 +48,7 @@ describe('Input', function () {
       <Input focus={true}></Input>
     );
 
-    expect(instance.getDOMNode().className).toMatch('focus');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('focus');
   });
 
   it('should have error class with error is true', function () {
@@ -55,7 +56,7 @@ describe('Input', function () {
       <Input error={true}></Input>
     );
 
-    expect(instance.getDOMNode().className).toMatch('error');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('error');
   });
 
   it('should have <input> if children is null', function () {
@@ -74,7 +75,7 @@ describe('Input', function () {
 
     var input = TestUtils.findRenderedDOMComponentWithTag(instance, 'input');
 
-    expect(input.getDOMNode().getAttribute('placeholder')).toMatch('Search');
+    expect(ReactDOM.findDOMNode(input).getAttribute('placeholder')).toMatch('Search');
   });
 
   it('should have type for input type', function () {
@@ -85,6 +86,6 @@ describe('Input', function () {
 
     var input = TestUtils.findRenderedDOMComponentWithTag(instance, 'input');
 
-    expect(input.getDOMNode().getAttribute('type')).toMatch('text');
+    expect(ReactDOM.findDOMNode(input).getAttribute('type')).toMatch('text');
   });
 });

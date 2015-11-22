@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/commons/unit.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Unit      = require('../../../src/commons/unit.js')(React);
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+var Unit      = require('../../../src/commons/unit.js');
 
 describe('Unit', function () {
   it('should have child by default', function () {
@@ -24,7 +25,7 @@ describe('Unit', function () {
       </Unit>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -43,7 +44,7 @@ describe('Unit', function () {
       </Unit>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have blue class with color is blue', function () {
@@ -62,7 +63,7 @@ describe('Unit', function () {
       </Unit>
     );
 
-    expect(instance.getDOMNode().className).toMatch('blue');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('blue');
   });
 
   it('should have props class with props is true', function () {
@@ -81,13 +82,13 @@ describe('Unit', function () {
       </Unit>
     );
 
-    expect(instance.getDOMNode().className).toMatch('disabled');
-    expect(instance.getDOMNode().className).toMatch('active');
-    expect(instance.getDOMNode().className).toMatch('loading');
-    expect(instance.getDOMNode().className).toMatch('focus');
-    expect(instance.getDOMNode().className).toMatch('error');
-    expect(instance.getDOMNode().className).toMatch('completed');
-    expect(instance.getDOMNode().className).toMatch('read-only');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('disabled');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('active');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('loading');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('focus');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('error');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('completed');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('read-only');
   });
 
   it('should call onClick callback when unit click', function () {
@@ -111,7 +112,7 @@ describe('Unit', function () {
       </Unit>
     );
 
-    TestUtils.Simulate.click(instance.getDOMNode());
+    TestUtils.Simulate.click(ReactDOM.findDOMNode(instance));
 
     expect(clickOp).toBeCalled();
   });

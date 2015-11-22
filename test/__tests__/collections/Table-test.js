@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/collections/table.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Table     = require('../../../src/collections/table.js')(React);
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Table     = require('../../../src/index.js').Table;
 
 describe('Table', function () {
   it('should have .ui.table class by default', function () {
@@ -12,8 +13,8 @@ describe('Table', function () {
       <Table></Table>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('table');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('table');
   });
 
   it('should have child by default', function () {
@@ -21,8 +22,8 @@ describe('Table', function () {
       <Table><tbody><tr></tr></tbody></Table>
     );
 
-    expect(instance.getDOMNode().children[0].children[0].tagName).toMatch('TR');
-    expect(instance.getDOMNode().children[0].tagName).toMatch('TBODY');
+    expect(ReactDOM.findDOMNode(instance).children[0].children[0].tagName).toEqual('TR');
+    expect(ReactDOM.findDOMNode(instance).children[0].tagName).toEqual('TBODY');
   });
 
   it('should have custom class with custom className', function () {
@@ -30,6 +31,6 @@ describe('Table', function () {
       <Table className="custom"></Table>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 });

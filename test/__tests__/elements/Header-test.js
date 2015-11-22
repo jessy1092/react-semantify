@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Header    = require('../../../src/index.js').Header;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Header    = require('../../../src/index.js').Header;
 
 describe('Header', function () {
   it('should have .ui.header class by default', function () {
@@ -12,8 +13,8 @@ describe('Header', function () {
       <Header></Header>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('header');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('header');
   });
 
   it('should have child by default', function () {
@@ -21,7 +22,7 @@ describe('Header', function () {
       <Header>123</Header>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -29,7 +30,7 @@ describe('Header', function () {
       <Header className="custom"></Header>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have blue class with color is blue', function () {
@@ -37,7 +38,7 @@ describe('Header', function () {
       <Header color="blue"></Header>
     );
 
-    expect(instance.getDOMNode().className).toMatch('blue');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('blue');
   });
 
   it('should have disabled class with disabled is true', function () {
@@ -45,7 +46,7 @@ describe('Header', function () {
       <Header disabled={true}></Header>
     );
 
-    expect(instance.getDOMNode().className).toMatch('disabled');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('disabled');
   });
 
   it('should be <a> with link', function () {
@@ -64,7 +65,7 @@ describe('Header', function () {
       <Header onClick={clickOp}></Header>
     );
 
-    TestUtils.Simulate.click(instance.getDOMNode());
+    TestUtils.Simulate.click(ReactDOM.findDOMNode(instance));
 
     expect(clickOp).toBeCalled();
   });

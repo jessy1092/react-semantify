@@ -1,50 +1,45 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ClassGenerator from '../mixins/classGenerator';
+import StateSelector from '../mixins/stateSelector';
+import Unit from '../commons/unit';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector  = require('../mixins/stateSelector.js')(React);
-  var Unit           = require('../commons/unit.js')(React);
+let defaultClassName = 'ui input';
 
-  var defaultClassName = 'ui input';
+module.exports = React.createClass({
 
-  var Input = React.createClass({
+  mixins: [ClassGenerator, StateSelector],
 
-    mixins: [ClassGenerator, StateSelector],
+  render: function () {
 
-    render: function () {
+    let {className, ...other} = this.props;
 
-      var {className, ...other} = this.props;
-
-      if (typeof this.props.children != 'undefined') {
-        return (
-          <Unit {...other}
-            className={this.getClassName(defaultClassName)}
-            type="div"
-            color="null"
-            loading={this.getLoading()}
-            focus={this.getFocus()}
-            error={this.getError()}>
-            {this.props.children}
-          </Unit>
-        );
-      } else {
-        return (
-          <Unit
-            className={this.getClassName(defaultClassName)}
-            type="div"
-            color="null"
-            loading={this.getLoading()}
-            focus={this.getFocus()}
-            error={this.getError()}>
-            <input {...other}
-              placeholder={this.props.placeholder}
-              type={this.props.type}/>
-          </Unit>
-        )
-      }
-
+    if (typeof this.props.children != 'undefined') {
+      return (
+        <Unit {...other}
+          className={this.getClassName(defaultClassName)}
+          type="div"
+          color="null"
+          loading={this.getLoading()}
+          focus={this.getFocus()}
+          error={this.getError()}>
+          {this.props.children}
+        </Unit>
+      );
+    } else {
+      return (
+        <Unit
+          className={this.getClassName(defaultClassName)}
+          type="div"
+          color="null"
+          loading={this.getLoading()}
+          focus={this.getFocus()}
+          error={this.getError()}>
+          <input {...other}
+            placeholder={this.props.placeholder}
+            type={this.props.type}/>
+        </Unit>
+      )
     }
-  });
 
-  return Input;
-}
+  }
+});

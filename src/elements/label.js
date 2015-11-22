@@ -1,31 +1,26 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ClassGenerator from '../mixins/classGenerator';
+import ColorSelector from '../mixins/colorSelector';
+import TypeSelector from '../mixins/typeSelector';
+import Unit from '../commons/unit';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var ColorSelector  = require('../mixins/colorSelector.js')(React);
-  var TypeSelector   = require('../mixins/typeSelector.js')(React);
-  var Unit           = require('../commons/unit.js')(React);
+let defaultClassName = 'ui label';
 
-  var defaultClassName = 'ui label';
+module.exports = React.createClass({
 
-  var Label = React.createClass({
+  mixins: [ClassGenerator, ColorSelector, TypeSelector],
 
-    mixins: [ClassGenerator, ColorSelector, TypeSelector],
+  render: function () {
 
-    render: function () {
+    let {className, type, color, ...other} = this.props;
 
-      var {className, type, color, ...other} = this.props;
-
-      return (
-        <Unit {...other}
-          className={this.getClassName(defaultClassName)}
-          type={this.getType()}
-          color={this.getColor()}>
-          {this.props.children}
-        </Unit>
-      );
-    }
-  });
-
-  return Label;
-}
+    return (
+      <Unit {...other}
+        className={this.getClassName(defaultClassName)}
+        type={this.getType()}
+        color={this.getColor()}>
+        {this.props.children}
+      </Unit>
+    );
+  }
+});

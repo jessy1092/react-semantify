@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Comment   = require('../../../src/index.js').Comment;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Comment   = require('../../../src/index.js').Comment;
 
 describe('Comment', function () {
   it('should have .comment class by default', function () {
@@ -12,7 +13,7 @@ describe('Comment', function () {
       <Comment></Comment>
     );
 
-    expect(instance.getDOMNode().className).toMatch('comment');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('comment');
   });
 
   it('should have child by default', function () {
@@ -20,7 +21,7 @@ describe('Comment', function () {
       <Comment>123</Comment>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -28,6 +29,6 @@ describe('Comment', function () {
       <Comment className="custom"></Comment>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 });

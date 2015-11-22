@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Divider   = require('../../../src/index.js').Divider;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Divider   = require('../../../src/index.js').Divider;
 
 describe('Divider', function () {
   it('should have .ui.divider class by default', function () {
@@ -12,8 +13,8 @@ describe('Divider', function () {
       <Divider></Divider>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('divider');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('divider');
   });
 
   it('should have child by default', function () {
@@ -21,7 +22,7 @@ describe('Divider', function () {
       <Divider>123</Divider>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -29,6 +30,6 @@ describe('Divider', function () {
       <Divider className="custom"></Divider>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 });

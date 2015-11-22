@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Menu      = require('../../../src/index.js').Menu;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Menu      = require('../../../src/index.js').Menu;
 
 describe('Menu', function () {
   it('should have .ui.menu class by default', function () {
@@ -12,8 +13,8 @@ describe('Menu', function () {
       <Menu></Menu>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('menu');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('menu');
   });
 
   it('should have child by default', function () {
@@ -21,7 +22,7 @@ describe('Menu', function () {
       <Menu>123</Menu>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -29,6 +30,6 @@ describe('Menu', function () {
       <Menu className="custom"></Menu>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 });

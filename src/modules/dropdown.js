@@ -1,51 +1,47 @@
-"use strict";
-module.exports = function (React) {
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ClassGenerator from '../mixins/classGenerator';
+import StateSelector from '../mixins/stateSelector';
+import Unit from '../commons/unit';
 
-  var ClassGenerator = require('../mixins/classGenerator.js')(React);
-  var StateSelector  = require('../mixins/stateSelector.js')(React);
-  var Unit           = require('../commons/unit.js')(React);
+let defaultClassName = 'ui dropdown';
 
-  var defaultClassName = 'ui dropdown';
+module.exports = React.createClass({
 
-  var Dropdown = React.createClass({
+  mixins: [ClassGenerator, StateSelector],
 
-    mixins: [ClassGenerator, StateSelector],
+  render: function () {
 
-    render: function () {
+    let {className, color, type, error, disable, active, ...other} = this.props;
 
-      var {className, color, type, error, disable, active, ...other} = this.props;
+    if (this.getActive() || this.getDisabled()) {
+      defaultClassName += ' simple';
+    }
 
-      if (this.getActive() || this.getDisabled()) {
-        defaultClassName += ' simple';
+    return (
+      <Unit {...other}
+        className={this.getClassName(defaultClassName)}
+        color="null"
+        type="div"
+        error={this.getError()}
+        disable={this.getDisabled()}
+        active={this.getActive()}>
+        {this.props.children}
+      </Unit>
+    );
+  },
+
+  componentDidMount: function () {
+    if (typeof this.props.init != 'undefined') {
+      if (this.props.init === false) {
+        return;
       }
 
-      return (
-        <Unit {...other}
-          className={this.getClassName(defaultClassName)}
-          color="null"
-          type="div"
-          error={this.getError()}
-          disable={this.getDisabled()}
-          active={this.getActive()}>
-          {this.props.children}
-        </Unit>
-      );
-    },
-
-    componentDidMount: function () {
-      if (typeof this.props.init != 'undefined') {
-        if (this.props.init === false) {
-          return;
-        }
-
-        if (this.props.init === true) {
-          $(this.getDOMNode()).dropdown();
-        } else {
-          $(this.getDOMNode()).dropdown(this.props.init);
-        }
+      if (this.props.init === true) {
+        $(ReactDOM.findDOMNode(this)).dropdown();
+      } else {
+        $(ReactDOM.findDOMNode(this)).dropdown(this.props.init);
       }
     }
-  });
-
-  return Dropdown;
-}
+  }
+});

@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Modal     = require('../../../src/index.js').Modal;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Modal     = require('../../../src/index.js').Modal;
 
 describe('Modal', function () {
   it('should have .ui.modal class by default', function () {
@@ -12,8 +13,8 @@ describe('Modal', function () {
       <Modal></Modal>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('modal');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('modal');
   });
 
   it('should have child by default', function () {
@@ -21,7 +22,7 @@ describe('Modal', function () {
       <Modal>123</Modal>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -29,7 +30,7 @@ describe('Modal', function () {
       <Modal className="custom"></Modal>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have active class with active is true', function () {
@@ -37,6 +38,6 @@ describe('Modal', function () {
       <Modal active={true}></Modal>
     );
 
-    expect(instance.getDOMNode().className).toMatch('active');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('active');
   });
 });

@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Field     = require('../../../src/index.js').Field;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Field     = require('../../../src/index.js').Field;
 
 describe('Field', function () {
   it('should have .field class by default', function () {
@@ -12,7 +13,7 @@ describe('Field', function () {
       <Field></Field>
     );
 
-    expect(instance.getDOMNode().className).toMatch('field');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('field');
   });
 
   it('should have child by default', function () {
@@ -20,7 +21,7 @@ describe('Field', function () {
       <Field>123</Field>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -28,6 +29,6 @@ describe('Field', function () {
       <Field className="custom"></Field>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 });

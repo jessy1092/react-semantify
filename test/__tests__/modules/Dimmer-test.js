@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Dimmer    = require('../../../src/index.js').Dimmer;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Dimmer    = require('../../../src/index.js').Dimmer;
 
 describe('Dimmer', function () {
   it('should have .ui.dimmer class by default', function () {
@@ -12,8 +13,8 @@ describe('Dimmer', function () {
       <Dimmer></Dimmer>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('dimmer');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('dimmer');
   });
 
   it('should have child by default', function () {
@@ -21,7 +22,7 @@ describe('Dimmer', function () {
       <Dimmer>123</Dimmer>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -29,7 +30,7 @@ describe('Dimmer', function () {
       <Dimmer className="custom"></Dimmer>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have disabled class with disabled is true', function () {
@@ -37,7 +38,7 @@ describe('Dimmer', function () {
       <Dimmer disabled={true}></Dimmer>
     );
 
-    expect(instance.getDOMNode().className).toMatch('disabled');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('disabled');
   });
 
   it('should have active class with active is true', function () {
@@ -45,6 +46,6 @@ describe('Dimmer', function () {
       <Dimmer active={true}></Dimmer>
     );
 
-    expect(instance.getDOMNode().className).toMatch('active');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('active');
   });
 });

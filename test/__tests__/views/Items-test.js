@@ -2,9 +2,10 @@
 
 jest.dontMock('../../../src/index.js');
 
-var React     = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Items     = require('../../../src/index.js').Items;
+let ReactDOM  = require('react-dom');
+let React     = require('react');
+let TestUtils = require('react-addons-test-utils');
+let Items     = require('../../../src/index.js').Items;
 
 describe('Items', function () {
   it('should have .ui.items class by default', function () {
@@ -12,8 +13,8 @@ describe('Items', function () {
       <Items></Items>
     );
 
-    expect(instance.getDOMNode().className).toMatch('ui');
-    expect(instance.getDOMNode().className).toMatch('items');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('ui');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('items');
   });
 
   it('should have child by default', function () {
@@ -21,7 +22,7 @@ describe('Items', function () {
       <Items>123</Items>
     );
 
-    expect(instance.getDOMNode().textContent).toMatch('123');
+    expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
   it('should have custom class with custom className', function () {
@@ -29,7 +30,7 @@ describe('Items', function () {
       <Items className="custom"></Items>
     );
 
-    expect(instance.getDOMNode().className).toMatch('custom');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
   it('should have link class with type is link', function () {
@@ -37,7 +38,7 @@ describe('Items', function () {
       <Items type='link'></Items>
     );
 
-    expect(instance.getDOMNode().className).toMatch('link');
+    expect(ReactDOM.findDOMNode(instance).className).toMatch('link');
   });
 
 });
