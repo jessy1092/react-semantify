@@ -1,0 +1,7 @@
+{
+  "name": "react-semantify-website",
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "semantic-ui": "^2.1.6"
+  }
+}

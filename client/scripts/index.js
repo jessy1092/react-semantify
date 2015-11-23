@@ -1,8 +1,3 @@
-"use strict";
-import $ from 'jquery';
-global.$ = global.jQuery = $;
-import 'semantic-ui/dist/semantic.js';
-
 import React        from 'react';
 import ReactDOM     from 'react-dom';
 import Sidebar      from '../../src/components/Sidebar.jsx';

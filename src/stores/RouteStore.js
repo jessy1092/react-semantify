@@ -2,7 +2,6 @@
 
 import AppDispatcher  from '../dispatcher/AppDispatcher';
 import {EventEmitter} from 'events';
-import util           from 'util';
 import RouteConfig    from './RouteConfig.js';
 import RouteConstants from '../constants/RouteConstants';
 

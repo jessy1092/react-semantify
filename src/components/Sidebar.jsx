@@ -25,26 +25,24 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <Menu className="ui inverted">
-          <Item className="header">Basic</Item>
-          <Item>
-            <Menu className="inverted">
-              {this.renderElements('Basic')}
-            </Menu>
-          </Item>
-          <Item className="header">Elements</Item>
-          <Item>
-            <Menu className="inverted">
-              {this.renderElements('Elements')}
-            </Menu>
-          </Item>
-          <Item className="header">Modules</Item>
-          <Item>
-            <Menu className="inverted">
-              {this.renderElements('Modules')}
-            </Menu>
-          </Item>
-        </Menu>
+        <Item className="header">Basic</Item>
+        <Item>
+          <Menu className="inverted vertical">
+            {this.renderElements('Basic')}
+          </Menu>
+        </Item>
+        <Item className="header">Elements</Item>
+        <Item>
+          <Menu className="inverted vertical">
+            {this.renderElements('Elements')}
+          </Menu>
+        </Item>
+        <Item className="header">Modules</Item>
+        <Item>
+          <Menu className="inverted vertical">
+            {this.renderElements('Modules')}
+          </Menu>
+        </Item>
       </div>
     );
   },
@@ -70,7 +68,7 @@ export default React.createClass({
   },
 
   _onChange() {
-    this.setState(RouteStore.getAll());
+    this.setState({routes: RouteStore.getAll()});
   }
 
 });
