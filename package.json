@@ -1,7 +1,7 @@
 {
   "name": "react-semantify-website",
   "description": "Semantic-ui implement by react component. Dev mode.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "contributor": [
     {
       "name": "Lee",
@@ -14,7 +14,7 @@
     "postinstall": "bower install --allow-root"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": ">=4.x"
   },
   "dependencies": {
     "flux": "^2.0.1",
