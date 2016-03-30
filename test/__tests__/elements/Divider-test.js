@@ -32,4 +32,20 @@ describe('Divider', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should set custom id', function () {
+    var instance = TestUtils.renderIntoDocument(
+      <Divider id="custom"></Divider>
+    );
+
+    expect(ReactDOM.findDOMNode(instance).id).toEqual('custom');
+  });
+
+  it('should set custom attribute', function () {
+    var instance = TestUtils.renderIntoDocument(
+      <Divider data-custom="custom"></Divider>
+    );
+
+    expect(ReactDOM.findDOMNode(instance).getAttribute('data-custom')).toEqual('custom');
+  });
 });

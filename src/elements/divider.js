@@ -9,7 +9,7 @@ const Divider = React.createClass({
 
   render: function () {
     return (
-      <div className={this.getClassName(defaultClassName)}>
+      <div {...this.props} className={this.getClassName(defaultClassName)}>
         {this.props.children}
       </div>
     );

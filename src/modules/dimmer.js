@@ -15,7 +15,7 @@ const Dimmer = React.createClass({
     let {className, color, type, disabled, active, ...other} = this.props;
 
     return (
-      <Unit
+      <Unit {...other}
         className={this.getClassName(defaultClassName)}
         color="null"
         type="div"
