@@ -1,8 +1,8 @@
 "use strict";
 
 import React        from 'react';
-import ExampleBlock from '../components/ExampleBlock.jsx';
-import PageTitle    from '../components/PageTitle.jsx';
+import ExampleBlock from '../../components/ExampleBlock.jsx';
+import PageTitle    from '../../components/PageTitle.jsx';
 
 import {Button, Divider, Header} from 'react-semantify';
 

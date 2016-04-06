@@ -9,11 +9,17 @@ export default {
 
   'Elements': [{
       name: 'Button',
-      page: require('../pages/ButtonPage.jsx')
+      page: require('../pages/Elements/ButtonPage.jsx')
     }, {
       name: 'Divider',
-      page: require('../pages/DividerPage.jsx')
-    }
+      page: require('../pages/Elements/DividerPage.jsx')
+    }, {
+      name: 'Flag',
+      page: require('../pages/Elements/FlagPage.jsx')
+  }, {
+      name: 'Icon',
+      page: require('../pages/Elements/IconPage.jsx')
+  }
   ],
 
   'Collections': [],
