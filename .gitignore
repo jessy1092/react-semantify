@@ -5,3 +5,5 @@ _public/
 
 # bower
 bower_components/
+
+.idea
