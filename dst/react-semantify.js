@@ -1,6 +1,6 @@
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.Semantify = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*!
-  Copyright (c) 2015 Jed Watson.
+  Copyright (c) 2016 Jed Watson.
   Licensed under the MIT License (MIT), see
   http://jedwatson.github.io/classnames
 */
@@ -12,7 +12,7 @@
 	var hasOwn = {}.hasOwnProperty;
 
 	function classNames () {
-		var classes = '';
+		var classes = [];
 
 		for (var i = 0; i < arguments.length; i++) {
 			var arg = arguments[i];
@@ -21,26 +21,26 @@
 			var argType = typeof arg;
 
 			if (argType === 'string' || argType === 'number') {
-				classes += ' ' + arg;
+				classes.push(arg);
 			} else if (Array.isArray(arg)) {
-				classes += ' ' + classNames.apply(null, arg);
+				classes.push(classNames.apply(null, arg));
 			} else if (argType === 'object') {
 				for (var key in arg) {
 					if (hasOwn.call(arg, key) && arg[key]) {
-						classes += ' ' + key;
+						classes.push(key);
 					}
 				}
 			}
 		}
 
-		return classes.substr(1);
+		return classes.join(' ');
 	}
 
 	if (typeof module !== 'undefined' && module.exports) {
 		module.exports = classNames;
 	} else if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
 		// register as 'classnames', consistent with npm package name
-		define('classnames', function () {
+		define('classnames', [], function () {
 			return classNames;
 		});
 	} else {
@@ -51,11 +51,11 @@
 },{}],2:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -73,6 +73,7 @@ var defaultClassName = 'ui breadcrumb';
 
 var Breadcrumb = _react2.default.createClass({
   displayName: 'Breadcrumb',
+
 
   mixins: [_classGenerator2.default],
 
@@ -95,11 +96,11 @@ exports.default = Breadcrumb;
 },{"../mixins/classGenerator":33}],3:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -117,6 +118,7 @@ var defaultClassName = 'ui form';
 
 var Form = _react2.default.createClass({
   displayName: 'Form',
+
 
   mixins: [_classGenerator2.default],
 
@@ -139,11 +141,11 @@ exports.default = Form;
 },{"../mixins/classGenerator":33}],4:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -161,6 +163,7 @@ var defaultClassName = 'ui grid';
 
 var Grid = _react2.default.createClass({
   displayName: 'Grid',
+
 
   mixins: [_classGenerator2.default],
 
@@ -183,11 +186,11 @@ exports.default = Grid;
 },{"../mixins/classGenerator":33}],5:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -205,6 +208,7 @@ var defaultClassName = 'ui menu';
 
 var Menu = _react2.default.createClass({
   displayName: 'Menu',
+
 
   mixins: [_classGenerator2.default],
 
@@ -227,11 +231,11 @@ exports.default = Menu;
 },{"../mixins/classGenerator":33}],6:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -249,6 +253,7 @@ var defaultClassName = 'ui message';
 
 var Message = _react2.default.createClass({
   displayName: 'Message',
+
 
   mixins: [_classGenerator2.default],
 
@@ -271,11 +276,11 @@ exports.default = Message;
 },{"../mixins/classGenerator":33}],7:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -293,6 +298,7 @@ var defaultClassName = 'ui table';
 
 var Table = _react2.default.createClass({
   displayName: 'Table',
+
 
   mixins: [_classGenerator2.default],
 
@@ -315,11 +321,11 @@ exports.default = Table;
 },{"../mixins/classGenerator":33}],8:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -337,6 +343,7 @@ var defaultClassName = 'column';
 
 var Column = _react2.default.createClass({
   displayName: 'Column',
+
 
   mixins: [_classGenerator2.default],
 
@@ -359,11 +366,11 @@ exports.default = Column;
 },{"../mixins/classGenerator":33}],9:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -387,6 +394,7 @@ var defaultClassName = 'content';
 
 var Content = _react2.default.createClass({
   displayName: 'Content',
+
 
   mixins: [_classGenerator2.default, _stateSelector2.default],
 
@@ -416,11 +424,11 @@ exports.default = Content;
 },{"../mixins/classGenerator":33,"../mixins/stateSelector":35,"./unit":16}],10:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -438,6 +446,7 @@ var defaultClassName = 'field';
 
 var Field = _react2.default.createClass({
   displayName: 'Field',
+
 
   mixins: [_classGenerator2.default],
 
@@ -460,11 +469,11 @@ exports.default = Field;
 },{"../mixins/classGenerator":33}],11:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -482,6 +491,7 @@ var defaultClassName = 'fields';
 
 var Fields = _react2.default.createClass({
   displayName: 'Fields',
+
 
   mixins: [_classGenerator2.default],
 
@@ -504,11 +514,11 @@ exports.default = Fields;
 },{"../mixins/classGenerator":33}],12:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -526,6 +536,7 @@ var defaultClassName = 'row';
 
 var Row = _react2.default.createClass({
   displayName: 'Row',
+
 
   mixins: [_classGenerator2.default],
 
@@ -548,11 +559,11 @@ exports.default = Row;
 },{"../mixins/classGenerator":33}],13:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -581,6 +592,7 @@ var defaultClassName = 'section';
 var Section = _react2.default.createClass({
   displayName: 'Section',
 
+
   mixins: [_classGenerator2.default, _colorSelector2.default, _typeSelector2.default],
 
   render: function render() {
@@ -606,11 +618,11 @@ exports.default = Section;
 },{"../mixins/classGenerator":33,"../mixins/colorSelector":34,"../mixins/typeSelector":36,"./unit":16}],14:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -628,6 +640,7 @@ var defaultClassName = 'text';
 
 var Text = _react2.default.createClass({
   displayName: 'Text',
+
 
   mixins: [_classGenerator2.default],
 
@@ -650,11 +663,11 @@ exports.default = Text;
 },{"../mixins/classGenerator":33}],15:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -678,6 +691,7 @@ var defaultClassName = 'title';
 
 var Title = _react2.default.createClass({
   displayName: 'Title',
+
 
   mixins: [_classGenerator2.default, _stateSelector2.default],
 
@@ -707,12 +721,12 @@ exports.default = Title;
 },{"../mixins/classGenerator":33,"../mixins/stateSelector":35,"./unit":16}],16:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.Unit = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -728,6 +742,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var Unit = exports.Unit = _react2.default.createClass({
   displayName: 'Unit',
+
 
   propTypes: {
     className: _react2.default.PropTypes.string.isRequired,
@@ -811,11 +826,11 @@ var Unit = exports.Unit = _react2.default.createClass({
 },{"classnames":1}],17:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -843,6 +858,7 @@ var defaultClassName = 'ui button';
 
 var Button = _react2.default.createClass({
   displayName: 'Button',
+
 
   mixins: [_classGenerator2.default, _colorSelector2.default, _stateSelector2.default],
 
@@ -879,6 +895,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _react = (window.React);
 
 var _react2 = _interopRequireDefault(_react);
@@ -894,12 +912,13 @@ var defaultClassName = 'ui divider';
 var Divider = _react2.default.createClass({
   displayName: 'Divider',
 
+
   mixins: [_classGenerator2.default],
 
   render: function render() {
     return _react2.default.createElement(
       'div',
-      { className: this.getClassName(defaultClassName) },
+      _extends({}, this.props, { className: this.getClassName(defaultClassName) }),
       this.props.children
     );
   }
@@ -910,11 +929,11 @@ exports.default = Divider;
 },{"../mixins/classGenerator":33}],19:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -934,6 +953,7 @@ var defaultClassName = 'flag';
 
 var Flag = _react2.default.createClass({
   displayName: 'Flag',
+
 
   mixins: [_classGenerator2.default],
 
@@ -957,11 +977,11 @@ exports.default = Flag;
 },{"../commons/unit":16,"../mixins/classGenerator":33}],20:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -994,6 +1014,7 @@ var defaultClassName = 'ui header';
 var Header = _react2.default.createClass({
   displayName: 'Header',
 
+
   mixins: [_classGenerator2.default, _colorSelector2.default, _typeSelector2.default, _stateSelector2.default],
 
   render: function render() {
@@ -1021,11 +1042,11 @@ exports.default = Header;
 },{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/colorSelector":34,"../mixins/stateSelector":35,"../mixins/typeSelector":36}],21:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -1054,6 +1075,7 @@ var defaultClassName = 'icon';
 var Icon = _react2.default.createClass({
   displayName: 'Icon',
 
+
   mixins: [_classGenerator2.default, _colorSelector2.default, _stateSelector2.default],
 
   render: function render() {
@@ -1077,11 +1099,11 @@ exports.default = Icon;
 },{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/colorSelector":34,"../mixins/stateSelector":35}],22:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -1105,6 +1127,7 @@ var defaultClassName = 'ui image';
 
 var Image = _react2.default.createClass({
   displayName: 'Image',
+
 
   mixins: [_classGenerator2.default, _stateSelector2.default],
 
@@ -1133,11 +1156,11 @@ exports.default = Image;
 },{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],23:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -1161,6 +1184,7 @@ var defaultClassName = 'ui input';
 
 var Input = _react2.default.createClass({
   displayName: 'Input',
+
 
   mixins: [_classGenerator2.default, _stateSelector2.default],
 
@@ -1205,11 +1229,11 @@ exports.default = Input;
 },{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],24:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -1238,6 +1262,7 @@ var defaultClassName = 'ui label';
 var Label = _react2.default.createClass({
   displayName: 'Label',
 
+
   mixins: [_classGenerator2.default, _colorSelector2.default, _typeSelector2.default],
 
   render: function render() {
@@ -1264,11 +1289,11 @@ exports.default = Label;
 },{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/colorSelector":34,"../mixins/typeSelector":36}],25:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -1286,6 +1311,7 @@ var defaultClassName = 'ui list';
 
 var List = _react2.default.createClass({
   displayName: 'List',
+
 
   mixins: [_classGenerator2.default],
 
@@ -1308,11 +1334,11 @@ exports.default = List;
 },{"../mixins/classGenerator":33}],26:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -1336,6 +1362,7 @@ var defaultClassName = 'ui loader';
 
 var Loader = _react2.default.createClass({
   displayName: 'Loader',
+
 
   mixins: [_classGenerator2.default, _stateSelector2.default],
 
@@ -1363,11 +1390,11 @@ exports.default = Loader;
 },{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],27:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -1385,6 +1412,7 @@ var defaultClassName = 'ui rail';
 
 var Rail = _react2.default.createClass({
   displayName: 'Rail',
+
 
   mixins: [_classGenerator2.default],
 
@@ -1407,11 +1435,11 @@ exports.default = Rail;
 },{"../mixins/classGenerator":33}],28:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -1435,6 +1463,7 @@ var defaultClassName = 'ui reveal';
 
 var Reveal = _react2.default.createClass({
   displayName: 'Reveal',
+
 
   mixins: [_classGenerator2.default, _stateSelector2.default],
 
@@ -1461,11 +1490,11 @@ exports.default = Reveal;
 },{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],29:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -1494,6 +1523,7 @@ var defaultClassName = 'ui segment';
 var Segment = _react2.default.createClass({
   displayName: 'Segment',
 
+
   mixins: [_classGenerator2.default, _colorSelector2.default, _stateSelector2.default],
 
   render: function render() {
@@ -1517,11 +1547,11 @@ exports.default = Segment;
 },{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/colorSelector":34,"../mixins/stateSelector":35}],30:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -1545,6 +1575,7 @@ var defaultClassName = 'step';
 
 var Step = _react2.default.createClass({
   displayName: 'Step',
+
 
   mixins: [_classGenerator2.default, _stateSelector2.default],
 
@@ -1573,11 +1604,11 @@ exports.default = Step;
 },{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],31:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -1595,6 +1626,7 @@ var defaultClassName = 'ui steps';
 
 var Steps = _react2.default.createClass({
   displayName: 'Steps',
+
 
   mixins: [_classGenerator2.default],
 
@@ -1896,6 +1928,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
 var _react = (window.React);
 
 var _react2 = _interopRequireDefault(_react);
@@ -1905,8 +1939,6 @@ var _classnames = require('classnames');
 var _classnames2 = _interopRequireDefault(_classnames);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
 
 exports.default = {
 
@@ -2126,6 +2158,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _react = (window.React);
 
 var _react2 = _interopRequireDefault(_react);
@@ -2136,18 +2170,26 @@ var _classGenerator2 = _interopRequireDefault(_classGenerator);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 var defaultClassName = 'ui accordion';
 
 var Accordion = _react2.default.createClass({
   displayName: 'Accordion',
 
+
   mixins: [_classGenerator2.default],
 
   render: function render() {
+    var _props = this.props;
+    var children = _props.children;
+
+    var other = _objectWithoutProperties(_props, ['children']);
+
     return _react2.default.createElement(
       'div',
-      { className: this.getClassName(defaultClassName), ref: 'accordion' },
-      this.props.children
+      _extends({}, other, { className: this.getClassName(defaultClassName), ref: 'accordion' }),
+      children
     );
   },
 
@@ -2171,11 +2213,11 @@ exports.default = Accordion;
 },{"../mixins/classGenerator":33}],38:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -2203,6 +2245,7 @@ var defaultClassName = 'ui checkbox';
 
 var Checkbox = _react2.default.createClass({
   displayName: 'Checkbox',
+
 
   mixins: [_classGenerator2.default, _stateSelector2.default],
 
@@ -2252,6 +2295,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _react = (window.React);
 
 var _react2 = _interopRequireDefault(_react);
@@ -2279,6 +2324,7 @@ var defaultClassName = 'ui dimmer';
 var Dimmer = _react2.default.createClass({
   displayName: 'Dimmer',
 
+
   mixins: [_classGenerator2.default, _stateSelector2.default],
 
   render: function render() {
@@ -2293,12 +2339,12 @@ var Dimmer = _react2.default.createClass({
 
     return _react2.default.createElement(
       _unit.Unit,
-      {
+      _extends({}, other, {
         className: this.getClassName(defaultClassName),
         color: 'null',
         type: 'div',
         disabled: this.getDisabled(),
-        active: this.getActive() },
+        active: this.getActive() }),
       this.props.children
     );
   },
@@ -2323,11 +2369,11 @@ exports.default = Dimmer;
 },{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],40:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -2355,6 +2401,7 @@ var defaultClassName = 'ui dropdown';
 
 var Dropdown = _react2.default.createClass({
   displayName: 'Dropdown',
+
 
   mixins: [_classGenerator2.default, _stateSelector2.default],
 
@@ -2406,11 +2453,11 @@ exports.default = Dropdown;
 },{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],41:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -2438,6 +2485,7 @@ var defaultClassName = 'ui modal';
 
 var Modal = _react2.default.createClass({
   displayName: 'Modal',
+
 
   mixins: [_classGenerator2.default, _stateSelector2.default],
 
@@ -2485,6 +2533,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _react = (window.React);
 
 var _react2 = _interopRequireDefault(_react);
@@ -2495,17 +2545,25 @@ var _classGenerator2 = _interopRequireDefault(_classGenerator);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 var defaultClassName = 'ui popup';
 
 var Popup = _react2.default.createClass({
   displayName: 'Popup',
 
+
   mixins: [_classGenerator2.default],
 
   render: function render() {
+    var _props = this.props;
+    var children = _props.children;
+
+    var other = _objectWithoutProperties(_props, ['children']);
+
     return _react2.default.createElement(
       'div',
-      { className: this.getClassName(defaultClassName) },
+      _extends({}, other, { className: this.getClassName(defaultClassName) }),
       this.props.children
     );
   }
@@ -2516,11 +2574,11 @@ exports.default = Popup;
 },{"../mixins/classGenerator":33}],43:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -2542,6 +2600,7 @@ var defaultClassName = 'ui progress';
 
 var Progress = _react2.default.createClass({
   displayName: 'Progress',
+
 
   mixins: [_classGenerator2.default, _stateSelector2.default],
 
@@ -2599,11 +2658,11 @@ exports.default = Progress;
 },{"../mixins/classGenerator":33,"../mixins/stateSelector":35}],44:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -2621,6 +2680,7 @@ var defaultClassName = 'ui rating';
 
 var Rating = _react2.default.createClass({
   displayName: 'Rating',
+
 
   mixins: [_classGenerator2.default],
 
@@ -2663,11 +2723,11 @@ exports.default = Rating;
 },{"../mixins/classGenerator":33}],45:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -2695,6 +2755,7 @@ var defaultClassName = 'ui search';
 
 var Search = _react2.default.createClass({
   displayName: 'Search',
+
 
   mixins: [_classGenerator2.default, _stateSelector2.default],
 
@@ -2738,11 +2799,11 @@ exports.default = Search;
 },{"../commons/unit":16,"../mixins/classGenerator":33,"../mixins/stateSelector":35}],46:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -2760,6 +2821,7 @@ var defaultClassName = 'ui shape';
 
 var Shap = _react2.default.createClass({
   displayName: 'Shap',
+
 
   mixins: [_classGenerator2.default],
 
@@ -2796,11 +2858,11 @@ exports.default = Shap;
 },{"../mixins/classGenerator":33}],47:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -2818,6 +2880,7 @@ var defaultClassName = 'ui sidebar';
 
 var Sidebar = _react2.default.createClass({
   displayName: 'Sidebar',
+
 
   mixins: [_classGenerator2.default],
 
@@ -2854,11 +2917,11 @@ exports.default = Sidebar;
 },{"../mixins/classGenerator":33}],48:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -2876,6 +2939,7 @@ var defaultClassName = 'ui sticky';
 
 var Sticky = _react2.default.createClass({
   displayName: 'Sticky',
+
 
   mixins: [_classGenerator2.default],
 
@@ -2912,11 +2976,11 @@ exports.default = Sticky;
 },{"../mixins/classGenerator":33}],49:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -2938,6 +3002,7 @@ var defaultClassName = 'ui tab';
 
 var Tab = _react2.default.createClass({
   displayName: 'Tab',
+
 
   mixins: [_classGenerator2.default, _stateSelector2.default],
 
@@ -2985,11 +3050,11 @@ exports.default = Tab;
 },{"../mixins/classGenerator":33,"../mixins/stateSelector":35}],50:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -3007,6 +3072,7 @@ var defaultClassName = 'ui ad';
 
 var Ad = _react2.default.createClass({
   displayName: 'Ad',
+
 
   mixins: [_classGenerator2.default],
 
@@ -3029,11 +3095,11 @@ exports.default = Ad;
 },{"../mixins/classGenerator":33}],51:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -3051,6 +3117,7 @@ var defaultClassName = 'ui card';
 
 var Card = _react2.default.createClass({
   displayName: 'Card',
+
 
   mixins: [_classGenerator2.default],
 
@@ -3073,11 +3140,11 @@ exports.default = Card;
 },{"../mixins/classGenerator":33}],52:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -3095,6 +3162,7 @@ var defaultClassName = 'comment';
 
 var Comment = _react2.default.createClass({
   displayName: 'Comment',
+
 
   mixins: [_classGenerator2.default],
 
@@ -3117,11 +3185,11 @@ exports.default = Comment;
 },{"../mixins/classGenerator":33}],53:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -3139,6 +3207,7 @@ var defaultClassName = 'ui comments';
 
 var Comments = _react2.default.createClass({
   displayName: 'Comments',
+
 
   mixins: [_classGenerator2.default],
 
@@ -3161,11 +3230,11 @@ exports.default = Comments;
 },{"../mixins/classGenerator":33}],54:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -3183,6 +3252,7 @@ var defaultClassName = 'ui feed';
 
 var Feed = _react2.default.createClass({
   displayName: 'Feed',
+
 
   mixins: [_classGenerator2.default],
 
@@ -3205,11 +3275,11 @@ exports.default = Feed;
 },{"../mixins/classGenerator":33}],55:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -3233,6 +3303,7 @@ var defaultClassName = 'item';
 
 var Item = _react2.default.createClass({
   displayName: 'Item',
+
 
   mixins: [_classGenerator2.default, _typeSelector2.default],
 
@@ -3264,6 +3335,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _react = (window.React);
 
 var _react2 = _interopRequireDefault(_react);
@@ -3274,10 +3347,13 @@ var _classGenerator2 = _interopRequireDefault(_classGenerator);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 var defaultClassName = 'ui items';
 
 var Items = _react2.default.createClass({
   displayName: 'Items',
+
 
   mixins: [_classGenerator2.default],
 
@@ -3287,17 +3363,20 @@ var Items = _react2.default.createClass({
   },
 
   render: function render() {
-    var type = '';
+    var _props = this.props;
+    var type = _props.type;
 
-    if (typeof this.props.type != 'undefined') {
-      if (this.props.type == 'link') {
-        type = 'link';
+    var other = _objectWithoutProperties(_props, ['type']);
+
+    if (typeof type !== 'undefined') {
+      if (type !== 'link') {
+        type = '';
       }
     }
 
     return _react2.default.createElement(
       'div',
-      { className: this.getClassName(defaultClassName, type) },
+      _extends({}, other, { className: this.getClassName(defaultClassName, type) }),
       this.props.children
     );
   }
@@ -3308,11 +3387,11 @@ exports.default = Items;
 },{"../mixins/classGenerator":33}],57:[function(require,module,exports){
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = (window.React);
 
@@ -3330,6 +3409,7 @@ var defaultClassName = 'ui statistic';
 
 var Statistic = _react2.default.createClass({
   displayName: 'Statistic',
+
 
   mixins: [_classGenerator2.default],
 

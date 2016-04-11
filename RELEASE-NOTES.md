@@ -1,3 +1,13 @@
+<a name="0.4.2"></a>
+## [0.4.2](https://github.com/jessy1092/react-semantify/compare/v0.4.1...v0.4.2) (2016-04-11)
+
+
+### Bug Fixes
+
+* Transmit the properties into components: divider, accordion, dimmer, popup, item ([d49066a](https://github.com/jessy1092/react-semantify/commit/d49066a))
+
+
+
 <a name="0.4.1"></a>
 ## [0.4.1](//compare/v0.4.0...v0.4.1) (2015-11-22)
 
