@@ -32,4 +32,12 @@ describe('Accordion', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should have custom attribute', function () {
+    var instance = TestUtils.renderIntoDocument(
+      <Accordion data-custom='custom'></Accordion>
+    );
+
+    expect(ReactDOM.findDOMNode(instance).getAttribute('data-custom')).toMatch('custom');
+  });
 });

@@ -8,9 +8,11 @@ const Accordion = React.createClass({
   mixins: [ClassGenerator],
 
   render: function () {
+    let {children, ...other} = this.props;
+
     return (
-      <div className={this.getClassName(defaultClassName)} ref="accordion">
-        {this.props.children}
+      <div {...other} className={this.getClassName(defaultClassName)} ref="accordion">
+        {children}
       </div>
     );
   },

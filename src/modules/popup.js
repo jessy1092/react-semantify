@@ -8,8 +8,10 @@ const Popup = React.createClass({
   mixins: [ClassGenerator],
 
   render: function () {
+    let {children, ...other} = this.props;
+
     return (
-      <div className={this.getClassName(defaultClassName)} >
+      <div {...other} className={this.getClassName(defaultClassName)} >
         {this.props.children}
       </div>
     );

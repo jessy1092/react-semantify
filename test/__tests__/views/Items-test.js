@@ -41,4 +41,12 @@ describe('Items', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('link');
   });
 
+  it('should have custom attribute', function () {
+    var instance = TestUtils.renderIntoDocument(
+      <Items data-custom='custom'></Items>
+    );
+
+    expect(ReactDOM.findDOMNode(instance).getAttribute('data-custom')).toMatch('custom');
+  });
+
 });

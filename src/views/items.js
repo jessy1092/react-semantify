@@ -13,16 +13,16 @@ const Items = React.createClass({
   },
 
   render: function () {
-    let type = '';
+    let {type, ...other} = this.props;
 
-    if (typeof this.props.type != 'undefined') {
-      if (this.props.type == 'link') {
-        type = 'link';
+    if (typeof type !== 'undefined') {
+      if (type !== 'link') {
+        type = '';
       }
     }
 
     return (
-      <div className={this.getClassName(defaultClassName, type)}>
+      <div {...other} className={this.getClassName(defaultClassName, type)}>
         {this.props.children}
       </div>
     );

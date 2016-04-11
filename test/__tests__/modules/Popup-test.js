@@ -32,4 +32,12 @@ describe('Popup', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should have custom attribute', function () {
+    var instance = TestUtils.renderIntoDocument(
+      <Popup data-custom='custom'></Popup>
+    );
+
+    expect(ReactDOM.findDOMNode(instance).getAttribute('data-custom')).toMatch('custom');
+  });
 });
