@@ -6,6 +6,12 @@ let defaultClassName = 'ui popup';
 const Popup = React.createClass({
 
   mixins: [ClassGenerator],
+  
+  componentDidMount = function () {
+    $(ReactDOM.findDOMNode(this)).prev().popup({
+      inline: true,
+    });
+  }
 
   render: function () {
     let {children, ...other} = this.props;
