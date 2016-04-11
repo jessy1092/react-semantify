@@ -1,8 +1,8 @@
 "use strict";
 
 import React        from 'react';
-import ExampleBlock from '../components/ExampleBlock.jsx';
-import PageTitle    from '../components/PageTitle.jsx';
+import ExampleBlock from '../../components/ExampleBlock.jsx';
+import PageTitle    from '../../components/PageTitle.jsx';
 
 import {Button, Divider, Header} from 'react-semantify';
 
@@ -21,6 +21,8 @@ export default React.createClass({
           <ExampleBlock header="Button"
                         sub="A standard button">
             <Button>Button</Button>
+            <Button color="red">Red Button</Button>
+            <Button color="orange">Orange Button</Button>
           </ExampleBlock>
 
           <Header className="large dividing">States</Header>
@@ -28,6 +30,8 @@ export default React.createClass({
           <ExampleBlock header="Active"
                         sub="A button can show it is in active mode">
             <Button active={true}>Button</Button>
+            <Button active={true} color="red">Red Button</Button>
+            <Button active={true} color="orange">Orange Button</Button>
           </ExampleBlock>
 
           <Divider/>
@@ -35,6 +39,8 @@ export default React.createClass({
           <ExampleBlock header="Disabled"
                         sub="A button can show it is in Disabled mode">
             <Button disabled={true}>Button</Button>
+            <Button disabled={true} color="red">Red Button</Button>
+            <Button disabled={true} color="orange">Orange Button</Button>
           </ExampleBlock>
 
           <Divider/>
@@ -42,6 +48,8 @@ export default React.createClass({
           <ExampleBlock header="Loading"
                         sub="A button can show it is in Loading mode">
             <Button loading={true}>Button</Button>
+            <Button loading={true} color="red">Button</Button>
+            <Button loading={true} color="orange">Button</Button>
           </ExampleBlock>
 
         </div>
