@@ -2,6 +2,7 @@
 node_modules/
 _public/
 *.log
+coverage/
 
 # transpile file
 lib/

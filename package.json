@@ -28,7 +28,7 @@
   "scripts": {
     "start": "gulp dev",
     "prepublish": "gulp transpile",
-    "test": "node ./node_modules/jest-cli/bin/jest.js"
+    "test": "node ./node_modules/jest-cli/bin/jest.js --coverage"
   },
   "engines": {
     "node": ">= 0.10.x"
@@ -51,6 +51,7 @@
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
     "browserify-global-shim": "^1.0.0",
+    "coveralls": "^2.11.9",
     "gulp": "git://github.com/gulpjs/gulp.git#4.0",
     "gulp-babel": "^6.1.0",
     "gulp-rename": "^1.2.2",
