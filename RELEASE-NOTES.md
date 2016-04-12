@@ -1,3 +1,13 @@
+<a name="0.4.3"></a>
+## [0.4.3](https://github.com/jessy1092/react-semantify/compare/v0.4.2...v0.4.3) (2016-04-12)
+
+
+### Features
+
+* Support react v15.0 ([b0b7fbd](https://github.com/jessy1092/react-semantify/commit/b0b7fbd))
+
+
+
 <a name="0.4.2"></a>
 ## [0.4.2](https://github.com/jessy1092/react-semantify/compare/v0.4.1...v0.4.2) (2016-04-11)
 

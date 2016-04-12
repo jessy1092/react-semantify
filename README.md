@@ -9,9 +9,9 @@ Integrate Semantic-ui with react components. It depends on Semantic-UI and helps
 [The components' Docs on the github](https://github.com/jessy1092/react-semantify/blob/master/docs)
 
 
-|         | React = 0.12 | React = 0.13.* | React = 0.14.* |
-| ------- | ------------ | -------------- | -------------- |
-| Version | <= 0.2       |  0.3.*         | 0.4.*          |
+|         | React = 0.12 | React = 0.13.* | React >= 0.14.* && React <= 15.* |
+| ------- | ------------ | -------------- | -------------------------------- |
+| Version | <= 0.2       |  0.3.*         | 0.4.*                            |
 
 ## Usage
 
