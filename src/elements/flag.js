@@ -5,14 +5,7 @@ import filter from '../filter';
 
 const defaultClassName = 'flag';
 
-const Basic = React.createClass({
-
-  render: function () {
-    return (
-      <i {...this.props} />
-    );
-  }
-});
+const Basic = (props) => <i {...props}/>;
 
 const Flag = new filter(Basic)
   .classGenerator(defaultClassName)

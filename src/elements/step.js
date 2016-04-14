@@ -2,25 +2,12 @@
 import React from 'react';
 
 import filter from '../filter';
+import Div    from '../commons/div';
 
 const stateArray       = ['active', 'completed', 'disabled'];
 const defaultClassName = 'step';
 
-const Basic = React.createClass({
-
-  render: function () {
-
-    const { props: { children, ...other } } = this;
-
-    return (
-      <div {...other} >
-        {children}
-      </div>
-    );
-  }
-});
-
-const Step = new filter(Basic)
+const Step = new filter(Div)
   .stateFilter(stateArray)
   .classGenerator(defaultClassName)
   .getComposeComponent();

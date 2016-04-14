@@ -2,24 +2,11 @@
 import React from 'react';
 
 import filter from '../filter';
+import Div    from '../commons/div';
 
 const defaultClassName = 'ui menu';
 
-const Basic = React.createClass({
-
-  render: function () {
-
-    const { props: { children, ...other } } = this;
-
-    return (
-      <div {...other} >
-        {children}
-      </div>
-    );
-  }
-});
-
-const Menu = new filter(Basic)
+const Menu = new filter(Div)
   .classGenerator(defaultClassName)
   .getComposeComponent();
 

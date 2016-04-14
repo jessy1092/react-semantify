@@ -5,21 +5,7 @@ import {Unit} from './unit';
 
 const defaultClassName = 'section';
 
-const Basic = React.createClass({
-
-  render: function () {
-
-    const { props: { children, type = 'div', ...other } } = this;
-
-    return (
-      <Unit {...other} type={type} >
-        {this.props.children}
-      </Unit>
-    );
-  }
-});
-
-const Section = new filter(Basic)
+const Section = new filter(Unit)
   .typeFilter()
   .colorFilter()
   .classGenerator(defaultClassName)

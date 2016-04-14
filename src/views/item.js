@@ -10,11 +10,10 @@ const Basic = React.createClass({
 
   render: function () {
 
-    const { props: { children, value, type = 'div', ...other } } = this;
+    const { props: { children, value, ...other } } = this;
 
     return (
       <Unit {...other}
-        type={type}
         data-value={value} >
         {children}
       </Unit>

@@ -2,25 +2,12 @@
 import React from 'react';
 
 import filter from '../filter';
+import Div    from './div';
 
 const stateArray       = ['active'];
 const defaultClassName = 'content';
 
-const Basic = React.createClass({
-
-  render: function () {
-
-    const { props: { children, ...other } } = this;
-
-    return (
-      <div {...other} >
-        {children}
-      </div>
-    );
-  }
-});
-
-const Content = new filter(Basic)
+const Content = new filter(Div)
   .stateFilter(stateArray)
   .classGenerator(defaultClassName)
   .getComposeComponent();

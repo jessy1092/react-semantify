@@ -2,24 +2,11 @@
 import React from 'react';
 
 import filter from '../filter';
+import Div    from '../commons/div';
 
 const defaultClassName = 'ui card';
 
-const Basic = React.createClass({
-
-  render: function () {
-
-    const { props: { children, ...other } } = this;
-
-    return (
-      <div {...other} >
-        {children}
-      </div>
-    );
-  }
-});
-
-const Card = new filter(Basic)
+const Card = new filter(Div)
   .classGenerator(defaultClassName)
   .getComposeComponent();
 

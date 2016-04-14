@@ -2,24 +2,11 @@
 import React from 'react';
 
 import filter from '../filter';
+import Div    from '../commons/div';
 
 const defaultClassName = 'ui comments';
 
-const Basic = React.createClass({
-
-  render: function () {
-
-    const { props: { children, ...other } } = this;
-
-    return (
-      <div {...other} >
-        {children}
-      </div>
-    );
-  }
-});
-
-const Comments = new filter(Basic)
+const Comments = new filter(Div)
   .classGenerator(defaultClassName)
   .getComposeComponent();
 

@@ -2,24 +2,11 @@
 import React from 'react';
 
 import filter from '../filter';
+import Div    from '../commons/div';
 
 const defaultClassName = 'ui list';
 
-const Basic = React.createClass({
-
-  render: function () {
-
-    const { props: { children, ...other } } = this;
-
-    return (
-      <div {...other} >
-        {children}
-      </div>
-    );
-  }
-});
-
-const List = new filter(Basic)
+const List = new filter(Div)
   .classGenerator(defaultClassName)
   .getComposeComponent();
 

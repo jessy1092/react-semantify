@@ -2,24 +2,11 @@
 import React from 'react';
 
 import filter from '../filter';
+import Div    from './div';
 
 const defaultClassName = 'column';
 
-const Basic = React.createClass({
-
-  render: function () {
-
-    const { props: { children, ...other } } = this;
-
-    return (
-      <div {...other} >
-        {children}
-      </div>
-    );
-  }
-});
-
-const Column = new filter(Basic)
+const Column = new filter(Div)
   .classGenerator(defaultClassName)
   .getComposeComponent();
 

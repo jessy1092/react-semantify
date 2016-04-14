@@ -2,24 +2,11 @@
 import React from 'react';
 
 import filter from '../filter';
+import Div    from '../commons/div';
 
 const defaultClassName = 'ui statistic';
 
-const Basic = React.createClass({
-
-  render: function () {
-
-    const { props: { children, ...other } } = this;
-
-    return (
-      <div {...other} >
-        {children}
-      </div>
-    );
-  }
-});
-
-const Statistic = new filter(Basic)
+const Statistic = new filter(Div)
   .classGenerator(defaultClassName)
   .getComposeComponent();
 

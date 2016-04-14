@@ -6,14 +6,7 @@ import filter from '../filter';
 const stateArray       = ['disabled'];
 const defaultClassName = 'ui image';
 
-const Basic = React.createClass({
-
-  render: function () {
-    return (
-      <img {...this.props} />
-    );
-  }
-});
+const Basic = (props) => <img {...props}/>;
 
 const Image = new filter(Basic)
   .stateFilter(stateArray)

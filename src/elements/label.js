@@ -6,21 +6,7 @@ import {Unit} from '../commons/unit';
 
 const defaultClassName = 'ui label';
 
-const Basic = React.createClass({
-
-  render: function () {
-
-    const { props: { children, type = 'div', ...other } } = this;
-
-    return (
-      <Unit {...other} type={type} >
-        {children}
-      </Unit>
-    );
-  }
-});
-
-const Label = new filter(Basic)
+const Label = new filter(Unit)
   .typeFilter()
   .colorFilter()
   .classGenerator(defaultClassName)

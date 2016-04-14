@@ -6,14 +6,7 @@ import filter from '../filter';
 const stateArray       = ['disabled', 'loading'];
 const defaultClassName = 'icon';
 
-const Basic = React.createClass({
-
-  render: function () {
-    return (
-      <i {...this.props} />
-    );
-  }
-});
+const Basic = (props) => <i {...props}/>;
 
 const Icon = new filter(Basic)
   .colorFilter()

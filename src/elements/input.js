@@ -10,12 +10,12 @@ const Basic = React.createClass({
 
   render: function () {
 
-    const { props: { children, placeholder, type, ...other } } = this
+    const { props: { children, placeholder, type, ...other } } = this;
 
     if (typeof children != 'undefined') {
       return (
         <div {...other} >
-          {this.props.children}
+          {children}
         </div>
       );
     } else {

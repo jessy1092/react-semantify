@@ -2,24 +2,11 @@
 import React from 'react';
 
 import filter from '../filter';
+import Div    from '../commons/div';
 
 const defaultClassName = 'ui divider';
 
-const Basic = React.createClass({
-
-  render: function () {
-
-    const { props: { children, ...other } } = this;
-
-    return (
-      <div {...other} >
-        {this.props.children}
-      </div>
-    );
-  }
-});
-
-const Divider = new filter(Basic)
+const Divider = new filter(Div)
   .classGenerator(defaultClassName)
   .getComposeComponent();
 

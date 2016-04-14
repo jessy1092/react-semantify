@@ -2,24 +2,11 @@
 import React from 'react';
 
 import filter from '../filter';
+import Div    from './div';
 
 const defaultClassName = 'row';
 
-const Basic = React.createClass({
-
-  render: function () {
-
-    const { props: { children, ...other } } = this;
-
-    return (
-      <div {...other} >
-        {this.props.children}
-      </div>
-    );
-  }
-});
-
-const Row = new filter(Basic)
+const Row = new filter(Div)
   .classGenerator(defaultClassName)
   .getComposeComponent();
 

@@ -2,24 +2,11 @@
 import React from 'react';
 
 import filter from '../filter';
+import Div    from './div';
 
 const defaultClassName = 'text';
 
-const Basic = React.createClass({
-
-  render: function () {
-
-    const { props: { children, ...other } } = this;
-
-    return (
-      <div {...other} >
-        {this.props.children}
-      </div>
-    );
-  }
-});
-
-const Text = new filter(Basic)
+const Text = new filter(Div)
   .classGenerator(defaultClassName)
   .getComposeComponent();
 
