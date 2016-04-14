@@ -1,30 +1,17 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
-import ColorSelector from '../mixins/colorSelector';
-import TypeSelector from '../mixins/typeSelector';
-import StateSelector from '../mixins/stateSelector';
-import {Unit} from '../commons/unit';
 
-let defaultClassName = 'ui header';
+import filter from '../filter';
+import Unit from '../commons/unit';
 
-const Header = React.createClass({
+const stateArray       = ['disabled'];
+const defaultClassName = 'ui header';
 
-  mixins: [ClassGenerator, ColorSelector, TypeSelector, StateSelector],
-
-  render: function () {
-
-    let {className, type, color, ...other} = this.props;
-
-    return (
-      <Unit {...other}
-        className={this.getClassName(defaultClassName)}
-        type={this.getType()}
-        color={this.getColor()}
-        disabled={this.getDisabled()}>
-        {this.props.children}
-      </Unit>
-    );
-  }
-});
+const Header = new filter(Unit)
+  .typeFilter()
+  .colorFilter()
+  .stateFilter(stateArray)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Header;

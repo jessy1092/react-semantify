@@ -1,28 +1,29 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
-import TypeSelector from '../mixins/typeSelector';
-import {Unit} from '../commons/unit';
 
-let defaultClassName = 'item';
+import filter from '../filter';
+import Unit from '../commons/unit';
 
-const Item = React.createClass({
+const defaultClassName = 'item';
 
-  mixins: [ClassGenerator, TypeSelector],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, type, ...other} = this.props;
+    const { props: { children, value, ...other } } = this;
 
     return (
       <Unit {...other}
-        className={this.getClassName(defaultClassName)}
-        type={this.getType()}
-        color="null"
-        value={this.props.value} >
-        {this.props.children}
+        data-value={value} >
+        {children}
       </Unit>
     );
   }
 });
+
+const Item = new filter(Basic)
+  .typeFilter()
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Item;

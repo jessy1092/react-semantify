@@ -1,29 +1,17 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
-import ColorSelector from '../mixins/colorSelector';
-import StateSelector from '../mixins/stateSelector';
-import {Unit} from '../commons/unit';
 
-let defaultClassName = 'icon';
+import filter from '../filter';
 
-const Icon = React.createClass({
+const stateArray       = ['disabled', 'loading'];
+const defaultClassName = 'icon';
 
-  mixins: [ClassGenerator, ColorSelector, StateSelector],
+const Basic = (props) => <i {...props}/>;
 
-  render: function () {
-
-    let {className, color, ...other} = this.props;
-
-    return (
-      <Unit {...other}
-        className={this.getClassName(defaultClassName)}
-        type="icon"
-        color={this.getColor()}
-        disabled={this.getDisabled()}
-        loading={this.getLoading()}>
-      </Unit>
-    );
-  }
-});
+const Icon = new filter(Basic)
+  .colorFilter()
+  .stateFilter(stateArray)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Icon;

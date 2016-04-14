@@ -1,22 +1,13 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'comment';
+import filter from '../filter';
+import Div    from '../commons/div';
 
-const Comment = React.createClass({
+const defaultClassName = 'comment';
 
-  mixins: [ClassGenerator],
-
-  render: function () {
-
-    let {className, ...other} = this.props;
-
-    return (
-      <div {...other} className={this.getClassName(defaultClassName)} >
-        {this.props.children}
-      </div>
-    );
-  }
-});
+const Comment = new filter(Div)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Comment;

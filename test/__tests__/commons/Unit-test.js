@@ -2,93 +2,59 @@
 
 jest.dontMock('../../../src/commons/unit.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-var Unit      = require('../../../src/commons/unit.js').Unit;
+import ReactDOM  from 'react-dom'
+import React     from 'react'
+import TestUtils from 'react-addons-test-utils'
+import Unit      from '../../../src/commons/unit.js';
 
 describe('Unit', function () {
   it('should have child by default', function () {
     var instance = TestUtils.renderIntoDocument(
-      <Unit
-        className="custom"
-        color="null"
-        type="div"
-        disabled={false}
-        active={false}
-        loading={false}
-        focus={false}
-        error={false}
-        completed={false}
-        readOnly={false}>
-          123
-      </Unit>
+      <Unit>123</Unit>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
+  it('should be <div /> tag by default', function () {
+    var instance = TestUtils.renderIntoDocument(
+      <Unit />
+    );
+
+    expect(ReactDOM.findDOMNode(instance).tagName).toEqual('DIV');
+  });
+
   it('should have custom class with custom className', function () {
     var instance = TestUtils.renderIntoDocument(
-      <Unit
-        className="custom"
-        color="null"
-        type="div"
-        disabled={false}
-        active={false}
-        loading={false}
-        focus={false}
-        error={false}
-        completed={false}
-        readOnly={false}>
+      <Unit className="custom" >
       </Unit>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
-  it('should have blue class with color is blue', function () {
+  it('should set <a /> tag with link type', function () {
     var instance = TestUtils.renderIntoDocument(
-      <Unit
-        className="custom"
-        color="blue"
-        type="div"
-        disabled={false}
-        active={false}
-        loading={false}
-        focus={false}
-        error={false}
-        completed={false}
-        readOnly={false}>
-      </Unit>
+      <Unit type="link" />
     );
 
-    expect(ReactDOM.findDOMNode(instance).className).toMatch('blue');
+    expect(ReactDOM.findDOMNode(instance).tagName).toMatch('A');
   });
 
-  it('should have props class with props is true', function () {
+  it('should set <img /> tag with link img', function () {
     var instance = TestUtils.renderIntoDocument(
-      <Unit
-        className="custom"
-        color="null"
-        type="div"
-        disabled={true}
-        active={true}
-        loading={true}
-        focus={true}
-        error={true}
-        completed={true}
-        readOnly={true}>
-      </Unit>
+      <Unit type="img" />
     );
 
-    expect(ReactDOM.findDOMNode(instance).className).toMatch('disabled');
-    expect(ReactDOM.findDOMNode(instance).className).toMatch('active');
-    expect(ReactDOM.findDOMNode(instance).className).toMatch('loading');
-    expect(ReactDOM.findDOMNode(instance).className).toMatch('focus');
-    expect(ReactDOM.findDOMNode(instance).className).toMatch('error');
-    expect(ReactDOM.findDOMNode(instance).className).toMatch('completed');
-    expect(ReactDOM.findDOMNode(instance).className).toMatch('read-only');
+    expect(ReactDOM.findDOMNode(instance).tagName).toMatch('IMG');
+  });
+
+  it('should set <i /> tag with link icon', function () {
+    var instance = TestUtils.renderIntoDocument(
+      <Unit type="icon" />
+    );
+
+    expect(ReactDOM.findDOMNode(instance).tagName).toMatch('I');
   });
 
   it('should call onClick callback when unit click', function () {
@@ -96,18 +62,7 @@ describe('Unit', function () {
     var clickOp = jest.genMockFunction();
 
     var instance = TestUtils.renderIntoDocument(
-      <Unit
-        className="custom"
-        color="null"
-        type="div"
-        disabled={true}
-        active={true}
-        loading={true}
-        focus={true}
-        error={true}
-        completed={true}
-        readOnly={true}
-        onClick={clickOp}>
+      <Unit onClick={clickOp}>
           123
       </Unit>
     );

@@ -1,22 +1,13 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'text';
+import filter from '../filter';
+import Div    from './div';
 
-const Text = React.createClass({
+const defaultClassName = 'text';
 
-  mixins: [ClassGenerator],
-
-  render: function () {
-
-    let {className, ...other} = this.props;
-
-    return (
-      <div {...other} className={this.getClassName(defaultClassName)} >
-        {this.props.children}
-      </div>
-    );
-  }
-});
+const Text = new filter(Div)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Text;

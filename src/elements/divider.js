@@ -1,19 +1,13 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'ui divider';
+import filter from '../filter';
+import Div    from '../commons/div';
 
-const Divider = React.createClass({
+const defaultClassName = 'ui divider';
 
-  mixins: [ClassGenerator],
-
-  render: function () {
-    return (
-      <div {...this.props} className={this.getClassName(defaultClassName)}>
-        {this.props.children}
-      </div>
-    );
-  }
-});
+const Divider = new filter(Div)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Divider;

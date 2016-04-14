@@ -1,25 +1,14 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
-import {Unit} from '../commons/unit';
 
-let defaultClassName = 'flag';
+import filter from '../filter';
 
-const Flag = React.createClass({
+const defaultClassName = 'flag';
 
-  mixins: [ClassGenerator],
+const Basic = (props) => <i {...props}/>;
 
-  render: function () {
-
-    let {className, type, color, ...other} = this.props;
-
-    return (
-      <Unit {...other}
-        className={this.getClassName(defaultClassName)}
-        type="icon"
-        color="null">
-      </Unit>
-    );
-  }
-});
+const Flag = new filter(Basic)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Flag;

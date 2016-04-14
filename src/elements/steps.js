@@ -1,22 +1,13 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'ui steps';
+import filter from '../filter';
+import Div    from '../commons/div';
 
-const Steps = React.createClass({
+const defaultClassName = 'ui steps';
 
-  mixins: [ClassGenerator],
-
-  render: function () {
-
-    let {className, ...other} = this.props;
-
-    return (
-      <div {...other} className={this.getClassName(defaultClassName)} >
-        {this.props.children}
-      </div>
-    );
-  }
-});
+const Steps = new filter(Div)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Steps;

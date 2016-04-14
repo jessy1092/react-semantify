@@ -1,22 +1,13 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'row';
+import filter from '../filter';
+import Div    from './div';
 
-const Row = React.createClass({
+const defaultClassName = 'row';
 
-  mixins: [ClassGenerator],
-
-  render: function () {
-
-    let {className, ...other} = this.props;
-
-    return (
-      <div {...other} className={this.getClassName(defaultClassName)} >
-        {this.props.children}
-      </div>
-    );
-  }
-});
+const Row = new filter(Div)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Row;

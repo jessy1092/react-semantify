@@ -1,43 +1,43 @@
+
 import React from 'react';
-import ReactDOM from 'react-dom';
-import ClassGenerator from '../mixins/classGenerator';
-import StateSelector from '../mixins/stateSelector';
-import {Unit} from '../commons/unit';
 
-let defaultClassName = 'ui search';
+import filter from '../filter';
 
-const Search = React.createClass({
+const stateArray = ['loading'];
+const defaultClassName = 'ui search';
 
-  mixins: [ClassGenerator, StateSelector],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, color, type, active, ...other} = this.props;
+    const { props: { children, ...other } } = this
 
     return (
-      <Unit {...other}
-        className={this.getClassName(defaultClassName)}
-        color="null"
-        type="div"
-        loading={this.getLoading()}>
-        {this.props.children}
-      </Unit>
+      <div {...other} ref="search" >
+        {children}
+      </div>
     );
   },
 
   componentDidMount: function () {
-    if (typeof this.props.init != 'undefined') {
-      if (this.props.init === false) {
-        return;
-      }
 
-      if (this.props.init === true) {
-        $(ReactDOM.findDOMNode(this)).search();
-      } else {
-        $(ReactDOM.findDOMNode(this)).search(this.props.init);
-      }
+    const { props: { init = false } } = this;
+
+    if (init === false) {
+      return;
+    }
+
+    if (init === true) {
+      $(this.refs.search).search();
+    } else {
+      $(this.refs.search).search(init);
     }
   }
 });
+
+const Search = new filter(Basic)
+  .stateFilter(stateArray)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Search;

@@ -1,22 +1,13 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'ui card';
+import filter from '../filter';
+import Div    from '../commons/div';
 
-const Card = React.createClass({
+const defaultClassName = 'ui card';
 
-  mixins: [ClassGenerator],
-
-  render: function () {
-
-    let {className, ...other} = this.props;
-
-    return (
-      <div {...other} className={this.getClassName(defaultClassName)} >
-        {this.props.children}
-      </div>
-    );
-  }
-});
+const Card = new filter(Div)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Card;

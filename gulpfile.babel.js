@@ -20,8 +20,7 @@ gulp.task('browserify', () => {
   return browserify('./src/index.js', {standalone: 'Semantify'})
     .transform('babelify', {presets: ['es2015', 'react', 'stage-0']})
     .transform(globalShim.configure({
-      'react': 'React',
-      'react-dom': 'ReactDOM'
+      'react': 'React'
     }))
     .bundle()
     .pipe(source('react-semantify.js'))

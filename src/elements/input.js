@@ -1,47 +1,38 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
-import StateSelector from '../mixins/stateSelector';
-import {Unit} from '../commons/unit';
 
-let defaultClassName = 'ui input';
+import filter from '../filter';
 
-const Input = React.createClass({
+const stateArray       = ['loading', 'focus', 'error'];
+const defaultClassName = 'ui input';
 
-  mixins: [ClassGenerator, StateSelector],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, ...other} = this.props;
+    const { props: { children, placeholder, type, ...other } } = this;
 
-    if (typeof this.props.children != 'undefined') {
+    if (typeof children != 'undefined') {
       return (
-        <Unit {...other}
-          className={this.getClassName(defaultClassName)}
-          type="div"
-          color="null"
-          loading={this.getLoading()}
-          focus={this.getFocus()}
-          error={this.getError()}>
-          {this.props.children}
-        </Unit>
+        <div {...other} >
+          {children}
+        </div>
       );
     } else {
       return (
-        <Unit
-          className={this.getClassName(defaultClassName)}
-          type="div"
-          color="null"
-          loading={this.getLoading()}
-          focus={this.getFocus()}
-          error={this.getError()}>
-          <input {...other}
-            placeholder={this.props.placeholder}
-            type={this.props.type}/>
-        </Unit>
+        <div {...other}>
+          <input
+            placeholder={placeholder}
+            type={type}/>
+        </div>
       )
     }
-
   }
 });
+
+const Input = new filter(Basic)
+  .stateFilter(stateArray)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Input;

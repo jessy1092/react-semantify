@@ -1,22 +1,13 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'ui feed';
+import filter from '../filter';
+import Div    from '../commons/div';
 
-const Feed = React.createClass({
+const defaultClassName = 'ui feed';
 
-  mixins: [ClassGenerator],
-
-  render: function () {
-
-    let {className, ...other} = this.props;
-
-    return (
-      <div {...other} className={this.getClassName(defaultClassName)} >
-        {this.props.children}
-      </div>
-    );
-  }
-});
+const Feed = new filter(Div)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Feed;

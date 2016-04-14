@@ -1,22 +1,13 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'ui breadcrumb';
+import filter from '../filter';
+import Div    from '../commons/div';
 
-const Breadcrumb = React.createClass({
+const defaultClassName = 'ui breadcrumb';
 
-  mixins: [ClassGenerator],
-
-  render: function () {
-
-    let {className, ...other} = this.props;
-
-    return (
-      <div {...other} className={this.getClassName(defaultClassName)} >
-        {this.props.children}
-      </div>
-    );
-  }
-});
+const Breadcrumb = new filter(Div)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Breadcrumb;

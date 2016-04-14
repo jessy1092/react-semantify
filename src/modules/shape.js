@@ -1,36 +1,41 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'ui shape';
+import filter from '../filter';
 
-const Shap = React.createClass({
+const defaultClassName = 'ui shape';
 
-  mixins: [ClassGenerator],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, ...other} = this.props;
+    const { props: { children, ...other } } = this;
 
     return (
-      <div {...other} className={this.getClassName(defaultClassName)} ref="shape">
-        {this.props.children}
+      <div {...other} ref="shape">
+        {children}
       </div>
     );
   },
 
   componentDidMount: function () {
-    if (typeof this.props.init != 'undefined') {
-      if (this.props.init === false) {
-        return;
-      }
 
-      if (this.props.init === true) {
-        $(this.refs.shape).shape();
-      } else {
-        $(this.refs.shape).shape(this.props.init);
-      }
+    const { props: { init = false } } = this;
+
+    if (init === false) {
+      return;
+    }
+
+    if (init === true) {
+      $(this.refs.shape).shape();
+    } else {
+      $(this.refs.shape).shape(init);
     }
   }
 });
+
+const Shap = new filter(Basic)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Shap;

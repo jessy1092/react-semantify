@@ -1,22 +1,13 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'field';
+import filter from '../filter';
+import Div    from './div';
 
-const Field = React.createClass({
+const defaultClassName = 'field';
 
-  mixins: [ClassGenerator],
-
-  render: function () {
-
-    let {className, ...other} = this.props;
-
-    return (
-      <div {...other} className={this.getClassName(defaultClassName)} >
-        {this.props.children}
-      </div>
-    );
-  }
-});
+const Field = new filter(Div)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Field;

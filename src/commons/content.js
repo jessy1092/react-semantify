@@ -1,28 +1,15 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
-import StateSelector from '../mixins/stateSelector';
-import {Unit} from './unit';
 
-let defaultClassName = 'content';
+import filter from '../filter';
+import Div    from './div';
 
-const Content = React.createClass({
+const stateArray       = ['active'];
+const defaultClassName = 'content';
 
-  mixins: [ClassGenerator, StateSelector],
-
-  render: function () {
-
-    let {className, type, color, active, ...other} = this.props;
-
-    return (
-      <Unit {...other}
-        className={this.getClassName(defaultClassName)}
-        type="div"
-        color="null"
-        active={this.getActive()}>
-        {this.props.children}
-      </Unit>
-    );
-  }
-});
+const Content = new filter(Div)
+  .stateFilter(stateArray)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Content;

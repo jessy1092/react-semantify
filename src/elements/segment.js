@@ -1,29 +1,16 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
-import ColorSelector from '../mixins/colorSelector';
-import StateSelector from '../mixins/stateSelector';
-import {Unit} from '../commons/unit';
 
-let defaultClassName = 'ui segment';
+import filter from '../filter';
+import Div    from '../commons/div';
 
-const Segment = React.createClass({
+const stateArray       = ['disabled', 'loading'];
+const defaultClassName = 'ui segment';
 
-  mixins: [ClassGenerator, ColorSelector, StateSelector],
-
-  render: function () {
-
-    let {className, color, ...other} = this.props;
-
-    return (
-      <Unit {...other}
-        className={this.getClassName(defaultClassName)}
-        type="div"
-        color={this.getColor()}
-        disabled={this.getDisabled()}
-        loading={this.getLoading()}>
-      </Unit>
-    );
-  }
-});
+const Segment = new filter(Div)
+  .colorFilter()
+  .stateFilter(stateArray)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Segment;

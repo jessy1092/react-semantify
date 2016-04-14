@@ -1,0 +1,45 @@
+
+import React from 'react';
+
+const keyMap = {
+  'readOnly': 'read-only'
+};
+
+export default function (stateArray, ComposeComponent) {
+
+  class HigherOrderComponent extends React.Component {
+
+    render() {
+      let { props: { className, children, ...other } } = this;
+
+      stateArray.forEach((key) => {
+        if (key in other) {
+
+          if (other[key]) {
+            if (key in keyMap) {
+              className += ' ' + keyMap[key];
+            } else {
+              className += ' ' + key;
+            }
+          }
+
+          delete other[key];
+        }
+      });
+
+      return (
+        <ComposeComponent className={className} {...other} >
+          {children}
+        </ComposeComponent>
+      );
+    }
+  }
+
+  let propTypes = {};
+
+  stateArray.forEach(key => propTypes[key] = React.PropTypes.bool);
+
+  HigherOrderComponent.propTypes = propTypes;
+
+  return HigherOrderComponent;
+}

@@ -1,32 +1,30 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'ui items';
+import filter from '../filter';
 
-const Items = React.createClass({
+const defaultClassName = 'ui items';
 
-  mixins: [ClassGenerator],
-
-  propTypes: {
-    className: React.PropTypes.string,
-    type: React.PropTypes.string
-  },
+const Basic = React.createClass({
 
   render: function () {
-    let {type, ...other} = this.props;
 
-    if (typeof type !== 'undefined') {
-      if (type !== 'link') {
-        type = '';
-      }
+    let { props: { className, children, type = '', ...other } } = this;
+
+    if (type === 'link') {
+      className += ' link';
     }
 
     return (
-      <div {...other} className={this.getClassName(defaultClassName, type)}>
-        {this.props.children}
+      <div {...other} className={className}>
+        {children}
       </div>
     );
   }
 });
+
+const Items = new filter(Basic)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Items;
