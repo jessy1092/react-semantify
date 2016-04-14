@@ -2,10 +2,10 @@
 
 jest.dontMock('../../../src/commons/unit.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-var Unit      = require('../../../src/commons/unit.js').Unit;
+import ReactDOM  from 'react-dom'
+import React     from 'react'
+import TestUtils from 'react-addons-test-utils'
+import Unit      from '../../../src/commons/unit.js';
 
 describe('Unit', function () {
   it('should have child by default', function () {

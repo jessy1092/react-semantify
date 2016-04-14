@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const Unit = React.createClass({
+class Unit extends React.Component {
 
-  render: function () {
+  render() {
 
     const { props: { children, type = 'div', ...other } } = this;
 
@@ -33,5 +33,7 @@ export const Unit = React.createClass({
           </div>
         );
     }
-  },
-});
+  }
+}
+
+export default Unit;

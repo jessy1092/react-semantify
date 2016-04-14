@@ -1,7 +1,7 @@
 import React from 'react';
 
 import filter from '../filter';
-import {Unit} from './unit';
+import Unit from './unit';
 
 const defaultClassName = 'section';
 
