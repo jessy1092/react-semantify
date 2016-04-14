@@ -1,44 +1,43 @@
+
 import React from 'react';
-import ReactDOM from 'react-dom';
-import ClassGenerator from '../mixins/classGenerator';
-import StateSelector from '../mixins/stateSelector';
-import {Unit} from '../commons/unit';
 
-let defaultClassName = 'ui checkbox';
+import filter from '../filter';
 
-const Checkbox = React.createClass({
+const stateArray = ['disabled', 'readOnly'];
+const defaultClassName = 'ui checkbox';
 
-  mixins: [ClassGenerator, StateSelector],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, color, type, disabled, readOnly, ...other} = this.props;
+    const { props: { children, ...other } } = this;
 
     return (
-      <Unit {...other}
-        className={this.getClassName(defaultClassName)}
-        color="null"
-        type="div"
-        disabled={this.getDisabled()}
-        readOnly={this.getReadOnly()}>
-        {this.props.children}
-      </Unit>
+      <div {...other} ref="checkbox">
+        {children}
+      </div>
     );
   },
 
   componentDidMount: function () {
-    if (typeof this.props.init != 'undefined') {
-      if (this.props.init === false) {
-        return;
-      }
 
-      if (this.props.init === true) {
-        $(ReactDOM.findDOMNode(this)).checkbox();
-      } else {
-        $(ReactDOM.findDOMNode(this)).checkbox(this.props.init);
-      }
+    const { props: { init = false } } = this;
+
+    if (init === false) {
+      return;
+    }
+
+    if (init === true) {
+      $(this.refs.checkbox).checkbox();
+    } else {
+      $(this.refs.checkbox).checkbox(init);
     }
   }
 });
+
+const Checkbox = new filter(Basic)
+  .stateFilter(stateArray)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Checkbox;

@@ -1,22 +1,26 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'ui form';
+import filter from '../filter';
 
-const Form = React.createClass({
+const defaultClassName = 'ui form';
 
-  mixins: [ClassGenerator],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, ...other} = this.props;
+    const { props: { children, ...other } } = this;
 
     return (
-      <form {...other} className={this.getClassName(defaultClassName)} >
-        {this.props.children}
+      <form {...other} >
+        {children}
       </form>
     );
   }
 });
+
+const Form = new filter(Basic)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Form;

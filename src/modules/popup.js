@@ -1,21 +1,26 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'ui popup';
+import filter from '../filter';
 
-const Popup = React.createClass({
+const defaultClassName = 'ui popup';
 
-  mixins: [ClassGenerator],
+const Basic = React.createClass({
 
   render: function () {
-    let {children, ...other} = this.props;
+
+    const { props: { children, ...other } } = this;
 
     return (
-      <div {...other} className={this.getClassName(defaultClassName)} >
-        {this.props.children}
+      <div {...other} >
+        {children}
       </div>
     );
   }
 });
+
+const Popup = new filter(Basic)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Popup;

@@ -1,22 +1,26 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'ui list';
+import filter from '../filter';
 
-const List = React.createClass({
+const defaultClassName = 'ui list';
 
-  mixins: [ClassGenerator],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, ...other} = this.props;
+    const { props: { children, ...other } } = this;
 
     return (
-      <div {...other} className={this.getClassName(defaultClassName)}>
-        {this.props.children}
+      <div {...other} >
+        {children}
       </div>
     );
   }
 });
+
+const List = new filter(Basic)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default List;

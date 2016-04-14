@@ -1,45 +1,45 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
-import StateSelector from '../mixins/stateSelector';
 
-let defaultClassName = 'ui tab';
+import filter from '../filter';
 
-const Tab = React.createClass({
+const stateArray       = ['active', 'loading'];
+const defaultClassName = 'ui tab';
 
-  mixins: [ClassGenerator, StateSelector],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, active, loading, tab, ...other} = this.props;
-
-    let state = {
-      active: this.getActive(),
-      loading: this.getLoading()
-    };
+    const { props: { children, tab, ...other } } = this;
 
     return (
       <div {...other}
-        className={this.getClassName(defaultClassName, state)}
         data-tab={tab}
         ref="tab">
-        {this.props.children}
+        {children}
       </div>
     );
   },
 
   componentDidMount: function () {
-    if (typeof this.props.init != 'undefined') {
-      if (this.props.init === false) {
-        return;
-      }
 
-      if (this.props.init === true) {
-        $(this.refs.tab).tab();
-      } else {
-        $(this.refs.tab).tab(this.props.init);
-      }
+    const { props: { init = false } } = this;
+
+    if (init === false) {
+      return;
+    }
+
+    if (init === true) {
+      $(this.refs.tab).tab();
+    } else {
+      $(this.refs.tab).tab(init);
     }
   }
 });
+
+const Tab = new filter(Basic)
+  .stateFilter(stateArray)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Tab;

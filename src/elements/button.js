@@ -1,31 +1,31 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
-import ColorSelector from '../mixins/colorSelector';
-import StateSelector from '../mixins/stateSelector';
+
+import filter from '../filter';
 import {Unit} from '../commons/unit';
 
-let defaultClassName = 'ui button';
+const stateArray       = ['disabled', 'active', 'loading'];
+const defaultClassName = 'ui button';
 
-const Button = React.createClass({
-
-  mixins: [ClassGenerator, ColorSelector, StateSelector],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, color, disabled, active, loading, ...other} = this.props;
+    const { props: { children, type = 'div', ...other } } = this;
 
     return (
-      <Unit {...other}
-        className={this.getClassName(defaultClassName)}
-        type="div"
-        color={this.getColor()}
-        disabled={this.getDisabled()}
-        active={this.getActive()}
-        loading={this.getLoading()}>
-        {this.props.children}
+      <Unit {...other} type={type}>
+        {children}
       </Unit>
     );
   }
 });
+
+const Button = new filter(Basic)
+  .typeFilter()
+  .colorFilter()
+  .stateFilter(stateArray)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Button;

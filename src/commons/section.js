@@ -1,28 +1,28 @@
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
-import ColorSelector from '../mixins/colorSelector';
-import TypeSelector from '../mixins/typeSelector';
+
+import filter from '../filter';
 import {Unit} from './unit';
 
-let defaultClassName = 'section';
+const defaultClassName = 'section';
 
-const Section = React.createClass({
-
-  mixins: [ClassGenerator, ColorSelector, TypeSelector],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, color, ...other} = this.props;
+    const { props: { children, type = 'div', ...other } } = this;
 
     return (
-      <Unit {...other}
-        className={this.getClassName(defaultClassName)}
-        type={this.getType()}
-        color={this.getColor()} >
+      <Unit {...other} type={type} >
         {this.props.children}
       </Unit>
     );
   }
 });
+
+const Section = new filter(Basic)
+  .typeFilter()
+  .colorFilter()
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Section;

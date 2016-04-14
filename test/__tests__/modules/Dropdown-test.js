@@ -39,7 +39,6 @@ describe('Dropdown', function () {
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('disabled');
-    expect(ReactDOM.findDOMNode(instance).className).toMatch('simple');
   });
 
   it('should have active class with active is true', function () {

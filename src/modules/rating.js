@@ -1,40 +1,44 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'ui rating';
+import filter from '../filter';
 
-const Rating = React.createClass({
+const defaultClassName = 'ui rating';
 
-  mixins: [ClassGenerator],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, rating, maxRating, ...other} = this.props;
+    const { props: { children, rating, maxRating, ...other } } = this;
 
     return (
       <div {...other}
-        className={this.getClassName(defaultClassName)}
         data-rating={rating}
         data-max-rating={maxRating}
-        ref="rating">
-        {this.props.children}
+        ref="rating" >
+        {children}
       </div>
     );
   },
 
   componentDidMount: function () {
-    if (typeof this.props.init != 'undefined') {
-      if (this.props.init === false) {
-        return;
-      }
 
-      if (this.props.init === true) {
-        $(this.refs.rating).rating();
-      } else {
-        $(this.refs.rating).rating(this.props.init);
-      }
+    const { props: { init = false } } = this;
+
+    if (init === false) {
+      return;
+    }
+
+    if (init === true) {
+      $(this.refs.rating).rating();
+    } else {
+      $(this.refs.rating).rating(init);
     }
   }
 });
+
+const Rating = new filter(Basic)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Rating;

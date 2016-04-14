@@ -1,36 +1,41 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'ui sidebar';
+import filter from '../filter';
 
-const Sidebar = React.createClass({
+const defaultClassName = 'ui sidebar';
 
-  mixins: [ClassGenerator],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, ...other} = this.props;
+    const { props: { children, ...other } } = this;
 
     return (
-      <div {...other} className={this.getClassName(defaultClassName)} ref="sidebar">
-        {this.props.children}
+      <div {...other} ref="sidebar">
+        {children}
       </div>
     );
   },
 
   componentDidMount: function () {
-    if (typeof this.props.init != 'undefined') {
-      if (this.props.init === false) {
-        return;
-      }
 
-      if (this.props.init === true) {
-        $(this.refs.sidebar).sidebar();
-      } else {
-        $(this.refs.sidebar).sidebar(this.props.init);
-      }
+    const { props: { init = false } } = this;
+
+    if (init === false) {
+      return;
+    }
+
+    if (init === true) {
+      $(this.refs.sidebar).sidebar();
+    } else {
+      $(this.refs.sidebar).sidebar(init);
     }
   }
 });
+
+const Sidebar = new filter(Basic)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Sidebar;

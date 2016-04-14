@@ -1,22 +1,26 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'ui rail';
+import filter from '../filter';
 
-const Rail = React.createClass({
+const defaultClassName = 'ui rail';
 
-  mixins: [ClassGenerator],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, ...other} = this.props;
+    const { props: { children, ...other } } = this;
 
     return (
-      <div {...other} className={this.getClassName(defaultClassName)} >
-        {this.props.children}
+      <div {...other} >
+        {children}
       </div>
     );
   }
 });
+
+const Rail = new filter(Basic)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Rail;

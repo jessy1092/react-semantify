@@ -1,22 +1,26 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'ui table';
+import filter from '../filter';
 
-const Table = React.createClass({
+const defaultClassName = 'ui table';
 
-  mixins: [ClassGenerator],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, ...other} = this.props;
+    const { props: { children, ...other } } = this;
 
     return (
-      <table {...other} className={this.getClassName(defaultClassName)} >
-        {this.props.children}
+      <table {...other} >
+        {children}
       </table>
     );
   }
 });
+
+const Table = new filter(Basic)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Table;

@@ -1,22 +1,26 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'ui statistic';
+import filter from '../filter';
 
-const Statistic = React.createClass({
+const defaultClassName = 'ui statistic';
 
-  mixins: [ClassGenerator],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, ...other} = this.props;
+    const { props: { children, ...other } } = this;
 
     return (
-      <div {...other} className={this.getClassName(defaultClassName)} >
-        {this.props.children}
+      <div {...other} >
+        {children}
       </div>
     );
   }
 });
 
-export default Statistic
+const Statistic = new filter(Basic)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
+
+export default Statistic;

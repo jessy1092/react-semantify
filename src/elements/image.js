@@ -1,28 +1,23 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
-import StateSelector from '../mixins/stateSelector';
-import {Unit} from '../commons/unit';
 
-let defaultClassName = 'ui image';
+import filter from '../filter';
 
-const Image = React.createClass({
+const stateArray       = ['disabled'];
+const defaultClassName = 'ui image';
 
-  mixins: [ClassGenerator, StateSelector],
+const Basic = React.createClass({
 
   render: function () {
-
-    let {className, type, disabled, ...other} = this.props;
-
     return (
-      <Unit {...other}
-        className={this.getClassName(defaultClassName)}
-        type="img"
-        color="null"
-        disabled={this.getDisabled()}>
-        {this.props.children}
-      </Unit>
+      <img {...this.props} />
     );
   }
 });
+
+const Image = new filter(Basic)
+  .stateFilter(stateArray)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Image;

@@ -1,35 +1,41 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
 
-let defaultClassName = 'ui accordion';
+import filter from '../filter';
 
-const Accordion = React.createClass({
+const defaultClassName = 'ui accordion';
 
-  mixins: [ClassGenerator],
+const Basic = React.createClass({
 
   render: function () {
-    let {children, ...other} = this.props;
+
+    const { props: { children, ...other } } = this;
 
     return (
-      <div {...other} className={this.getClassName(defaultClassName)} ref="accordion">
+      <div {...other} ref="accordion">
         {children}
       </div>
     );
   },
 
   componentDidMount: function () {
-    if (typeof this.props.init != 'undefined') {
-      if (this.props.init === false) {
-        return;
-      }
 
-      if (this.props.init === true) {
-        $(this.refs.accordion).accordion();
-      } else {
-        $(this.refs.accordion).accordion(this.props.init);
-      }
+    const { props: { init = false } } = this;
+
+    if (init === false) {
+      return;
+    }
+
+    if (init === true) {
+      $(this.refs.accordion).accordion();
+    } else {
+      $(this.refs.accordion).accordion(init);
     }
   }
 });
+
+const Accordion = new filter(Basic)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Accordion;

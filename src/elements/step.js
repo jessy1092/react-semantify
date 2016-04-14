@@ -1,30 +1,28 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
-import StateSelector from '../mixins/stateSelector';
-import {Unit} from '../commons/unit';
 
-let defaultClassName = 'step';
+import filter from '../filter';
 
-const Step = React.createClass({
+const stateArray       = ['active', 'completed', 'disabled'];
+const defaultClassName = 'step';
 
-  mixins: [ClassGenerator, StateSelector],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, ...other} = this.props;
+    const { props: { children, ...other } } = this;
 
     return (
-      <Unit {...other}
-        className={this.getClassName(defaultClassName)}
-        type="div"
-        color="null"
-        active={this.getActive()}
-        completed={this.getCompleted()}
-        disabled={this.getDisabled()}>
-        {this.props.children}
-      </Unit>
+      <div {...other} >
+        {children}
+      </div>
     );
   }
 });
+
+const Step = new filter(Basic)
+  .stateFilter(stateArray)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Step;

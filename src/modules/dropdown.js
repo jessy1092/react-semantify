@@ -1,49 +1,47 @@
+
 import React from 'react';
-import ReactDOM from 'react-dom';
-import ClassGenerator from '../mixins/classGenerator';
-import StateSelector from '../mixins/stateSelector';
-import {Unit} from '../commons/unit';
 
-let defaultClassName = 'ui dropdown';
+import filter from '../filter';
 
-const Dropdown = React.createClass({
+const stateArray = ['error', 'disabled', 'active'];
+const defaultClassName = 'ui dropdown';
 
-  mixins: [ClassGenerator, StateSelector],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, color, type, error, disable, active, ...other} = this.props;
+    let { props: { className, children, ...other } } = this;
 
-    if (this.getActive() || this.getDisabled()) {
-      defaultClassName += ' simple';
+    if (className.indexOf('active') >= 0) {
+      className += ' simple';
     }
 
     return (
-      <Unit {...other}
-        className={this.getClassName(defaultClassName)}
-        color="null"
-        type="div"
-        error={this.getError()}
-        disable={this.getDisabled()}
-        active={this.getActive()}>
-        {this.props.children}
-      </Unit>
+      <div {...other} className={className} ref="dropdown" >
+        {children}
+      </div>
     );
   },
 
   componentDidMount: function () {
-    if (typeof this.props.init != 'undefined') {
-      if (this.props.init === false) {
-        return;
-      }
 
-      if (this.props.init === true) {
-        $(ReactDOM.findDOMNode(this)).dropdown();
-      } else {
-        $(ReactDOM.findDOMNode(this)).dropdown(this.props.init);
-      }
+    const { props: { init = false } } = this
+
+    if (init === false) {
+      return;
+    }
+
+    if (init === true) {
+      $(this.refs.dropdown).dropdown();
+    } else {
+      $(this.refs.dropdown).dropdown(init);
     }
   }
 });
+
+const Dropdown = new filter(Basic)
+  .stateFilter(stateArray)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Dropdown;

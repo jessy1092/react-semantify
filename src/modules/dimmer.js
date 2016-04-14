@@ -1,44 +1,43 @@
+
 import React from 'react';
-import ReactDOM from 'react-dom';
-import ClassGenerator from '../mixins/classGenerator';
-import StateSelector from '../mixins/stateSelector';
-import {Unit} from '../commons/unit';
 
-let defaultClassName = 'ui dimmer';
+import filter from '../filter';
 
-const Dimmer = React.createClass({
+const stateArray       = ['disabled', 'active'];
+const defaultClassName = 'ui dimmer';
 
-  mixins: [ClassGenerator, StateSelector],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, color, type, disabled, active, ...other} = this.props;
+    const { props: { children, ...other } } = this;
 
     return (
-      <Unit {...other}
-        className={this.getClassName(defaultClassName)}
-        color="null"
-        type="div"
-        disabled={this.getDisabled()}
-        active={this.getActive()}>
-        {this.props.children}
-      </Unit>
+      <div {...other} ref="dimmer">
+        {children}
+      </div>
     );
   },
 
   componentDidMount: function () {
-    if (typeof this.props.init != 'undefined') {
-      if (this.props.init === false) {
-        return;
-      }
 
-      if (this.props.init === true) {
-        $(ReactDOM.findDOMNode(this)).dimmer();
-      } else {
-        $(ReactDOM.findDOMNode(this)).dimmer(this.props.init);
-      }
+    const { props: { init = false } } = this;
+
+    if (init === false) {
+      return;
+    }
+
+    if (init === true) {
+      $(this.refs.dimmer).dimmer();
+    } else {
+      $(this.refs.dimmer).dimmer(init);
     }
   }
 });
+
+const Dimmer = new filter(Basic)
+  .stateFilter(stateArray)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Dimmer;

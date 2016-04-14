@@ -1,28 +1,28 @@
+
 import React from 'react';
-import ClassGenerator from '../mixins/classGenerator';
-import StateSelector from '../mixins/stateSelector';
-import {Unit} from '../commons/unit';
 
-let defaultClassName = 'ui reveal';
+import filter from '../filter';
 
-const Reveal = React.createClass({
+const stateArray       = ['disabled'];
+const defaultClassName = 'ui reveal';
 
-  mixins: [ClassGenerator, StateSelector],
+const Basic = React.createClass({
 
   render: function () {
 
-    let {className, ...other} = this.props;
+    const { props: { children, ...other } } = this;
 
     return (
-      <Unit {...other}
-        className={this.getClassName(defaultClassName)}
-        type="div"
-        color="null"
-        disabled={this.getDisabled()}>
-        {this.props.children}
-      </Unit>
+      <div {...other} >
+        {children}
+      </div>
     );
   }
 });
+
+const Reveal = new filter(Basic)
+  .stateFilter(stateArray)
+  .classGenerator(defaultClassName)
+  .getComposeComponent();
 
 export default Reveal;
