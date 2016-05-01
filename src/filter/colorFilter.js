@@ -11,13 +11,10 @@ export default function (ComposeComponent) {
   class HigherOrderComponent extends React.Component {
 
     render() {
-      let { props: { className = '', children, color, ...other } } = this;
+      let { props: { className = '', children, color = '', ...other } } = this;
 
-      if (typeof color !== 'undefined') {
-
-        if (colorArray.indexOf(color) !== -1) {
-          className += ' ' + color;
-        }
+      if (colorArray.indexOf(color) !== -1) {
+        className = `${className} ${color}`.trim();
       }
 
       return (

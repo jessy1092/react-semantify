@@ -8,9 +8,7 @@ export default function (defaultClassName, ComposeComponent) {
     render() {
       let { props: { className = '', children, ...other } } = this;
 
-      if (typeof className !== 'undefined') {
-        className += ' ' + defaultClassName;
-      }
+      className = `${className} ${defaultClassName}`.trim();
 
       return (
         <ComposeComponent className={className} {...other} >

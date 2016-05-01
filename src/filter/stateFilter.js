@@ -10,16 +10,16 @@ export default function (stateArray, ComposeComponent) {
   class HigherOrderComponent extends React.Component {
 
     render() {
-      let { props: { className, children, ...other } } = this;
+      let { props: { className = '', children, ...other } } = this;
 
       stateArray.forEach((key) => {
         if (key in other) {
 
           if (other[key]) {
             if (key in keyMap) {
-              className += ' ' + keyMap[key];
+              className = `${className} ${keyMap[key]}`.trim();
             } else {
-              className += ' ' + key;
+              className = `${className} ${key}`.trim();
             }
           }
 
