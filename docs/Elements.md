@@ -16,7 +16,7 @@ You also can write like this:
 <Button className="red disabled examplebutton" onClick={this._onClick}></Button>
 ```
 
-are equal to 
+are equal to
 
 ```html
 <div class="ui button red disabled examplebutton"></div>
@@ -34,6 +34,26 @@ and register the function(this._onClick) on click event.
 - *loading*: This is a booling type. If `true`, the `loading` would be part of `class` attribute.
 
 
+# Container
+A standard Container.
+
+### Example
+
+```html
+<Container className="examplecontainer"></Container>
+```
+
+is equal to
+
+```html
+<div class="ui container examplecontainer"></div>
+```
+
+### Properties
+
+- *className*: The className would be part of the `class` attribute.
+
+
 # Divider
 A standard Divider.
 
@@ -43,7 +63,7 @@ A standard Divider.
 <Divider className="exampledivider"></Divider>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui divider exampledivider"></div>
@@ -63,7 +83,7 @@ A standard Flag.
 <Flag className="tw" onClick={this._onClick}></Flag>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <i class="flag tw"></i>
@@ -91,7 +111,7 @@ You also can write like this:
 <Header className="red disabled exampleheader" type="div" onClick={this._onClick}></Header>
 ```
 
-are equal to 
+are equal to
 
 ```html
 <div class="ui header red disabled exampleheader"></div>
@@ -122,7 +142,7 @@ You also can write like this:
 <Icon className="red disabled cloud" onClick={this._onClick}></Icon>
 ```
 
-are equal to 
+are equal to
 
 ```html
 <i class="icon red disabled cloud"></i>
@@ -148,7 +168,7 @@ A standard Image.
 <Image className="medium" src="./example/example.jpg" disabled={true}></Image>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <img class="ui image medium disabled" src="./example/example.jpg"></img>
@@ -200,7 +220,7 @@ You also can write like this:
 <Label className="red examplelabel" type="div"></Label>
 ```
 
-are equal to 
+are equal to
 
 ```html
 <div class="ui label red examplelabel"></div>
@@ -225,7 +245,7 @@ A standard List.
 <List className="examplelist"></List>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui list examplelist"></div>
@@ -245,7 +265,7 @@ A standard Loader.
 <Loader className="exampleloader" disabled={true}></Loader>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui loader disabled exampleloader"></div>
@@ -267,7 +287,7 @@ A standard Rail.
 <Rail className="examplerail"></Rail>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui rail examplerail"></div>
@@ -287,7 +307,7 @@ A standard Reveal.
 <Reveal className="examplereveal" disabled={true}></Reveal>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui reveal disabled examplereveal"></div>
@@ -313,7 +333,7 @@ You also can write like this:
 <Segment className="red disabled examplesegment"></Segment>
 ```
 
-are equal to 
+are equal to
 
 ```html
 <div class="ui segment red disabled examplesegment"></div>
@@ -341,7 +361,7 @@ A standard Steps/Step.
 </Steps>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui steps examplestep">
