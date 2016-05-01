@@ -1,3 +1,15 @@
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/jessy1092/react-semantify/compare/v0.4.3...v0.5.0) (2016-05-01)
+
+
+### Features
+
+* Add new component: Container([2a718cd](https://github.com/jessy1092/react-semantify/commit/2a718cd))
+* Add new component: Embed([a121c17](https://github.com/jessy1092/react-semantify/commit/a121c17))
+* Use higher order component instead of mixin and rewrite all component. close #35([dc85f72](https://github.com/jessy1092/react-semantify/commit/dc85f72)), closes [#35](https://github.com/jessy1092/react-semantify/issues/35)
+
+
+
 <a name="0.4.3"></a>
 ## [0.4.3](https://github.com/jessy1092/react-semantify/compare/v0.4.2...v0.4.3) (2016-04-12)
 
