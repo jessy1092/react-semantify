@@ -1,4 +1,23 @@
+
 import React from 'react';
+
+const link = ({children, ...other}) => (
+  <a {...other}>{children}</a>
+);
+
+const icon = ({children, ...other}) => (
+  <i {...other}>{children}</i>
+);
+
+const div = ({children, ...other}) => (
+  <div {...other}>{children}</div>
+);
+
+const basicComponentMap = {
+  link,
+  icon,
+  div
+};
 
 class Unit extends React.Component {
 
@@ -6,33 +25,11 @@ class Unit extends React.Component {
 
     const { props: { children, type = 'div', ...other } } = this;
 
-    switch (type) {
+    const Component = basicComponentMap[type];
 
-      case 'link':
-        return (
-          <a {...other} >
-            {children}
-          </a>
-        );
-
-      case 'icon':
-        return (
-          <i {...other} />
-        );
-
-      case 'img':
-        return (
-          <img {...other} />
-        );
-
-      case 'div':
-      default:
-        return (
-          <div {...other} >
-            {children}
-          </div>
-        );
-    }
+    return (
+      <Component {...other}>{children}</Component>
+    );
   }
 }
 

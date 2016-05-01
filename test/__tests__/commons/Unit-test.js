@@ -41,14 +41,6 @@ describe('Unit', function () {
     expect(ReactDOM.findDOMNode(instance).tagName).toMatch('A');
   });
 
-  it('should set <img /> tag with link img', function () {
-    var instance = TestUtils.renderIntoDocument(
-      <Unit type="img" />
-    );
-
-    expect(ReactDOM.findDOMNode(instance).tagName).toMatch('IMG');
-  });
-
   it('should set <i /> tag with link icon', function () {
     var instance = TestUtils.renderIntoDocument(
       <Unit type="icon" />
