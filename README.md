@@ -11,7 +11,7 @@ Integrate Semantic-ui with react components. It depends on Semantic-UI and helps
 
 |         | React = 0.12 | React = 0.13.* | React >= 0.14.* && React <= 15.* |
 | ------- | ------------ | -------------- | -------------------------------- |
-| Version | <= 0.2       |  0.3.*         | 0.4.*                            |
+| Version | <= 0.2       |  0.3.*         | >= 0.4.*                            |
 
 ## Usage
 
@@ -127,6 +127,7 @@ bower install semantic-ui
 - [Elements](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md)
   + [Button](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#button)
   + [Divider](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#divider)
+  + [Container](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#container)
   + [Flag](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#flag)
   + [Header](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#header)
   + [Icon](https://github.com/jessy1092/react-semantify/blob/master/docs/Elements.md#icon)
@@ -161,6 +162,7 @@ bower install semantic-ui
   + [Checkbox](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#checkbox)
   + [Dimmer](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#dimmer)
   + [Dropdown](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#dropdown)
+  + [Embed](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#embed)
   + [Modal](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#modal)
   + [Popup](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#popup) - Pre-release
   + [Progress](https://github.com/jessy1092/react-semantify/blob/master/docs/Modules.md#progress)
