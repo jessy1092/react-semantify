@@ -11,7 +11,7 @@ A standard Accordion.
 <Accordion className="exampleaccordion" init={true}></Accordion>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui accordion examplebutton"></div>
@@ -24,7 +24,7 @@ $('.ui.accordion').accordion();
 
 You also can use `init={param}` to transfer parameter.
 
-ex. 
+ex.
 ```js
 <Accordion init='refresh'></Accordion>
 ```
@@ -49,7 +49,7 @@ A standard Checkbox.
 <Checkbox className="examplecheckbox" init={true}></Checkbox>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui checkbox examplecheckbox"></div>
@@ -62,7 +62,7 @@ $('.ui.checkbox').checkbox();
 
 You also can use `init={param}` to transfer parameter.
 
-ex. 
+ex.
 ```js
 <Checkbox init={{uncheckable: false}}></Checkbox>
 ```
@@ -89,7 +89,7 @@ A standard Dimmer.
 <Dimmer className="exampledimmer" init={true}></Dimmer>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui dimmer exampledimmer"></div>
@@ -102,7 +102,7 @@ $('.ui.dimmer').dimmer();
 
 You also can use `init={param}` to transfer parameter.
 
-ex. 
+ex.
 ```js
 <Dimmer init={{on: 'hover'}}></Dimmer>
 ```
@@ -129,7 +129,7 @@ A standard Dropdown.
 <Dropdown className="exampledropdown" init={true}></Dropdown>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui dropdown exampledropdown"></div>
@@ -142,7 +142,7 @@ $('.ui.dropdown').dropdown();
 
 You also can use `init={param}` to transfer parameter.
 
-ex. 
+ex.
 ```js
 <Dropdown init={{transition: 'drop'}}></Dropdown>
 ```
@@ -160,6 +160,50 @@ $('.ui.dropdown').dropdown({transition: 'drop'});
 - *active*: This is a booling type. If `true`, the `active` would be part of `class` attribute.
 - *error*: This is a booling type. If `true`, the `error` would be part of `class` attribute.
 
+
+# Embed
+A standard Embed.
+
+### Example
+
+```html
+<Embed className="exampleembed" source="youtube" sourceId="pfdu_gTry8E" placeholder="/images/bear-waving.jpg" init={true}></Embed>
+```
+
+is equal to
+
+```html
+<div class="ui embed exampleembed" data-source="youtube" data-id="pfdu_gTry8E" data-placeholder="/images/bear-waving.jpg"></div>
+```
+
+and call below Sementic-ui init function when element in the `componentDidMount` life cycle.
+```js
+$('.ui.embed').embed();
+```
+
+You also can use `init={param}` to transfer parameter.
+
+ex.
+```js
+<Embed init={{source: 'youtube', id: 'pfdu_gTry8E', placeholder: '/images/bear-waving.jpg'}}></Embed>
+```
+
+will transfer `{source: 'youtube', id: 'pfdu_gTry8E', placeholder: '/images/bear-waving.jpg'}` to init function.
+
+```js
+$('.ui.embed').embed({source: 'youtube', id: 'pfdu_gTry8E', placeholder: '/images/bear-waving.jpg'});
+```
+
+### Properties
+
+- *init*: You can see [Embed usage](http://semantic-ui.com/modules/embed.html#/usage) on the Semantic-ui web site.
+- *source*: This is a string type. Use to be a embed `data-source` state. You can see [Embed usage](http://semantic-ui.com/modules/embed.html#/usage) for more detail.
+- *sourceId*: This is a string type. Use to be a embed `data-id` state. You can see [Embed usage](http://semantic-ui.com/modules/embed.html#/usage) for more detail.
+- *placeholder*: This is a string type. Use to be a embed `data-placeholder` state. You can see [Embed usage](http://semantic-ui.com/modules/embed.html#/usage) for more detail.
+- *url*: This is a string type. Use to be a embed `data-url` state. You can see [Embed usage](http://semantic-ui.com/modules/embed.html#/usage) for more detail.
+- *icon*: This is a string type. Use to be a embed `data-icon` state. You can see [Embed usage](http://semantic-ui.com/modules/embed.html#/usage) for more detail.
+
+
 # Modal
 A standard Modal.
 
@@ -169,7 +213,7 @@ A standard Modal.
 <Modal className="examplemodal" init={true}></Modal>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui modal examplemodal"></div>
@@ -182,7 +226,7 @@ $('.ui.modal').modal();
 
 You also can use `init={param}` to transfer parameter.
 
-ex. 
+ex.
 ```js
 <Modal init='show'></Modal>
 ```
@@ -208,7 +252,7 @@ A standard Popup. This is a Pre-Existing popup usage. The inline popup will comm
 <Popup className="examplepopup"></Popup>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui popup examplepopup"></div>
@@ -238,7 +282,7 @@ A standard Progress.
 <Progress className="exampleprogress" init={true}></Progress>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui progress exampleprogress"></div>
@@ -251,7 +295,7 @@ $('.ui.progress').progress();
 
 You also can use `init={param}` to transfer parameter.
 
-ex. 
+ex.
 ```js
 <Progress init={{percent: 22}}></Progress>
 ```
@@ -284,7 +328,7 @@ A standard Rating.
 <Rating className="examplerating" init={true}></Rating>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui rating examplerating"></div>
@@ -297,7 +341,7 @@ $('.ui.rating').rating();
 
 You also can use `init={param}` to transfer parameter.
 
-ex. 
+ex.
 ```js
 <Rating init={{initialRating: 3, maxRating: 5}}></Rating>
 ```
@@ -324,7 +368,7 @@ A standard Search.
 <Search className="examplesearch" init={true}></Search>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui search examplesearch"></div>
@@ -337,7 +381,7 @@ $('.ui.search').search();
 
 You also can use `init={param}` to transfer parameter.
 
-ex. 
+ex.
 ```js
 <Search init={{type: 'category'}}></Search>
 ```
@@ -363,7 +407,7 @@ A standard Shape.
 <Shape className="exampleshape" init={true}></Shape>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui shape exampleshape"></div>
@@ -376,7 +420,7 @@ $('.ui.shape').shape();
 
 You also can use `init={param}` to transfer parameter.
 
-ex. 
+ex.
 ```js
 <Shape init='flip up'}></Shape>
 ```
@@ -401,7 +445,7 @@ A standard Sidebar.
 <Sidebar className="examplesidebar" init={true}></Sidebar>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui sidebar examplesidebar"></div>
@@ -414,7 +458,7 @@ $('.ui.sidebar').sidebar();
 
 You also can use `init={param}` to transfer parameter.
 
-ex. 
+ex.
 ```js
 <Sidebar init='show'></Sidebar>
 ```
@@ -439,7 +483,7 @@ A standard Sticky.
 <Sticky className="examplesticky" init={true}></Sticky>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui sticky examplesticky"></div>
@@ -452,7 +496,7 @@ $('.ui.sticky').sticky();
 
 You also can use `init={param}` to transfer parameter.
 
-ex. 
+ex.
 ```js
 <Sticky init={{context: '#example'}}></Sticky>
 ```
@@ -477,7 +521,7 @@ A standard Tab.
 <Tab className="exampletab" init={true}></Tab>
 ```
 
-is equal to 
+is equal to
 
 ```html
 <div class="ui tab exampletab"></div>
@@ -490,7 +534,7 @@ $('.ui.tab').tab();
 
 You also can use `init={param}` to transfer parameter.
 
-ex. 
+ex.
 ```js
 <Tab init={{history: true, historyType: 'hash'}}></Tab>
 ```
