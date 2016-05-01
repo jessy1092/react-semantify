@@ -40,6 +40,7 @@ export Accordion from './modules/accordion';
 export Checkbox from './modules/checkbox';
 export Dimmer from './modules/dimmer';
 export Dropdown from './modules/dropdown';
+export Embed from './modules/embed';
 export Modal from './modules/modal';
 export Popup from './modules/popup';
 export Progress from './modules/progress';
