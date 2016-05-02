@@ -3,8 +3,9 @@ import React from 'react';
 
 import filter from '../filter';
 
-const stateArray = ['disabled', 'readOnly'];
+const stateArray       = ['disabled', 'readOnly'];
 const defaultClassName = 'ui checkbox';
+const componentName    = 'Checkbox';
 
 const Basic = React.createClass({
 
@@ -38,6 +39,6 @@ const Basic = React.createClass({
 const Checkbox = new filter(Basic)
   .stateFilter(stateArray)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Checkbox;

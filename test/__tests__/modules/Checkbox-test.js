@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Checkbox  = require('../../../src/index.js').Checkbox;
+import ReactDOM   from 'react-dom';
+import React      from 'react';
+import TestUtils  from 'react-addons-test-utils';
+import {Checkbox} from '../../../src/index';
 
-describe('Checkbox', function () {
-  it('should have .ui.checkbox class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Checkbox', () => {
+  it('should have .ui.checkbox class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Checkbox></Checkbox>
     );
 
@@ -17,35 +16,43 @@ describe('Checkbox', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('checkbox');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Checkbox>123</Checkbox>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Checkbox className="custom"></Checkbox>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
-  it('should have disabled class with disabled is true', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have disabled class with disabled is true', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Checkbox disabled={true}></Checkbox>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('disabled');
   });
 
-  it('should have readOnly class with readOnly is true', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have readOnly class with readOnly is true', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Checkbox readOnly={true}></Checkbox>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('read-only');
+  });
+
+  it('should display Checkbox name', () => {
+    let Component = (
+      <Checkbox></Checkbox>
+    );
+
+    expect(Component.type.displayName).toMatch('Checkbox');
   });
 });

@@ -6,10 +6,11 @@ import Div    from '../commons/div';
 
 const stateArray       = ['active', 'completed', 'disabled'];
 const defaultClassName = 'step';
+const componentName    = 'Step';
 
 const Step = new filter(Div)
   .stateFilter(stateArray)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Step;

@@ -6,11 +6,12 @@ import Div    from '../commons/div';
 
 const stateArray       = ['disabled', 'loading'];
 const defaultClassName = 'ui segment';
+const componentName    = 'Segment';
 
 const Segment = new filter(Div)
   .colorFilter()
   .stateFilter(stateArray)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Segment;

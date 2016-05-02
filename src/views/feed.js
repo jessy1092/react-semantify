@@ -5,9 +5,10 @@ import filter from '../filter';
 import Div    from '../commons/div';
 
 const defaultClassName = 'ui feed';
+const componentName    = 'Feed';
 
 const Feed = new filter(Div)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Feed;

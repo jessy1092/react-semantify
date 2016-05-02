@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Card      = require('../../../src/index.js').Card;
+import ReactDOM  from 'react-dom';
+import React     from 'react';
+import TestUtils from 'react-addons-test-utils';
+import {Card}    from '../../../src/index';
 
-describe('Card', function () {
-  it('should have .ui.card class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Card', () => {
+  it('should have .ui.card class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Card></Card>
     );
 
@@ -17,19 +16,27 @@ describe('Card', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('card');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Card>123</Card>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Card className="custom"></Card>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
+  });
+
+  it('should display Card name', () => {
+    let Component = (
+      <Card></Card>
+    );
+
+    expect(Component.type.displayName).toMatch('Card');
   });
 });

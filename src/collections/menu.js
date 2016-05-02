@@ -5,9 +5,10 @@ import filter from '../filter';
 import Div    from '../commons/div';
 
 const defaultClassName = 'ui menu';
+const componentName    = 'Menu';
 
 const Menu = new filter(Div)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Menu;

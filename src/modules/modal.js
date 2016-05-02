@@ -5,6 +5,7 @@ import filter from '../filter';
 
 const stateArray       = ['active'];
 const defaultClassName = 'ui modal';
+const componentName    = 'Modal';
 
 const Basic = React.createClass({
 
@@ -37,6 +38,6 @@ const Basic = React.createClass({
 const Modal = new filter(Basic)
   .stateFilter(stateArray)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Modal;

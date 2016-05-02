@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Statistic = require('../../../src/index.js').Statistic;
+import ReactDOM    from 'react-dom';
+import React       from 'react';
+import TestUtils   from 'react-addons-test-utils';
+import {Statistic} from '../../../src/index';
 
-describe('Statistic', function () {
-  it('should have .ui.statistic class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Statistic', () => {
+  it('should have .ui.statistic class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Statistic></Statistic>
     );
 
@@ -17,19 +16,27 @@ describe('Statistic', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('statistic');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Statistic>123</Statistic>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Statistic className="custom"></Statistic>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
+  });
+
+  it('should display Statistic name', () => {
+    let Component = (
+      <Statistic></Statistic>
+    );
+
+    expect(Component.type.displayName).toMatch('Statistic');
   });
 });

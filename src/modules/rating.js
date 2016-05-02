@@ -4,6 +4,7 @@ import React from 'react';
 import filter from '../filter';
 
 const defaultClassName = 'ui rating';
+const componentName    = 'Rating';
 
 const Basic = React.createClass({
 
@@ -39,6 +40,6 @@ const Basic = React.createClass({
 
 const Rating = new filter(Basic)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Rating;

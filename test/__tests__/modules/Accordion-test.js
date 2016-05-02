@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Accordion = require('../../../src/index.js').Accordion;
+import ReactDOM    from 'react-dom';
+import React       from 'react';
+import TestUtils   from 'react-addons-test-utils';
+import {Accordion} from '../../../src/index';
 
-describe('Accordion', function () {
-  it('should have .ui.accordion class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Accordion', () => {
+  it('should have .ui.accordion class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Accordion></Accordion>
     );
 
@@ -17,27 +16,35 @@ describe('Accordion', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('accordion');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Accordion>123</Accordion>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Accordion className="custom"></Accordion>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
-  it('should have custom attribute', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom attribute', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Accordion data-custom='custom'></Accordion>
     );
 
     expect(ReactDOM.findDOMNode(instance).getAttribute('data-custom')).toMatch('custom');
+  });
+
+  it('should display Accordion name', () => {
+    let Component = (
+      <Accordion></Accordion>
+    );
+
+    expect(Component.type.displayName).toMatch('Accordion');
   });
 });

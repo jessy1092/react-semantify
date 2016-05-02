@@ -5,6 +5,7 @@ import filter from '../filter';
 
 const stateArray       = ['loading', 'focus', 'error'];
 const defaultClassName = 'ui input';
+const componentName    = 'Input';
 
 const Basic = React.createClass({
 
@@ -33,6 +34,6 @@ const Basic = React.createClass({
 const Input = new filter(Basic)
   .stateFilter(stateArray)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Input;

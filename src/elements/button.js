@@ -6,12 +6,13 @@ import Unit from '../commons/unit';
 
 const stateArray       = ['disabled', 'active', 'loading'];
 const defaultClassName = 'ui button';
+const componentName    = 'Button';
 
 const Button = new filter(Unit)
   .typeFilter()
   .colorFilter()
   .stateFilter(stateArray)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Button;

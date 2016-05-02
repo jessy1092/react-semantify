@@ -3,6 +3,7 @@ import classGenerator from './classGenerator';
 import colorFilter from './colorFilter';
 import stateFilter from './stateFilter';
 import typeFilter from './typeFilter';
+import nameSetter from './nameSetter';
 
 
 class FilterFactory {
@@ -31,8 +32,8 @@ class FilterFactory {
     return this;
   }
 
-  getComposeComponent() {
-    return this.ComposeComponent;
+  getComposeComponent(componentName) {
+    return nameSetter(componentName, this.ComposeComponent);
   }
 }
 

@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Shape     = require('../../../src/index.js').Shape;
+import ReactDOM  from 'react-dom';
+import React     from 'react';
+import TestUtils from 'react-addons-test-utils';
+import {Shape}   from '../../../src/index';
 
-describe('Shape', function () {
-  it('should have .ui.shape class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Shape', () => {
+  it('should have .ui.shape class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Shape></Shape>
     );
 
@@ -17,19 +16,27 @@ describe('Shape', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('shape');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Shape>123</Shape>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Shape className="custom"></Shape>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
+  });
+
+  it('should display Shape name', () => {
+    let Component = (
+      <Shape></Shape>
+    );
+
+    expect(Component.type.displayName).toMatch('Shape');
   });
 });

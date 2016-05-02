@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Steps     = require('../../../src/index.js').Steps;
+import ReactDOM  from 'react-dom';
+import React     from 'react';
+import TestUtils from 'react-addons-test-utils';
+import {Steps}   from '../../../src/index';
 
-describe('Steps', function () {
-  it('should have .ui.steps class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Steps', () => {
+  it('should have .ui.steps class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Steps></Steps>
     );
 
@@ -17,19 +16,27 @@ describe('Steps', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('steps');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Steps>123</Steps>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Steps className="custom"></Steps>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
+  });
+
+  it('should display Steps name', () => {
+    let Component = (
+      <Steps></Steps>
+    );
+
+    expect(Component.type.displayName).toMatch('Steps');
   });
 });

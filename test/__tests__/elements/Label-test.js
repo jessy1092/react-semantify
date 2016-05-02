@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Label     = require('../../../src/index.js').Label;
+import ReactDOM  from 'react-dom';
+import React     from 'react';
+import TestUtils from 'react-addons-test-utils';
+import {Label}   from '../../../src/index';
 
-describe('Label', function () {
-  it('should have .ui.label class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Label', () => {
+  it('should have .ui.label class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Label></Label>
     );
 
@@ -17,48 +16,56 @@ describe('Label', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('label');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Label>123</Label>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Label className="custom"></Label>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
-  it('should have blue class with color is blue', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have blue class with color is blue', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Label color="blue"></Label>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('blue');
   });
 
-  it('should be <div> if type is div', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should be <div> if type is div', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Label type="div"></Label>
     );
 
     expect(TestUtils.findRenderedDOMComponentWithTag(instance, 'div')).toBeDefined();
   });
 
-  it('should call onClick callback when unit click', function () {
+  it('should call onClick callback when unit click', () => {
 
-    var clickOp = jest.genMockFunction();
+    let clickOp = jest.genMockFunction();
 
-    var instance = TestUtils.renderIntoDocument(
+    let instance = TestUtils.renderIntoDocument(
       <Label onClick={clickOp}></Label>
     );
 
     TestUtils.Simulate.click(ReactDOM.findDOMNode(instance));
 
     expect(clickOp).toBeCalled();
+  });
+
+  it('should display Label name', () => {
+    let Component = (
+      <Label></Label>
+    );
+
+    expect(Component.type.displayName).toMatch('Label');
   });
 });

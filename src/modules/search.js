@@ -3,8 +3,9 @@ import React from 'react';
 
 import filter from '../filter';
 
-const stateArray = ['loading'];
+const stateArray       = ['loading'];
 const defaultClassName = 'ui search';
+const componentName    = 'Search';
 
 const Basic = React.createClass({
 
@@ -38,6 +39,6 @@ const Basic = React.createClass({
 const Search = new filter(Basic)
   .stateFilter(stateArray)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Search;

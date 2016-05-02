@@ -4,6 +4,7 @@ import React from 'react';
 import filter from '../filter';
 
 const defaultClassName = 'ui sticky';
+const componentName    = 'Sticky';
 
 const Basic = React.createClass({
 
@@ -36,6 +37,6 @@ const Basic = React.createClass({
 
 const Sticky = new filter(Basic)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Sticky;

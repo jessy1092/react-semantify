@@ -5,6 +5,7 @@ import filter from '../filter';
 
 const stateArray       = ['disabled', 'active'];
 const defaultClassName = 'ui dimmer';
+const componentName    = 'Dimmer';
 
 const Basic = React.createClass({
 
@@ -38,6 +39,6 @@ const Basic = React.createClass({
 const Dimmer = new filter(Basic)
   .stateFilter(stateArray)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Dimmer;

@@ -3,8 +3,9 @@ import React from 'react';
 
 import filter from '../filter';
 
-const stateArray = ['error', 'disabled', 'active'];
+const stateArray       = ['error', 'disabled', 'active'];
 const defaultClassName = 'ui dropdown';
+const componentName    = 'Dropdown';
 
 const Basic = React.createClass({
 
@@ -42,6 +43,6 @@ const Basic = React.createClass({
 const Dropdown = new filter(Basic)
   .stateFilter(stateArray)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Dropdown;

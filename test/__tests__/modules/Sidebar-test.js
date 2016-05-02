@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Sidebar   = require('../../../src/index.js').Sidebar;
+import ReactDOM  from 'react-dom';
+import React     from 'react';
+import TestUtils from 'react-addons-test-utils';
+import {Sidebar} from '../../../src/index';
 
-describe('Sidebar', function () {
-  it('should have .ui.sidebar class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Sidebar', () => {
+  it('should have .ui.sidebar class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Sidebar></Sidebar>
     );
 
@@ -17,19 +16,27 @@ describe('Sidebar', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('sidebar');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Sidebar>123</Sidebar>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Sidebar className="custom"></Sidebar>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
+  });
+
+  it('should display Sidebar name', () => {
+    let Component = (
+      <Sidebar></Sidebar>
+    );
+
+    expect(Component.type.displayName).toMatch('Sidebar');
   });
 });

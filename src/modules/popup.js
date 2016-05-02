@@ -4,6 +4,7 @@ import React from 'react';
 import filter from '../filter';
 
 const defaultClassName = 'ui popup';
+const componentName    = 'Popup';
 
 const Basic = React.createClass({
 
@@ -21,6 +22,6 @@ const Basic = React.createClass({
 
 const Popup = new filter(Basic)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Popup;
