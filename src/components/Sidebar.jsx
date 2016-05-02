@@ -58,7 +58,7 @@ export default React.createClass({
             {entry.name}
           </Item>
         );
-      }.bind(this))
+      })
     );
   },
 
