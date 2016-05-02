@@ -20,8 +20,9 @@ var _div2 = _interopRequireDefault(_div);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'ui breadcrumb';
+var componentName = 'Breadcrumb';
 
-var Breadcrumb = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Breadcrumb = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Breadcrumb;
 
@@ -47,8 +48,9 @@ var _div2 = _interopRequireDefault(_div);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'ui form';
+var componentName = 'Form';
 
-var Form = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Form = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Form;
 
@@ -74,8 +76,9 @@ var _div2 = _interopRequireDefault(_div);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'ui grid';
+var componentName = 'Grid';
 
-var Grid = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Grid = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Grid;
 
@@ -101,8 +104,9 @@ var _div2 = _interopRequireDefault(_div);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'ui menu';
+var componentName = 'Menu';
 
-var Menu = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Menu = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Menu;
 
@@ -128,8 +132,9 @@ var _div2 = _interopRequireDefault(_div);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'ui message';
+var componentName = 'Message';
 
-var Message = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Message = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Message;
 
@@ -153,6 +158,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var defaultClassName = 'ui table';
+var componentName = 'Table';
 
 var Basic = function Basic(_ref) {
   var children = _ref.children;
@@ -166,7 +172,7 @@ var Basic = function Basic(_ref) {
   );
 };
 
-var Table = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent();
+var Table = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Table;
 
@@ -192,8 +198,9 @@ var _div2 = _interopRequireDefault(_div);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'column';
+var componentName = 'Column';
 
-var Column = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Column = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Column;
 
@@ -220,8 +227,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var stateArray = ['active'];
 var defaultClassName = 'content';
+var componentName = 'Content';
 
-var Content = new _filter2.default(_div2.default).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Content = new _filter2.default(_div2.default).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Content;
 
@@ -276,8 +284,9 @@ var _div2 = _interopRequireDefault(_div);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'field';
+var componentName = 'Field';
 
-var Field = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Field = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Field;
 
@@ -303,8 +312,9 @@ var _div2 = _interopRequireDefault(_div);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'fields';
+var componentName = 'Fields';
 
-var Fields = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Fields = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Fields;
 
@@ -330,8 +340,9 @@ var _div2 = _interopRequireDefault(_div);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'row';
+var componentName = 'Row';
 
-var Row = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Row = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Row;
 
@@ -357,8 +368,9 @@ var _unit2 = _interopRequireDefault(_unit);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'section';
+var componentName = 'Section';
 
-var Section = new _filter2.default(_unit2.default).typeFilter().colorFilter().classGenerator(defaultClassName).getComposeComponent();
+var Section = new _filter2.default(_unit2.default).typeFilter().colorFilter().classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Section;
 
@@ -384,8 +396,9 @@ var _div2 = _interopRequireDefault(_div);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'text';
+var componentName = 'Text';
 
-var Text = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Text = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Text;
 
@@ -412,8 +425,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var stateArray = ['active'];
 var defaultClassName = 'title';
+var componentName = 'Title';
 
-var Title = new _filter2.default(_div2.default).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Title = new _filter2.default(_div2.default).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Title;
 
@@ -432,13 +446,55 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var link = function link(_ref) {
+  var children = _ref.children;
+
+  var other = _objectWithoutProperties(_ref, ['children']);
+
+  return _react2.default.createElement(
+    'a',
+    other,
+    children
+  );
+};
+
+var icon = function icon(_ref2) {
+  var children = _ref2.children;
+
+  var other = _objectWithoutProperties(_ref2, ['children']);
+
+  return _react2.default.createElement(
+    'i',
+    other,
+    children
+  );
+};
+
+var div = function div(_ref3) {
+  var children = _ref3.children;
+
+  var other = _objectWithoutProperties(_ref3, ['children']);
+
+  return _react2.default.createElement(
+    'div',
+    other,
+    children
+  );
+};
+
+var basicComponentMap = {
+  link: link,
+  icon: icon,
+  div: div
+};
 
 var Unit = function (_React$Component) {
   _inherits(Unit, _React$Component);
@@ -459,29 +515,13 @@ var Unit = function (_React$Component) {
 
       var other = _objectWithoutProperties(_props, ['children', 'type']);
 
-      switch (type) {
+      var Component = basicComponentMap[type];
 
-        case 'link':
-          return _react2.default.createElement(
-            'a',
-            other,
-            children
-          );
-
-        case 'icon':
-          return _react2.default.createElement('i', other);
-
-        case 'img':
-          return _react2.default.createElement('img', other);
-
-        case 'div':
-        default:
-          return _react2.default.createElement(
-            'div',
-            other,
-            children
-          );
-      }
+      return _react2.default.createElement(
+        Component,
+        other,
+        children
+      );
     }
   }]);
 
@@ -513,8 +553,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var stateArray = ['disabled', 'active', 'loading'];
 var defaultClassName = 'ui button';
+var componentName = 'Button';
 
-var Button = new _filter2.default(_unit2.default).typeFilter().colorFilter().stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Button = new _filter2.default(_unit2.default).typeFilter().colorFilter().stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Button;
 
@@ -540,8 +581,9 @@ var _div2 = _interopRequireDefault(_div);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'ui container';
+var componentName = 'Container';
 
-var Container = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Container = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Container;
 
@@ -567,8 +609,9 @@ var _div2 = _interopRequireDefault(_div);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'ui divider';
+var componentName = 'Divider';
 
-var Divider = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Divider = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Divider;
 
@@ -590,12 +633,13 @@ var _filter2 = _interopRequireDefault(_filter);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'flag';
+var componentName = 'Flag';
 
 var Basic = function Basic(props) {
   return _react2.default.createElement('i', props);
 };
 
-var Flag = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent();
+var Flag = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Flag;
 
@@ -622,8 +666,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var stateArray = ['disabled'];
 var defaultClassName = 'ui header';
+var componentName = 'Header';
 
-var Header = new _filter2.default(_unit2.default).typeFilter().colorFilter().stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Header = new _filter2.default(_unit2.default).typeFilter().colorFilter().stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Header;
 
@@ -646,12 +691,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var stateArray = ['disabled', 'loading'];
 var defaultClassName = 'icon';
+var componentName = 'Icon';
 
 var Basic = function Basic(props) {
   return _react2.default.createElement('i', props);
 };
 
-var Icon = new _filter2.default(Basic).colorFilter().stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Icon = new _filter2.default(Basic).colorFilter().stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Icon;
 
@@ -674,12 +720,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var stateArray = ['disabled'];
 var defaultClassName = 'ui image';
+var componentName = 'Image';
 
 var Basic = function Basic(props) {
   return _react2.default.createElement('img', props);
 };
 
-var Image = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Image = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Image;
 
@@ -704,6 +751,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var stateArray = ['loading', 'focus', 'error'];
 var defaultClassName = 'ui input';
+var componentName = 'Input';
 
 var Basic = _react2.default.createClass({
   displayName: 'Basic',
@@ -735,7 +783,7 @@ var Basic = _react2.default.createClass({
   }
 });
 
-var Input = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Input = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Input;
 
@@ -761,8 +809,9 @@ var _unit2 = _interopRequireDefault(_unit);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'ui label';
+var componentName = 'Label';
 
-var Label = new _filter2.default(_unit2.default).typeFilter().colorFilter().classGenerator(defaultClassName).getComposeComponent();
+var Label = new _filter2.default(_unit2.default).typeFilter().colorFilter().classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Label;
 
@@ -788,8 +837,9 @@ var _div2 = _interopRequireDefault(_div);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'ui list';
+var componentName = 'List';
 
-var List = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var List = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = List;
 
@@ -816,8 +866,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var stateArray = ['disabled', 'active'];
 var defaultClassName = 'ui loader';
+var componentName = 'Loader';
 
-var Loader = new _filter2.default(_div2.default).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Loader = new _filter2.default(_div2.default).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Loader;
 
@@ -843,8 +894,9 @@ var _div2 = _interopRequireDefault(_div);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'ui rail';
+var componentName = 'Rail';
 
-var Rail = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Rail = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Rail;
 
@@ -871,8 +923,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var stateArray = ['disabled'];
 var defaultClassName = 'ui reveal';
+var componentName = 'Reveal';
 
-var Reveal = new _filter2.default(_div2.default).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Reveal = new _filter2.default(_div2.default).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Reveal;
 
@@ -899,8 +952,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var stateArray = ['disabled', 'loading'];
 var defaultClassName = 'ui segment';
+var componentName = 'Segment';
 
-var Segment = new _filter2.default(_div2.default).colorFilter().stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Segment = new _filter2.default(_div2.default).colorFilter().stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Segment;
 
@@ -927,8 +981,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var stateArray = ['active', 'completed', 'disabled'];
 var defaultClassName = 'step';
+var componentName = 'Step';
 
-var Step = new _filter2.default(_div2.default).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Step = new _filter2.default(_div2.default).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Step;
 
@@ -954,8 +1009,9 @@ var _div2 = _interopRequireDefault(_div);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'ui steps';
+var componentName = 'Steps';
 
-var Steps = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Steps = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Steps;
 
@@ -991,9 +1047,7 @@ exports.default = function (defaultClassName, ComposeComponent) {
 
         var other = _objectWithoutProperties(_props, ['className', 'children']);
 
-        if (typeof className !== 'undefined') {
-          className += ' ' + defaultClassName;
-        }
+        className = (className + ' ' + defaultClassName).trim();
 
         return _react2.default.createElement(
           ComposeComponent,
@@ -1051,15 +1105,13 @@ exports.default = function (ComposeComponent) {
         var _props$className = _props.className;
         var className = _props$className === undefined ? '' : _props$className;
         var children = _props.children;
-        var color = _props.color;
+        var _props$color = _props.color;
+        var color = _props$color === undefined ? '' : _props$color;
 
         var other = _objectWithoutProperties(_props, ['className', 'children', 'color']);
 
-        if (typeof color !== 'undefined') {
-
-          if (colorArray.indexOf(color) !== -1) {
-            className += ' ' + color;
-          }
+        if (colorArray.indexOf(color) !== -1) {
+          className = (className + ' ' + color).trim();
         }
 
         return _react2.default.createElement(
@@ -1121,6 +1173,10 @@ var _typeFilter2 = require('./typeFilter');
 
 var _typeFilter3 = _interopRequireDefault(_typeFilter2);
 
+var _nameSetter = require('./nameSetter');
+
+var _nameSetter2 = _interopRequireDefault(_nameSetter);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1158,8 +1214,8 @@ var FilterFactory = function () {
     }
   }, {
     key: 'getComposeComponent',
-    value: function getComposeComponent() {
-      return this.ComposeComponent;
+    value: function getComposeComponent(componentName) {
+      return (0, _nameSetter2.default)(componentName, this.ComposeComponent);
     }
   }]);
 
@@ -1168,7 +1224,64 @@ var FilterFactory = function () {
 
 exports.default = FilterFactory;
 
-},{"./classGenerator":33,"./colorFilter":34,"./stateFilter":36,"./typeFilter":37}],36:[function(require,module,exports){
+},{"./classGenerator":33,"./colorFilter":34,"./nameSetter":36,"./stateFilter":37,"./typeFilter":38}],36:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+exports.default = function (componentName, ComposeComponent) {
+  var _class, _temp;
+
+  return _temp = _class = function (_React$Component) {
+    _inherits(_class, _React$Component);
+
+    function _class() {
+      _classCallCheck(this, _class);
+
+      return _possibleConstructorReturn(this, Object.getPrototypeOf(_class).apply(this, arguments));
+    }
+
+    _createClass(_class, [{
+      key: 'render',
+      value: function render() {
+        var _props = this.props;
+        var children = _props.children;
+
+        var other = _objectWithoutProperties(_props, ['children']);
+
+        return _react2.default.createElement(
+          ComposeComponent,
+          other,
+          children
+        );
+      }
+    }]);
+
+    return _class;
+  }(_react2.default.Component), _class.displayName = componentName, _temp;
+};
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+;
+
+},{}],37:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1193,7 +1306,8 @@ exports.default = function (stateArray, ComposeComponent) {
       key: 'render',
       value: function render() {
         var _props = this.props;
-        var className = _props.className;
+        var _props$className = _props.className;
+        var className = _props$className === undefined ? '' : _props$className;
         var children = _props.children;
 
         var other = _objectWithoutProperties(_props, ['className', 'children']);
@@ -1203,9 +1317,9 @@ exports.default = function (stateArray, ComposeComponent) {
 
             if (other[key]) {
               if (key in keyMap) {
-                className += ' ' + keyMap[key];
+                className = (className + ' ' + keyMap[key]).trim();
               } else {
-                className += ' ' + key;
+                className = (className + ' ' + key).trim();
               }
             }
 
@@ -1253,7 +1367,7 @@ var keyMap = {
   'readOnly': 'read-only'
 };
 
-},{}],37:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1314,7 +1428,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var typeArray = ['div', 'link', 'icon'];
 
-},{}],38:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1599,7 +1713,7 @@ exports.Item = _item2.default;
 exports.Items = _items2.default;
 exports.Statistic = _statistic2.default;
 
-},{"./collections/breadcrumb":1,"./collections/form":2,"./collections/grid":3,"./collections/menu":4,"./collections/message":5,"./collections/table":6,"./commons/column":7,"./commons/content":8,"./commons/field":10,"./commons/fields":11,"./commons/row":12,"./commons/section":13,"./commons/text":14,"./commons/title":15,"./elements/button":17,"./elements/container":18,"./elements/divider":19,"./elements/flag":20,"./elements/header":21,"./elements/icon":22,"./elements/image":23,"./elements/input":24,"./elements/label":25,"./elements/list":26,"./elements/loader":27,"./elements/rail":28,"./elements/reveal":29,"./elements/segment":30,"./elements/step":31,"./elements/steps":32,"./modules/accordion":39,"./modules/checkbox":40,"./modules/dimmer":41,"./modules/dropdown":42,"./modules/embed":43,"./modules/modal":44,"./modules/popup":45,"./modules/progress":46,"./modules/rating":47,"./modules/search":48,"./modules/shape":49,"./modules/sidebar":50,"./modules/sticky":51,"./modules/tab":52,"./views/advertisement":53,"./views/card":54,"./views/comment":55,"./views/comments":56,"./views/feed":57,"./views/item":58,"./views/items":59,"./views/statistic":60}],39:[function(require,module,exports){
+},{"./collections/breadcrumb":1,"./collections/form":2,"./collections/grid":3,"./collections/menu":4,"./collections/message":5,"./collections/table":6,"./commons/column":7,"./commons/content":8,"./commons/field":10,"./commons/fields":11,"./commons/row":12,"./commons/section":13,"./commons/text":14,"./commons/title":15,"./elements/button":17,"./elements/container":18,"./elements/divider":19,"./elements/flag":20,"./elements/header":21,"./elements/icon":22,"./elements/image":23,"./elements/input":24,"./elements/label":25,"./elements/list":26,"./elements/loader":27,"./elements/rail":28,"./elements/reveal":29,"./elements/segment":30,"./elements/step":31,"./elements/steps":32,"./modules/accordion":40,"./modules/checkbox":41,"./modules/dimmer":42,"./modules/dropdown":43,"./modules/embed":44,"./modules/modal":45,"./modules/popup":46,"./modules/progress":47,"./modules/rating":48,"./modules/search":49,"./modules/shape":50,"./modules/sidebar":51,"./modules/sticky":52,"./modules/tab":53,"./views/advertisement":54,"./views/card":55,"./views/comment":56,"./views/comments":57,"./views/feed":58,"./views/item":59,"./views/items":60,"./views/statistic":61}],40:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1621,6 +1735,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var defaultClassName = 'ui accordion';
+var componentName = 'Accordion';
 
 var Basic = _react2.default.createClass({
   displayName: 'Basic',
@@ -1656,11 +1771,11 @@ var Basic = _react2.default.createClass({
   }
 });
 
-var Accordion = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent();
+var Accordion = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Accordion;
 
-},{"../filter":35}],40:[function(require,module,exports){
+},{"../filter":35}],41:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1683,6 +1798,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var stateArray = ['disabled', 'readOnly'];
 var defaultClassName = 'ui checkbox';
+var componentName = 'Checkbox';
 
 var Basic = _react2.default.createClass({
   displayName: 'Basic',
@@ -1718,11 +1834,11 @@ var Basic = _react2.default.createClass({
   }
 });
 
-var Checkbox = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Checkbox = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Checkbox;
 
-},{"../filter":35}],41:[function(require,module,exports){
+},{"../filter":35}],42:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1745,6 +1861,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var stateArray = ['disabled', 'active'];
 var defaultClassName = 'ui dimmer';
+var componentName = 'Dimmer';
 
 var Basic = _react2.default.createClass({
   displayName: 'Basic',
@@ -1780,11 +1897,11 @@ var Basic = _react2.default.createClass({
   }
 });
 
-var Dimmer = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Dimmer = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Dimmer;
 
-},{"../filter":35}],42:[function(require,module,exports){
+},{"../filter":35}],43:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1807,6 +1924,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var stateArray = ['error', 'disabled', 'active'];
 var defaultClassName = 'ui dropdown';
+var componentName = 'Dropdown';
 
 var Basic = _react2.default.createClass({
   displayName: 'Basic',
@@ -1847,11 +1965,11 @@ var Basic = _react2.default.createClass({
   }
 });
 
-var Dropdown = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Dropdown = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Dropdown;
 
-},{"../filter":35}],43:[function(require,module,exports){
+},{"../filter":35}],44:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1873,6 +1991,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var defaultClassName = 'ui embed';
+var componentName = 'Embed';
 
 var Basic = _react2.default.createClass({
   displayName: 'Basic',
@@ -1919,11 +2038,11 @@ var Basic = _react2.default.createClass({
   }
 });
 
-var Embed = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent();
+var Embed = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Embed;
 
-},{"../filter":35}],44:[function(require,module,exports){
+},{"../filter":35}],45:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1946,6 +2065,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var stateArray = ['active'];
 var defaultClassName = 'ui modal';
+var componentName = 'Modal';
 
 var Basic = _react2.default.createClass({
   displayName: 'Basic',
@@ -1980,11 +2100,11 @@ var Basic = _react2.default.createClass({
   }
 });
 
-var Modal = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Modal = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Modal;
 
-},{"../filter":35}],45:[function(require,module,exports){
+},{"../filter":35}],46:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2004,6 +2124,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var defaultClassName = 'ui popup';
+var componentName = 'Popup';
 
 var Basic = _react2.default.createClass({
   displayName: 'Basic',
@@ -2023,11 +2144,11 @@ var Basic = _react2.default.createClass({
   }
 });
 
-var Popup = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent();
+var Popup = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Popup;
 
-},{"../filter":35}],46:[function(require,module,exports){
+},{"../filter":35}],47:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2050,6 +2171,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var stateArray = ['active', 'success', 'warning', 'error', 'disabled'];
 var defaultClassName = 'ui progress';
+var componentName = 'Progress';
 
 var Basic = _react2.default.createClass({
   displayName: 'Basic',
@@ -2092,11 +2214,11 @@ var Basic = _react2.default.createClass({
   }
 });
 
-var Progress = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Progress = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Progress;
 
-},{"../filter":35}],47:[function(require,module,exports){
+},{"../filter":35}],48:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2118,6 +2240,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var defaultClassName = 'ui rating';
+var componentName = 'Rating';
 
 var Basic = _react2.default.createClass({
   displayName: 'Basic',
@@ -2158,11 +2281,11 @@ var Basic = _react2.default.createClass({
   }
 });
 
-var Rating = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent();
+var Rating = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Rating;
 
-},{"../filter":35}],48:[function(require,module,exports){
+},{"../filter":35}],49:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2185,6 +2308,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var stateArray = ['loading'];
 var defaultClassName = 'ui search';
+var componentName = 'Search';
 
 var Basic = _react2.default.createClass({
   displayName: 'Basic',
@@ -2220,11 +2344,11 @@ var Basic = _react2.default.createClass({
   }
 });
 
-var Search = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Search = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Search;
 
-},{"../filter":35}],49:[function(require,module,exports){
+},{"../filter":35}],50:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2246,6 +2370,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var defaultClassName = 'ui shape';
+var componentName = 'Shape';
 
 var Basic = _react2.default.createClass({
   displayName: 'Basic',
@@ -2281,11 +2406,11 @@ var Basic = _react2.default.createClass({
   }
 });
 
-var Shap = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent();
+var Shap = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Shap;
 
-},{"../filter":35}],50:[function(require,module,exports){
+},{"../filter":35}],51:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2307,6 +2432,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var defaultClassName = 'ui sidebar';
+var componentName = 'Sidebar';
 
 var Basic = _react2.default.createClass({
   displayName: 'Basic',
@@ -2342,11 +2468,11 @@ var Basic = _react2.default.createClass({
   }
 });
 
-var Sidebar = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent();
+var Sidebar = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Sidebar;
 
-},{"../filter":35}],51:[function(require,module,exports){
+},{"../filter":35}],52:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2368,6 +2494,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var defaultClassName = 'ui sticky';
+var componentName = 'Sticky';
 
 var Basic = _react2.default.createClass({
   displayName: 'Basic',
@@ -2403,11 +2530,11 @@ var Basic = _react2.default.createClass({
   }
 });
 
-var Sticky = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent();
+var Sticky = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Sticky;
 
-},{"../filter":35}],52:[function(require,module,exports){
+},{"../filter":35}],53:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2430,6 +2557,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var stateArray = ['active', 'loading'];
 var defaultClassName = 'ui tab';
+var componentName = 'Tab';
 
 var Basic = _react2.default.createClass({
   displayName: 'Basic',
@@ -2468,11 +2596,11 @@ var Basic = _react2.default.createClass({
   }
 });
 
-var Tab = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent();
+var Tab = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Tab;
 
-},{"../filter":35}],53:[function(require,module,exports){
+},{"../filter":35}],54:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2494,37 +2622,11 @@ var _div2 = _interopRequireDefault(_div);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'ui ad';
+var componentName = 'Ad';
 
-var Ad = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Ad = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Ad;
-
-},{"../commons/div":9,"../filter":35}],54:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = (window.React);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _filter = require('../filter');
-
-var _filter2 = _interopRequireDefault(_filter);
-
-var _div = require('../commons/div');
-
-var _div2 = _interopRequireDefault(_div);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var defaultClassName = 'ui card';
-
-var Card = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
-
-exports.default = Card;
 
 },{"../commons/div":9,"../filter":35}],55:[function(require,module,exports){
 'use strict';
@@ -2547,11 +2649,12 @@ var _div2 = _interopRequireDefault(_div);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var defaultClassName = 'comment';
+var defaultClassName = 'ui card';
+var componentName = 'Card';
 
-var Comment = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Card = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
-exports.default = Comment;
+exports.default = Card;
 
 },{"../commons/div":9,"../filter":35}],56:[function(require,module,exports){
 'use strict';
@@ -2574,11 +2677,12 @@ var _div2 = _interopRequireDefault(_div);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var defaultClassName = 'ui comments';
+var defaultClassName = 'comment';
+var componentName = 'Comment';
 
-var Comments = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Comment = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
-exports.default = Comments;
+exports.default = Comment;
 
 },{"../commons/div":9,"../filter":35}],57:[function(require,module,exports){
 'use strict';
@@ -2601,13 +2705,42 @@ var _div2 = _interopRequireDefault(_div);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var defaultClassName = 'ui feed';
+var defaultClassName = 'ui comments';
+var componentName = 'Comments';
 
-var Feed = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Comments = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
+
+exports.default = Comments;
+
+},{"../commons/div":9,"../filter":35}],58:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _filter = require('../filter');
+
+var _filter2 = _interopRequireDefault(_filter);
+
+var _div = require('../commons/div');
+
+var _div2 = _interopRequireDefault(_div);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var defaultClassName = 'ui feed';
+var componentName = 'Feed';
+
+var Feed = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Feed;
 
-},{"../commons/div":9,"../filter":35}],58:[function(require,module,exports){
+},{"../commons/div":9,"../filter":35}],59:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2633,6 +2766,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var defaultClassName = 'item';
+var componentName = 'Item';
 
 var Basic = _react2.default.createClass({
   displayName: 'Basic',
@@ -2654,11 +2788,11 @@ var Basic = _react2.default.createClass({
   }
 });
 
-var Item = new _filter2.default(Basic).typeFilter().classGenerator(defaultClassName).getComposeComponent();
+var Item = new _filter2.default(Basic).typeFilter().classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Item;
 
-},{"../commons/unit":16,"../filter":35}],59:[function(require,module,exports){
+},{"../commons/unit":16,"../filter":35}],60:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2680,6 +2814,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var defaultClassName = 'ui items';
+var componentName = 'Items';
 
 var Basic = _react2.default.createClass({
   displayName: 'Basic',
@@ -2706,11 +2841,11 @@ var Basic = _react2.default.createClass({
   }
 });
 
-var Items = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent();
+var Items = new _filter2.default(Basic).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Items;
 
-},{"../filter":35}],60:[function(require,module,exports){
+},{"../filter":35}],61:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2732,10 +2867,11 @@ var _div2 = _interopRequireDefault(_div);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultClassName = 'ui statistic';
+var componentName = 'Statistic';
 
-var Statistic = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent();
+var Statistic = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
 
 exports.default = Statistic;
 
-},{"../commons/div":9,"../filter":35}]},{},[38])(38)
+},{"../commons/div":9,"../filter":35}]},{},[39])(39)
 });

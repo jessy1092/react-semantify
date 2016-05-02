@@ -1,3 +1,13 @@
+<a name="0.5.1"></a>
+## [0.5.1](https://github.com/jessy1092/react-semantify/compare/v0.5.0...v0.5.1) (2016-05-02)
+
+
+### Bug Fixes
+
+* Set displayname when getComposeComponent. close #60([617e5c8](https://github.com/jessy1092/react-semantify/commit/617e5c8)), closes [#60](https://github.com/jessy1092/react-semantify/issues/60)
+
+
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/jessy1092/react-semantify/compare/v0.4.3...v0.5.0) (2016-05-01)
 
