@@ -31,4 +31,12 @@ describe('Form', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Form name', function () {
+    var Component = (
+      <Form></Form>
+    );
+
+    expect(Component.type.displayName).toMatch('Form');
+  });
 });

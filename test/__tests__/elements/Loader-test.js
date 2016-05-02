@@ -48,4 +48,12 @@ describe('Loader', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('active');
   });
+
+  it('should display Loader name', function () {
+    var Component = (
+      <Loader></Loader>
+    );
+
+    expect(Component.type.displayName).toMatch('Loader');
+  });
 });

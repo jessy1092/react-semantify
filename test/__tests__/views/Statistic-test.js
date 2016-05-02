@@ -32,4 +32,12 @@ describe('Statistic', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Statistic name', function () {
+    var Component = (
+      <Statistic></Statistic>
+    );
+
+    expect(Component.type.displayName).toMatch('Statistic');
+  });
 });

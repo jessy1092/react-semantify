@@ -4,6 +4,7 @@ import React from 'react';
 import filter from '../filter';
 
 const defaultClassName = 'ui embed';
+const componentName    = 'Embed';
 
 const Basic = React.createClass({
 
@@ -42,6 +43,6 @@ const Basic = React.createClass({
 
 const Embed = new filter(Basic)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Embed;

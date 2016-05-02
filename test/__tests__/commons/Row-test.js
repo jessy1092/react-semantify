@@ -31,4 +31,12 @@ describe('Row', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Row name', function () {
+    var Component = (
+      <Row></Row>
+    );
+
+    expect(Component.type.displayName).toMatch('Row');
+  });
 });

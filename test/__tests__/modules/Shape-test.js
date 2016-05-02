@@ -32,4 +32,12 @@ describe('Shape', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Shape name', function () {
+    var Component = (
+      <Shape></Shape>
+    );
+
+    expect(Component.type.displayName).toMatch('Shape');
+  });
 });

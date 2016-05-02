@@ -40,4 +40,12 @@ describe('Accordion', function () {
 
     expect(ReactDOM.findDOMNode(instance).getAttribute('data-custom')).toMatch('custom');
   });
+
+  it('should display Accordion name', function () {
+    var Component = (
+      <Accordion></Accordion>
+    );
+
+    expect(Component.type.displayName).toMatch('Accordion');
+  });
 });

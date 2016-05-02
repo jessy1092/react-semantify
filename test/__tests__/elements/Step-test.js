@@ -55,4 +55,12 @@ describe('Step', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('completed');
   });
+
+  it('should display Step name', function () {
+    var Component = (
+      <Step></Step>
+    );
+
+    expect(Component.type.displayName).toMatch('Step');
+  });
 });

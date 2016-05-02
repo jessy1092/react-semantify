@@ -31,4 +31,12 @@ describe('Fields', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Fields name', function () {
+    var Component = (
+      <Fields></Fields>
+    );
+
+    expect(Component.type.displayName).toMatch('Fields');
+  });
 });

@@ -56,4 +56,12 @@ describe('Progress', function () {
 
     expect(ReactDOM.findDOMNode(instance).getAttribute('data-total')).toMatch('1');
   });
+
+  it('should display Progress name', function () {
+    var Component = (
+      <Progress></Progress>
+    );
+
+    expect(Component.type.displayName).toMatch('Progress');
+  });
 });

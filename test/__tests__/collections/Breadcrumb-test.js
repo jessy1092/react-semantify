@@ -31,4 +31,12 @@ describe('Breadcrumb', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Breadcrumb name', function () {
+    var Component = (
+      <Breadcrumb></Breadcrumb>
+    );
+
+    expect(Component.type.displayName).toMatch('Breadcrumb');
+  });
 });

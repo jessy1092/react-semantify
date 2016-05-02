@@ -68,4 +68,12 @@ describe('Icon', function () {
 
     expect(clickOp).toBeCalled();
   });
+
+  it('should display Icon name', function () {
+    var Component = (
+      <Icon></Icon>
+    );
+
+    expect(Component.type.displayName).toMatch('Icon');
+  });
 });

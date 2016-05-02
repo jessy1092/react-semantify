@@ -5,6 +5,7 @@ import filter from '../filter';
 
 const stateArray       = ['active', 'success', 'warning', 'error', 'disabled'];
 const defaultClassName = 'ui progress';
+const componentName    = 'Progress';
 
 const Basic = React.createClass({
 
@@ -42,6 +43,6 @@ const Basic = React.createClass({
 const Progress = new filter(Basic)
   .stateFilter(stateArray)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Progress;

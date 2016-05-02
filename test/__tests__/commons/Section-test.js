@@ -47,4 +47,12 @@ describe('Section', function () {
 
     expect(TestUtils.findRenderedDOMComponentWithTag(instance, 'a')).toBeDefined();
   });
+
+  it('should display Section name', function () {
+    var Component = (
+      <Section></Section>
+    );
+
+    expect(Component.type.displayName).toMatch('Section');
+  });
 });

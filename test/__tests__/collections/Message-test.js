@@ -32,4 +32,12 @@ describe('Message', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Message name', function () {
+    var Component = (
+      <Message></Message>
+    );
+
+    expect(Component.type.displayName).toMatch('Message');
+  });
 });

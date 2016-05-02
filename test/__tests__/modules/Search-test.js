@@ -40,4 +40,12 @@ describe('Search', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('loading');
   });
+
+  it('should display Search name', function () {
+    var Component = (
+      <Search></Search>
+    );
+
+    expect(Component.type.displayName).toMatch('Search');
+  });
 });

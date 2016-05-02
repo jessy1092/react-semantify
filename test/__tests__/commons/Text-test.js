@@ -31,4 +31,12 @@ describe('Text', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Text name', function () {
+    var Component = (
+      <Text></Text>
+    );
+
+    expect(Component.type.displayName).toMatch('Text');
+  });
 });

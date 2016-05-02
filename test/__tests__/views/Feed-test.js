@@ -32,4 +32,12 @@ describe('Feed', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Feed name', function () {
+    var Component = (
+      <Feed></Feed>
+    );
+
+    expect(Component.type.displayName).toMatch('Feed');
+  });
 });

@@ -4,6 +4,7 @@ import React from 'react';
 import filter from '../filter';
 
 const defaultClassName = 'ui table';
+const componentName    = 'Table';
 
 const Basic = ({children, ...other}) => (
   <table {...other}>{children}</table>
@@ -11,6 +12,6 @@ const Basic = ({children, ...other}) => (
 
 const Table = new filter(Basic)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Table;

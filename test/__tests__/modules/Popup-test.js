@@ -40,4 +40,12 @@ describe('Popup', function () {
 
     expect(ReactDOM.findDOMNode(instance).getAttribute('data-custom')).toMatch('custom');
   });
+
+  it('should display Popup name', function () {
+    var Component = (
+      <Popup></Popup>
+    );
+
+    expect(Component.type.displayName).toMatch('Popup');
+  });
 });

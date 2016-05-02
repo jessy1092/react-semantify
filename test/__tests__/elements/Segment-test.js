@@ -69,4 +69,12 @@ describe('Segment', function () {
 
     expect(clickOp).toBeCalled();
   });
+
+  it('should display Segment name', function () {
+    var Component = (
+      <Segment></Segment>
+    );
+
+    expect(Component.type.displayName).toMatch('Segment');
+  });
 });

@@ -40,4 +40,12 @@ describe('Modal', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('active');
   });
+
+  it('should display Modal name', function () {
+    var Component = (
+      <Modal></Modal>
+    );
+
+    expect(Component.type.displayName).toMatch('Modal');
+  });
 });

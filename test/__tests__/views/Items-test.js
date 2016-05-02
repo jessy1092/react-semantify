@@ -49,4 +49,11 @@ describe('Items', function () {
     expect(ReactDOM.findDOMNode(instance).getAttribute('data-custom')).toMatch('custom');
   });
 
+  it('should display Items name', function () {
+    var Component = (
+      <Items></Items>
+    );
+
+    expect(Component.type.displayName).toMatch('Items');
+  });
 });

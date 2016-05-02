@@ -32,4 +32,12 @@ describe('Sidebar', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Sidebar name', function () {
+    var Component = (
+      <Sidebar></Sidebar>
+    );
+
+    expect(Component.type.displayName).toMatch('Sidebar');
+  });
 });

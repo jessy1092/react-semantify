@@ -48,4 +48,11 @@ describe('Container', () => {
     expect(ReactDOM.findDOMNode(instance).getAttribute('data-custom')).toEqual('custom');
   });
 
+  it('should display Container name', function () {
+    var Component = (
+      <Container></Container>
+    );
+
+    expect(Component.type.displayName).toMatch('Container');
+  });
 });

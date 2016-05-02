@@ -32,4 +32,12 @@ describe('Card', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Card name', function () {
+    var Component = (
+      <Card></Card>
+    );
+
+    expect(Component.type.displayName).toMatch('Card');
+  });
 });

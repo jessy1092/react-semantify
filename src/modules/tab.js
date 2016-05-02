@@ -5,6 +5,7 @@ import filter from '../filter';
 
 const stateArray       = ['active', 'loading'];
 const defaultClassName = 'ui tab';
+const componentName    = 'Tab';
 
 const Basic = React.createClass({
 
@@ -40,6 +41,6 @@ const Basic = React.createClass({
 const Tab = new filter(Basic)
   .stateFilter(stateArray)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Tab;

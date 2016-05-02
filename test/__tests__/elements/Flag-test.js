@@ -36,4 +36,12 @@ describe('Flag', function () {
 
     expect(clickOp).toBeCalled();
   });
+
+  it('should display Flag name', function () {
+    var Component = (
+      <Flag></Flag>
+    );
+
+    expect(Component.type.displayName).toMatch('Flag');
+  });
 });

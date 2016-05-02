@@ -39,4 +39,12 @@ describe('Title', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('active');
   });
+
+  it('should display Title name', function () {
+    var Component = (
+      <Title></Title>
+    );
+
+    expect(Component.type.displayName).toMatch('Title');
+  });
 });

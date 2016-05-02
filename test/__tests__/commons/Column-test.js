@@ -31,4 +31,12 @@ describe('Column', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Column name', function () {
+    var Component = (
+      <Column></Column>
+    );
+
+    expect(Component.type.displayName).toMatch('Column');
+  });
 });

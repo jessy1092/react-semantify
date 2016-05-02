@@ -31,4 +31,12 @@ describe('Comment', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Comment name', function () {
+    var Component = (
+      <Comment></Comment>
+    );
+
+    expect(Component.type.displayName).toMatch('Comment');
+  });
 });

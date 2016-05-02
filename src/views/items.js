@@ -4,6 +4,7 @@ import React from 'react';
 import filter from '../filter';
 
 const defaultClassName = 'ui items';
+const componentName    = 'Items';
 
 const Basic = React.createClass({
 
@@ -25,6 +26,6 @@ const Basic = React.createClass({
 
 const Items = new filter(Basic)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Items;

@@ -6,11 +6,12 @@ import Div    from './div';
 
 const stateArray       = ['active'];
 const defaultClassName = 'title';
+const componentName    = 'Title';
 
 const Title = new filter(Div)
   .stateFilter(stateArray)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 
 export default Title;

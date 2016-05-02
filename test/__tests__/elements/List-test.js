@@ -32,4 +32,12 @@ describe('List', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display List name', function () {
+    var Component = (
+      <List></List>
+    );
+
+    expect(Component.type.displayName).toMatch('List');
+  });
 });

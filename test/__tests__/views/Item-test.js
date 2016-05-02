@@ -47,4 +47,12 @@ describe('Item', function () {
 
     expect(ReactDOM.findDOMNode(instance).getAttribute('data-value')).toEqual('1');
   });
+
+  it('should display Item name', function () {
+    var Component = (
+      <Item></Item>
+    );
+
+    expect(Component.type.displayName).toMatch('Item');
+  });
 });

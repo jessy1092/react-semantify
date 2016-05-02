@@ -48,4 +48,12 @@ describe('Divider', function () {
 
     expect(ReactDOM.findDOMNode(instance).getAttribute('data-custom')).toEqual('custom');
   });
+
+  it('should display Divider name', function () {
+    var Component = (
+      <Divider></Divider>
+    );
+
+    expect(Component.type.displayName).toMatch('Divider');
+  });
 });

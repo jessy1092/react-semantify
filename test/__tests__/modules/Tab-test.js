@@ -56,4 +56,12 @@ describe('Tab', function () {
 
     expect(ReactDOM.findDOMNode(instance).getAttribute('data-tab')).toMatch('1');
   });
+
+  it('should display Tab name', function () {
+    var Component = (
+      <Tab></Tab>
+    );
+
+    expect(Component.type.displayName).toMatch('Tab');
+  });
 });

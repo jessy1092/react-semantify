@@ -32,4 +32,12 @@ describe('Sticky', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Sticky name', function () {
+    var Component = (
+      <Sticky></Sticky>
+    );
+
+    expect(Component.type.displayName).toMatch('Sticky');
+  });
 });

@@ -31,4 +31,12 @@ describe('Content', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Content name', function () {
+    var Component = (
+      <Content></Content>
+    );
+
+    expect(Component.type.displayName).toMatch('Content');
+  });
 });

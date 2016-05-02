@@ -32,4 +32,12 @@ describe('Ad', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Ad name', function () {
+    var Component = (
+      <Ad></Ad>
+    );
+
+    expect(Component.type.displayName).toMatch('Ad');
+  });
 });

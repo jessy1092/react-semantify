@@ -48,4 +48,12 @@ describe('Dimmer', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('active');
   });
+
+  it('should display Dimmer name', function () {
+    var Component = (
+      <Dimmer></Dimmer>
+    );
+
+    expect(Component.type.displayName).toMatch('Dimmer');
+  });
 });

@@ -32,4 +32,12 @@ describe('Comments', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Comments name', function () {
+    var Component = (
+      <Comments></Comments>
+    );
+
+    expect(Component.type.displayName).toMatch('Comments');
+  });
 });

@@ -32,4 +32,12 @@ describe('Grid', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Grid name', function () {
+    var Component = (
+      <Grid></Grid>
+    );
+
+    expect(Component.type.displayName).toMatch('Grid');
+  });
 });

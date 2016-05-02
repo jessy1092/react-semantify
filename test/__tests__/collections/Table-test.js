@@ -33,4 +33,12 @@ describe('Table', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Table name', function () {
+    var Component = (
+      <Table></Table>
+    );
+
+    expect(Component.type.displayName).toMatch('Table');
+  });
 });

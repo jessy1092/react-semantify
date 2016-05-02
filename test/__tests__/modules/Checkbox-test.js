@@ -48,4 +48,12 @@ describe('Checkbox', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('read-only');
   });
+
+  it('should display Checkbox name', function () {
+    var Component = (
+      <Checkbox></Checkbox>
+    );
+
+    expect(Component.type.displayName).toMatch('Checkbox');
+  });
 });

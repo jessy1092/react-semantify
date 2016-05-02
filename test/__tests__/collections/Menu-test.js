@@ -32,4 +32,12 @@ describe('Menu', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Menu name', function () {
+    var Component = (
+      <Menu></Menu>
+    );
+
+    expect(Component.type.displayName).toMatch('Menu');
+  });
 });

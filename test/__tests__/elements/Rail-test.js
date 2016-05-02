@@ -32,4 +32,12 @@ describe('Rail', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
+
+  it('should display Rail name', function () {
+    var Component = (
+      <Rail></Rail>
+    );
+
+    expect(Component.type.displayName).toMatch('Rail');
+  });
 });

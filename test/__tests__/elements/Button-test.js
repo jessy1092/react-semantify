@@ -77,4 +77,12 @@ describe('Button', function () {
 
     expect(clickOp).toBeCalled();
   });
+
+  it('should display Button name', function () {
+    var Component = (
+      <Button></Button>
+    );
+
+    expect(Component.type.displayName).toMatch('Button');
+  });
 });

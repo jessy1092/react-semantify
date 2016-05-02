@@ -49,4 +49,12 @@ describe('Image', function () {
 
     expect(TestUtils.findRenderedDOMComponentWithTag(instance, 'img')).toBeDefined();
   });
+
+  it('should display Image name', function () {
+    var Component = (
+      <Image></Image>
+    );
+
+    expect(Component.type.displayName).toMatch('Image');
+  });
 });

@@ -5,6 +5,7 @@ import filter from '../filter';
 import Unit from '../commons/unit';
 
 const defaultClassName = 'item';
+const componentName    = 'Item';
 
 const Basic = React.createClass({
 
@@ -24,6 +25,6 @@ const Basic = React.createClass({
 const Item = new filter(Basic)
   .typeFilter()
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Item;

@@ -40,4 +40,12 @@ describe('Reveal', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('disabled');
   });
+
+  it('should display Reveal name', function () {
+    var Component = (
+      <Reveal></Reveal>
+    );
+
+    expect(Component.type.displayName).toMatch('Reveal');
+  });
 });

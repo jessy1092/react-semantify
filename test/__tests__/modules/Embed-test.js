@@ -73,4 +73,11 @@ describe('Embed', () => {
     expect(ReactDOM.findDOMNode(instance).getAttribute('data-icon')).toEqual('right circle arrow');
   });
 
+  it('should display Embed name', function () {
+    var Component = (
+      <Embed></Embed>
+    );
+
+    expect(Component.type.displayName).toMatch('Embed');
+  });
 });

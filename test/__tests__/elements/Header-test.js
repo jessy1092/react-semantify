@@ -69,4 +69,12 @@ describe('Header', function () {
 
     expect(clickOp).toBeCalled();
   });
+
+  it('should display Header name', function () {
+    var Component = (
+      <Header></Header>
+    );
+
+    expect(Component.type.displayName).toMatch('Header');
+  });
 });

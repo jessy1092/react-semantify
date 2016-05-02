@@ -48,4 +48,12 @@ describe('Rating', function () {
 
     expect(ReactDOM.findDOMNode(instance).getAttribute('data-max-rating')).toEqual('1');
   });
+
+  it('should display Rating name', function () {
+    var Component = (
+      <Rating></Rating>
+    );
+
+    expect(Component.type.displayName).toMatch('Rating');
+  });
 });

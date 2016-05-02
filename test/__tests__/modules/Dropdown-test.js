@@ -57,4 +57,12 @@ describe('Dropdown', function () {
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('error');
   });
+
+  it('should display Dropdown name', function () {
+    var Component = (
+      <Dropdown></Dropdown>
+    );
+
+    expect(Component.type.displayName).toMatch('Dropdown');
+  });
 });

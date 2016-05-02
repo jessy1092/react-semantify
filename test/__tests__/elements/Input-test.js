@@ -88,4 +88,12 @@ describe('Input', function () {
 
     expect(ReactDOM.findDOMNode(input).getAttribute('type')).toMatch('text');
   });
+
+  it('should display Input name', function () {
+    var Component = (
+      <Input></Input>
+    );
+
+    expect(Component.type.displayName).toMatch('Input');
+  });
 });

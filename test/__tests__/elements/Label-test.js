@@ -61,4 +61,12 @@ describe('Label', function () {
 
     expect(clickOp).toBeCalled();
   });
+
+  it('should display Label name', function () {
+    var Component = (
+      <Label></Label>
+    );
+
+    expect(Component.type.displayName).toMatch('Label');
+  });
 });

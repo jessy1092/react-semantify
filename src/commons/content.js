@@ -6,10 +6,11 @@ import Div    from './div';
 
 const stateArray       = ['active'];
 const defaultClassName = 'content';
+const componentName    = 'Content';
 
 const Content = new filter(Div)
   .stateFilter(stateArray)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Content;

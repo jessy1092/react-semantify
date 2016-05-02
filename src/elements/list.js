@@ -5,9 +5,10 @@ import filter from '../filter';
 import Div    from '../commons/div';
 
 const defaultClassName = 'ui list';
+const componentName    = 'List';
 
 const List = new filter(Div)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default List;

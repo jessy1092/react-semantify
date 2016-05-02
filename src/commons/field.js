@@ -5,9 +5,10 @@ import filter from '../filter';
 import Div    from './div';
 
 const defaultClassName = 'field';
+const componentName    = 'Field';
 
 const Field = new filter(Div)
   .classGenerator(defaultClassName)
-  .getComposeComponent();
+  .getComposeComponent(componentName);
 
 export default Field;
