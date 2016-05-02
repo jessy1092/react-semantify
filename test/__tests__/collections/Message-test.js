@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Message   = require('../../../src/index.js').Message;
+import ReactDOM  from 'react-dom';
+import React     from 'react';
+import TestUtils from 'react-addons-test-utils';
+import {Message} from '../../../src/index';
 
-describe('Message', function () {
-  it('should have .ui.message class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Message', () => {
+  it('should have .ui.message class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Message></Message>
     );
 
@@ -17,24 +16,24 @@ describe('Message', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('message');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Message>123</Message>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Message className="custom"></Message>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
-  it('should display Message name', function () {
-    var Component = (
+  it('should display Message name', () => {
+    let Component = (
       <Message></Message>
     );
 

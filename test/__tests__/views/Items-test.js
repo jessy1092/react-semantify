@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Items     = require('../../../src/index.js').Items;
+import ReactDOM  from 'react-dom';
+import React     from 'react';
+import TestUtils from 'react-addons-test-utils';
+import {Items}   from '../../../src/index';
 
-describe('Items', function () {
-  it('should have .ui.items class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Items', () => {
+  it('should have .ui.items class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Items></Items>
     );
 
@@ -17,40 +16,40 @@ describe('Items', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('items');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Items>123</Items>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Items className="custom"></Items>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
-  it('should have link class with type is link', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have link class with type is link', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Items type='link'></Items>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('link');
   });
 
-  it('should have custom attribute', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom attribute', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Items data-custom='custom'></Items>
     );
 
     expect(ReactDOM.findDOMNode(instance).getAttribute('data-custom')).toMatch('custom');
   });
 
-  it('should display Items name', function () {
-    var Component = (
+  it('should display Items name', () => {
+    let Component = (
       <Items></Items>
     );
 

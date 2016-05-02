@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Divider   = require('../../../src/index.js').Divider;
+import ReactDOM  from 'react-dom';
+import React     from 'react';
+import TestUtils from 'react-addons-test-utils';
+import {Divider} from '../../../src/index';
 
-describe('Divider', function () {
-  it('should have .ui.divider class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Divider', () => {
+  it('should have .ui.divider class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Divider></Divider>
     );
 
@@ -17,40 +16,40 @@ describe('Divider', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('divider');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Divider>123</Divider>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Divider className="custom"></Divider>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
-  it('should set custom id', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should set custom id', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Divider id="custom"></Divider>
     );
 
     expect(ReactDOM.findDOMNode(instance).id).toEqual('custom');
   });
 
-  it('should set custom attribute', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should set custom attribute', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Divider data-custom="custom"></Divider>
     );
 
     expect(ReactDOM.findDOMNode(instance).getAttribute('data-custom')).toEqual('custom');
   });
 
-  it('should display Divider name', function () {
-    var Component = (
+  it('should display Divider name', () => {
+    let Component = (
       <Divider></Divider>
     );
 

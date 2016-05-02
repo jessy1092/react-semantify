@@ -1,39 +1,38 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Content   = require('../../../src/index.js').Content;
+import ReactDOM  from 'react-dom';
+import React     from 'react';
+import TestUtils from 'react-addons-test-utils';
+import {Content} from '../../../src/index';
 
-describe('Content', function () {
-  it('should have .content class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Content', () => {
+  it('should have .content class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Content></Content>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('content');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Content>123</Content>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Content className="custom"></Content>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
-  it('should display Content name', function () {
-    var Component = (
+  it('should display Content name', () => {
+    let Component = (
       <Content></Content>
     );
 

@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Dimmer    = require('../../../src/index.js').Dimmer;
+import ReactDOM  from 'react-dom';
+import React     from 'react';
+import TestUtils from 'react-addons-test-utils';
+import {Dimmer}  from '../../../src/index';
 
-describe('Dimmer', function () {
-  it('should have .ui.dimmer class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Dimmer', () => {
+  it('should have .ui.dimmer class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Dimmer></Dimmer>
     );
 
@@ -17,40 +16,40 @@ describe('Dimmer', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('dimmer');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Dimmer>123</Dimmer>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Dimmer className="custom"></Dimmer>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
-  it('should have disabled class with disabled is true', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have disabled class with disabled is true', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Dimmer disabled={true}></Dimmer>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('disabled');
   });
 
-  it('should have active class with active is true', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have active class with active is true', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Dimmer active={true}></Dimmer>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('active');
   });
 
-  it('should display Dimmer name', function () {
-    var Component = (
+  it('should display Dimmer name', () => {
+    let Component = (
       <Dimmer></Dimmer>
     );
 

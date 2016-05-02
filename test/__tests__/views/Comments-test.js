@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Comments  = require('../../../src/index.js').Comments;
+import ReactDOM   from 'react-dom';
+import React      from 'react';
+import TestUtils  from 'react-addons-test-utils';
+import {Comments} from '../../../src/index';
 
-describe('Comments', function () {
-  it('should have .ui.comments class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Comments', () => {
+  it('should have .ui.comments class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Comments></Comments>
     );
 
@@ -17,24 +16,24 @@ describe('Comments', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('comments');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Comments>123</Comments>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Comments className="custom"></Comments>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
-  it('should display Comments name', function () {
-    var Component = (
+  it('should display Comments name', () => {
+    let Component = (
       <Comments></Comments>
     );
 

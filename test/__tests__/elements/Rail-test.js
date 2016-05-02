@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Rail      = require('../../../src/index.js').Rail;
+import ReactDOM  from 'react-dom';
+import React     from 'react';
+import TestUtils from 'react-addons-test-utils';
+import {Rail}    from '../../../src/index';
 
-describe('Rail', function () {
-  it('should have .ui.rail class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Rail', () => {
+  it('should have .ui.rail class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Rail></Rail>
     );
 
@@ -17,24 +16,24 @@ describe('Rail', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('rail');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Rail>123</Rail>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Rail className="custom"></Rail>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
-  it('should display Rail name', function () {
-    var Component = (
+  it('should display Rail name', () => {
+    let Component = (
       <Rail></Rail>
     );
 

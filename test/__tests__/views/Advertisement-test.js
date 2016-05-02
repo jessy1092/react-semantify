@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Ad        = require('../../../src/index.js').Ad;
+import ReactDOM  from 'react-dom';
+import React     from 'react';
+import TestUtils from 'react-addons-test-utils';
+import {Ad}      from '../../../src/index';
 
-describe('Ad', function () {
-  it('should have .ui.ad class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Ad', () => {
+  it('should have .ui.ad class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Ad></Ad>
     );
 
@@ -17,24 +16,24 @@ describe('Ad', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('ad');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Ad>123</Ad>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Ad className="custom"></Ad>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
-  it('should display Ad name', function () {
-    var Component = (
+  it('should display Ad name', () => {
+    let Component = (
       <Ad></Ad>
     );
 

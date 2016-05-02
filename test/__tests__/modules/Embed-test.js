@@ -1,4 +1,3 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
@@ -34,7 +33,7 @@ describe('Embed', () => {
   });
 
   it('should have source for item data-source', () => {
-    var instance = TestUtils.renderIntoDocument(
+    let instance = TestUtils.renderIntoDocument(
       <Embed source="vimeo"></Embed>
     );
 
@@ -42,7 +41,7 @@ describe('Embed', () => {
   });
 
   it('should have sourceId for item data-id', () => {
-    var instance = TestUtils.renderIntoDocument(
+    let instance = TestUtils.renderIntoDocument(
       <Embed sourceId="pfdu_gTry8E"></Embed>
     );
 
@@ -50,7 +49,7 @@ describe('Embed', () => {
   });
 
   it('should have placeholder for item data-placeholder', () => {
-    var instance = TestUtils.renderIntoDocument(
+    let instance = TestUtils.renderIntoDocument(
       <Embed placeholder="/images/image-16by9.png"></Embed>
     );
 
@@ -58,7 +57,7 @@ describe('Embed', () => {
   });
 
   it('should have url for item data-url', () => {
-    var instance = TestUtils.renderIntoDocument(
+    let instance = TestUtils.renderIntoDocument(
       <Embed url="http://www.myfav.es/jack"></Embed>
     );
 
@@ -66,15 +65,15 @@ describe('Embed', () => {
   });
 
   it('should have icon for item data-icon', () => {
-    var instance = TestUtils.renderIntoDocument(
+    let instance = TestUtils.renderIntoDocument(
       <Embed icon="right circle arrow"></Embed>
     );
 
     expect(ReactDOM.findDOMNode(instance).getAttribute('data-icon')).toEqual('right circle arrow');
   });
 
-  it('should display Embed name', function () {
-    var Component = (
+  it('should display Embed name', () => {
+    let Component = (
       <Embed></Embed>
     );
 

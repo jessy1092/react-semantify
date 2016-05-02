@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Input     = require('../../../src/index.js').Input;
+import ReactDOM  from 'react-dom';
+import React     from 'react';
+import TestUtils from 'react-addons-test-utils';
+import {Input}   from '../../../src/index';
 
-describe('Input', function () {
-  it('should have .ui.input class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Input', () => {
+  it('should have .ui.input class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Input></Input>
     );
 
@@ -17,8 +16,8 @@ describe('Input', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('input');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Input>
         <input placeholder="Search" type="text"/>
       </Input>
@@ -27,70 +26,70 @@ describe('Input', function () {
     expect(ReactDOM.findDOMNode(instance).children[0].getAttribute('placeholder')).toMatch('Search');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Input className="custom"></Input>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
-  it('should have loading class with loading is true', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have loading class with loading is true', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Input loading={true}></Input>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('loading');
   });
 
-  it('should have focus class with focus is true', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have focus class with focus is true', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Input focus={true}></Input>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('focus');
   });
 
-  it('should have error class with error is true', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have error class with error is true', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Input error={true}></Input>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('error');
   });
 
-  it('should have <input> if children is null', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have <input> if children is null', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Input></Input>
     );
 
     expect(TestUtils.findRenderedDOMComponentWithTag(instance, 'input')).toBeDefined();
   });
 
-  it('should have placeholder for input string', function () {
+  it('should have placeholder for input string', () => {
 
-    var instance = TestUtils.renderIntoDocument(
+    let instance = TestUtils.renderIntoDocument(
       <Input placeholder="Search"></Input>
     );
 
-    var input = TestUtils.findRenderedDOMComponentWithTag(instance, 'input');
+    let input = TestUtils.findRenderedDOMComponentWithTag(instance, 'input');
 
     expect(ReactDOM.findDOMNode(input).getAttribute('placeholder')).toMatch('Search');
   });
 
-  it('should have type for input type', function () {
+  it('should have type for input type', () => {
 
-    var instance = TestUtils.renderIntoDocument(
+    let instance = TestUtils.renderIntoDocument(
       <Input type="text"></Input>
     );
 
-    var input = TestUtils.findRenderedDOMComponentWithTag(instance, 'input');
+    let input = TestUtils.findRenderedDOMComponentWithTag(instance, 'input');
 
     expect(ReactDOM.findDOMNode(input).getAttribute('type')).toMatch('text');
   });
 
-  it('should display Input name', function () {
-    var Component = (
+  it('should display Input name', () => {
+    let Component = (
       <Input></Input>
     );
 

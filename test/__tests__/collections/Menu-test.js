@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Menu      = require('../../../src/index.js').Menu;
+import ReactDOM  from 'react-dom';
+import React     from 'react';
+import TestUtils from 'react-addons-test-utils';
+import {Menu}    from '../../../src/index';
 
-describe('Menu', function () {
-  it('should have .ui.menu class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Menu', () => {
+  it('should have .ui.menu class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Menu></Menu>
     );
 
@@ -17,24 +16,24 @@ describe('Menu', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('menu');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Menu>123</Menu>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Menu className="custom"></Menu>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
-  it('should display Menu name', function () {
-    var Component = (
+  it('should display Menu name', () => {
+    let Component = (
       <Menu></Menu>
     );
 

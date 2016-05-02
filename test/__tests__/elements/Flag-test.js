@@ -1,34 +1,33 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Flag      = require('../../../src/index.js').Flag;
+import ReactDOM  from 'react-dom';
+import React     from 'react';
+import TestUtils from 'react-addons-test-utils';
+import {Flag}    from '../../../src/index';
 
-describe('Flag', function () {
-  it('should have .flag class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Flag', () => {
+  it('should have .flag class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Flag></Flag>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('flag');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Flag className="custom"></Flag>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
-  it('should call onClick callback when unit click', function () {
+  it('should call onClick callback when unit click', () => {
 
-    var clickOp = jest.genMockFunction();
+    let clickOp = jest.genMockFunction();
 
-    var instance = TestUtils.renderIntoDocument(
+    let instance = TestUtils.renderIntoDocument(
       <Flag onClick={clickOp}></Flag>
     );
 
@@ -37,8 +36,8 @@ describe('Flag', function () {
     expect(clickOp).toBeCalled();
   });
 
-  it('should display Flag name', function () {
-    var Component = (
+  it('should display Flag name', () => {
+    let Component = (
       <Flag></Flag>
     );
 

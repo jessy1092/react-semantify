@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let List      = require('../../../src/index.js').List;
+import ReactDOM  from 'react-dom';
+import React     from 'react';
+import TestUtils from 'react-addons-test-utils';
+import {List}    from '../../../src/index';
 
-describe('List', function () {
-  it('should have .ui.list class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('List', () => {
+  it('should have .ui.list class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <List></List>
     );
 
@@ -17,24 +16,24 @@ describe('List', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('list');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <List>123</List>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <List className="custom"></List>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
-  it('should display List name', function () {
-    var Component = (
+  it('should display List name', () => {
+    let Component = (
       <List></List>
     );
 

@@ -1,15 +1,14 @@
-"use strict";
 
 jest.dontMock('../../../src/index.js');
 
-let ReactDOM  = require('react-dom');
-let React     = require('react');
-let TestUtils = require('react-addons-test-utils');
-let Loader    = require('../../../src/index.js').Loader;
+import ReactDOM  from 'react-dom';
+import React     from 'react';
+import TestUtils from 'react-addons-test-utils';
+import {Loader}  from '../../../src/index';
 
-describe('Loader', function () {
-  it('should have .ui.loader class by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+describe('Loader', () => {
+  it('should have .ui.loader class by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Loader></Loader>
     );
 
@@ -17,40 +16,40 @@ describe('Loader', function () {
     expect(ReactDOM.findDOMNode(instance).className).toMatch('loader');
   });
 
-  it('should have child by default', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have child by default', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Loader>123</Loader>
     );
 
     expect(ReactDOM.findDOMNode(instance).textContent).toEqual('123');
   });
 
-  it('should have custom class with custom className', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have custom class with custom className', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Loader className="custom"></Loader>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('custom');
   });
 
-  it('should have disabled class with disabled is true', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have disabled class with disabled is true', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Loader disabled={true}></Loader>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('disabled');
   });
 
-  it('should have active class with active is true', function () {
-    var instance = TestUtils.renderIntoDocument(
+  it('should have active class with active is true', () => {
+    let instance = TestUtils.renderIntoDocument(
       <Loader active={true}></Loader>
     );
 
     expect(ReactDOM.findDOMNode(instance).className).toMatch('active');
   });
 
-  it('should display Loader name', function () {
-    var Component = (
+  it('should display Loader name', () => {
+    let Component = (
       <Loader></Loader>
     );
 
