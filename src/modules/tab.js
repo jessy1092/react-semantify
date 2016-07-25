@@ -11,7 +11,7 @@ const Basic = React.createClass({
 
   render: function () {
 
-    const { props: { children, tab, ...other } } = this;
+    const { props: { children, tab, init, ...other } } = this;
 
     return (
       <div {...other}

@@ -11,7 +11,7 @@ const Basic = React.createClass({
 
   render: function () {
 
-    const { props: { children, percent, value, total, ...other } } = this;
+    const { props: { children, percent, value, total, init, ...other } } = this;
 
     return (
       <div {...other}

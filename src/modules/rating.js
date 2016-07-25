@@ -10,7 +10,7 @@ const Basic = React.createClass({
 
   render: function () {
 
-    const { props: { children, rating, maxRating, ...other } } = this;
+    const { props: { children, rating, maxRating, init, ...other } } = this;
 
     return (
       <div {...other}

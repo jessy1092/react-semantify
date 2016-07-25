@@ -11,7 +11,7 @@ const Basic = React.createClass({
 
   render: function () {
 
-    let { props: { className, children, ...other } } = this;
+    let { props: { className, children, init, ...other } } = this;
 
     if (className.indexOf('active') >= 0) {
       className += ' simple';
