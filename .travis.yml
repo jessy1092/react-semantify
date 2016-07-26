@@ -5,6 +5,10 @@ node_js:
 
 sudo: false
 
+cache:
+  directories:
+  - node_modules
+
 git:
   depth: 1
 
