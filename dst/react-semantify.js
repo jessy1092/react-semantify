@@ -1744,8 +1744,9 @@ var Basic = _react2.default.createClass({
   render: function render() {
     var _props = this.props;
     var children = _props.children;
+    var init = _props.init;
 
-    var other = _objectWithoutProperties(_props, ['children']);
+    var other = _objectWithoutProperties(_props, ['children', 'init']);
 
     return _react2.default.createElement(
       'div',
@@ -1807,8 +1808,9 @@ var Basic = _react2.default.createClass({
   render: function render() {
     var _props = this.props;
     var children = _props.children;
+    var init = _props.init;
 
-    var other = _objectWithoutProperties(_props, ['children']);
+    var other = _objectWithoutProperties(_props, ['children', 'init']);
 
     return _react2.default.createElement(
       'div',
@@ -1870,8 +1872,9 @@ var Basic = _react2.default.createClass({
   render: function render() {
     var _props = this.props;
     var children = _props.children;
+    var init = _props.init;
 
-    var other = _objectWithoutProperties(_props, ['children']);
+    var other = _objectWithoutProperties(_props, ['children', 'init']);
 
     return _react2.default.createElement(
       'div',
@@ -1934,8 +1937,9 @@ var Basic = _react2.default.createClass({
     var _props = this.props;
     var className = _props.className;
     var children = _props.children;
+    var init = _props.init;
 
-    var other = _objectWithoutProperties(_props, ['className', 'children']);
+    var other = _objectWithoutProperties(_props, ['className', 'children', 'init']);
 
     if (className.indexOf('active') >= 0) {
       className += ' simple';
@@ -2005,8 +2009,9 @@ var Basic = _react2.default.createClass({
     var sourceId = _props.sourceId;
     var url = _props.url;
     var icon = _props.icon;
+    var init = _props.init;
 
-    var other = _objectWithoutProperties(_props, ['children', 'placeholder', 'source', 'sourceId', 'url', 'icon']);
+    var other = _objectWithoutProperties(_props, ['children', 'placeholder', 'source', 'sourceId', 'url', 'icon', 'init']);
 
     return _react2.default.createElement(
       'div',
@@ -2074,8 +2079,9 @@ var Basic = _react2.default.createClass({
   render: function render() {
     var _props = this.props;
     var children = _props.children;
+    var init = _props.init;
 
-    var other = _objectWithoutProperties(_props, ['children']);
+    var other = _objectWithoutProperties(_props, ['children', 'init']);
 
     return _react2.default.createElement(
       'div',
@@ -2183,8 +2189,9 @@ var Basic = _react2.default.createClass({
     var percent = _props.percent;
     var value = _props.value;
     var total = _props.total;
+    var init = _props.init;
 
-    var other = _objectWithoutProperties(_props, ['children', 'percent', 'value', 'total']);
+    var other = _objectWithoutProperties(_props, ['children', 'percent', 'value', 'total', 'init']);
 
     return _react2.default.createElement(
       'div',
@@ -2251,8 +2258,9 @@ var Basic = _react2.default.createClass({
     var children = _props.children;
     var rating = _props.rating;
     var maxRating = _props.maxRating;
+    var init = _props.init;
 
-    var other = _objectWithoutProperties(_props, ['children', 'rating', 'maxRating']);
+    var other = _objectWithoutProperties(_props, ['children', 'rating', 'maxRating', 'init']);
 
     return _react2.default.createElement(
       'div',
@@ -2317,8 +2325,9 @@ var Basic = _react2.default.createClass({
   render: function render() {
     var _props = this.props;
     var children = _props.children;
+    var init = _props.init;
 
-    var other = _objectWithoutProperties(_props, ['children']);
+    var other = _objectWithoutProperties(_props, ['children', 'init']);
 
     return _react2.default.createElement(
       'div',
@@ -2379,8 +2388,9 @@ var Basic = _react2.default.createClass({
   render: function render() {
     var _props = this.props;
     var children = _props.children;
+    var init = _props.init;
 
-    var other = _objectWithoutProperties(_props, ['children']);
+    var other = _objectWithoutProperties(_props, ['children', 'init']);
 
     return _react2.default.createElement(
       'div',
@@ -2441,8 +2451,9 @@ var Basic = _react2.default.createClass({
   render: function render() {
     var _props = this.props;
     var children = _props.children;
+    var init = _props.init;
 
-    var other = _objectWithoutProperties(_props, ['children']);
+    var other = _objectWithoutProperties(_props, ['children', 'init']);
 
     return _react2.default.createElement(
       'div',
@@ -2503,8 +2514,9 @@ var Basic = _react2.default.createClass({
   render: function render() {
     var _props = this.props;
     var children = _props.children;
+    var init = _props.init;
 
-    var other = _objectWithoutProperties(_props, ['children']);
+    var other = _objectWithoutProperties(_props, ['children', 'init']);
 
     return _react2.default.createElement(
       'div',
@@ -2567,8 +2579,9 @@ var Basic = _react2.default.createClass({
     var _props = this.props;
     var children = _props.children;
     var tab = _props.tab;
+    var init = _props.init;
 
-    var other = _objectWithoutProperties(_props, ['children', 'tab']);
+    var other = _objectWithoutProperties(_props, ['children', 'tab', 'init']);
 
     return _react2.default.createElement(
       'div',
