@@ -10,7 +10,11 @@ const Basic = React.createClass({
 
   render: function () {
 
-    const { props: { children, placeholder, source, sourceId, url, icon, ...other } } = this;
+    const {
+      props: {
+        children, placeholder, source, sourceId, url, icon, init, ...other
+      }
+    } = this;
 
     return (
       <div {...other}

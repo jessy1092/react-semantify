@@ -11,7 +11,7 @@ const Basic = React.createClass({
 
   render: function () {
 
-    const { props: { children, ...other } } = this
+    const { props: { children, init, ...other } } = this
 
     return (
       <div {...other} ref="search" >
