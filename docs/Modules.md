@@ -1,6 +1,6 @@
 Modules
 =============
-The modules which interagte Semantic-Ui in react components.
+The modules which integrate Semantic-Ui in react components.
 
 # Accordion
 A standard Accordion.
