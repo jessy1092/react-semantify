@@ -11,7 +11,7 @@ const Basic = React.createClass({
 
   render: function () {
 
-    const { props: { children, placeholder, type, ...other } } = this;
+    const { props: { className, children, ...other } } = this;
 
     if (typeof children != 'undefined') {
       return (
@@ -21,10 +21,8 @@ const Basic = React.createClass({
       );
     } else {
       return (
-        <div {...other}>
-          <input
-            placeholder={placeholder}
-            type={type}/>
+        <div className={className}>
+          <input {...other}/>
         </div>
       )
     }
