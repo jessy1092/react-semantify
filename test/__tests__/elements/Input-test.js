@@ -86,6 +86,17 @@ describe('Input', () => {
     expect(ReactDOM.findDOMNode(input).getAttribute('type')).toMatch('text');
   });
 
+  it('should have value for button type', () => {
+
+    let instance = TestUtils.renderIntoDocument(
+      <Input type="button" value="Submit..."></Input>
+    );
+
+    let input = TestUtils.findRenderedDOMComponentWithTag(instance, 'input');
+
+    expect(ReactDOM.findDOMNode(input).getAttribute('value')).toMatch('Submit...');
+  });
+
   it('should display Input name', () => {
     let Component = (
       <Input></Input>
