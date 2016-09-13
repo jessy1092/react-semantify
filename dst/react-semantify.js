@@ -26,7 +26,7 @@ var Breadcrumb = new _filter2.default(_div2.default).classGenerator(defaultClass
 
 exports.default = Breadcrumb;
 
-},{"../commons/div":9,"../filter":35}],2:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -54,7 +54,7 @@ var Form = new _filter2.default(_div2.default).classGenerator(defaultClassName).
 
 exports.default = Form;
 
-},{"../commons/div":9,"../filter":35}],3:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -82,7 +82,7 @@ var Grid = new _filter2.default(_div2.default).classGenerator(defaultClassName).
 
 exports.default = Grid;
 
-},{"../commons/div":9,"../filter":35}],4:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -110,7 +110,7 @@ var Menu = new _filter2.default(_div2.default).classGenerator(defaultClassName).
 
 exports.default = Menu;
 
-},{"../commons/div":9,"../filter":35}],5:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -138,7 +138,7 @@ var Message = new _filter2.default(_div2.default).classGenerator(defaultClassNam
 
 exports.default = Message;
 
-},{"../commons/div":9,"../filter":35}],6:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -176,7 +176,7 @@ var Table = new _filter2.default(Basic).classGenerator(defaultClassName).getComp
 
 exports.default = Table;
 
-},{"../filter":35}],7:[function(require,module,exports){
+},{"../filter":36}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -204,7 +204,7 @@ var Column = new _filter2.default(_div2.default).classGenerator(defaultClassName
 
 exports.default = Column;
 
-},{"../filter":35,"./div":9}],8:[function(require,module,exports){
+},{"../filter":36,"./div":9}],8:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -233,7 +233,7 @@ var Content = new _filter2.default(_div2.default).stateFilter(stateArray).classG
 
 exports.default = Content;
 
-},{"../filter":35,"./div":9}],9:[function(require,module,exports){
+},{"../filter":36,"./div":9}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -290,7 +290,7 @@ var Field = new _filter2.default(_div2.default).classGenerator(defaultClassName)
 
 exports.default = Field;
 
-},{"../filter":35,"./div":9}],11:[function(require,module,exports){
+},{"../filter":36,"./div":9}],11:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -318,7 +318,7 @@ var Fields = new _filter2.default(_div2.default).classGenerator(defaultClassName
 
 exports.default = Fields;
 
-},{"../filter":35,"./div":9}],12:[function(require,module,exports){
+},{"../filter":36,"./div":9}],12:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -346,7 +346,7 @@ var Row = new _filter2.default(_div2.default).classGenerator(defaultClassName).g
 
 exports.default = Row;
 
-},{"../filter":35,"./div":9}],13:[function(require,module,exports){
+},{"../filter":36,"./div":9}],13:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -374,7 +374,7 @@ var Section = new _filter2.default(_unit2.default).typeFilter().colorFilter().cl
 
 exports.default = Section;
 
-},{"../filter":35,"./unit":16}],14:[function(require,module,exports){
+},{"../filter":36,"./unit":16}],14:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -402,7 +402,7 @@ var Text = new _filter2.default(_div2.default).classGenerator(defaultClassName).
 
 exports.default = Text;
 
-},{"../filter":35,"./div":9}],15:[function(require,module,exports){
+},{"../filter":36,"./div":9}],15:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -431,7 +431,7 @@ var Title = new _filter2.default(_div2.default).stateFilter(stateArray).classGen
 
 exports.default = Title;
 
-},{"../filter":35,"./div":9}],16:[function(require,module,exports){
+},{"../filter":36,"./div":9}],16:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -502,7 +502,7 @@ var Unit = function (_React$Component) {
   function Unit() {
     _classCallCheck(this, Unit);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(Unit).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Unit.__proto__ || Object.getPrototypeOf(Unit)).apply(this, arguments));
   }
 
   _createClass(Unit, [{
@@ -559,7 +559,35 @@ var Button = new _filter2.default(_unit2.default).typeFilter().colorFilter().sta
 
 exports.default = Button;
 
-},{"../commons/unit":16,"../filter":35}],18:[function(require,module,exports){
+},{"../commons/unit":16,"../filter":36}],18:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = (window.React);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _filter = require('../filter');
+
+var _filter2 = _interopRequireDefault(_filter);
+
+var _div = require('../commons/div');
+
+var _div2 = _interopRequireDefault(_div);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var defaultClassName = 'ui buttons';
+var componentName = 'Buttons';
+
+var Buttons = new _filter2.default(_div2.default).classGenerator(defaultClassName).getComposeComponent(componentName);
+
+exports.default = Buttons;
+
+},{"../commons/div":9,"../filter":36}],19:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -587,7 +615,7 @@ var Container = new _filter2.default(_div2.default).classGenerator(defaultClassN
 
 exports.default = Container;
 
-},{"../commons/div":9,"../filter":35}],19:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],20:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -615,7 +643,7 @@ var Divider = new _filter2.default(_div2.default).classGenerator(defaultClassNam
 
 exports.default = Divider;
 
-},{"../commons/div":9,"../filter":35}],20:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],21:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -643,7 +671,7 @@ var Flag = new _filter2.default(Basic).classGenerator(defaultClassName).getCompo
 
 exports.default = Flag;
 
-},{"../filter":35}],21:[function(require,module,exports){
+},{"../filter":36}],22:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -672,7 +700,7 @@ var Header = new _filter2.default(_unit2.default).typeFilter().colorFilter().sta
 
 exports.default = Header;
 
-},{"../commons/unit":16,"../filter":35}],22:[function(require,module,exports){
+},{"../commons/unit":16,"../filter":36}],23:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -701,7 +729,7 @@ var Icon = new _filter2.default(Basic).colorFilter().stateFilter(stateArray).cla
 
 exports.default = Icon;
 
-},{"../filter":35}],23:[function(require,module,exports){
+},{"../filter":36}],24:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -730,7 +758,7 @@ var Image = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(d
 
 exports.default = Image;
 
-},{"../filter":35}],24:[function(require,module,exports){
+},{"../filter":36}],25:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -759,11 +787,10 @@ var Basic = _react2.default.createClass({
 
   render: function render() {
     var _props = this.props;
+    var className = _props.className;
     var children = _props.children;
-    var placeholder = _props.placeholder;
-    var type = _props.type;
 
-    var other = _objectWithoutProperties(_props, ['children', 'placeholder', 'type']);
+    var other = _objectWithoutProperties(_props, ['className', 'children']);
 
     if (typeof children != 'undefined') {
       return _react2.default.createElement(
@@ -774,10 +801,8 @@ var Basic = _react2.default.createClass({
     } else {
       return _react2.default.createElement(
         'div',
-        other,
-        _react2.default.createElement('input', {
-          placeholder: placeholder,
-          type: type })
+        { className: className },
+        _react2.default.createElement('input', other)
       );
     }
   }
@@ -787,7 +812,7 @@ var Input = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(d
 
 exports.default = Input;
 
-},{"../filter":35}],25:[function(require,module,exports){
+},{"../filter":36}],26:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -815,7 +840,7 @@ var Label = new _filter2.default(_unit2.default).typeFilter().colorFilter().clas
 
 exports.default = Label;
 
-},{"../commons/unit":16,"../filter":35}],26:[function(require,module,exports){
+},{"../commons/unit":16,"../filter":36}],27:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -843,7 +868,7 @@ var List = new _filter2.default(_div2.default).classGenerator(defaultClassName).
 
 exports.default = List;
 
-},{"../commons/div":9,"../filter":35}],27:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],28:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -872,7 +897,7 @@ var Loader = new _filter2.default(_div2.default).stateFilter(stateArray).classGe
 
 exports.default = Loader;
 
-},{"../commons/div":9,"../filter":35}],28:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],29:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -900,7 +925,7 @@ var Rail = new _filter2.default(_div2.default).classGenerator(defaultClassName).
 
 exports.default = Rail;
 
-},{"../commons/div":9,"../filter":35}],29:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],30:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -929,7 +954,7 @@ var Reveal = new _filter2.default(_div2.default).stateFilter(stateArray).classGe
 
 exports.default = Reveal;
 
-},{"../commons/div":9,"../filter":35}],30:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],31:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -958,7 +983,7 @@ var Segment = new _filter2.default(_div2.default).colorFilter().stateFilter(stat
 
 exports.default = Segment;
 
-},{"../commons/div":9,"../filter":35}],31:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],32:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -987,7 +1012,7 @@ var Step = new _filter2.default(_div2.default).stateFilter(stateArray).classGene
 
 exports.default = Step;
 
-},{"../commons/div":9,"../filter":35}],32:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],33:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1015,7 +1040,7 @@ var Steps = new _filter2.default(_div2.default).classGenerator(defaultClassName)
 
 exports.default = Steps;
 
-},{"../commons/div":9,"../filter":35}],33:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],34:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1034,7 +1059,7 @@ exports.default = function (defaultClassName, ComposeComponent) {
     function _class() {
       _classCallCheck(this, _class);
 
-      return _possibleConstructorReturn(this, Object.getPrototypeOf(_class).apply(this, arguments));
+      return _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).apply(this, arguments));
     }
 
     _createClass(_class, [{
@@ -1077,7 +1102,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 ;
 
-},{}],34:[function(require,module,exports){
+},{}],35:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1095,7 +1120,7 @@ exports.default = function (ComposeComponent) {
     function HigherOrderComponent() {
       _classCallCheck(this, HigherOrderComponent);
 
-      return _possibleConstructorReturn(this, Object.getPrototypeOf(HigherOrderComponent).apply(this, arguments));
+      return _possibleConstructorReturn(this, (HigherOrderComponent.__proto__ || Object.getPrototypeOf(HigherOrderComponent)).apply(this, arguments));
     }
 
     _createClass(HigherOrderComponent, [{
@@ -1148,7 +1173,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var colorArray = ['black', 'yellow', 'green', 'blue', 'orange', 'purple', 'red', 'teal'];
 
-},{}],35:[function(require,module,exports){
+},{}],36:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1224,7 +1249,7 @@ var FilterFactory = function () {
 
 exports.default = FilterFactory;
 
-},{"./classGenerator":33,"./colorFilter":34,"./nameSetter":36,"./stateFilter":37,"./typeFilter":38}],36:[function(require,module,exports){
+},{"./classGenerator":34,"./colorFilter":35,"./nameSetter":37,"./stateFilter":38,"./typeFilter":39}],37:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1242,7 +1267,7 @@ exports.default = function (componentName, ComposeComponent) {
     function _class() {
       _classCallCheck(this, _class);
 
-      return _possibleConstructorReturn(this, Object.getPrototypeOf(_class).apply(this, arguments));
+      return _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).apply(this, arguments));
     }
 
     _createClass(_class, [{
@@ -1281,7 +1306,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 ;
 
-},{}],37:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1299,7 +1324,7 @@ exports.default = function (stateArray, ComposeComponent) {
     function HigherOrderComponent() {
       _classCallCheck(this, HigherOrderComponent);
 
-      return _possibleConstructorReturn(this, Object.getPrototypeOf(HigherOrderComponent).apply(this, arguments));
+      return _possibleConstructorReturn(this, (HigherOrderComponent.__proto__ || Object.getPrototypeOf(HigherOrderComponent)).apply(this, arguments));
     }
 
     _createClass(HigherOrderComponent, [{
@@ -1367,7 +1392,7 @@ var keyMap = {
   'readOnly': 'read-only'
 };
 
-},{}],38:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1383,7 +1408,7 @@ exports.default = function (ComposeComponent) {
     function HigherOrderComponent() {
       _classCallCheck(this, HigherOrderComponent);
 
-      return _possibleConstructorReturn(this, Object.getPrototypeOf(HigherOrderComponent).apply(this, arguments));
+      return _possibleConstructorReturn(this, (HigherOrderComponent.__proto__ || Object.getPrototypeOf(HigherOrderComponent)).apply(this, arguments));
     }
 
     _createClass(HigherOrderComponent, [{
@@ -1428,13 +1453,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var typeArray = ['div', 'link', 'icon'];
 
-},{}],39:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Statistic = exports.Items = exports.Item = exports.Feed = exports.Comments = exports.Comment = exports.Card = exports.Ad = exports.Tab = exports.Sticky = exports.Sidebar = exports.Shape = exports.Search = exports.Rating = exports.Progress = exports.Popup = exports.Modal = exports.Embed = exports.Dropdown = exports.Dimmer = exports.Checkbox = exports.Accordion = exports.Steps = exports.Step = exports.Segment = exports.Reveal = exports.Rail = exports.Loader = exports.List = exports.Label = exports.Input = exports.Image = exports.Icon = exports.Header = exports.Flag = exports.Divider = exports.Container = exports.Button = exports.Title = exports.Text = exports.Section = exports.Row = exports.Fields = exports.Field = exports.Content = exports.Column = exports.Table = exports.Message = exports.Menu = exports.Grid = exports.Form = exports.Breadcrumb = undefined;
+exports.Statistic = exports.Items = exports.Item = exports.Feed = exports.Comments = exports.Comment = exports.Card = exports.Ad = exports.Tab = exports.Sticky = exports.Sidebar = exports.Shape = exports.Search = exports.Rating = exports.Progress = exports.Popup = exports.Modal = exports.Embed = exports.Dropdown = exports.Dimmer = exports.Checkbox = exports.Accordion = exports.Steps = exports.Step = exports.Segment = exports.Reveal = exports.Rail = exports.Loader = exports.List = exports.Label = exports.Input = exports.Image = exports.Icon = exports.Header = exports.Flag = exports.Divider = exports.Container = exports.Buttons = exports.Button = exports.Title = exports.Text = exports.Section = exports.Row = exports.Fields = exports.Field = exports.Content = exports.Column = exports.Table = exports.Message = exports.Menu = exports.Grid = exports.Form = exports.Breadcrumb = undefined;
 
 var _breadcrumb = require('./collections/breadcrumb');
 
@@ -1495,6 +1520,10 @@ var _title2 = _interopRequireDefault(_title);
 var _button = require('./elements/button');
 
 var _button2 = _interopRequireDefault(_button);
+
+var _buttons = require('./elements/buttons');
+
+var _buttons2 = _interopRequireDefault(_buttons);
 
 var _container = require('./elements/container');
 
@@ -1669,6 +1698,7 @@ exports.Title = _title2.default;
 // elements
 
 exports.Button = _button2.default;
+exports.Buttons = _buttons2.default;
 exports.Container = _container2.default;
 exports.Divider = _divider2.default;
 exports.Flag = _flag2.default;
@@ -1713,7 +1743,7 @@ exports.Item = _item2.default;
 exports.Items = _items2.default;
 exports.Statistic = _statistic2.default;
 
-},{"./collections/breadcrumb":1,"./collections/form":2,"./collections/grid":3,"./collections/menu":4,"./collections/message":5,"./collections/table":6,"./commons/column":7,"./commons/content":8,"./commons/field":10,"./commons/fields":11,"./commons/row":12,"./commons/section":13,"./commons/text":14,"./commons/title":15,"./elements/button":17,"./elements/container":18,"./elements/divider":19,"./elements/flag":20,"./elements/header":21,"./elements/icon":22,"./elements/image":23,"./elements/input":24,"./elements/label":25,"./elements/list":26,"./elements/loader":27,"./elements/rail":28,"./elements/reveal":29,"./elements/segment":30,"./elements/step":31,"./elements/steps":32,"./modules/accordion":40,"./modules/checkbox":41,"./modules/dimmer":42,"./modules/dropdown":43,"./modules/embed":44,"./modules/modal":45,"./modules/popup":46,"./modules/progress":47,"./modules/rating":48,"./modules/search":49,"./modules/shape":50,"./modules/sidebar":51,"./modules/sticky":52,"./modules/tab":53,"./views/advertisement":54,"./views/card":55,"./views/comment":56,"./views/comments":57,"./views/feed":58,"./views/item":59,"./views/items":60,"./views/statistic":61}],40:[function(require,module,exports){
+},{"./collections/breadcrumb":1,"./collections/form":2,"./collections/grid":3,"./collections/menu":4,"./collections/message":5,"./collections/table":6,"./commons/column":7,"./commons/content":8,"./commons/field":10,"./commons/fields":11,"./commons/row":12,"./commons/section":13,"./commons/text":14,"./commons/title":15,"./elements/button":17,"./elements/buttons":18,"./elements/container":19,"./elements/divider":20,"./elements/flag":21,"./elements/header":22,"./elements/icon":23,"./elements/image":24,"./elements/input":25,"./elements/label":26,"./elements/list":27,"./elements/loader":28,"./elements/rail":29,"./elements/reveal":30,"./elements/segment":31,"./elements/step":32,"./elements/steps":33,"./modules/accordion":41,"./modules/checkbox":42,"./modules/dimmer":43,"./modules/dropdown":44,"./modules/embed":45,"./modules/modal":46,"./modules/popup":47,"./modules/progress":48,"./modules/rating":49,"./modules/search":50,"./modules/shape":51,"./modules/sidebar":52,"./modules/sticky":53,"./modules/tab":54,"./views/advertisement":55,"./views/card":56,"./views/comment":57,"./views/comments":58,"./views/feed":59,"./views/item":60,"./views/items":61,"./views/statistic":62}],41:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1776,7 +1806,7 @@ var Accordion = new _filter2.default(Basic).classGenerator(defaultClassName).get
 
 exports.default = Accordion;
 
-},{"../filter":35}],41:[function(require,module,exports){
+},{"../filter":36}],42:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1840,7 +1870,7 @@ var Checkbox = new _filter2.default(Basic).stateFilter(stateArray).classGenerato
 
 exports.default = Checkbox;
 
-},{"../filter":35}],42:[function(require,module,exports){
+},{"../filter":36}],43:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1904,7 +1934,7 @@ var Dimmer = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(
 
 exports.default = Dimmer;
 
-},{"../filter":35}],43:[function(require,module,exports){
+},{"../filter":36}],44:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1973,7 +2003,7 @@ var Dropdown = new _filter2.default(Basic).stateFilter(stateArray).classGenerato
 
 exports.default = Dropdown;
 
-},{"../filter":35}],44:[function(require,module,exports){
+},{"../filter":36}],45:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2047,7 +2077,7 @@ var Embed = new _filter2.default(Basic).classGenerator(defaultClassName).getComp
 
 exports.default = Embed;
 
-},{"../filter":35}],45:[function(require,module,exports){
+},{"../filter":36}],46:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2110,7 +2140,7 @@ var Modal = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(d
 
 exports.default = Modal;
 
-},{"../filter":35}],46:[function(require,module,exports){
+},{"../filter":36}],47:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2154,7 +2184,7 @@ var Popup = new _filter2.default(Basic).classGenerator(defaultClassName).getComp
 
 exports.default = Popup;
 
-},{"../filter":35}],47:[function(require,module,exports){
+},{"../filter":36}],48:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2225,7 +2255,7 @@ var Progress = new _filter2.default(Basic).stateFilter(stateArray).classGenerato
 
 exports.default = Progress;
 
-},{"../filter":35}],48:[function(require,module,exports){
+},{"../filter":36}],49:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2293,7 +2323,7 @@ var Rating = new _filter2.default(Basic).classGenerator(defaultClassName).getCom
 
 exports.default = Rating;
 
-},{"../filter":35}],49:[function(require,module,exports){
+},{"../filter":36}],50:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2357,7 +2387,7 @@ var Search = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(
 
 exports.default = Search;
 
-},{"../filter":35}],50:[function(require,module,exports){
+},{"../filter":36}],51:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2420,7 +2450,7 @@ var Shap = new _filter2.default(Basic).classGenerator(defaultClassName).getCompo
 
 exports.default = Shap;
 
-},{"../filter":35}],51:[function(require,module,exports){
+},{"../filter":36}],52:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2483,7 +2513,7 @@ var Sidebar = new _filter2.default(Basic).classGenerator(defaultClassName).getCo
 
 exports.default = Sidebar;
 
-},{"../filter":35}],52:[function(require,module,exports){
+},{"../filter":36}],53:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2546,7 +2576,7 @@ var Sticky = new _filter2.default(Basic).classGenerator(defaultClassName).getCom
 
 exports.default = Sticky;
 
-},{"../filter":35}],53:[function(require,module,exports){
+},{"../filter":36}],54:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2613,7 +2643,7 @@ var Tab = new _filter2.default(Basic).stateFilter(stateArray).classGenerator(def
 
 exports.default = Tab;
 
-},{"../filter":35}],54:[function(require,module,exports){
+},{"../filter":36}],55:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2641,7 +2671,7 @@ var Ad = new _filter2.default(_div2.default).classGenerator(defaultClassName).ge
 
 exports.default = Ad;
 
-},{"../commons/div":9,"../filter":35}],55:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],56:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2669,7 +2699,7 @@ var Card = new _filter2.default(_div2.default).classGenerator(defaultClassName).
 
 exports.default = Card;
 
-},{"../commons/div":9,"../filter":35}],56:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],57:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2697,7 +2727,7 @@ var Comment = new _filter2.default(_div2.default).classGenerator(defaultClassNam
 
 exports.default = Comment;
 
-},{"../commons/div":9,"../filter":35}],57:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],58:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2725,7 +2755,7 @@ var Comments = new _filter2.default(_div2.default).classGenerator(defaultClassNa
 
 exports.default = Comments;
 
-},{"../commons/div":9,"../filter":35}],58:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],59:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2753,7 +2783,7 @@ var Feed = new _filter2.default(_div2.default).classGenerator(defaultClassName).
 
 exports.default = Feed;
 
-},{"../commons/div":9,"../filter":35}],59:[function(require,module,exports){
+},{"../commons/div":9,"../filter":36}],60:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2805,7 +2835,7 @@ var Item = new _filter2.default(Basic).typeFilter().classGenerator(defaultClassN
 
 exports.default = Item;
 
-},{"../commons/unit":16,"../filter":35}],60:[function(require,module,exports){
+},{"../commons/unit":16,"../filter":36}],61:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2858,7 +2888,7 @@ var Items = new _filter2.default(Basic).classGenerator(defaultClassName).getComp
 
 exports.default = Items;
 
-},{"../filter":35}],61:[function(require,module,exports){
+},{"../filter":36}],62:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2886,5 +2916,5 @@ var Statistic = new _filter2.default(_div2.default).classGenerator(defaultClassN
 
 exports.default = Statistic;
 
-},{"../commons/div":9,"../filter":35}]},{},[39])(39)
+},{"../commons/div":9,"../filter":36}]},{},[40])(40)
 });

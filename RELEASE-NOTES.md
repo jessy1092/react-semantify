@@ -1,3 +1,18 @@
+<a name="0.6.0"></a>
+# [0.6.0](https://github.com/jessy1092/react-semantify/compare/v0.5.2...v0.6.0) (2016-09-13)
+
+
+### Bug Fixes
+
+* Correct pass custom properties into Input component. close #73([610d8e9](https://github.com/jessy1092/react-semantify/commit/610d8e9)), closes [#73](https://github.com/jessy1092/react-semantify/issues/73)
+
+
+### Features
+
+* Create Buttons component([1f78c6c](https://github.com/jessy1092/react-semantify/commit/1f78c6c))
+
+
+
 <a name="0.5.2"></a>
 ## [0.5.2](https://github.com/jessy1092/react-semantify/compare/v0.5.1...v0.5.2) (2016-07-26)
 
