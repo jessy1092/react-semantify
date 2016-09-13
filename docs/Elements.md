@@ -22,7 +22,7 @@ are equal to
 <div class="ui button red disabled examplebutton"></div>
 ```
 
-and register the function(this._onClick) on click event.
+and register the `function(this._onClick)` on click event.
 
 ### Properties
 
@@ -32,6 +32,34 @@ and register the function(this._onClick) on click event.
 - *active*: This is a booling type. If `true`, the `active` would be part of `class` attribute.
 - *disabled*: This is a booling type. If `true`, the `disabled` would be part of `class` attribute.
 - *loading*: This is a booling type. If `true`, the `loading` would be part of `class` attribute.
+
+
+# Buttons
+The group of Buttons.
+
+### Example
+
+```html
+<Buttons className="examplebuttons">
+  <Button>One</Button>
+  <Button>Two</Button>
+  <Button>Three</Button>
+</Buttons>
+```
+
+are equal to
+
+```html
+<div class="ui buttons examplebuttons">
+  <div class="ui button">One</div>
+  <div class="ui button">Two</div>
+  <div class="ui button">Three</div>
+</div>
+```
+
+### Properties
+
+- *className*: The className would be part of the `class` attribute.
 
 
 # Container
@@ -89,7 +117,7 @@ is equal to
 <i class="flag tw"></i>
 ```
 
-and register the function(this._onClick) on click event.
+and register the `function(this._onClick)` on click event.
 
 ### Properties
 
@@ -117,7 +145,7 @@ are equal to
 <div class="ui header red disabled exampleheader"></div>
 ```
 
-and register the function(this._onClick) on click event.
+and register the `function(this._onClick)` on click event.
 
 ### Properties
 
@@ -148,7 +176,7 @@ are equal to
 <i class="icon red disabled cloud"></i>
 ```
 
-and register the function(this._onClick) on click event.
+and register the `function(this._onClick)` on click event.
 
 ### Properties
 
@@ -226,7 +254,7 @@ are equal to
 <div class="ui label red examplelabel"></div>
 ```
 
-and register the function(this._onClick) on click event.
+and register the `function(this._onClick)` on click event.
 
 ### Properties
 
@@ -339,7 +367,7 @@ are equal to
 <div class="ui segment red disabled examplesegment"></div>
 ```
 
-and register the function(this._onClick) on click event.
+and register the `function(this._onClick)` on click event.
 
 ### Properties
 
