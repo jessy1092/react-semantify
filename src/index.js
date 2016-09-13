@@ -19,6 +19,7 @@ export Title from './commons/title';
 
 // elements
 export Button from './elements/button';
+export Buttons from './elements/buttons';
 export Container from './elements/container';
 export Divider from './elements/divider';
 export Flag from './elements/flag';
