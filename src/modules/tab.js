@@ -7,9 +7,8 @@ const stateArray       = ['active', 'loading'];
 const defaultClassName = 'ui tab';
 const componentName    = 'Tab';
 
-const Basic = React.createClass({
-
-  render: function () {
+class Basic extends React.Component {
+  render() {
 
     const { props: { children, tab, init, ...other } } = this;
 
@@ -20,9 +19,9 @@ const Basic = React.createClass({
         {children}
       </div>
     );
-  },
+  }
 
-  componentDidMount: function () {
+  componentDidMount() {
 
     const { props: { init = false } } = this;
 
@@ -36,7 +35,7 @@ const Basic = React.createClass({
       $(this.refs.tab).tab(init);
     }
   }
-});
+}
 
 const Tab = new filter(Basic)
   .stateFilter(stateArray)

@@ -1,4 +1,5 @@
 
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const keyMap = {
@@ -37,7 +38,7 @@ export default function (stateArray, ComposeComponent) {
 
   let propTypes = {};
 
-  stateArray.forEach(key => propTypes[key] = React.PropTypes.bool);
+  stateArray.forEach(key => propTypes[key] = PropTypes.bool);
 
   HigherOrderComponent.propTypes = propTypes;
 

@@ -7,9 +7,8 @@ const stateArray       = ['loading', 'focus', 'error'];
 const defaultClassName = 'ui input';
 const componentName    = 'Input';
 
-const Basic = React.createClass({
-
-  render: function () {
+class Basic extends React.Component {
+  render() {
 
     const { props: { className, children, ...other } } = this;
 
@@ -27,7 +26,7 @@ const Basic = React.createClass({
       )
     }
   }
-});
+}
 
 const Input = new filter(Basic)
   .stateFilter(stateArray)

@@ -7,9 +7,8 @@ const stateArray       = ['disabled', 'readOnly'];
 const defaultClassName = 'ui checkbox';
 const componentName    = 'Checkbox';
 
-const Basic = React.createClass({
-
-  render: function () {
+class Basic extends React.Component {
+  render() {
 
     const { props: { children, init, ...other } } = this;
 
@@ -18,9 +17,9 @@ const Basic = React.createClass({
         {children}
       </div>
     );
-  },
+  }
 
-  componentDidMount: function () {
+  componentDidMount() {
 
     const { props: { init = false } } = this;
 
@@ -34,7 +33,7 @@ const Basic = React.createClass({
       $(this.refs.checkbox).checkbox(init);
     }
   }
-});
+}
 
 const Checkbox = new filter(Basic)
   .stateFilter(stateArray)

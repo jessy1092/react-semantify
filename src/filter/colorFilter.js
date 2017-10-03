@@ -1,4 +1,5 @@
 
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const colorArray = [
@@ -26,7 +27,7 @@ export default function (ComposeComponent) {
   }
 
   HigherOrderComponent.propTypes = {
-    color: React.PropTypes.oneOf(colorArray)
+    color: PropTypes.oneOf(colorArray)
   };
 
   return HigherOrderComponent;
