@@ -6,9 +6,8 @@ import filter from '../filter';
 const defaultClassName = 'ui sidebar';
 const componentName    = 'Sidebar';
 
-const Basic = React.createClass({
-
-  render: function () {
+class Basic extends React.Component {
+  render() {
 
     const { props: { children, init, ...other } } = this;
 
@@ -17,9 +16,9 @@ const Basic = React.createClass({
         {children}
       </div>
     );
-  },
+  }
 
-  componentDidMount: function () {
+  componentDidMount() {
 
     const { props: { init = false } } = this;
 
@@ -33,7 +32,7 @@ const Basic = React.createClass({
       $(this.refs.sidebar).sidebar(init);
     }
   }
-});
+}
 
 const Sidebar = new filter(Basic)
   .classGenerator(defaultClassName)

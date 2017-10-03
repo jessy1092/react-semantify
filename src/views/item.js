@@ -7,9 +7,8 @@ import Unit from '../commons/unit';
 const defaultClassName = 'item';
 const componentName    = 'Item';
 
-const Basic = React.createClass({
-
-  render: function () {
+class Basic extends React.Component {
+  render() {
 
     const { props: { children, value, ...other } } = this;
 
@@ -20,7 +19,7 @@ const Basic = React.createClass({
       </Unit>
     );
   }
-});
+}
 
 const Item = new filter(Basic)
   .typeFilter()

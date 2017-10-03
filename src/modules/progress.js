@@ -7,9 +7,8 @@ const stateArray       = ['active', 'success', 'warning', 'error', 'disabled'];
 const defaultClassName = 'ui progress';
 const componentName    = 'Progress';
 
-const Basic = React.createClass({
-
-  render: function () {
+class Basic extends React.Component {
+  render() {
 
     const { props: { children, percent, value, total, init, ...other } } = this;
 
@@ -22,9 +21,9 @@ const Basic = React.createClass({
         {children}
       </div>
     );
-  },
+  }
 
-  componentDidMount: function () {
+  componentDidMount() {
 
     const { props: { init = false } } = this;
 
@@ -38,7 +37,7 @@ const Basic = React.createClass({
       $(this.refs.progress).progress(init);
     }
   }
-});
+}
 
 const Progress = new filter(Basic)
   .stateFilter(stateArray)

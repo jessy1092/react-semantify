@@ -7,9 +7,8 @@ const stateArray       = ['error', 'disabled', 'active'];
 const defaultClassName = 'ui dropdown';
 const componentName    = 'Dropdown';
 
-const Basic = React.createClass({
-
-  render: function () {
+class Basic extends React.Component {
+  render() {
 
     let { props: { className, children, init, ...other } } = this;
 
@@ -22,9 +21,9 @@ const Basic = React.createClass({
         {children}
       </div>
     );
-  },
+  }
 
-  componentDidMount: function () {
+  componentDidMount() {
 
     const { props: { init = false } } = this
 
@@ -38,7 +37,7 @@ const Basic = React.createClass({
       $(this.refs.dropdown).dropdown(init);
     }
   }
-});
+}
 
 const Dropdown = new filter(Basic)
   .stateFilter(stateArray)

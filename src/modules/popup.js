@@ -6,9 +6,8 @@ import filter from '../filter';
 const defaultClassName = 'ui popup';
 const componentName    = 'Popup';
 
-const Basic = React.createClass({
-
-  render: function () {
+class Basic extends React.Component {
+  render() {
 
     const { props: { children, ...other } } = this;
 
@@ -18,7 +17,7 @@ const Basic = React.createClass({
       </div>
     );
   }
-});
+}
 
 const Popup = new filter(Basic)
   .classGenerator(defaultClassName)

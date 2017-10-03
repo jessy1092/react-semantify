@@ -7,9 +7,8 @@ const stateArray       = ['active'];
 const defaultClassName = 'ui modal';
 const componentName    = 'Modal';
 
-const Basic = React.createClass({
-
-  render: function () {
+class Basic extends React.Component {
+  render() {
 
     const { props: { children, init, ...other } } = this;
 
@@ -18,9 +17,9 @@ const Basic = React.createClass({
         {children}
       </div>
     );
-  },
+  }
 
-  componentDidMount: function () {
+  componentDidMount() {
 
     const { props: { init = false } } = this;
     if (init === false) {
@@ -33,7 +32,7 @@ const Basic = React.createClass({
       $(this.refs.modal).modal(init);
     }
   }
-});
+}
 
 const Modal = new filter(Basic)
   .stateFilter(stateArray)

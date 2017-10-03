@@ -1,4 +1,5 @@
 
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const typeArray = ['div', 'link', 'icon'];
@@ -19,7 +20,7 @@ export default function (ComposeComponent) {
   }
 
   HigherOrderComponent.propTypes = {
-    type: React.PropTypes.oneOf(typeArray)
+    type: PropTypes.oneOf(typeArray)
   };
 
   return HigherOrderComponent;

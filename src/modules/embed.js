@@ -6,9 +6,8 @@ import filter from '../filter';
 const defaultClassName = 'ui embed';
 const componentName    = 'Embed';
 
-const Basic = React.createClass({
-
-  render: function () {
+class Basic extends React.Component {
+  render() {
 
     const {
       props: {
@@ -27,9 +26,9 @@ const Basic = React.createClass({
         {children}
       </div>
     );
-  },
+  }
 
-  componentDidMount: function () {
+  componentDidMount() {
 
     const { props: { init = false } } = this;
 
@@ -43,7 +42,7 @@ const Basic = React.createClass({
       $(this.refs.embed).embed(init);
     }
   }
-});
+}
 
 const Embed = new filter(Basic)
   .classGenerator(defaultClassName)

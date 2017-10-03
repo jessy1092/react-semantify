@@ -6,9 +6,8 @@ import filter from '../filter';
 const defaultClassName = 'ui items';
 const componentName    = 'Items';
 
-const Basic = React.createClass({
-
-  render: function () {
+class Basic extends React.Component {
+  render() {
 
     let { props: { className, children, type = '', ...other } } = this;
 
@@ -22,7 +21,7 @@ const Basic = React.createClass({
       </div>
     );
   }
-});
+}
 
 const Items = new filter(Basic)
   .classGenerator(defaultClassName)

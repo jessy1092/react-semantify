@@ -6,9 +6,8 @@ import filter from '../filter';
 const defaultClassName = 'ui rating';
 const componentName    = 'Rating';
 
-const Basic = React.createClass({
-
-  render: function () {
+class Basic extends React.Component {
+  render() {
 
     const { props: { children, rating, maxRating, init, ...other } } = this;
 
@@ -20,9 +19,9 @@ const Basic = React.createClass({
         {children}
       </div>
     );
-  },
+  }
 
-  componentDidMount: function () {
+  componentDidMount() {
 
     const { props: { init = false } } = this;
 
@@ -36,7 +35,7 @@ const Basic = React.createClass({
       $(this.refs.rating).rating(init);
     }
   }
-});
+}
 
 const Rating = new filter(Basic)
   .classGenerator(defaultClassName)

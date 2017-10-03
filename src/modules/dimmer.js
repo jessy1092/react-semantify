@@ -7,9 +7,8 @@ const stateArray       = ['disabled', 'active'];
 const defaultClassName = 'ui dimmer';
 const componentName    = 'Dimmer';
 
-const Basic = React.createClass({
-
-  render: function () {
+class Basic extends React.Component {
+  render() {
 
     const { props: { children, init, ...other } } = this;
 
@@ -18,9 +17,9 @@ const Basic = React.createClass({
         {children}
       </div>
     );
-  },
+  }
 
-  componentDidMount: function () {
+  componentDidMount() {
 
     const { props: { init = false } } = this;
 
@@ -34,7 +33,7 @@ const Basic = React.createClass({
       $(this.refs.dimmer).dimmer(init);
     }
   }
-});
+}
 
 const Dimmer = new filter(Basic)
   .stateFilter(stateArray)

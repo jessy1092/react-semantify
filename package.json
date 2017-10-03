@@ -54,9 +54,8 @@
     "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.7",
     "jest-cli": "^15.1.1",
-    "react": "^15.3.0",
-    "react-addons-test-utils": "^15.3.0",
-    "react-dom": "^15.3.0",
+    "react": "^15.5.0",
+    "react-dom": "^15.5.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
